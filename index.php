@@ -14,47 +14,53 @@
 
 
   <body>
-  <div class="page">
-	<div class="venn-wrapper">
-		<h1>IKIGAI</h1>
-		<div class="venn-1">
-			<p>What You <br><b>Love</b></p>
-			<span>Your<br />Mission</span>
-		</div>
-		<div class="venn-2">
-			<p>What the <br><b>World Needs</b></p>
-			<span>Your<br />Vocation</span>
-		</div>
-		<div class="venn-3">
-			<p>What You get <br><b>Paid For</b></p>
-			</ul>
-			<span>Your<br />Profession</span>
-		</div>
-		<div class="venn-4">
-			<p>What You Are <br><b>Good At</b></p>
-			<span>Your<br />Passion</span>
-		</div>
-		<ul class="tr">
-			<li>+ Delight</li>
-			<li>+ Fullness</li>
-			<li>- Wealth</li>
-		</ul>
-		<ul class="tl">
-			<li>+ Satisfaction</li>
-			<li>- Feeling of <br> &nbsp;&nbsp;Uselesness</li>
-		</ul>
-		<ul class="bl">
-			<li>+ Comfortable</li>
-			<li>- Feeling of  <br> &nbsp;&nbsp;Emptiness</li>
-		</ul>
+
+
+
+
+
+  <!-- ikigai -->
+    <div class="page">
+	    <div class="venn-wrapper">
+		    <h1>IKIGAI</h1>
+		    <div class="venn-1">
+			    <p>What You <br><b>Love</b></p>
+			    <span>Your<br />Mission</span>
+		    </div>
+		    <div class="venn-2">
+			    <p>What the <br><b>World Needs</b></p>
+			    <span>Your<br />Vocation</span>
+		    </div>
+		    <div class="venn-3">
+			    <p>What You get <br><b>Paid For</b></p>
+			    </ul>
+			    <span>Your<br />Profession</span>
+		    </div>
+		    <div class="venn-4">
+			    <p>What You Are <br><b>Good At</b></p>
+			    <span>Your<br />Passion</span>
+		    </div>
+		    <ul class="tr">
+			    <li>+ Delight</li>
+			    <li>+ Fullness</li>
+			    <li>- Wealth</li>
+		    </ul>
+		    <ul class="tl">
+			    <li>+ Satisfaction</li>
+			    <li>- Feeling of <br> &nbsp;&nbsp;Uselesness</li>
+		    </ul>
+		    <ul class="bl">
+			    <li>+ Comfortable</li>
+			    <li>- Feeling of  <br> &nbsp;&nbsp;Emptiness</li>
+		    </ul>
 			<ul class="br">
-			<li>+ Excitement</li>
-			<li>+ Complacency</li>
-			<li>- Uncertainty</li>
-		</ul>
+			    <li>+ Excitement</li>
+			    <li>+ Complacency</li>
+			    <li>- Uncertainty</li>
+		    </ul>
 	
-	</div>
-</div>
+	    </div>
+    </div>
         
 
         
