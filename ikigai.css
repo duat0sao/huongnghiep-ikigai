@@ -1,0 +1,242 @@
+/* Global stuff */
+html,
+body {
+	margin: 0;
+	font-family: "Montserrat", Montserrat, sans-serif;
+	font-size: 10px;
+	background-color: #d8f5fd;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	/*  */
+}
+
+
+.page {
+	display: grid;
+	height: 100vh;
+	width: 100vw;
+}
+
+.venn-wrapper {
+	position: relative;
+	margin: auto;
+	width: 48vw;
+	height: 48vw;
+	border-radius: 100%;
+	background-color: #FA8BFF;
+	background-image: -webkit-linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+	background-image: -moz-linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+	background-image: -o-linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+	background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+
+	transition: all 0.3s ease-in-out;
+	/*  */
+	display: grid;
+	grid-template: 1fr / 1fr;
+}
+
+.venn-wrapper div {
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+	grid-column: 1;
+	grid-row: 1;
+	transition: all 0.3s ease-in-out;
+	/*  */
+	display: grid;
+	grid-template: 1fr 1fr / 1fr 1fr;
+	justify-content: center;
+  /* 	 */
+	opacity: 0;
+}
+
+.venn-wrapper p {
+	margin: auto;
+	text-transform: uppercase;
+	font-size: 1.5vw;
+	grid-column: 1 / -1;
+	grid-row: 1 / -1;
+}
+
+.venn-wrapper span {
+	text-transform: uppercase;
+	font-size: 1.5vw;
+}
+
+.venn-1 {
+	background-color: rgba(255, 0, 0, 0.5);
+}
+
+.venn-2 {
+	background-color: rgba(0, 255, 0, 0.5);
+}
+
+.venn-3 {
+	background-color: rgba(0, 0, 255, 0.5);
+}
+
+.venn-4 {
+	background-color: rgba(0, 255, 255, 0.5);
+}
+
+.venn-wrapper:hover {
+	background: #d8f5fd;
+}
+
+.venn-wrapper:hover > div {
+	opacity: 1;
+	transition-delay: 0.2s;
+}
+
+.venn-wrapper:hover .venn-1 {
+	transform: translate3d(0, -33%, 0);
+}
+.venn-wrapper:hover .venn-2 {
+	transform: translate3d(33%, 0, 0);
+}
+.venn-wrapper:hover .venn-3 {
+	transform: translate3d(0, 33%, 0);
+}
+.venn-wrapper:hover .venn-4 {
+	transform: translate3d(-33%, 0, 0);
+}
+
+/* Place center text */
+.venn-wrapper h1 {
+	grid-row: 1;
+	grid-column: 1;
+	margin: auto;
+	z-index: 1;
+	font-size:10vw;
+	color: #ffffff;
+	transition: 0.3s all;
+}
+
+
+.venn-wrapper:hover h1 {
+	font-size: 3vw;
+}
+
+/* Place outer text */
+.venn-1 p {
+	margin-top: 3vw;
+}
+
+.venn-2 p {
+	margin-right: 3vw;
+}
+
+.venn-3 p {
+	margin-bottom: 3vw;
+}
+
+.venn-4 p {
+	margin-left: 3vw;
+}
+
+/* Place middle text */
+.venn-1 span {
+	grid-row: 2;
+	grid-column: 2;
+	margin: 0 auto;
+}
+
+.venn-2 span {
+	grid-row: 2;
+	grid-column: 1;
+	margin: auto 0 auto auto;
+}
+
+.venn-3 span {
+	grid-row: 1;
+	grid-column: 1;
+	margin: auto auto 0 auto;
+}
+
+.venn-4 span {
+	grid-row: 1;
+	grid-column: 2;
+	margin: auto 0 auto;
+}
+
+/* Place outer text */
+.venn-wrapper ul {
+	font-size: 1.2rem;
+	grid-column: 1;
+	grid-row: 1;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+	transition-delay: 0.5s;
+	position: relative;
+}
+
+/* .venn-wrapper ul:after {
+	content:'';
+	position:absolute;
+	bottom:0;
+	left:0;
+	width: 100%;
+	background: #000000;
+	height: 1px;
+} */
+
+.venn-wrapper ul:before {
+	content:'';
+	position:absolute;
+	width: 1px;
+	background: #000000;
+	height: 32vw;
+}
+
+
+.venn-wrapper .tr:before {
+	left:2rem;
+	top:6rem;
+	transform: rotatez(45deg);
+	transform-origin: top left;
+}
+
+.venn-wrapper .tl:before {
+	left:2rem;
+	top:6rem;
+	transform: rotatez(-37deg);
+	transform-origin: top left;
+	height: 43vw;
+}
+
+.venn-wrapper .bl:before {
+	left:2rem;
+	bottom: 6rem;
+	transform: rotatez(72deg);
+	transform-origin: bottom right;
+	height: 40vw;
+}
+
+.venn-wrapper .br:before {
+	left:2rem;
+	bottom: 6rem;
+	transform: rotatez(-28deg);
+	transform-origin: bottom left;
+	height: 30vw;
+}
+
+
+.tr, .br { 
+	justify-self: end; 
+}
+.bl, .br { 
+	align-self: end; }
+
+.venn-wrapper:hover ul {
+		opacity: 1;
+}
+
+.venn-wrapper:hover .tr { transform: translate3d(100%, -33%, 0); }
+.venn-wrapper:hover .tl { transform: translate3d(-33%, -33%, 0); }
+.venn-wrapper:hover .bl { transform: translate3d(-33%, 230%, 0); }
+.venn-wrapper:hover .br { transform: translate3d(100%, 200%, 0); }
