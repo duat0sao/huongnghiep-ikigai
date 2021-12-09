@@ -123,3 +123,19 @@ canvas#myChart {
 .hide {
     display: none;
 }
+
+.nhoma {
+    color: red;
+}
+
+.nhomb {
+    color: green;
+}
+
+.nhomc {
+    color: blue;
+}
+
+.nhomd {
+    color: orange;
+}
