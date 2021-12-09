@@ -1,3 +1,5 @@
+
+   
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,13 +10,14 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <script src="1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
     <div class="container1">
-    	<div class="row justify-content-center">
+    	<div class="row justify-content-center hang">
     		<form id="form-1">
     			<h2>Trắc Nghiệm D.I.S.C Online</h2>
 			<div class="form-group1 id1">
@@ -59,7 +62,7 @@
     		    </div>
 			</div>
     		  	
-    		  	<div class="form-group1 id3 hide">
+    		  <div class="form-group1 id3 hide">
     		  	<h4>Bạn là người như thế nào? Chọn đáp án đúng nhất:</h4>
     		  	<label class="form-message"></label>
     		    <div class="cauhoi">
@@ -79,67 +82,235 @@
     		    	<label for="question3">Phát triển cá nhân.</label>
     		    </div>
 			</div>
+                
+              <div class="form-group1 id4 hide">
+                <h4>Bạn là người như thế nào? Chọn đáp án đúng nhất:</h4>
+                <label class="form-message"></label>
+                <div class="cauhoi">
+                    <input type="radio" name="question4" value="a">
+                    <label for="question4">Tôi thích nói lên suy nghĩ của mình.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question4" value="b">
+                    <label for="question4">Tôi rất thân thiện.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question4" value="c">
+                    <label for="question4">Tôi có xu hướng giữ cảm xúc của mình với chính mình.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question4" value="d">
+                    <label for="question4">Độ chính xác rất quan trọng đối với tôi.</label>
+                </div>
+            </div>
+                
+              <div class="form-group1 id5 hide">
+                <h4>Bạn là người như thế nào? Chọn đáp án đúng nhất:</h4>
+                <label class="form-message"></label>
+                <div class="cauhoi">
+                    <input type="radio" name="question5" value="a">
+                    <label for="question5">Tôi giỏi thuyết phục mọi người</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question5" value="b">
+                    <label for="question5">Tôi có xu hướng trở thành một người thân thiện.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question5" value="c">
+                    <label for="question5">Tôi là một người rất kiên quyết</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question5" value="d">
+                    <label for="question5">Tôi có xu hướng là một người thận trọng.</label>
+                </div>
+            </div>
+                
+              <div class="form-group1 id6 hide">
+                <h4>Bạn là người như thế nào? Chọn đáp án đúng nhất:</h4>
+                <label class="form-message"></label>
+                <div class="cauhoi">
+                    <input type="radio" name="question6" value="a">
+                    <label for="question6">Tôi rất bình thường trong thói quen của tôi.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question6" value="b">
+                    <label for="question6">Tôi thích trò chuyện với mọi người.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question6" value="c">
+                    <label for="question6">Tôi đưa ra quyết định một cách dứt khoát.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question6" value="d">
+                    <label for="question6">Tôi kiểm soát cảm xúc của mình tốt.</label>
+                </div>
+            </div>
+                
+              <div class="form-group1 id7 hide">
+                <h4>Bạn là người như thế nào? Chọn đáp án đúng nhất:</h4>
+                <label class="form-message"></label>
+                <div class="cauhoi">
+                    <input type="radio" name="question7" value="a">
+                    <label for="question7">Tôi có sự nhận thức và hiểu biết sâu sắc về mọi người xung quanh.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question7" value="b">
+                    <label for="question7">Tôi luôn sẵn sàng làm những điều mới - chấp nhận rủi ro.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question7" value="c">
+                    <label for="question7">Tôi là một người ôn hòa chứ không phải là một người cực đoan.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question7" value="d">
+                    <label for="question7">Mọi người thấy tôi thoải mái và dễ gần.</label>
+                </div>
+            </div>
+                
+              <div class="form-group1 id8 hide">
+                <h4>Bạn là người như thế nào? Chọn đáp án đúng nhất:</h4>
+                <label class="form-message"></label>
+                <div class="cauhoi">
+                    <input type="radio" name="question8" value="a">
+                    <label for="question8">Tôi có thể dễ dàng thuyết phục người khác.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question8" value="b">
+                    <label for="question8">Tôi không thích khoe khoang.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question8" value="c">
+                    <label for="question8">Tôi là một người lịch thiệp.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question8" value="d">
+                    <label for="question8">Tôi thường có cách riêng của mình.</label>
+                </div>
+            </div>
+                
+              <div class="form-group1 id9 hide">
+                <h4>Bạn là người như thế nào? Chọn đáp án đúng nhất:</h4>
+                <label class="form-message"></label>
+                <div class="cauhoi">
+                    <input type="radio" name="question9" value="a">
+                    <label for="question9">Tôi đưa ra quyết định nhanh chóng.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question9" value="b">
+                    <label for="question9">Tôi luôn cố gắng làm thật tốt công việc của mình.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question9" value="c">
+                    <label for="question9">Tôi sống thật với cảm xúc của mình.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question9" value="d">
+                    <label for="question9">Tôi thích mọi thứ phải rất gọn gàng và ngăn nắp.</label>
+                </div>
+            </div>
+                
+              <div class="form-group1 id10 hide">
+                <h4>Bạn là người như thế nào? Chọn đáp án đúng nhất:</h4>
+                <label class="form-message"></label>
+                <div class="cauhoi">
+                    <input type="radio" name="question10" value="a">
+                    <label for="question10">Tôi nóng nảy bồn chồn.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question10" value="b">
+                    <label for="question10">Tôi rất tự tin và có sức thuyết phục.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question10" value="c">
+                    <label for="question10">Tôi thuộc tuýp người rất khiêm tốn.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question10" value="d">
+                    <label for="question10">Tôi luôn chú ý đến những gì người khác nói.</label>
+                </div>
+            </div>
+                
+              <div class="form-group1 id11 hide">
+                <h4>Bạn là người như thế nào? Chọn đáp án đúng nhất:</h4>
+                <label class="form-message"></label>
+                <div class="cauhoi">
+                    <input type="radio" name="question11" value="a">
+                    <label for="question11">Mọi người không thể ngăn cản tôi.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question11" value="b">
+                    <label for="question11">Mọi người thường chú ý đến tôi.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question11" value="c">
+                    <label for="question11">Tôi là một loại dễ chịu.</label>
+                </div>
+                <div class="cauhoi">
+                    <input type="radio" name="question11" value="d">
+                    <label for="question11">Tôi thích xử lý mọi việc bằng ngoại giao.</label>
+                </div>
+            </div>
     		  	
-    		  	<div class="form-group1 id4 hide">
+    		  	<div class="form-group1 id12 hide">
     		  	<h4>Bạn gặp những khó khăn khi phải:</h4>
     		  	<label class="form-message"></label>
     		    <div class="cauhoi">
-    		    	<input type="radio" name="question4" value="d">
-    		    	<label for="question4">Bỏ dở công việc.</label>
+    		    	<input type="radio" name="question12" value="d">
+    		    	<label for="question12">Bỏ dở công việc.</label>
     		    </div>
     		    <div class="cauhoi">
-    		    	<input type="radio" name="question4" value="c">
-    		    	<label for="question4">Thích ứng với môi trường luôn thay đổi hoặc những mục tiêu được đặt ra không rõ ràng.</label>
+    		    	<input type="radio" name="question12" value="c">
+    		    	<label for="question12">Thích ứng với môi trường luôn thay đổi hoặc những mục tiêu được đặt ra không rõ ràng.</label>
     		    </div>
     		    <div class="cauhoi">
-    		    	<input type="radio" name="question4" value="b">
-    		    	<label for="question4">Nói chuyện trực tiếp và thẳng thắn.</label>
+    		    	<input type="radio" name="question12" value="b">
+    		    	<label for="question12">Nói chuyện trực tiếp và thẳng thắn.</label>
     		    </div>
     		    <div class="cauhoi">
-    		    	<input type="radio" name="question4" value="a">
-    		    	<label for="question4">Thể hiện sự kiên nhẫn.</label>
+    		    	<input type="radio" name="question12" value="a">
+    		    	<label for="question12">Thể hiện sự kiên nhẫn.</label>
     		    </div>
 			</div>
     		  	
-    		  	<div class="form-group1 id5 hide">
+    		  	<div class="form-group1 id13 hide">
     		  	<h4>Bạn gặp những khó khăn khi phải:</h4>
     		  	<label class="form-message"></label>
     		    <div class="cauhoi">
-    		    	<input type="radio" name="question5" value="a">
-    		    	<label for="question5">Làm việc với tiểu tiết.</label>
+    		    	<input type="radio" name="question13" value="a">
+    		    	<label for="question13">Làm việc với tiểu tiết.</label>
     		    </div>
     		    <div class="cauhoi">
-    		    	<input type="radio" name="question5" value="b">
-    		    	<label for="question5">Tập trung trong thời gian dài.</label>
+    		    	<input type="radio" name="question13" value="b">
+    		    	<label for="question13">Tập trung trong thời gian dài.</label>
     		    </div>
     		    <div class="cauhoi">
-    		    	<input type="radio" name="question5" value="c">
-    		    	<label for="question5">Phải làm nhiều việc cùng một lúc.</label>
+    		    	<input type="radio" name="question13" value="c">
+    		    	<label for="question13">Phải làm nhiều việc cùng một lúc.</label>
     		    </div>
     		    <div class="cauhoi">
-    		    	<input type="radio" name="question5" value="d">
-    		    	<label for="question5">Tham gia các sự kiện xã hội.</label>
+    		    	<input type="radio" name="question13" value="d">
+    		    	<label for="question13">Tham gia các sự kiện xã hội.</label>
     		    </div>
 			</div>
     		  	
-    		  	<div class="form-group1 id6 hide">
+    		  	<div class="form-group1 id14 hide">
     		  	<h4>Bạn gặp những khó khăn khi phải:</h4>
     		  	<label class="form-message"></label>
     		    <div class="cauhoi">
-    		    	<input type="radio" name="question6" value="d">
-    		    	<label for="question6">Phải đưa ra quyết định nhanh chóng.</label>
+    		    	<input type="radio" name="question14" value="d">
+    		    	<label for="question14">Phải đưa ra quyết định nhanh chóng.</label>
     		    </div>
     		    <div class="cauhoi">
-    		    	<input type="radio" name="question6" value="c">
-    		    	<label for="question6">Phải cạnh tranh/đối đầu với người khác.</label>
+    		    	<input type="radio" name="question14" value="c">
+    		    	<label for="question14">Phải cạnh tranh/đối đầu với người khác.</label>
     		    </div>
     		    <div class="cauhoi">
-    		    	<input type="radio" name="question6" value="b">
-    		    	<label for="question6">Bị kiểm soát.</label>
+    		    	<input type="radio" name="question14" value="b">
+    		    	<label for="question14">Bị kiểm soát.</label>
     		    </div>
     		    <div class="cauhoi">
-    		    	<input type="radio" name="question6" value="a">
-    		    	<label for="question6">Nghe người khác nói lan man</label>
+    		    	<input type="radio" name="question14" value="a">
+    		    	<label for="question14">Nghe người khác nói lan man</label>
     		    </div>
 			</div>
     		  <div class="footer">
@@ -177,29 +348,61 @@
         	if (data[key] == 'a') nhom1++
         	else if (data[key] == 'b') nhom2++
         	else if (data[key] == 'c') nhom3++
-        	else nhom3++
+        	else nhom4++
         }
+    console.log(nhom1)
+    console.log(nhom2)
+    console.log(nhom3)
+    console.log(nhom4)
+    var xValues = ["Nhóm A", "Nhóm B", "Nhóm C", "Nhóm D"];
+    var yValues = [nhom1, nhom2, nhom3, nhom4];
+    var barColors = ["red", "green","blue","orange"];
+
+    
     var max = Math.max(nhom1, nhom2, nhom3, nhom4)
     if(max == nhom1) {
-    	document.querySelector(".container1").innerHTML = `<div class="mt-2" style="text-align: justify;"><div><b>•Kết quả:</b> Người Thủ lĩnh
+    	document.querySelector(".hang").innerHTML = `<canvas id="myChart" style="width:100%;max-width:600px; height: 300px"></canvas>
+        <div class="mt-2" style="text-align: justify;"><div><b>•Kết quả:</b> Người Thủ lĩnh <span class="nhoma">(Nhóm A)</span>
                     </div> <div><b>•Mô tả:</b> Những người nằm ở nhóm này quan trọng kết quả hoàn thành. Họ luôn tự tin và có động lực cạnh tranh để chiến thắng hoặc đạt được thành công. Họ luôn chấp nhận thử thách và hành động tức thì để đạt được kết quả. Những người thuộc nhóm Thủ lĩnh thường được mô tả là mạnh mẽ, tự tin, nhanh nhẹn, luôn tiếp cận vấn đề một cách trực tiếp. Tuy nhiên, điểm trừ của những người thuộc nhóm Thủ lĩnh là đôi khi họ bị giới hạn bởi sự vô tâm đối với người khác, thiếu kiên nhẫn và hay hoài nghi. Đôi khi họ cũng được cho là dễ bị tổn thương.
                     </div> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----></div>`
       }
       else if(max == nhom2) {
-      	document.querySelector(".container1").innerHTML = `<div class="mt-2" style="text-align: justify;"><div><b>•Kết quả:</b> Người tạo ảnh hưởng
+      	document.querySelector(".hang").innerHTML = `<canvas id="myChart" style="width:100%;max-width:600px; height: 300px"></canvas>
+        <div class="mt-2" style="text-align: justify;"><div><b>•Kết quả:</b> Người tạo ảnh hưởng <span class="nhomb">(Nhóm B)</span>
                     </div> <div><b>•Mô tả:</b> Người thuộc nhóm này chú trọng vào việc tạo ra ảnh hưởng hoặc thuyết phục người khác bằng sự cởi mở và những mối quan hệ của mình. Họ thường được mô tả là những người có sức thuyết phục, nhiệt tình, ấm áp, luôn lạc quan và có niềm tin vào người khác. Phong cách làm việc của họ luôn thể hiện sự hợp tác và nhiệt tình. Những người Tạo ảnh hưởng thường được thúc đẩy bởi sự công nhận xã hội (hoặc một nhóm người trong xã hội), vào những hoạt động nhóm và sự phát triển các mối quan hệ. Chính vì vậy mà họ sẽ sợ bị mất sự ảnh hưởng, bị từ chối hoặc bị bỏ qua.
                     </div> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----></div>`
       }
       else if(max == nhom3) {
-      	document.querySelector(".container1").innerHTML = `<div class="mt-2" style="text-align: justify;"><div><b>•Kết quả:</b> Người Kiên định
+      	document.querySelector(".hang").innerHTML = `<canvas id="myChart" style="width:100%;max-width:600px; height: 300px"></canvas>
+        <div class="mt-2" style="text-align: justify;"><div><b>•Kết quả:</b> Người Kiên định <span class="nhomc">(Nhóm C)</span>
                     </div> <div><b>•Mô tả:</b> Những người thuộc nhóm này thường chú trọng vào sự hợp tác, chân thành, tin cậy. Họ thường tìm động lực thúc đẩy từ sự cộng tác, phối hợp, đánh giá chân thành và hướng đến duy trì sự ổn định. Những người Kiên Định thường được mô tả là bình tĩnh, kiên nhẫn, có thể lường trước sự việc, ổn định và nhất quán. Họ cũng có thể bị giới hạn bởi sự thiếu quyết đoán, sợ thay đổi, sợ sự mất ổn định và bị xúc phạm. Tuy nhiên, bạn có thể tin tưởng vào giá trị trung thành và sự đảm bảo của những người Kiên Định.
                     </div> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----></div>`
       } else {
-      	document.querySelector(".container1").innerHTML = `<div class="mt-2" style="text-align: justify;"><div><b>•Kết quả:</b> Người Tuân thủ
+      	document.querySelector(".hang").innerHTML = `<canvas id="myChart" style="width:100%;max-width:600px; height: 300px"></canvas>
+        <div class="mt-2" style="text-align: justify;"><div><b>•Kết quả:</b> Người Tuân thủ <span class="nhomd">(Nhóm D)</span>
                     </div> <div><b>•Mô tả:</b> Những người thuộc nhóm Tuân thủ này thường chú trọng vào chất lượng và độ chính xác, chuyên môn, năng lực cá nhân. Họ thường tìm thấy động lực từ những cơ hội để đạt được kiến thức, những cơ hội giúp họ thể hiện được chuyên môn cá nhân và tạo ra những sản phẩm có chất lượng. Người Tuân thủ để ý đến độ chính xác trong công việc, họ luôn muốn duy trì sự ổn định trong công việc. Những người Tuân thủ cũng thường được được mô tả là người cẩn thận, thận trọng, làm việc có hệ thống, chính xác, lịch sự và biết cách ngoại giao. Tuy nhiên, họ có thể bị giới hạn bởi việc bị quá tải, bản thân bị cô lập, những lời chỉ trích và mắc sai lầm.
                     </div> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----></div>`
       }
+
+    new Chart("myChart", {
+          type: "pie",
+          data: {
+            labels: xValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues
+            }]
+          },
+          options: {
+            title: {
+              display: true,
+              text: "Tích cách của bạn"
+            }
+          }
+        });
+
     }
+
     })
     </script>
 
@@ -209,10 +412,10 @@
      	$('.id' + index).toggleClass('hide');
         $('.preview').prop('disabled', false)
         $('.preview').removeClass('vohieuhoa')
-     	if (index <= 6) {
+     	if (index <= 14) {
 	     	index++;
 	     	$('.id' + index).toggleClass('hide');
-	     	if (index == 6) {
+	     	if (index == 14) {
                 $('.next').addClass('vohieuhoa')
                 $('.next').prop('disabled', true)
                 $('.form-submit').removeClass('vohieuhoa')
