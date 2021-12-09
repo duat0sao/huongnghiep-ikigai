@@ -1,4 +1,13 @@
 
+<?php
+ $ketqua1 = $_GET['kq1'];
+ $ketqua2 = $_GET['kq2'];
+ $ketqua3 = $_GET['kq3'];
+ $ketqua4 = $_GET['kq4'];
+
+
+?>
+
 
 
 
@@ -11,7 +20,7 @@
     </head>
     <body>
  
-<form method="post" action="xuly5.php">
+<form method="post" action="xuly5.php?kq1=<?php echo $ketqua1; ?>&kq2=<?php echo $ketqua2;?>&kq3=<?php echo $ketqua3;?>&kq4=<?php echo  $ketqua4;?>">
     <!-- câu 1 bộ 1-->
     <div>
         <h4>Tôi là người có tính phiêu lưu, mạo hiểm</h4>
