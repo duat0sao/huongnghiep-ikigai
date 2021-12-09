@@ -1,19 +1,22 @@
 
 
-
-
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Holland</title>
+        <link rel="stylesheet" href="style.css">
         
     </head>
     <body>
- 
-<form method="post" action="xuly1.php">
+<div class="container">
+     
+<div class="row justify-content-center hang">
+<form method="post" action="xuly1.php" id="form-1">
+    <h2>Trắc ngiệm Holland</h2>
+
     <!-- câu 1 bộ 1-->
-    <div>
+    <div class="form-group1 id1">
         <h4>Tôi có tính tự lập</h4>
         <div>
             
@@ -33,7 +36,7 @@
         <div>
             
             <input type="radio" name="cau1" value="3">
-            <label>Bạn thấy ý đó gần như là đúng với bạn trong hầu hết mọi trường hợp, chỉ có một vài trường hợp là chưa đúng lắm</label>
+            <label>Bạn thấy ý đó gần như là đúng với bạn trong hầu hết mọi trường hợp</label>
         </div>
         <div>
             
@@ -44,7 +47,7 @@
     </div>
 
     <!-- câu 2 bộ 1-->
-    <div>
+    <div class="form-group1 id2 hide">
         <h4>Tôi suy nghĩ thực tế</h4>
         <div>
             
@@ -75,7 +78,7 @@
     </div>
 
     <!-- câu 3 bộ 1-->
-    <div>
+    <div class="form-group1 id3 hide">
         <h4>Tôi là người thích nghi với môi trường mới</h4>
         <div>
             
@@ -106,7 +109,7 @@
     </div>
 
     <!-- câu 4 bộ 1-->
-    <div>
+    <div class="form-group1 id4 hide">
         <h4>Tôi có thể vận hành, điều khiển các máy móc thiết bị</h4>
         <div>
             
@@ -138,7 +141,7 @@
 
 
     <!-- câu 5 bộ 1-->
-    <div>
+    <div class="form-group1 id5 hide">
         <h4>Tôi có thể vận hành, điều khiển các máy móc thiết bị</h4>
         <div>
             
@@ -169,7 +172,7 @@
     </div>
 
     <!-- câu 6 bộ 1-->
-    <div>
+    <div class="form-group1 id6 hide">
         <h4>Tôi có thể vận hành, điều khiển các máy móc thiết bị</h4>
         <div>
             
@@ -200,7 +203,7 @@
     </div>
 
     <!-- câu 7 bộ 1-->
-    <div>
+    <div class="form-group1 id7 hide">
         <h4>Tôi có thể vận hành, điều khiển các máy móc thiết bị</h4>
         <div>
             
@@ -231,7 +234,7 @@
     </div>
 
     <!-- câu 8 bộ 1-->
-    <div>
+    <div  class="form-group1 id8 hide">
         <h4>Tôi có thể vận hành, điều khiển các máy móc thiết bị</h4>
         <div>
             
@@ -262,7 +265,7 @@
     </div>
 
     <!-- câu 9 bộ 1-->
-    <div>
+    <div class="form-group1 id9 hide">
         <h4>Tôi có thể vận hành, điều khiển các máy móc thiết bị</h4>
         <div>
             
@@ -292,14 +295,17 @@
         
     </div>
 
+   
+    	
+
 
    
     <input type="submit" value="Gửi">
     
 </form>
 
-
-
+</div>
+</div>
 
  
     </body>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Holland Quiz</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>
+
+    <div class="align-center text-center">
+      <h2 class="question"></h2>
+      <div class="answers">
+        <button class="btn btn-primary absolutely" value="4" type="button">
+          Hoàn toàn đúng
+        </button>
+        <button class="btn btn-primary very" value="3" type="button">
+          Đúng trong hầu hết trường hợp
+        </button>
+        <button class="btn btn-primary normal" value="2" type="button">
+          Chỉ đúng một nửa
+        </button>
+        <button class="btn btn-primary maybe" value="1" type="button">
+          Đúng trong vài trường hợp
+        </button>
+        <button class="btn btn-primary never" value="0" type="button">
+          Không hề đúng
+        </button>
+      </div>
+    </div>
+
+    <div class="align-center">
+      <h1 class="text-center" style="display: none;" id="resultIntro">
+        Kết quả của bạn là
+      </h1>
+      <div class="result blue" style="display: none;"></div>
+      <div><canvas style="display: none;" id="myChart"></canvas></div>
+    </div>
+    
+
+    <script src="holland.js"></script>
+  </body>
+</html>
