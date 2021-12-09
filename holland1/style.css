@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');   
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background-color:powderblue;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  /* background-image: linear-gradient(); */
+  display: flex;
+  justify-content: center;
+}
+
+
+.align-center {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.question {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  margin-top: 0.8rem;
+  background-color: rgb(58, 58, 184);
+  border-color: rgb(58, 58, 184);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: rgb(24, 24, 177);
+  border-color: rgb(24, 24, 177);
+  color: #fff;
+  cursor: pointer;
+}
+
+.blue {
+  background-color: rgb(58, 58, 184);
+  color: #fff;
+  padding: 15px 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  line-height: 1.5rem;
+}
