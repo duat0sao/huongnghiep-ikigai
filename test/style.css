@@ -110,7 +110,10 @@ body{
     padding: 4px 0 0;
 }
 
-
+canvas#myChart {
+    margin-top: 120px;
+    margin-bottom: 40px;
+}
 
 
 .spacer {
