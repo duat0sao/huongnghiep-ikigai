@@ -76,23 +76,23 @@ var dataQuestion = [
 
 
 var newQuestion = dataQuestion.map(function(data, index) {
-	return `<div class="form-group1 id${index + 1} hide">
-    		  	<h4>Bạn là người như thế nào? Chọn đáp án đúng nhất:</h4>
+	return `<div class="form-group1 id${index + 1} hide mb-3">
+    		  	
     		  	<label class="form-message"></label>
     		    <div class="cauhoi">
-    		    	<input type="radio" name="question${index + 1}" value="a">
+    		    	<input class="form-check-input" type="radio" name="question${index + 1}" value="a">
     		    	<label for="question${index + 1}">${data['nhomA']}</label>
     		    </div>
     		    <div class="cauhoi">
-    		    	<input type="radio" name="question${index + 1}" value="b">
+    		    	<input class="form-check-input" type="radio" name="question${index + 1}" value="b">
     		    	<label for="question${index + 1}">${data['nhomB']}</label>
     		    </div>
     		    <div class="cauhoi">
-    		    	<input type="radio" name="question${index + 1}" value="c">
+    		    	<input class="form-check-input" type="radio" name="question${index + 1}" value="c">
     		    	<label for="question${index + 1}">${data['nhomC']}</label>
     		    </div>
     		    <div class="cauhoi">
-    		    	<input type="radio" name="question${index + 1}" value="d">
+    		    	<input class="form-check-input" type="radio" name="question${index + 1}" value="d">
     		    	<label for="question${index + 1}">${data['nhomD']}</label>
     		    </div>
 			</div>
