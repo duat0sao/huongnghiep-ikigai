@@ -82,8 +82,13 @@ function printQuestion() {
   questionText.textContent = questions[questionsIndex];
 }
 
-function nextQuestion() {
+function nextQuestion() {  // câu hỏi tiếp theo
   questionsIndex += 1;
+}
+
+
+function unQuestion() {   // quay lại
+  questionsIndex -= 1;
 }
 
 function removeQuestions() {
@@ -178,7 +183,8 @@ function printCanvas() {
 
     new Chart("myChart", {
       
-      type: "pie",
+      type: "bar",
+      indexLabelFontSize: 0,
       data: {
         labels: xValues,
         datasets: [{
@@ -189,7 +195,8 @@ function printCanvas() {
       options: {
         title: {
           display: true,
-          text: "Biểu điểm của bạn"
+          text: "Biểu điểm của bạn",
+          fontSize:43
         }
       }
     });
