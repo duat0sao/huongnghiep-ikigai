@@ -187,8 +187,10 @@ function printCanvas() {
       indexLabelFontSize: 0,
       data: {
         labels: xValues,
+        
         datasets: [{
           backgroundColor: barColors,
+          
           data: scores
         }]
       },
