@@ -2,7 +2,6 @@
 html,
 body {
 	margin: 0;
-	padding: 0;
 	font-family: "Montserrat", Montserrat, sans-serif;
 	font-size: 10px;
 	background-color: #d8f5fd;
@@ -19,15 +18,15 @@ li {
 
 .page {
 	display: grid;
-	height: 100vh;
+	height: 80vw;
 	width: 100vw;
 }
 
 .venn-wrapper {
 	position: relative;
 	margin: auto;
-	width: 28vw;
-	height: 28vw;
+	width: 48vw;
+	height: 48vw;
 	border-radius: 100%;
 	background-color: #FA8BFF;
 	background-image: -webkit-linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
