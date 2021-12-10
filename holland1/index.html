@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Holland Quiz</title>
     <link rel="stylesheet" href="./style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
   <body>
@@ -32,12 +32,21 @@
       </div>
     </div>
 
+    <div class="container container1 hide">
+      <div class="row justify-content-center">
+        <div class="col">
+          <canvas id="myChart" style="width:100%;max-width:600px; height: 300px"></canvas>
+        </div>
+      </div>
+    </div>
+
     <div class="align-center">
+      
+
       <h1 class="text-center" style="display: none;" id="resultIntro">
         Kết quả của bạn là
       </h1>
       <div class="result blue" style="display: none;"></div>
-      <div><canvas style="display: none;" id="myChart"></canvas></div>
     </div>
     
 

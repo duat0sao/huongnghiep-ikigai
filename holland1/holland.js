@@ -170,6 +170,31 @@ function resultScreen() {
   result.style.display = "block";
 }
 
+function printCanvas() {
+    var xValues = ["Nhóm A", "Nhóm B", "Nhóm C", "Nhóm D", "Nhóm E", "Nhóm F"];
+    var barColors = ["red", "green","blue","orange", "purple", "yellow"];
+
+    document.querySelector(".container1").classList.remove("hide")
+
+    new Chart("myChart", {
+      type: "pie",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: scores
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Tích cách của bạn"
+        }
+      }
+    });
+
+}
+
 function main() {
   printQuestion();
   buttons.forEach(button => {
@@ -181,7 +206,10 @@ function main() {
       nextQuestion();
       printQuestion();
       if (questionsIndex % 9 == 0) scoresIndex += 1;
-      if (questionsIndex == questions.length) resultScreen();
+      if (questionsIndex == questions.length) {
+        resultScreen();
+        printCanvas();
+      }
     });
   });
 }
