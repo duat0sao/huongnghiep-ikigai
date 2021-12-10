@@ -1,11 +1,13 @@
 var index = 1;
      $('.next').click(function(event) {
      	$('.id' + index).toggleClass('hide');
+        $('.question-' + index).toggleClass('hide');
         $('.preview').prop('disabled', false)
         $('.preview').removeClass('vohieuhoa')
      	if (index <= 14) {
 	     	index++;
 	     	$('.id' + index).toggleClass('hide');
+            $('.question-' + index).toggleClass('hide');
 	     	if (index == 14) {
                 $('.next').addClass('vohieuhoa')
                 $('.next').prop('disabled', true)
@@ -17,8 +19,10 @@ var index = 1;
 
      $('.preview').click(function(event) {
      	$('.id' + index).toggleClass('hide');
+        $('.question-' + index).toggleClass('hide');
      	index--
      	$('.id' + index).toggleClass('hide');
+        $('.question-' + index).toggleClass('hide');
      	$('.next').prop('disabled', false)
         $('.next').removeClass('vohieuhoa')
      	if (index == 1) {

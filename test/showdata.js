@@ -74,15 +74,6 @@ var dataQuestion = [
 
 
 
-let htmlFooter = `<div class="footer">
-				<div class="footer_l">
-					<input type="button" class="preview vohieuhoa" value="Preview" disabled>
-					<input type="button" class=" next" value="Next">
-				</div>
-				<div class="footer_r">
-					<button class="form-submit vohieuhoa" disabled>Submit</button>
-				</div>
-			  </div>`
 
 var newQuestion = dataQuestion.map(function(data, index) {
 	return `<div class="form-group1 id${index + 1} hide">
@@ -104,10 +95,13 @@ var newQuestion = dataQuestion.map(function(data, index) {
     		    	<input type="radio" name="question${index + 1}" value="d">
     		    	<label for="question${index + 1}">${data['nhomD']}</label>
     		    </div>
-			</div>`
+			</div>
+			<div class="question-${index + 1} hide"><h5 class="thutu">Question ${index + 1} of ${dataQuestion.length}</h5></div>
+			`
 })
 
 
-let html = newQuestion.join('') + htmlFooter
-$('#form-1').html(html);
+
+$('.content').html(newQuestion.join(''));
 $(".id1").removeClass('hide')
+$('.question-1').removeClass('hide')
