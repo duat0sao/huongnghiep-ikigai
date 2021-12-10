@@ -171,12 +171,13 @@ function resultScreen() {
 }
 
 function printCanvas() {
-    var xValues = ["Nhóm A", "Nhóm B", "Nhóm C", "Nhóm D", "Nhóm E", "Nhóm F"];
+    var xValues = ['R: Realistic', 'I: Investigative', 'A: Artstic', 'S: Social', 'E: Enterprising', 'C: Conventional'];
     var barColors = ["red", "green","blue","orange", "purple", "yellow"];
 
     document.querySelector(".container1").classList.remove("hide")
 
     new Chart("myChart", {
+      
       type: "pie",
       data: {
         labels: xValues,
@@ -188,7 +189,7 @@ function printCanvas() {
       options: {
         title: {
           display: true,
-          text: "Tích cách của bạn"
+          text: "Biểu điểm của bạn"
         }
       }
     });
