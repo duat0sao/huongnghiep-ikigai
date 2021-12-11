@@ -231,20 +231,16 @@ function main() {
         resultScreen();
         printCanvas();
 
-        var bo1 = console.log(scores[0]);
-        var bo2 = console.log(scores[1]);
-        var bo3 = console.log(scores[2]);
-        var bo4 = console.log(scores[3]);
-        var bo5 = console.log(scores[4]);
-        var bo6 = console.log(scores[5]);
 
+        
         $.ajax({
           url: "xuly.php",
           type: "POST",
-          cache: false,
-          data:{bo1:bo1,bo2:bo2,bo3:bo3,bo4:bo4,bo5:bo5,bo6:bo6},
-          success: function(result){
-            alert(result);}
+          
+          data:{clm: scores}
+         
+          
+          
         });
 
       }
