@@ -8,13 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <script src="1.js"></script>
+    
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');   
-
-
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');   
+         
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +19,7 @@
 }
 
 body{
-  background-color:powderblue;
+  background-color:white;
   font-size: 20px;
   font-family: 'Poppins', sans-serif;
   /* background-image: linear-gradient(); */
@@ -130,15 +127,17 @@ canvas#myChart {
 
                 <div class="content"></div>
 			
-    		  <div class="footer">
-                <div class="footer_l">
-                    <input type="button" class="preview vohieuhoa btn" value="Preview" disabled>
-                    <input type="button" class="next btn" value="Next">
-                </div>
-                <div class="footer_r">
-                    <button class="form-submit vohieuhoa" disabled>Submit</button>
-                </div>
-              </div>
+    		  <center>
+                <div class="footer">
+                    <div class="footer_l">
+                        <input type="button" class="preview vohieuhoa btn" value="Preview" disabled>
+                        <button class="form-submit vohieuhoa btn" disabled>Submit</button>
+                        <input type="button" class="next btn" value="Next">
+                       
+                    </div>
+                    
+                  </div>
+              </center>
     		</form>
     	</div>
     </div>
@@ -146,46 +145,58 @@ canvas#myChart {
     <script>
         var dataQuestion = [
 	{
-		"nhomA" : "Đạt được mục tiêu xuất sắc.",
+		"nhomA" : "Cuộc sống của bạn chủ yếu xoay quanh việc gì.",
 		
 	},{
-		"nhomA" : "Độc lập.",
+		"nhomA" : "Bạn bè nhớ đến bạn vì điều gì.",
 		
 	},{
-		"nhomA" : "Hướng đến những cơ hội mới.",
+		"nhomA" : "Thầy cô nhớ đến bạn vì điều gì.",
 		
 	},{
-		"nhomA" : "Tôi thích nói lên suy nghĩ của mình.",
+		"nhomA" : "Kỹ năng bẩm sinh bạn có.",
 		
 	},{
-		"nhomA" : "Tôi giỏi thuyết phục mọi người",
+		"nhomA" : "Bạn học kỹ năng nào dễ dàng nhất",
 		
 	},{
-		"nhomA" : "Tôi rất bình thường trong thói quen của tôi.",
+		"nhomA" : "Bạn bè hay nhờ bạn điều gì.",
 		
 	},{
-		"nhomA" : "Tôi có sự nhận thức và hiểu biết sâu sắc về mọi người xung quanh.",
+		"nhomA" : "Nếu không phải nghĩ về tiền, bạn sẽ làm gì.",
 		
 	},{
-		"nhomA" : "Tôi có thể dễ dàng thuyết phục người khác.",
+		"nhomA" : "Điều gì khiến bạn quên thời gian.",
 		
 	},{
-		"nhomA" : "Tôi đưa ra quyết định nhanh chóng.",
+		"nhomA" : "Điều gì khiến làm nổi khùng.",
 		
 	},{
-		"nhomA" : "Tôi nóng nảy bồn chồn.",
+		"nhomA" : "Điều  gì làm bạn tràn đầy nhiệt huyết.",
 		
 	},{
-		"nhomA" : "Mọi người không thể ngăn cản tôi.",
+		"nhomA" : "Bạn muốn thay đổi gì ở trường học.",
 		
 	},{
-		"nhomA" : "Bỏ dở công việc.",
+		"nhomA" : "Thành tựu nào khiến bạn tự hào.",
 		
 	},{
-		"nhomA" : "Làm việc với tiểu tiết.",
+		"nhomA" : "Điều gì khiến bạn cảm thấy vui nhất.",
 		
 	},{
-		"nhomA" : "Phải đưa ra quyết định nhanh chóng.",
+		"nhomA" : "Điều gì khiến bạn muốn giải quyết nhất.",
+		
+	},
+    {
+		"nhomA" : "3 điều bạn muốn làm ngay hôm nay.",
+		
+	},
+    {
+		"nhomA" : "Bạn ngưỡng mộ công việc của ai nhất.",
+		
+	},
+    {
+		"nhomA" : "Bạn thấy công việc của ai thú vị.",
 		
 	},
 ]
@@ -199,7 +210,7 @@ var newQuestion = dataQuestion.map(function(data, index) {
                 <label class="form-message"></label>
     		    <div class="cauhoi">
                     <label for="question${index + 1}">${data['nhomA']}</label><br>
-    		    	<input type="input" name="question${index + 1}" value="Mời bạn điền vô đây">
+    		    	<input type="input" class="form-control" name="question${index + 1}" value="Mời bạn điền vô đây">
     		    	
     		    </div>
     		   
