@@ -1,0 +1,255 @@
+
+   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="1.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');   
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');   
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background-color:powderblue;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  /* background-image: linear-gradient(); */
+  display: flex;
+  justify-content: center;
+}
+
+
+.align-center {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.question {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  margin-top: 0.8rem;
+  background-color: rgb(58, 58, 184);
+  border-color: rgb(58, 58, 184);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: rgb(24, 24, 177);
+  border-color: rgb(24, 24, 177);
+  color: #fff;
+  cursor: pointer;
+}
+
+.blue {
+  background-color: rgb(58, 58, 184);
+  color: #fff;
+  padding: 15px 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  line-height: 1.5rem;
+}
+
+.hide {
+  display: none;
+}
+@media only screen and (min-width: 600px) {
+  .container1{
+    width: 600vh;
+    height: 100vh;
+    /* background-color: turquoise; */
+    position: relative;
+    }
+
+    h2.header {
+        width: 100%;
+        color: #e9558b;
+        font-size: 50px;
+        margin: 60px auto 20px;
+        text-align: center;
+    }
+    .form-group1{
+        width: 500px;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 20px;
+        border: 1px solid white;
+        border-radius: 15px;
+    }
+}
+
+
+
+canvas#myChart {
+  margin-top: 120px;
+  margin-bottom: 40px;
+}
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    	<div class="row justify-content-center hang">
+
+            <h2 class="header">Bạn thích gì?</h2>
+
+    		<form id="form-1">
+
+                <div class="content"></div>
+			
+    		  <div class="footer">
+                <div class="footer_l">
+                    <input type="button" class="preview vohieuhoa btn" value="Preview" disabled>
+                    <input type="button" class="next btn" value="Next">
+                </div>
+                <div class="footer_r">
+                    <button class="form-submit vohieuhoa" disabled>Submit</button>
+                </div>
+              </div>
+    		</form>
+    	</div>
+    </div>
+
+    <script>
+        var dataQuestion = [
+	{
+		"nhomA" : "Đạt được mục tiêu xuất sắc.",
+		
+	},{
+		"nhomA" : "Độc lập.",
+		
+	},{
+		"nhomA" : "Hướng đến những cơ hội mới.",
+		
+	},{
+		"nhomA" : "Tôi thích nói lên suy nghĩ của mình.",
+		
+	},{
+		"nhomA" : "Tôi giỏi thuyết phục mọi người",
+		
+	},{
+		"nhomA" : "Tôi rất bình thường trong thói quen của tôi.",
+		
+	},{
+		"nhomA" : "Tôi có sự nhận thức và hiểu biết sâu sắc về mọi người xung quanh.",
+		
+	},{
+		"nhomA" : "Tôi có thể dễ dàng thuyết phục người khác.",
+		
+	},{
+		"nhomA" : "Tôi đưa ra quyết định nhanh chóng.",
+		
+	},{
+		"nhomA" : "Tôi nóng nảy bồn chồn.",
+		
+	},{
+		"nhomA" : "Mọi người không thể ngăn cản tôi.",
+		
+	},{
+		"nhomA" : "Bỏ dở công việc.",
+		
+	},{
+		"nhomA" : "Làm việc với tiểu tiết.",
+		
+	},{
+		"nhomA" : "Phải đưa ra quyết định nhanh chóng.",
+		
+	},
+]
+
+
+
+
+var newQuestion = dataQuestion.map(function(data, index) {
+	return `<div class="form-group1 id${index + 1} hide mb-3">
+    		  	
+                <label class="form-message"></label>
+    		    <div class="cauhoi">
+                    <label for="question${index + 1}">${data['nhomA']}</label><br>
+    		    	<input type="input" name="question${index + 1}" value="Mời bạn điền vô đây">
+    		    	
+    		    </div>
+    		   
+			</div>
+			
+			`
+})
+
+
+
+$('.content').html(newQuestion.join(''));
+$(".id1").removeClass('hide')
+$('.question-1').removeClass('hide')
+    </script>
+
+    <script src="xuly.js"></script>
+
+    <script>
+        var index = 1;
+     $('.next').click(function(event) {
+     	$('.id' + index).toggleClass('hide');
+        $('.question-' + index).toggleClass('hide');
+        $('.preview').prop('disabled', false)
+        $('.preview').removeClass('vohieuhoa')
+     	if (index <= 14) {
+	     	index++;
+	     	$('.id' + index).toggleClass('hide');
+            $('.question-' + index).toggleClass('hide');
+	     	if (index == 14) {
+                $('.next').addClass('vohieuhoa')
+                $('.next').prop('disabled', true)
+                $('.form-submit').removeClass('vohieuhoa')
+                $('.form-submit').prop('disabled', false)
+	     	}
+	     }
+     });
+
+     $('.preview').click(function(event) {
+     	$('.id' + index).toggleClass('hide');
+        $('.question-' + index).toggleClass('hide');
+     	index--
+     	$('.id' + index).toggleClass('hide');
+        $('.question-' + index).toggleClass('hide');
+     	$('.next').prop('disabled', false)
+        $('.next').removeClass('vohieuhoa')
+     	if (index == 1) {
+            $('.preview').prop('disabled', true)
+            $('.preview').addClass('vohieuhoa')
+        }
+     });
+    </script>
+</body>
+</html>

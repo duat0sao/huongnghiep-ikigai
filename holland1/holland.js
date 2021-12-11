@@ -77,6 +77,9 @@ const buttons = document.querySelectorAll(".answers button");
 let questionsIndex = 0;
 let scoresIndex = 0;
 
+
+
+
 function printQuestion() {
   console.log(questions[questionsIndex]);
   questionText.textContent = questions[questionsIndex];
@@ -87,9 +90,6 @@ function nextQuestion() {  // câu hỏi tiếp theo
 }
 
 
-function unQuestion() {   // quay lại
-  questionsIndex -= 1;
-}
 
 function removeQuestions() {
   questionText.style.display = "none";
@@ -183,7 +183,7 @@ function printCanvas() {
 
     new Chart("myChart", {
       
-      type: "bar",
+      type: "pie",
       indexLabelFontSize: 0,
       data: {
         labels: xValues,
@@ -205,6 +205,11 @@ function printCanvas() {
 
 }
 
+
+
+
+
+
 function main() {
   printQuestion();
   buttons.forEach(button => {
@@ -214,11 +219,12 @@ function main() {
       scores[scoresIndex] += score;
       console.log(scores);
       nextQuestion();
+      document.getElementById("1").checked = false;
       printQuestion();
       if (questionsIndex % 9 == 0) scoresIndex += 1;
       if (questionsIndex == questions.length) {
         resultScreen();
-        printCanvas();
+        //printCanvas();
       }
     });
   });

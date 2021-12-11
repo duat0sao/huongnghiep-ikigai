@@ -8,26 +8,32 @@
     <link rel="stylesheet" href="./style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src = "https://code.highcharts.com"> </script>
+
   </head>
   <body>
 
     <div class="align-center text-center">
       <h2 class="question"></h2>
       <div class="answers">
-        <button class="btn btn-primary absolutely" value="4" type="button">
+        <button class="btn btn-primary absolutely" value="4" type="button" id="1">
           Hoàn toàn đúng
         </button>
-        <button class="btn btn-primary very" value="3" type="button">
+        <button class="btn btn-primary very" value="3" type="button" id="1">
           Đúng trong hầu hết trường hợp
         </button>
-        <button class="btn btn-primary normal" value="2" type="button">
+        <button class="btn btn-primary normal" value="2" type="button" id="1">
           Chỉ đúng một nửa
         </button>
-        <button class="btn btn-primary maybe" value="1" type="button">
+        <button class="btn btn-primary maybe" value="1" type="button" id="1">
           Đúng trong vài trường hợp
         </button>
-        <button class="btn btn-primary never" value="0" type="button">
+        <button class="btn btn-primary never" value="0" type="button" id="1">
           Không hề đúng
+        </button>
+
+        <br><br> 
+        <a class="btn btn-primary" href="../toigioi.html">Trở lại</a>
         
       </div>
     </div>
@@ -40,14 +46,17 @@
       
 
       <h1 class="text-center" style="display: none;" id="resultIntro">
-        
+          kết quả của bạn là:
       </h1>
 
       <div class="container container1 hide">
         <div class="row justify-content-center">
+          
           <div>
-            <canvas id="myChart" style="width:100%;max-width:600px; height: 300px"></canvas>
+            <canvas id="myChart" style="width:100%; margin:auto; max-width:600px; height: 300px"></canvas>
           </div>
+          <br><br><br><br>
+
         </div>
       </div>
       <div class="result blue" style="display: none;"></div>
