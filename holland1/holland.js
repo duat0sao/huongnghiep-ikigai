@@ -62,7 +62,7 @@ const questions = [
 //   enterprising: 0,
 //   conventional: 0
 // };
-let scores = [0, 0, 0, 0, 0, 0];
+var scores = [0, 0, 0, 0, 0, 0];
 /* 
 index 0 => realistic
 index 1 => investigate
@@ -158,7 +158,12 @@ function resultScreen() {
     return b.score - a.score;
   });
 
+
+
+
+
   //   Print Result
+  document.getElementById("taga").style.display = "none";
   document.getElementById("resultIntro").style.display = "block";
   let resultName = document.createElement("h2");
   result.classList.add("text-center");
@@ -176,7 +181,7 @@ function resultScreen() {
 }
 
 function printCanvas() {
-    var xValues = ['R: Realistic', 'I: Investigative', 'A: Artstic', 'S: Social', 'E: Enterprising', 'C: Conventional'];
+    var xValues = ['R:', 'I:', 'A:', 'S:', 'E:', 'C:'];
     var barColors = ["red", "green","blue","orange", "purple", "yellow"];
 
     document.querySelector(".container1").classList.remove("hide")
@@ -224,7 +229,24 @@ function main() {
       if (questionsIndex % 9 == 0) scoresIndex += 1;
       if (questionsIndex == questions.length) {
         resultScreen();
-        //printCanvas();
+        printCanvas();
+
+        var bo1 = console.log(scores[0]);
+        var bo2 = console.log(scores[1]);
+        var bo3 = console.log(scores[2]);
+        var bo4 = console.log(scores[3]);
+        var bo5 = console.log(scores[4]);
+        var bo6 = console.log(scores[5]);
+
+        $.ajax({
+          url: "xuly.php",
+          type: "POST",
+          cache: false,
+          data:{bo1:bo1,bo2:bo2,bo3:bo3,bo4:bo4,bo5:bo5,bo6:bo6},
+          success: function(result){
+            alert(result);}
+        });
+
       }
     });
   });

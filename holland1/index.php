@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Holland Quiz</title>
     <link rel="stylesheet" href="./style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src = "https://code.highcharts.com"> </script>
@@ -33,7 +34,7 @@
         </button>
 
         <br><br> 
-        <a class="btn btn-primary" href="../toigioi.html">Trở lại</a>
+        <a class="btn btn-primary" href="../toigioi.html" id="taga" style="display: block;">Trở lại</a>
         
       </div>
     </div>
@@ -46,14 +47,14 @@
       
 
       <h1 class="text-center" style="display: none;" id="resultIntro">
-          kết quả của bạn là:
+          
       </h1>
 
       <div class="container container1 hide">
         <div class="row justify-content-center">
           
           <div>
-            <canvas id="myChart" style="width:100%; margin:auto; max-width:600px; height: 300px"></canvas>
+            <canvas id="myChart" style="width:100%; margin:auto; max-width:600px; height: 600px"></canvas>
           </div>
           <br><br><br><br>
 
