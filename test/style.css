@@ -26,18 +26,38 @@ body{
     h2.header {
         width: 100%;
         color: #e9558b;
-        font-size: 30px;
+        font-size: 28px;
         margin: 30px auto 20px;
         text-align: center;
     }
     .form-group1{
         width: 80%;
-        height: 80vh;
         margin: 0 auto;
         overflow: hidden;
         padding: 20px;
         border: 1px solid white;
         border-radius: 15px;
+    }
+
+    .hang h4{
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        padding: 0 12px;
+    }
+
+    .form-group2{
+        width: 80%;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 20px;
+        border: 1px solid white;
+        border-radius: 15px;
+    }
+
+    .kq,
+    .mota {
+        font-size: 14px;
     }
 
     .cauhoi{
@@ -55,15 +75,21 @@ body{
     .cauhoi label{
         margin:0 0 0 15px;
         color: black;
-        font-size: 20px;
+        font-size: 16px;
     }
     .footer{
         margin: 20px 40px;
         display: flex;
         justify-content: space-between;
     }
+
+    .footer .footer_l,
+    .footer .footer_r {
+        float: left;
+    }
+
     .footer .footer_l input{
-        width: 112px;
+        width: 100px;
         height: 40px;
         color: powderblue;
         background-color: #e9558b;
@@ -71,11 +97,12 @@ body{
         outline: none;
         border-radius: 5px;
         font-size: 16px;
+        margin-top: 0 10px;
 
     }
 
     .footer .footer_r button{
-        width: 120px;
+        width: 100px;
         color: white;
         height: 40px;
         background-image:linear-gradient( -90deg, rgb(245, 156, 105) 0%, rgb(252, 52, 105) 100%);
@@ -99,17 +126,23 @@ body{
     h2.header {
         width: 100%;
         color: #e9558b;
-        font-size: 50px;
+        font-size: 30px;
         margin: 60px auto 20px;
         text-align: center;
     }
-    .form-group1{
+    .form-group1,
+    .form-group2{
         width: 500px;
         margin: 0 auto;
         overflow: hidden;
         padding: 20px;
         border: 1px solid white;
         border-radius: 15px;
+    }
+
+    .kq,
+    .mota {
+        font-size: 16px;
     }
 }
 
@@ -125,17 +158,23 @@ body{
     h2.header {
         width: 100%;
         color: #e9558b;
-        font-size: 50px;
+        font-size: 45px;
         margin: 60px auto 20px;
         text-align: center;
     }
-    .form-group1{
+    .form-group1,
+    .form-group2{
         width: 700px;
         margin: 0 auto;
         overflow: hidden;
         padding: 20px;
         border: 1px solid white;
         border-radius: 15px;
+    }
+
+    .kq,
+    .mota {
+        font-size: 18px;
     }
 } 
 
@@ -155,7 +194,8 @@ body{
         margin: 60px auto 20px;
         text-align: center;
     }
-    .form-group1{
+    .form-group1,
+    .form-group2{
         width: 900px;
         margin: 0 auto;
         overflow: hidden;
@@ -181,7 +221,8 @@ body{
         margin: 60px auto 20px;
         text-align: center;
     }
-    .form-group1{
+    .form-group1,
+    .form-group2{
         width: 1000px;
         margin: 0 auto;
         overflow: hidden;
@@ -277,7 +318,7 @@ body{
 }
 
 canvas#myChart {
-    margin-top: 120px;
+    margin-top: 80px;
     margin-bottom: 40px;
 }
 
