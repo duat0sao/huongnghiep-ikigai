@@ -1,0 +1,249 @@
+
+/* CSS Document */
+
+/* 
+    Created on   : 28/06/2019.
+    Theme Name   : Rogan - Business and Agency html Template.
+    Version      : 1.1.
+    Author       : Creativegigs.
+    Developed by : Jubayer al hasan. (me@heloshape.com) / (www.me.heloshape.com)
+   
+*/
+
+/* ------------------------------------------ */
+/*             TABLE OF CONTENTS
+/* ------------------------------------------ */
+/*   01 - Global Prefix  */
+/*   02 - Loading Transition  */
+/*   03 - Global style  */
+/*   04 - Prefix Classes */
+/*   05 - Theme Section Title */
+/*   06 - Theme Button  */
+/*   07 - Theme Pagination  */
+/*   08 - Theme Menu  */
+/*   09 - Main Hero Banner  */
+/*   10 - rogan Hero One  */
+/*   11 - rogan Hero Two  */
+/*   12 - rogan Hero Three  */
+/*   13 - Our Core Feature  */
+/*   14 - About Us One   */
+/*   15 - About Us Two  */
+/*   16 - Our Service One  */
+/*   17 - Testimonial Classic  */
+/*   18 - Testemonial Classic version two  */
+/*   19 - Testimonial Standard   */
+/*   20 - Free Consultation */
+/*   21 - Home Blog */
+/*   22 - Newsletter Section */
+/*   23 - Footer One  */
+/*   24 - Achivement Section  */
+/*   25 - Why Choose Us  */
+/*   26 - Project Gallery */
+/*   27 - Pricing Plan One  */
+/*   28 - Partner Section   */
+/*   29 - Contact Us HOme   */
+/*   30 - Banner Large Text   */
+/*   31 - About Text Block   */
+/*   32 - Our Team Standard   */
+/*   33 - Our Team Minimul   */
+/*   34 - Our Team Buisness   */
+/*   35 - Inner Banner   */
+/*   36 - Text Inner Banner One   */
+/*   37 - Our Service/Modern   */
+/*   38 - Our Service/Classic   */
+/*   39 - Contact Banner   */
+/*   40 - Intro Text   */
+/*   41 - Our Portfolio   */
+/*   42 - Project Details   */
+/*   43 - Blog Sidebar   */
+/*   44 - Our Blog   */
+/*   45 - Blog Details   */
+/*   46 - Sidebar Menu   */
+/*   47 - Product Filter Area/Sidebar   */
+/*   48 - SHOP SHOWCASE   */
+/*   49 - Promo Code   */
+/*   50 - Shop Details   */
+/*   51 - Cart Page   */
+/*   52 - CheckOut Page  */
+/*   53 - Contact Address   */
+/*   54 - FAQ Page   */
+/*   55 - Error   */
+/*   56 - Sign Up   */
+
+
+
+
+
+/**
+* Importing necessary  Styles.
+**/
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import url('../fonts/gilroy/fonts.css');
+/*----bootstrap css ----- */
+@import url('../vendor/bootstrap/css/bootstrap.min.css');
+/*------- Framework css -----------*/
+@import url('framework.css');
+/*------- menu ------*/
+@import url('../vendor/mega-menu/assets/css/menu.css');
+/*----font awesome -------*/
+@import url('../fonts/font-awesome/css/font-awesome.min.css');
+/*---------------- Cube Portfolio -------------*/
+@import url('../vendor/cubeportfolio/css/cubeportfolio.min.css');
+/*----owl-carousel css----*/
+@import url('../vendor/owl-carousel/owl.carousel.css');
+@import url('../vendor/owl-carousel/owl.theme.css');
+@import url('../vendor/owl-carousel/animate.css');
+/*-------- AOS css ------*/
+@import url('../vendor/aos-next/dist/aos.css');
+/*----------- Fancybox css -------*/
+@import url('../vendor/fancybox/dist/jquery.fancybox.min.css');
+/*------------- Map -------------*/
+@import url('../vendor/sanzzy-map/dist/snazzy-info-window.min.css');
+/*----Flaticon-------*/
+@import url('../fonts/icon/font/flaticon.css');
+/*---------------- Custom Animation -------------*/
+@import url('custom-animation.css');
+/*---------------- Animated Headline -------------*/
+@import url('../vendor/animated-headline-master/style.css');
+/*---------------- Modal -------------*/
+@import url('../vendor/iziModal-master/iziModal.css');
+/*--------- Jquery ui ---------*/
+@import url('../vendor/jquery-ui/jquery-ui.min.css');
+/*--------- Select js ---------*/
+@import url('../vendor/selectize.js/selectize.css');
+/*--------- Tabs ---------*/
+@import url('../vendor/tabs/tabs.css');
+
+/*^^^^^^^^^^^^^^^^^^^^^^ SHORTCODE CSS ^^^^^^^^^^^^^^^^^^*/
+/*Must include if you want the shortcode/element styles*/ 
+@import url('shortcode-style.css');
+
+@font-face {
+  font-family: 'font-awesome';
+  src: url('../fonts/font-awesome/fonts/fontawesome-webfont.ttf');
+  src: url('../fonts/font-awesome/fonts/fontawesome-webfont.eot'), /* IE9 Compat Modes */
+       url('../fonts/font-awesome/fonts/fontawesome-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/font-awesome/fonts/fontawesome-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/font-awesome/fonts/fontawesome-webfont.svg') format('svg'); /* Legacy iOS */
+}
+
+/*========================================================================================
+
+*************************** Start Styling Your theme from here ***************************
+
+==========================================================================================*/
+/*------------- Global Prefix -------------------*/
+::-webkit-scrollbar{ width: 5px; }
+::-webkit-scrollbar-track { background: #fff;}
+::-webkit-scrollbar-thumb { background: var(--rose-gr-bg);border-radius: 30px;}
+:root {
+  --text-color: #8a919c;
+  --text-light:#c0c0c9;
+  --text-dark: #313131;
+  --heading :#2A2A2A;
+  --p-rose: #ff5284;
+  --rose-gr-bg: linear-gradient( -90deg, rgb(255,182,139) 0%, rgb(255,96,139) 100%);
+  --rose-gr-reverse: linear-gradient( -90deg, rgb(255,96,139) 0%, rgb(255,182,139) 100%);
+  --p-green: #0de49d;
+  --p-orange:#ff8618;
+  --cyan: #1aceff;
+  --redOne:#ff6262;
+}
+
+body {
+  /*
+  font-family: 'gilroy-black';   
+  font-family: 'gilroy-bold';
+  font-family: 'gilroy-semibold';
+  font-family: 'gilroy-light';
+  font-family: 'gilroy-ultralight';
+        */
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 17px;
+  position: relative;
+  line-height: 28px;
+  color: var(--text-color);
+}
+/*** 
+
+====================================================================
+  Loading Transition
+====================================================================
+
+ ***/
+.ctn-preloader {
+  align-items: center;
+  -webkit-align-items: center;
+  display: flex;
+  display: -ms-flexbox;
+  height: 100%;
+  justify-content: center;
+  -webkit-justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: #fff;
+}
+.ctn-preloader .animation-preloader {position: absolute;z-index: 100;}
+.ctn-preloader .animation-preloader .icon {margin-bottom: 60px; display: flex; justify-content: center;}
+.ctn-preloader .animation-preloader .icon img {margin: 0 auto;}
+.ctn-preloader .animation-preloader .txt-loading {text-align: center;user-select: none;}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:before {
+  animation: letters-loading 4s infinite;
+  color: var(--p-rose);
+  content: attr(data-text-preloader);
+  left: 0;
+  opacity: 0;
+  top:0;
+  line-height: 70px;
+  position: absolute;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading {
+  font-weight: 700;
+  letter-spacing: 15px;
+  display: inline-block;
+  color: rgba(255, 82, 132, 0.15);
+  position: relative;
+  font-size: 70px;
+  line-height: 70px;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(2):before {animation-delay: 0.2s;}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(3):before {animation-delay: 0.4s;}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(4):before {animation-delay: 0.6s;}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(5):before {animation-delay: 0.8s;}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(6):before { animation-delay: 1s;}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(7):before { animation-delay: 1.2s;}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(8):before { animation-delay: 1.4s;}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(9):before {animation-delay: 1.6s;}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(10):before {animation-delay: 1.8s;}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(11):before { animation-delay: 2s;}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(12):before { animation-delay: 2.2s;}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(13):before { animation-delay: 2.4s;}
+.ctn-preloader .loader-section {
+  background-color: #ffffff;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: calc(50% + 1px);
+}
+.loaded .animation-preloader {opacity: 0;transition: 0.3s ease-out;}
+@keyframes letters-loading {
+  0%,
+  75%,
+  100% {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+
+  25%,
+  50% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+@media screen and (max-width: 500px) {
+  .ctn-preloader .animation-preloader .txt-loading .letters-loading {font-size: 65px; letter-spacing: 10px;}
+}
