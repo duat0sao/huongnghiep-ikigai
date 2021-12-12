@@ -56,6 +56,7 @@ include('random.php');
        
         mysqli_query($conn,"INSERT INTO holland(idkhach) VALUES('$idkhach')");
         mysqli_query($conn,"INSERT INTO disc(idkhach) VALUES('$idkhach')");
+		mysqli_query($conn,"INSERT INTO toithichgi(idkhach) VALUES('$idkhach')");
         
         
         header('location:../index.php');
@@ -71,8 +72,7 @@ include('random.php');
 		}
 		$errorstring .= "Please try again.<br>";
         header("Location:error.php?error=$errorstring");
-		}// End of if (empty($errors)) IF.
-
+		}
 
 
 
