@@ -245,20 +245,20 @@ include 'config.php';
 	    <div class="venn-wrapper">
 		    <h1>IKIGAI</h1>
 		    <div class="venn-1">
-			    <p><a href="toithich/index.html"> Bạn<b> thích</b> cái gì?</a></p>
+			    <p><a href="toithich/index.php"> Bạn<b> thích</b> cái gì?</a></p>
 			    <span><b>Sứ mệnh</b></span>
 		    </div>
 		    <div class="venn-2">
-			    <p><a href="cangi.html"><b>Thế giới </b> cần gì?</a></p>
+			    <p><a href="cangi.php"><b>Thế giới </b> cần gì?</a></p>
 			    <span><b>Nghề nghiệp</b></span>
 		    </div>
 		    <div class="venn-3">
-			    <p> <a href="duoctra.html">Bạn được<b> trả tiền</b> vì? </a></p>
+			    <p> <a href="duoctra.php">Bạn được<b> trả tiền</b> vì? </a></p>
 			    </ul>
 			    <span><b>Chuyên môn</b></span>
 		    </div>
 		    <div class="venn-4">
-			    <p><a href="toigioi.html">Bạn <b>giỏi</b>  gì?</b></a></p>
+			    <p><a href="toigioi.php">Bạn <b>giỏi</b>  gì?</b></a></p>
 			    <span><b>Đam mê</b></span>
 		    </div>
 

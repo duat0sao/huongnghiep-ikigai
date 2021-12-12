@@ -18,8 +18,7 @@
 </head>
 <body>
 
-    <img class="la-phai" src="img/la1.png" alt="">
-    <img class="la-trai" src="img/la2.png" alt="" style="left: 0;">
+    <?php include '../nen.php'; ?>
     
     <div class="container1">
     	<div class="row justify-content-center hang">

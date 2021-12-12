@@ -116,10 +116,6 @@ body{
         font-size: 16px;
     }
 
-    .la-phai, 
-    .la-trai {
-        display: none;
-    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -352,23 +348,4 @@ canvas#myChart {
 
 .nhomd {
     color: orange;
-}
-
-.la-phai {
-    position: absolute;
-    right: 0;
-    width: 250px;
-    object-fit: cover;
-    transform: translateX(40%);
-    bottom: 40px;
-    z-index: -1;
-}
-
-.la-trai {
-    position: absolute;
-    top: 20px;
-    width: 250px;
-    object-fit: cover;
-    transform: translateX(-40%);
-    z-index: -1;
 }
