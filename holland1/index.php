@@ -19,8 +19,54 @@ $idkhach = $_GET['id'];
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src = "https://code.highcharts.com"> </script>
 
+
+    <style>
+
+    @media only screen and (max-width: 600px) {
+      .la-phai, 
+      .la-trai, 
+      .logo {
+            display: none;
+        }
+
+
+    }
+
+    .la-phai {
+        position: absolute;
+        right: 0;
+        width: 250px;
+        object-fit: cover;
+        transform: translateX(40%);
+        bottom: 40px;
+        z-index: -1;
+    }
+
+    .la-trai {
+        position: absolute;
+        top: 40px;
+        width: 250px;
+        object-fit: cover;
+        transform: translateX(-40%);
+        z-index: -1;
+    }
+
+    .logo {
+        height: 150px;
+        position: absolute;
+        right: 120px;
+        top: 32px;
+    }
+
+  </style>
+
   </head>
   <body>
+
+    <img class="la-phai" src="img/la1.png" alt="">
+    <img class="la-trai" src="img/la2.png" alt="">
+    <img class="logo" src="img/log_nghiaminh.jpg" alt="">
+
 
     <div class="align-center text-center">
       <h2 class="question"></h2>
