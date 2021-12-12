@@ -62,7 +62,14 @@ const questions = [
 //   enterprising: 0,
 //   conventional: 0
 // };
+
+let params = new URLSearchParams(location.search);
+let aid = params.get('id');
+
+
+
 var scores = [0, 0, 0, 0, 0, 0];
+scores[6] = aid;
 /* 
 index 0 => realistic
 index 1 => investigate
@@ -196,21 +203,19 @@ function printCanvas() {
         datasets: [{
           backgroundColor: barColors,
           
-          data: scores
+          data: [scores[0], scores[1], scores[2], scores[3], scores[4], scores[5]]
         }]
       },
       options: {
         title: {
           display: true,
           text: "Biểu điểm của bạn",
-          fontSize:43
+          fontSize:34
         }
       }
     });
 
 }
-
-
 
 
 
@@ -228,9 +233,14 @@ function main() {
       printQuestion();
       if (questionsIndex % 9 == 0) scoresIndex += 1;
       if (questionsIndex == questions.length) {
+        
         resultScreen();
         printCanvas();
 
+
+        
+        
+        
 
         //truyen du lieu sang xuly.php va day vao db
         $.ajax({

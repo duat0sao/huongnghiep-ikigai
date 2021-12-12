@@ -24,13 +24,17 @@ Validator({
     console.log(nhom4)
 
 
+    let params = new URLSearchParams(location.search);
+    let aid = params.get('id');
+
+
 
     //truyen du lieu sang xuly.php va day vao db
     $.ajax({
       url: "xuly.php",
       type: "POST",
       
-      data:{nhom1:nhom1,nhom2:nhom2,nhom3:nhom3,nhom4:nhom4}
+      data:{nhom1:nhom1,nhom2:nhom2,nhom3:nhom3,nhom4:nhom4,idkhach:aid}
      
       
       

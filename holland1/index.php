@@ -1,3 +1,9 @@
+<?php
+include '../config.php';
+
+
+$idkhach = $_GET['id'];
+?>
 
 
 <!DOCTYPE html>
@@ -36,7 +42,7 @@
         </button>
 
         <br><br> 
-        <a class="btn btn-primary" href="../toigioi.html" id="taga" style="display: block;">Trở lại</a>
+        <a class="btn btn-primary" href="../toigioi.php?id=<?php echo $idkhach;?>" id="taga" style="display: block;">Trở lại</a>
         
       </div>
     </div>

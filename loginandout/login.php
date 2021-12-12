@@ -32,7 +32,7 @@ if(isset($_POST['sign-in']) && $_POST['email'] != '' && $_POST['password'] != ''
         $tenkh = $row['hovaten'];
                   
         
-        echo "Xin chào " . $tenkh . ". Bạn đã đăng nhập thành công. <a href='../index.php?id=". $idkhach ."'>Về trang chủ</a>";
+        echo "Xin chào " . $tenkh . ". Bạn đã đăng nhập thành công. <a href='../index1.php?id=". $idkhach ."'>Về trang chủ</a>";
         die();
        
     }

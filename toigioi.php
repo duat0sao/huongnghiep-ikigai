@@ -1,3 +1,12 @@
+<?php
+include 'config.php';
+
+
+$idkhach = $_GET['id'];
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -52,9 +61,9 @@ h1 {
   <body>
     <div class="center">
       <h2>Mời bạn chọn</h2>
-      <a href="holland1/index.php">Làm trắc nghiệm Holland</a>
-      <a href="test/index.html">Làm trắc nghiệm DICS</a>
-      <a href="index.html">Trang chủ</a>
+      <a href="holland1/index.php?id=<?php echo $idkhach;?>">Làm trắc nghiệm Holland</a>
+      <a href="test/index.php?id=<?php echo $idkhach;?>">Làm trắc nghiệm DICS</a>
+      <a href="index1.php?id=<?php echo $idkhach;?>">Trang chủ</a>
     </div>
   </body>
 </html>
