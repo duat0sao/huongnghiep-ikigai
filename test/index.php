@@ -34,11 +34,10 @@ include '../config.php';
     		  <div class="footer">
                 <div class="footer_l">
                     <input type="button" class="preview vohieuhoa" value="Preview" disabled>
+                    <button class="form-submit btn vohieuhoa" disabled>Submit</button>
                     <input type="button" class=" next" value="Next">
                 </div>
-                <div class="footer_r">
-                    <button class="form-submit vohieuhoa" disabled>Submit</button>
-                </div>
+                
               </div>
     		</form>
     	</div>

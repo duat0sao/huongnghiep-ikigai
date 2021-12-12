@@ -171,6 +171,7 @@ function resultScreen() {
 
   //   Print Result
   document.getElementById("taga").style.display = "none";
+  document.getElementById("hello").style.display = "block";
   document.getElementById("resultIntro").style.display = "block";
   let resultName = document.createElement("h2");
   result.classList.add("text-center");
