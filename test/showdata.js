@@ -77,7 +77,8 @@ var dataQuestion = [
 
 var newQuestion = dataQuestion.map(function(data, index) {
 	return `<div class="form-group1 id${index + 1} hide mb-3">
-    		  	
+            <h4>Chọn đáp án bạn thấy đúng nhất với mình</h4>
+
     		  	<label class="form-message"></label>
     		    <div class="cauhoi">
     		    	<input class="form-check-input" type="radio" name="question${index + 1}" value="a">

@@ -20,11 +20,11 @@
 
     <?php include '../nen.php'; ?>
     
+    
     <div class="container1">
     	<div class="row justify-content-center hang">
 
             <h2 class="header">Trắc Nghiệm D.I.S.C Online</h2>
-            <h4>Chọn đáp án bạn thấy đúng nhất với mình</h4>
 
     		<form id="form-1">
 
