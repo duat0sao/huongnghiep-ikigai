@@ -10,8 +10,11 @@ body{
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
     /* background-image: linear-gradient(); */
+    width: 100vw;
     display: flex;
     justify-content: center;
+    overflow: hidden;
+    position: relative;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -35,7 +38,7 @@ body{
         margin: 0 auto;
         overflow: hidden;
         padding: 20px;
-        border: 1px solid white;
+        border: 1px solid #888;
         border-radius: 15px;
     }
 
@@ -51,7 +54,7 @@ body{
         margin: 0 auto;
         overflow: hidden;
         padding: 20px;
-        border: 1px solid white;
+        border: 1px solid #888;
         border-radius: 15px;
     }
 
@@ -112,6 +115,11 @@ body{
         border-radius: 5px;
         font-size: 16px;
     }
+
+    .la-phai, 
+    .la-trai {
+        display: none;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -136,7 +144,7 @@ body{
         margin: 0 auto;
         overflow: hidden;
         padding: 20px;
-        border: 1px solid white;
+        border: 1px solid #888;
         border-radius: 15px;
     }
 
@@ -168,7 +176,7 @@ body{
         margin: 0 auto;
         overflow: hidden;
         padding: 20px;
-        border: 1px solid white;
+        border: 1px solid #888;
         border-radius: 15px;
     }
 
@@ -200,7 +208,7 @@ body{
         margin: 0 auto;
         overflow: hidden;
         padding: 20px;
-        border: 1px solid white;
+        border: 1px solid #888;
         border-radius: 15px;
     }
 } 
@@ -227,7 +235,7 @@ body{
         margin: 0 auto;
         overflow: hidden;
         padding: 20px;
-        border: 1px solid white;
+        border: 1px solid #888;
         border-radius: 15px;
     }
 }
@@ -252,7 +260,6 @@ body{
 
 .form-group1 h4{
     color:transparent;
-    margin-top: 20px;
     background-image: linear-gradient( -90deg, rgb(245, 156, 105) 0%, rgb(252, 52, 105) 100%);
     -webkit-background-clip: text;
     text-align: center;
@@ -345,4 +352,23 @@ canvas#myChart {
 
 .nhomd {
     color: orange;
+}
+
+.la-phai {
+    position: absolute;
+    right: 0;
+    width: 250px;
+    object-fit: cover;
+    transform: translateX(40%);
+    bottom: 40px;
+    z-index: -1;
+}
+
+.la-trai {
+    position: absolute;
+    top: 20px;
+    width: 250px;
+    object-fit: cover;
+    transform: translateX(-40%);
+    z-index: -1;
 }
