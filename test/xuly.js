@@ -22,6 +22,22 @@ Validator({
     console.log(nhom2)
     console.log(nhom3)
     console.log(nhom4)
+
+
+
+    //truyen du lieu sang xuly.php va day vao db
+    $.ajax({
+      url: "xuly.php",
+      type: "POST",
+      
+      data:{nhom1:nhom1,nhom2:nhom2,nhom3:nhom3,nhom4:nhom4}
+     
+      
+      
+    });
+
+
+
     var xValues = ["Nhóm A", "Nhóm B", "Nhóm C", "Nhóm D"];
     var yValues = [nhom1, nhom2, nhom3, nhom4];
     var barColors = ["red", "green","blue","orange"];
@@ -70,5 +86,9 @@ Validator({
         });
 
     }
+    
+
+
+
 
     })

@@ -232,7 +232,7 @@ function main() {
         printCanvas();
 
 
-        
+        //truyen du lieu sang xuly.php va day vao db
         $.ajax({
           url: "xuly.php",
           type: "POST",

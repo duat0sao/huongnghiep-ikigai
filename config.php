@@ -11,8 +11,5 @@ if(!$conn){
     die("connect fail ".mysqli_connect_error());
 }
 
-else{
-    echo 'oke';
-}
 
 ?>

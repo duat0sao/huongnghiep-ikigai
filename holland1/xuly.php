@@ -18,8 +18,4 @@ $data = $_POST['clm'];
 mysqli_query($conn, $sql)
 
 
-
-
-
-
 ?>
