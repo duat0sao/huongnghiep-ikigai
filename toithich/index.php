@@ -3,6 +3,43 @@ include '../config.php';
 
 
 $idkhach = $_GET['id'];
+
+$cauhoi = rand(1,17);
+
+$query=mysqli_query($conn,"select * from `toithichgi` where idkhach='$idkhach'");
+$row=mysqli_fetch_assoc($query);
+
+
+$query1=mysqli_query($conn,"select * from `noidungcauhoi` where idcauhoi='$cauhoi'");
+$row1=mysqli_fetch_assoc($query1);
+
+
+if (isset($_POST['update_user'])){
+  
+  $noidung=$_POST['gia'];
+  
+  
+
+  if ($conn->connect_error) {
+  
+  }
+   
+  $sql = "INSERT INTO `toithichgi`(idkhach, idcauhoi, noidung) VALUES('$idkhach', '$cauhoi', '$noidung');";
+  mysqli_query($conn,$sql);
+  $url = "../index1.php?id=" . $idkhach . "";
+  header('location:' . $url);
+
+
+  
+  
+  }
+
+
+
+
+
+
+
 ?>
 
 
@@ -125,149 +162,50 @@ canvas#myChart {
     <title>Document</title>
 </head>
 <body>
+
+
+
+
     <div>
     	<div class="row justify-content-center hang">
 
             <h2 class="header">Bạn thích gì?</h2>
 
-    		<form id="form-1">
-
-                <div class="content"></div>
+    		<form method="POST" class="form" id="form-1" >
+        <center>
+        <div class="form-group1 mb-3">
+    		  	
+            <label class="form-message"></label>
+                <div class="cauhoi">
+                <label> <?php echo $row1['noidungcauhoi']; ?></label><br>
+                <input type="input" class="form-contr" name="gia" value="">
+          
+                </div>
+       
+                </div>
 			
-    		  <center>
+    		  
                 <div class="footer">
                     <div class="footer_l">
-                        <input type="button" class="preview vohieuhoa btn" value="Preview" disabled>
-                        <button class="form-submit vohieuhoa btn" disabled>Submit</button>
-                        <input type="button" class="next btn" value="Next">
+                        
+                        <button name="update_user" class="btn">Submit</button>
+                        
                        
                     </div>
                     
                   </div>
+
+
+                  
               </center>
     		</form>
     	</div>
     </div>
 
-    <script>
-        var dataQuestion = [
-	{
-		"nhomA" : "Cuộc sống của bạn chủ yếu xoay quanh việc gì.",
-		
-	},{
-		"nhomA" : "Bạn bè nhớ đến bạn vì điều gì.",
-		
-	},{
-		"nhomA" : "Thầy cô nhớ đến bạn vì điều gì.",
-		
-	},{
-		"nhomA" : "Kỹ năng bẩm sinh bạn có.",
-		
-	},{
-		"nhomA" : "Bạn học kỹ năng nào dễ dàng nhất",
-		
-	},{
-		"nhomA" : "Bạn bè hay nhờ bạn điều gì.",
-		
-	},{
-		"nhomA" : "Nếu không phải nghĩ về tiền, bạn sẽ làm gì.",
-		
-	},{
-		"nhomA" : "Điều gì khiến bạn quên thời gian.",
-		
-	},{
-		"nhomA" : "Điều gì khiến làm nổi khùng.",
-		
-	},{
-		"nhomA" : "Điều  gì làm bạn tràn đầy nhiệt huyết.",
-		
-	},{
-		"nhomA" : "Bạn muốn thay đổi gì ở trường học.",
-		
-	},{
-		"nhomA" : "Thành tựu nào khiến bạn tự hào.",
-		
-	},{
-		"nhomA" : "Điều gì khiến bạn cảm thấy vui nhất.",
-		
-	},{
-		"nhomA" : "Điều gì khiến bạn muốn giải quyết nhất.",
-		
-	},
-    {
-		"nhomA" : "3 điều bạn muốn làm ngay hôm nay.",
-		
-	},
-    {
-		"nhomA" : "Bạn ngưỡng mộ công việc của ai nhất.",
-		
-	},
-    {
-		"nhomA" : "Bạn thấy công việc của ai thú vị.",
-		
-	},
-]
+   
 
 
-
-
-var newQuestion = dataQuestion.map(function(data, index) {
-	return `<div class="form-group1 id${index + 1} hide mb-3">
-    		  	
-                <label class="form-message"></label>
-    		    <div class="cauhoi">
-                    <label for="question${index + 1}">${data['nhomA']}</label><br>
-    		    	<input type="input" class="form-control" name="question${index + 1}" value="">
-    		    	
-    		    </div>
-    		   
-			</div>
-			
-			`
-})
-
-
-
-$('.content').html(newQuestion.join(''));
-$(".id1").removeClass('hide')
-$('.question-1').removeClass('hide')
-    </script>
 
     
-
-    <script>
-        var index = 1;
-     $('.next').click(function(event) {
-     	$('.id' + index).toggleClass('hide');
-        $('.question-' + index).toggleClass('hide');
-        $('.preview').prop('disabled', false)
-        $('.preview').removeClass('vohieuhoa')
-     	if (index <= 14) {
-	     	index++;
-	     	$('.id' + index).toggleClass('hide');
-            $('.question-' + index).toggleClass('hide');
-	     	if (index == 14) {
-                $('.next').addClass('vohieuhoa')
-                $('.next').prop('disabled', true)
-                $('.form-submit').removeClass('vohieuhoa')
-                $('.form-submit').prop('disabled', false)
-	     	}
-	     }
-     });
-
-     $('.preview').click(function(event) {
-     	$('.id' + index).toggleClass('hide');
-        $('.question-' + index).toggleClass('hide');
-     	index--
-     	$('.id' + index).toggleClass('hide');
-        $('.question-' + index).toggleClass('hide');
-     	$('.next').prop('disabled', false)
-        $('.next').removeClass('vohieuhoa')
-     	if (index == 1) {
-            $('.preview').prop('disabled', true)
-            $('.preview').addClass('vohieuhoa')
-        }
-     });
-    </script>
 </body>
 </html>
