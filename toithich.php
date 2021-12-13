@@ -1,10 +1,10 @@
 <?php
-include '../config.php';
+include 'config.php';
 
 
 $idkhach = $_GET['id'];
 
-$cauhoi = rand(1,17);
+$cauhoi = rand(1,16);
 
 $query=mysqli_query($conn,"select * from `toithichgi` where idkhach='$idkhach'");
 $row=mysqli_fetch_assoc($query);
@@ -26,7 +26,7 @@ if (isset($_POST['update_user'])){
    
   $sql = "INSERT INTO `toithichgi`(idkhach, idcauhoi, noidung) VALUES('$idkhach', '$cauhoi', '$noidung');";
   mysqli_query($conn,$sql);
-  $url = "../index1.php?id=" . $idkhach . "";
+  $url = "index1.php?id=" . $idkhach . "";
   header('location:' . $url);
 
 
@@ -55,81 +55,9 @@ if (isset($_POST['update_user'])){
     
     
     <style>
-         
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-  background-color:white;
-  font-size: 20px;
-  font-family: 'Poppins', sans-serif;
-  /* background-image: linear-gradient(); */
-  display: flex;
-  justify-content: center;
-}
 
 
-.align-center {
-  width: 80%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
-.text-center {
-  text-align: center;
-}
-
-.question {
-  font-size: 2rem;
-  margin-bottom: 1.2rem;
-}
-
-.btn-primary {
-  display: block;
-  width: 100%;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  margin-top: 0.8rem;
-  background-color: rgb(58, 58, 184);
-  border-color: rgb(58, 58, 184);
-  color: #fff;
-}
-
-.btn-primary:hover {
-  background-color: rgb(24, 24, 177);
-  border-color: rgb(24, 24, 177);
-  color: #fff;
-  cursor: pointer;
-}
-
-.blue {
-  background-color: rgb(58, 58, 184);
-  color: #fff;
-  padding: 15px 20px;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
-}
-
-p {
-  font-size: 1rem;
-  margin-top: 0.5rem;
-  line-height: 1.5rem;
-}
-
-.hide {
-  display: none;
-}
-@media only screen and (min-width: 600px) {
-  .container1{
-    width: 600vh;
-    height: 100vh;
-    /* background-color: turquoise; */
-    position: relative;
-    }
 
     h2.header {
         width: 100%;
@@ -138,22 +66,11 @@ p {
         margin: 60px auto 20px;
         text-align: center;
     }
-    .form-group1{
-        width: 500px;
-        margin: 0 auto;
-        overflow: hidden;
-        padding: 20px;
-        border: 1px solid white;
-        border-radius: 15px;
+  
     }
 }
 
 
-
-canvas#myChart {
-  margin-top: 120px;
-  margin-bottom: 40px;
-}
 
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
@@ -163,22 +80,25 @@ canvas#myChart {
 </head>
 <body>
 
+<?php include 'header.php';?>              
+
 
 
 
     <div>
-    	<div class="row justify-content-center hang">
+    	<div>
 
             <h2 class="header">Bạn thích gì?</h2>
 
     		<form method="POST" class="form" id="form-1" >
         <center>
-        <div class="form-group1 mb-3">
+        <div class="mb-3">
     		  	
             <label class="form-message"></label>
                 <div class="cauhoi">
-                <label> <?php echo $row1['noidungcauhoi']; ?></label><br>
-                <input type="input" class="form-contr" name="gia" value="">
+
+                <label style="width:100; font-size: 25px;"> <?php echo $row1['noidungcauhoi']; ?></label><br>
+                <br><input style="width:100; font-size: 20px;" type="input" class="form-contr" name="gia" value="">
           
                 </div>
        
@@ -188,7 +108,7 @@ canvas#myChart {
                 <div class="footer">
                     <div class="footer_l">
                         
-                        <button name="update_user" class="btn">Submit</button>
+                        <button name="update_user" class="btn" style="width:100; font-size: 20px;">Submit</button>
                         
                        
                     </div>

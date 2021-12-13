@@ -20,10 +20,10 @@
 		<div class="row justify-content-center">
 			
 			<form class="center col-xl-10 col-lg-9 col-md-8 col-sm-8">
-				<div class="alert alert-info" role="alert">
-				  <strong>Bạn vui lòng đăng nhập</strong> trước khi tham gia khảo sát
+				<div class="alert alert-info center" role="alert">
+                <center>Bạn vui lòng <strong>đăng nhập/đăng ký</strong> trước </center>
 				</div>	
-				<a class="btn btn-danger" href="index.php"><i class="fas fa-chevron-left"></i> Quay lại trang chủ.</a>
+				<center><a class="btn btn-danger" href="index.php"><i class="fas fa-chevron-left"></i> Quay lại trang chủ.</a></center>
 			</form>
 			
 		</div>
