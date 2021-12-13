@@ -24,7 +24,7 @@ include 'config.php';
   <body>
     <header>
       <nav class="navbar navbar-expand-sm header-top">
-          <a class="navbar-brand logo" href="index.php">
+          <a class="navbar-brand logo" href="#">
                   SleepingBeauty
           </a>
           <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
@@ -258,7 +258,7 @@ include 'config.php';
 			    <span><b>Sứ mệnh</b></span>
 		    </div>
 		    <div class="venn-2">
-			    <p><a href="cangi.php?id=<?php echo $idkhach;?>"><b>Thế giới </b> cần gì?</a></p>
+			    <p><a href="duoctra.php?id=<?php echo $idkhach;?>"><b>Thế giới </b> cần gì?</a></p>
 			    <span><b>Nghề nghiệp</b></span>
 		    </div>
 		    <div class="venn-3">

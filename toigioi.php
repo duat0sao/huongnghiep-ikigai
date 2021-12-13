@@ -163,9 +163,9 @@ h1 {
   </head>
   <body>
     <div class="nen">
-    <?php include 'nen.php'; ?>
+    
 
-    <img class="logo" src="img/log_nghiaminh.jpg" alt="">
+    <!-- them anh logo truong ??? <img class="logo" src="img/log_nghiaminh.jpg" alt="">-->
 
     <a href="index1.php?id=<?php echo $idkhach;?>"><img class="home" src="img/home.jpg" alt=""></a>
 
