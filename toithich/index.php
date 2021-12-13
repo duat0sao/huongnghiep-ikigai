@@ -1,3 +1,10 @@
+<?php
+include '../config.php';
+
+
+$idkhach = $_GET['id'];
+?>
+
 
    
 <!DOCTYPE html>
@@ -226,7 +233,7 @@ $(".id1").removeClass('hide')
 $('.question-1').removeClass('hide')
     </script>
 
-    <script src="xuly.js"></script>
+    
 
     <script>
         var index = 1;
