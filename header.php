@@ -44,7 +44,7 @@
                   </li>
                  
                   <li class="nav-item">
-                      <a style="width:100; font-size: 15px;" class="nav-link" href="#">Bản thân</a>
+                      <a style="width:100; font-size: 15px;" class="nav-link" href="banthan.php?id=<?php echo $idkhach;?>">Bản thân</a>
                   </li>
               </ul>
               

@@ -3,7 +3,7 @@
 
 
 <?php
-session_start();
+
 include '../config.php';
 if(isset($_POST['sign-in']) && $_POST['email'] != '' && $_POST['password'] != ''){
     $t1 = $_POST['email'];

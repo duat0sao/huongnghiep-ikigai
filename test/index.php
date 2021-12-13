@@ -21,6 +21,7 @@
     <?php include '../nen.php'; ?>
     
     
+    
     <div class="container1">
     	<div class="row justify-content-center hang">
 
