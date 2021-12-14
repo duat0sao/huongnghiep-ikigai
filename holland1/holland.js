@@ -65,6 +65,9 @@ const questions = [
 
 let params = new URLSearchParams(location.search);
 let aid = params.get('id');
+
+
+
 var scores = [0, 0, 0, 0, 0, 0];
 scores[6] = aid;
 /* 
@@ -233,7 +236,11 @@ function main() {
       if (questionsIndex == questions.length) {
         
         resultScreen();
+        
         printCanvas();
+        
+
+
 
 
         
