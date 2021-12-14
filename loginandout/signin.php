@@ -54,8 +54,8 @@ include('random.php');
         $row=mysqli_fetch_array($layid);
         $idkhach = $row['idkhach'];
        
-        mysqli_query($conn,"INSERT INTO holland(idkhach) VALUES('$idkhach')");
-        mysqli_query($conn,"INSERT INTO disc(idkhach) VALUES('$idkhach')");
+        mysqli_query($conn,"INSERT INTO holland(idkhach, bo1, bo2, bo3, bo4, bo5, bo6) VALUES('$idkhach', '0','0','0','0','0','0')");
+        mysqli_query($conn,"INSERT INTO disc(idkhach,nhom1,nhom2,nhom3,nhom4) VALUES('$idkhach','0','0','0','0')");
 		
         
         

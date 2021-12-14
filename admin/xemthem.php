@@ -18,7 +18,7 @@
       
   <header class="container">
       <nav class="navbar navbar-expand-sm header-top">
-          <a class="navbar-brand logo" href="#">
+          <a class="navbar-brand logo" href="admin.php">
                   THPT Nghĩa Minh
           </a>
           <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
@@ -255,7 +255,7 @@ while($row2=mysqli_fetch_array($query2)){
             </div>
             
         </div>
-        <center><a class="btn" href="send.php?id=<?php echo $idkhach;?>">Gửi về mail</a></center>
+        <center><a class="btn" href="admin.php">Trở lại</a></center>
 
 
 
