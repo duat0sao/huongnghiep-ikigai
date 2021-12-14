@@ -1,5 +1,5 @@
 
-<?php include 'config.php';
+<?php include '../config.php';
 ?>
 
 
@@ -15,9 +15,66 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-      <?php include 'header.php';?>
+      
+  <header class="container">
+      <nav class="navbar navbar-expand-sm header-top">
+          <a class="navbar-brand logo" href="#">
+                  THPT Nghĩa Minh
+          </a>
+          <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+          </div>
+         
+      </nav>
+      <nav class="navbar navbar-expand-lg navbar-light header-bottom">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#">Trang chủ<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Giới thiệu</a>
+                  </li> 
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Liên hệ</a>
+                  </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+          </div>
+      </nav>
+  </header> 
+
+
+
+
 <br><br><br>
+
+
         <div class="container">
+        
+          <a class="navbar-brand logo" href="">
+          <?php 
+$idkhach = $_GET['id'];
+
+$query11=mysqli_query($conn,"select * from khach where idkhach='$idkhach'");
+$row11=mysqli_fetch_array($query11);
+echo $row11['hovaten'];
+
+?>
+          </a>
+          
+         
+         
+      </nav>
+
+          <br>
             <ul class="nav nav-pills mb-3">
                 <li class="nav-item">
                     <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">DISC</a>
@@ -43,7 +100,7 @@
                           </tr>
                         </thead>
 <?php   
-$idkhach = $_GET['id'];
+
 $query=mysqli_query($conn,"select * from disc where idkhach='$idkhach'");
 $row=mysqli_fetch_array($query)
 ?>

@@ -42,7 +42,7 @@ include('random.php');
     $randstring=generateRandomString();
 
     //execute query
-    $sql="insert into khach(hovaten, email, matkhau, sdt) VALUES ('$hovaten','$email','$password1', '$sdt')";
+    $sql="INSERT INTO khach(hovaten, email, matkhau, sdt) VALUES ('$hovaten','$email','$password1', '$sdt')";
 
 
 
