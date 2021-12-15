@@ -62,10 +62,17 @@ $idkhach = $_GET['id'];
 
   </head>
   <body>
+  <nav class="navbar navbar-expand-sm header-top container">
+          <a class="navbar-brand" href="../toigioi.php?id=<?php echo $idkhach;?>" style="width:100; font-size: 25px;">
+                 THPT Nghĩa Minh
+          </a>
+          <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId" style="z-idex: 1; background: white; box-shadow: 1px 1px 1px #aaa; boder-radius: 3px;">
+          </div>
+          
+      </nav>
 
-    <img class="la-phai" src="img/la1.png" alt="">
-    <img class="la-trai" src="img/la2.png" alt="">
-    <img class="logo" src="img/log_nghiaminh.jpg" alt="">
+    
 
 
     <div class="align-center text-center">
@@ -115,7 +122,8 @@ $idkhach = $_GET['id'];
         </div>
       </div>
       <div class="result blue" style="display: none;"></div>
-      <a class="btn"  href="../toigioi.php?id=<?php echo $idkhach;?>" id="hello" style="display: none;">Home</a>
+      <div class=""></div>
+      <a class="btn btn-primary"  href="../superlink.php?id=<?php echo $idkhach;?>" id="hello" style="display: none;">Xem thêm</a>
     </div>
     
 

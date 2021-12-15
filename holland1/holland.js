@@ -236,7 +236,11 @@ function main() {
       if (questionsIndex == questions.length) {
         
         resultScreen();
+        
         printCanvas();
+        
+
+
 
 
         
