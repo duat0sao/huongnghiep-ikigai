@@ -69,13 +69,13 @@ if (isset($_POST['update_user'])){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Thâm ngành nghề vào dữ liệu</title>
 </head>
 <body>
 
 <header>
       <nav class="navbar navbar-expand-sm header-top">
-          <a class="navbar-brand logo" href="#">
+          <a class="navbar-brand logo" href="admin.php">
                   THPT Nghĩa Minh
           </a>
           <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
@@ -91,7 +91,7 @@ if (isset($_POST['update_user'])){
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                   <li class="nav-item active">
-                      <a class="nav-link" href="#">Trang chủ<span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="admin.php">Trang chủ<span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="#">Giới thiệu</a>

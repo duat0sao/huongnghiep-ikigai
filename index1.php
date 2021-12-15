@@ -6,7 +6,7 @@ include 'config.php';
 <html lang="en">
 
   <head>
-    <title>Ikigai</title>
+    <title>Hướng nghiệp THPT Nghĩa Minh</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -50,7 +50,7 @@ include 'header.php';
 			    <span><b>Nghề nghiệp</b></span>
 		    </div>
 		    <div class="venn-3">
-			    <p> <a href="danhmuc.php?id=<?php echo $idkhach;?>">Bạn được<b> trả tiền</b> vì? </a></p>
+			    <p> <a href="phanloai.php?id=<?php echo $idkhach;?>">Bạn được<b> trả tiền</b> vì? </a></p>
 			    </ul>
 			    <span><b>Chuyên môn</b></span>
 		    </div>

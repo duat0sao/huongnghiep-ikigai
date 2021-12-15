@@ -6,7 +6,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Bản thân</title>
+    <title>ADMIN quản lý</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -46,7 +46,7 @@
                   
                  
                   <li class="nav-item">
-                      <a class="nav-link" href="#">Liên hệ</a>
+                      <a class="nav-link" href="addedu.php">Thêm ngành học</a>
                   </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
@@ -61,7 +61,7 @@
 
 
 <br><br><br>
-        
+     <center>
 <div id="generic_price_table">   
     
     <?php   
@@ -74,10 +74,10 @@
     
     <section>
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
+                <div class="">
+                    <div class="">
                         <!--PRICE HEADING START-->
-                        <div class="price-heading clearfix">
+                        <div class="">
                             <h1></h1>
                         </div>
                         <!--//PRICE HEADING END-->
@@ -197,7 +197,7 @@ echo $ten = $row2['hovaten']; ?></span>
         <?php 
     }?>
         
-        
+        </center>       
     
     
     

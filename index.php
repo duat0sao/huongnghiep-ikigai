@@ -5,7 +5,7 @@
 <html lang="en">
 
   <head>
-    <title>Ikigai</title>
+    <title>Hướng nghiệp THPT Nghĩa Minh</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

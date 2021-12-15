@@ -123,7 +123,7 @@ $idkhach = $_GET['id'];
       </div>
       <div class="result blue" style="display: none;"></div>
       <div class=""></div>
-      <a class="btn btn-primary"  href="../superlink.php?id=<?php echo $idkhach;?>" id="hello" style="display: none;">Xem thêm</a>
+      <a class="btn btn-primary"  href="nhomnganh.php?id=<?php echo $idkhach;?>" id="hello" style="display: none;">Xem thêm</a>
     </div>
     
 

@@ -10,7 +10,7 @@ $idkhach = $_GET['id'];
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Phân loại việc làm ở Việt Nam</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

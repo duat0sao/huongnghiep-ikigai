@@ -8,7 +8,7 @@ include '../config.php';
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Đăng nhập</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,7 +23,7 @@ include '../config.php';
     <header>
         <nav class="navbar navbar-expand-sm header-top">
             <a class="navbar-brand logo" href="home.php">
-                    SleepingBeauty
+                    THPT Nghĩa Minh
             </a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
