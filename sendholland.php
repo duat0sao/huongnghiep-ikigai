@@ -53,23 +53,22 @@ default:
         require 'mailer/PHPMailerAutoload.php';  
         
         $mail = new PHPMailer(true);
-        $mail->SMTPDebug = 3;                                  // Enable verbose debug output  
-        $mail->isSMTP();                                       // Set mailer to use SMTP  
-        $mail->Host = 'smtp.gmail.com;';                       // Specify main and backup SMTP servers  
-        $mail->SMTPAuth = true;                                // Enable SMTP authentication  
-        $mail->Username = 'Anhhjew5@gmail.com';               // your SMTP username  
-        $mail->Password = 'Anhhjew2k';                      // your SMTP password  
-        $mail->SMTPSecure = 'tls';                             // Enable TLS encryption, `ssl` also accepted  
-        $mail->Port = 587;                                     // TCP port to connect to  
+        $mail->SMTPDebug = 3;                                  
+        $mail->isSMTP();                                       
+        $mail->Host = 'smtp.gmail.com;';                       
+        $mail->SMTPAuth = true;                               
+        $mail->Username = '18lynnxx@gmail.com';                  //tk gmail
+        $mail->Password = 'matkhau3';                           //mk gmail
+        $mail->SMTPSecure = 'tls';                              
+        $mail->Port = 587;                                       
         $mail->setFrom('18lynnxx@gmail.com', 'BOSS lv1');  
-        $mail->addAddress('tduat183@gmail.com');                             // set your BCC email address  
-        $mail->isHTML(true);                                   // Set email format to HTML  
+        $mail->addAddress($eail);                              
+        $mail->isHTML(true);                                   
         $mail->Subject = 'Sent from dotted career guidance';  
         $mail->Body  = '<h3>Dear '.$hovaten.'</h3>';
         $mail->Body  .= ''.$a.'';
         $mail->Body  .= ''.$b.'';
-
-        if($mail->send()) {  
+        if($mail->send()) {                                     // phải bật cho ứng dụng kém  được dùng ở     myaccount.google.com
         echo 'Gửi thành công. <a href="banthan.php?id='.$idkhach.'>">Trở về</a> ';  
         } else {  
         echo 'Message could not be sent';  
