@@ -50,7 +50,7 @@ include 'header.php';
 			    <span><b>Nghề nghiệp</b></span>
 		    </div>
 		    <div class="venn-3">
-			    <p> <a href="duoctra.php?id=<?php echo $idkhach;?>">Bạn được<b> trả tiền</b> vì? </a></p>
+			    <p> <a href="danhmuc.php?id=<?php echo $idkhach;?>">Bạn được<b> trả tiền</b> vì? </a></p>
 			    </ul>
 			    <span><b>Chuyên môn</b></span>
 		    </div>

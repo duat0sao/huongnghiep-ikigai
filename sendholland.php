@@ -57,15 +57,15 @@ default:
         $mail->isSMTP();                                       // Set mailer to use SMTP  
         $mail->Host = 'smtp.gmail.com;';                       // Specify main and backup SMTP servers  
         $mail->SMTPAuth = true;                                // Enable SMTP authentication  
-        $mail->Username = 'tduat183@gmail.com';               // your SMTP username  
+        $mail->Username = '18lynnxx@gmail.com';               // your SMTP username  
         $mail->Password = 'matkhau3';                      // your SMTP password  
         $mail->SMTPSecure = 'tls';                             // Enable TLS encryption, `ssl` also accepted  
         $mail->Port = 587;                                     // TCP port to connect to  
-        $mail->setFrom('tduat183@gmail.com', 'BOSS lv1');  
-        $mail->addAddress($eail);                             // set your BCC email address  
+        $mail->setFrom('18lynnxx@gmail.com', 'BOSS lv1');  
+        $mail->addAddress('tduat183@gmail.com');                             // set your BCC email address  
         $mail->isHTML(true);                                   // Set email format to HTML  
         $mail->Subject = 'Sent from dotted career guidance';  
-        $mail->Body  = '<h1>Welcome to động wibu</h1><h3>Dear '.$hovaten.'</h3>';
+        $mail->Body  = '<h3>Dear '.$hovaten.'</h3>';
         $mail->Body  .= ''.$a.'';
         $mail->Body  .= ''.$b.'';
 
