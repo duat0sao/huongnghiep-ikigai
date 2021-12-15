@@ -118,14 +118,14 @@ default:
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                   <li class="nav-item active">
-                      <a style="width:100; font-size: 15px;" class="nav-link" href="index1.php?id=<?php echo $idkhach;?>"><strong>Trang chủ</strong><span class="sr-only">(current)</span></a>
+                      <a style="width:100; font-size: 15px;" class="nav-link" href="../index1.php?id=<?php echo $idkhach;?>"><strong>Trang chủ</strong><span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
                       <a style="width:100; font-size: 15px;" class="nav-link" href="#">Giới thiệu</a>
                   </li>
                  
                   <li class="nav-item">
-                      <a style="width:100; font-size: 15px;" class="nav-link" href="banthan.php?id=<?php echo $idkhach;?>">Bản thân</a>
+                      <a style="width:100; font-size: 15px;" class="nav-link" href="../banthan.php?id=<?php echo $idkhach;?>">Bản thân</a>
                   </li>
               </ul>
               
