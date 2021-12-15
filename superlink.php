@@ -77,10 +77,124 @@
   </div>
 
 
+<div class="tab-pane fade" id="nav-chinhtri" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Tên ngành</th>
+                            <th>Mã ngành</th>
+                          </tr>
+                        </thead>
+                        <tbody class="body-chinhtri">
+                        </tbody>
+                    </table>
+</div>
 
 
 
 
+<<<<<<< HEAD
+
+=======
+<div class="tab-pane fade" id="nav-toanhoc" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Tên ngành</th>
+                            <th>Mã ngành</th>
+                          </tr>
+                        </thead>
+                        <tbody class="body-toan">
+                          <tr>   
+                            <td>Toán học</td>
+                            <td>7460101</td>    
+                          </tr>
+                        </tbody>
+                    </table>
+</div>
+
+
+
+
+<div class="tab-pane fade" id="nav-cntt" role="tabpanel" aria-labelledby="nav-contact-tab">
+<table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Tên ngành</th>
+                            <th>Mã ngành</th>
+                          </tr>
+                        </thead>
+                        <tbody class="body-cntt">
+                          <tr>   
+                            <td></td>
+                            <td></td>    
+                          </tr>
+                        </tbody>
+                    </table>
+</div>
+
+
+
+
+<div class="tab-pane fade" id="nav-xaydung" role="tabpanel" aria-labelledby="nav-contact-tab">
+  <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Tên ngành</th>
+                            <th>Mã ngành</th>
+                          </tr>
+                        </thead>
+                        <tbody class="body-xaydung">
+                        </tbody>
+                    </table>
+</div>
+
+
+
+
+<div class="tab-pane fade" id="nav-khoangsan" role="tabpanel" aria-labelledby="nav-contact-tab">
+  <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Tên ngành</th>
+                            <th>Mã ngành</th>
+                          </tr>
+                        </thead>
+                        <tbody class="body-khoangsan">
+                        </tbody>
+                    </table>
+</div>
+
+<div class="tab-pane fade" id="nav-detmay" role="tabpanel" aria-labelledby="nav-contact-tab">
+  <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Tên ngành</th>
+                            <th>Mã ngành</th>
+                          </tr>
+                        </thead>
+                        <tbody class="body-detmay">
+                        </tbody>
+                    </table>
+</div>
+
+
+
+
+
+<div class="tab-pane fade" id="nav-nongnghiep" role="tabpanel" aria-labelledby="nav-contact-tab">
+  <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Tên ngành</th>
+                            <th>Mã ngành</th>
+                          </tr>
+                        </thead>
+                        <tbody class="body-nongnghiep">
+                        </tbody>
+                    </table>
+</div>
+>>>>>>> 40a03fc6ad0305959bcfc0d2e5e2d52646f68fe6
 
 
 
@@ -91,5 +205,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="nganhhoc.js"></script>
   </body>
 </html>
