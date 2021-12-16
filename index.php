@@ -13,6 +13,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="ikigai.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+      span.slogan{
+        padding: 0 12px;
+        color: #367cff;
+      }
+    </style>
+    
   </head>
 
 
@@ -49,6 +56,8 @@
               </ul>
           </div>
       </nav>
+      <span class="slogan">Hành trình khám phá bản thân</span>
+
       <nav class="navbar navbar-expand-lg navbar-light header-bottom">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -276,7 +285,6 @@
         
 
         
-
 
 
 
