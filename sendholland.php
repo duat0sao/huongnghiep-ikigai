@@ -49,9 +49,7 @@ default:
   echo "error";
   break;
 }
-
         require 'mailer/PHPMailerAutoload.php';  
-        
         $mail = new PHPMailer(true);
         $mail->SMTPDebug = 3;                                  
         $mail->isSMTP();                                       
@@ -69,7 +67,7 @@ default:
         $mail->Body  .= ''.$a.'';
         $mail->Body  .= ''.$b.'';
         if($mail->send()) {                                     // phải bật cho ứng dụng kém  được dùng ở     myaccount.google.com
-          $url = "../thanhcong.php?id=" . $idkhach . "";
+          $url = "thanhcong.php?id=" . $idkhach . "";
           header('location:' . $url);
         } else {  
         echo 'Message could not be sent';  
