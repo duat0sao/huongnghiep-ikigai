@@ -50,8 +50,8 @@ body {
 
   .hola,
   .disc {
-      width: 250px;
-      height: 250px;
+      width: 200px;
+      height: 200px;
     }
 
   .home {
@@ -59,6 +59,12 @@ body {
     top: 20px;
     left: 20px;
     width: 40px;
+  }
+
+  div#navbarTogglerDemo02 {
+    z-index: 1;
+    background: #f8f7f7;
+    box-shadow: 1px 1px 1px #ccc;
   }
 }
 
