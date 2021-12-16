@@ -59,7 +59,7 @@
 
         <div class="container">
         
-          <a class="navbar-brand logo" href="">
+          <h3> Họ và Tên: 
           <?php 
 $idkhach = $_GET['id'];
 
@@ -68,7 +68,18 @@ $row11=mysqli_fetch_array($query11);
 echo $row11['hovaten'];
 
 ?>
-          </a>
+          </h3>
+          <h4>Email: 
+            <?php $query22=mysqli_query($conn,"select * from khach where idkhach='$idkhach'");
+$row22=mysqli_fetch_array($query22);
+echo $row22['email'];?>
+          </h4>
+          <h4>SĐT: <?php $query33=mysqli_query($conn,"select * from khach where idkhach='$idkhach'");
+$row33=mysqli_fetch_array($query33);
+echo $row33['sdt'];?></h4>
+
+
+        
           
          
          

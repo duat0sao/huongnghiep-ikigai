@@ -78,6 +78,7 @@ $idkhach = $_GET['id'];
     <div class="align-center text-center">
       <h2 class="question"></h2>
       <div class="answers">
+      <h5><sub>Hãy chọn đáp án phù hợp nhất với mình</sub></h5>
         <button class="btn btn-primary absolutely" value="4" type="button" id="1">
           Hoàn toàn đúng
         </button>
@@ -93,7 +94,7 @@ $idkhach = $_GET['id'];
         <button class="btn btn-primary never" value="0" type="button" id="1">
           Không hề đúng
         </button>
-
+        <h4 class="" id="thutu">/54</h4>
         <br><br> 
         <a class="btn " href="../toigioi.php?id=<?php echo $idkhach;?>" id="taga" style="display: block;">Trở lại</a>
         

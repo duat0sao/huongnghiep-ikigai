@@ -97,7 +97,7 @@ var newQuestion = dataQuestion.map(function(data, index) {
     		    	<label for="question${index + 1}">${data['nhomD']}</label>
     		    </div>
 			</div>
-			<div class="question-${index + 1} hide"><h5 class="thutu">Question ${index + 1} of ${dataQuestion.length}</h5></div>
+			<div class="question-${index + 1} hide"><h5 class="thutu">Câu số ${index + 1} / ${dataQuestion.length}</h5></div>
 			`
 })
 

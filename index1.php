@@ -46,11 +46,11 @@ include 'header.php';
 			    <span><b>Sứ mệnh</b></span>
 		    </div>
 		    <div class="venn-2">
-			    <p><a href="duoctra.php?id=<?php echo $idkhach;?>"><b>Thế giới </b> cần gì?</a></p>
+			    <p><a href="phanloai.php?id=<?php echo $idkhach;?>"><b>Thế giới </b> cần gì?</a></p>
 			    <span><b>Nghề nghiệp</b></span>
 		    </div>
 		    <div class="venn-3">
-			    <p> <a href="phanloai.php?id=<?php echo $idkhach;?>">Bạn được<b> trả tiền</b> vì? </a></p>
+			    <p> <a href="duoctra.php?id=<?php echo $idkhach;?>">Bạn được<b> trả tiền</b> vì? </a></p>
 			    </ul>
 			    <span><b>Chuyên môn</b></span>
 		    </div>

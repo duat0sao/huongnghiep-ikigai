@@ -79,6 +79,8 @@ index 4 => enterprising
 index 5 => conventional
 */
 
+
+
 const questionText = document.querySelector(".question");
 const buttons = document.querySelectorAll(".answers button");
 let questionsIndex = 0;
@@ -90,6 +92,8 @@ let scoresIndex = 0;
 function printQuestion() {
   console.log(questions[questionsIndex]);
   questionText.textContent = questions[questionsIndex];
+  
+
 }
 
 function nextQuestion() {  // câu hỏi tiếp theo
@@ -223,6 +227,7 @@ function printCanvas() {
 
 function main() {
   printQuestion();
+  document.getElementById("thutu").innerHTML = "1/54";
   buttons.forEach(button => {
     button.addEventListener("click", () => {
       let score = button.getAttribute("value");
@@ -230,6 +235,7 @@ function main() {
       scores[scoresIndex] += score;
       console.log(scores);
       nextQuestion();
+      document.getElementById("thutu").innerHTML = `${questionsIndex+1}/54`;
       document.getElementById("1").checked = false;
       printQuestion();
       if (questionsIndex % 9 == 0) scoresIndex += 1;

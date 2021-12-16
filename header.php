@@ -6,7 +6,7 @@
                     $row=mysqli_fetch_array($layid);
                     $tenkhach = $row['hovaten'];
 
-                  ?>
+?>
 <header class="container">
       <nav class="navbar navbar-expand-sm header-top">
           <a class="navbar-brand" href="index1.php?id=<?php echo $idkhach;?>" style="width:100; font-size: 25px;">
@@ -23,7 +23,7 @@
                           
                           
                           <li class="nav-item">
-                              <a style="width:100; font-size: 13px;" class="nav-link active" href="loginandout/logout.php">Logout</a>
+                              <a style="width:100; font-size: 13px;" class="nav-link active" href="loginandout/logout.php">Thoát</a>
                           </li>
                   
               </ul>
@@ -44,7 +44,7 @@
                   </li>
                  
                   <li class="nav-item">
-                      <a style="width:100; font-size: 15px;" class="nav-link" href="banthan.php?id=<?php echo $idkhach;?>">Bản thân</a>
+                      <a style="width:100; font-size: 15px;" class="nav-link" href="banthan.php?id=<?php echo $idkhach;?>">Cá nhân</a>
                   </li>
               </ul>
               

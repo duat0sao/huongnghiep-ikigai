@@ -108,7 +108,7 @@ if (isset($_POST['update_user'])){
                 <div class="footer">
                     <div class="footer_l">
                         
-                        <button name="update_user" class="btn" style="width:100; font-size: 20px;">Submit</button>
+                        <button name="update_user" class="btn" style="width:100; font-size: 20px;">Trả lời</button>
                         
                        
                     </div>

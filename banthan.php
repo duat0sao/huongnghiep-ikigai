@@ -16,11 +16,30 @@
   </head>
   <body>
       <?php include 'header.php';?>
+
 <br><br><br>
+<center>
+<div class="container">
+        
+          <h3>
+          <?php 
+$idkhach = $_GET['id'];
+
+$query11=mysqli_query($conn,"select * from khach where idkhach='$idkhach'");
+$row11=mysqli_fetch_array($query11);
+echo $row11['hovaten'];
+
+?>
+</h3> </div>
+</center>
+
         <div class="container">
             <ul class="nav nav-pills mb-3">
                 <li class="nav-item">
-                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">DISC</a>
+                    <a class="nav-link active" id="pills-thongtin-tab" data-toggle="pill" href="#pills-thongtin" role="tab" aria-controls="pills-thonting" aria-selected="true">Thông tin bản thân</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="false">DISC</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Holland</a>
@@ -29,8 +48,33 @@
                     <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Sở thích</a>
                 </li>
             </ul>
+
+
+
             <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+            <div class="tab-pane fade show active" id="pills-thongtin" role="tabpanel" aria-labelledby="pills-thongtin-tab">
+                    
+<?php
+    $query12=mysqli_query($conn,"select * from khach where idkhach = '$idkhach'");
+
+
+    $row12=mysqli_fetch_array($query12)
+    
+?>
+                        <h5>Họ và Tên: <?php echo $row12['hovaten'];?></h5>
+                        <h5>SĐT: <?php echo $row12['sdt'];?></h5>
+                        <h5>Email: <?php echo $row12['email'];?></h5>
+                        
+                </div>
+                
+            
+            
+       
+
+
+            
+                <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                     <table class="table table-striped">
                         <thead>
                           <tr>
@@ -58,6 +102,7 @@ $row=mysqli_fetch_array($query)
 
                         </tbody>
                     </table>
+
                     <div class="container">
 <div class="container"><?php 
 $listnhom = array($nhom1,$nhom2,$nhom3,$nhom4);
@@ -159,7 +204,7 @@ default:
   break;
 }
 ?>
-  
+
 
 </div>
                 </div>
