@@ -56,7 +56,7 @@ include('random.php');
        
         mysqli_query($conn,"INSERT INTO holland(idkhach, bo1, bo2, bo3, bo4, bo5, bo6) VALUES('$idkhach', '0','0','0','0','0','0')");
         mysqli_query($conn,"INSERT INTO disc(idkhach,nhom1,nhom2,nhom3,nhom4) VALUES('$idkhach','0','0','0','0')");
-		
+		mysqli_query($conn,"INSERT INTO toithichgi(idkhach) VALUES('$idkhach')");
         
         
         header('location:../index.php');

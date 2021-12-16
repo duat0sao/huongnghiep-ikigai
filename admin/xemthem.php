@@ -233,33 +233,82 @@ default:
                 </div>
                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                     <table class="table table-striped">
+                    <table class="table table-striped">
                         <thead>
-                            <tr>
-
-                              <th>Câu hỏi</th>
-                              <th>Câu trả lời</th>
-
-                              
-                            </tr>
+                        <tr>
+                            <th scope="col">Câu hỏi </th>
+                            <th scope="col">Câu trả lời</th>
+                            
+                          </tr>
+                            
                           </thead>
 <?php
 $query2=mysqli_query($conn,"select * from toithichgi where idkhach = '$idkhach'");
+$row2=mysqli_fetch_array($query2);
+$hello = 1;
 
-
-while($row2=mysqli_fetch_array($query2)){
-    $idcauhoi = $row2['idcauhoi'];
-    $query3=mysqli_query($conn,"select * from noidungcauhoi where idcauhoi = '$idcauhoi'");
+if ($row2['cau1']==''){
+  $ci = 1;
+}
+else if ($row2['cau2']==''){
+  $ci = 2;
+}
+else if ($row2['cau3']==''){
+  $ci = 3;
+}
+else if ($row2['cau4']==''){
+  $ci = 4;
+}
+else if ($row2['cau5']==''){
+  $ci = 5;
+}
+else if ($row2['cau6']==''){
+  $ci = 6;
+}
+else if ($row2['cau7']==''){
+  $ci = 7;
+}
+else if ($row2['cau8']==''){
+  $ci = 8;
+}
+else if ($row2['cau9']==''){
+  $ci = 9;
+}
+else if ($row2['cau10']==''){
+  $ci = 10;
+}
+else if ($row2['cau11']==''){
+  $ci = 11;
+}
+else if ($row2['cau12']==''){
+  $ci = 12;
+}
+else if ($row2['cau13']==''){
+  $ci = 13;
+}
+else if ($row2['cau14']==''){
+  $ci = 14;
+}
+else if ($row2['cau15']==''){
+  $ci = 15;
+} else{
+  $ci = 16;
+}
+for($i=1; $i<$ci; $i++){
+  
+    $query3=mysqli_query($conn,"select * from noidungcauhoi where idcauhoi = '$i'");
     $row3=mysqli_fetch_array($query3);
 ?>
                           <tbody>
                             <tr>
                               <td><?php echo $row3['noidungcauhoi']; ?></td>
-                              <td><?php echo $row2['noidung']; ?></td>
-                              
+                              <td><?php echo $row2['cau'.$i.'']; ?></td>
                             </tr>
+                            
                             
                           </tbody>
                           <?php }?>
+                        </table>
                         </table>
                 </div>
                 

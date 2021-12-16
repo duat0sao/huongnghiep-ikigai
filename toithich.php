@@ -4,10 +4,60 @@ include 'config.php';
 
 $idkhach = $_GET['id'];
 
-$cauhoi = rand(1,16);
+
 
 $query=mysqli_query($conn,"select * from `toithichgi` where idkhach='$idkhach'");
 $row=mysqli_fetch_assoc($query);
+
+
+if ($row['cau1']==''){
+    $cauhoi = 1;
+}
+else if ($row['cau2']==''){
+    $cauhoi = 2;
+}
+else if ($row['cau3']==''){
+    $cauhoi = 3;
+}
+else if ($row['cau4']==''){
+    $cauhoi = 4;
+}
+else if ($row['cau5']==''){
+    $cauhoi = 5;
+}
+else if ($row['cau6']==''){
+    $cauhoi = 6;
+}
+else if ($row['cau7']==''){
+    $cauhoi = 7;
+}
+else if ($row['cau8']==''){
+    $cauhoi = 8;
+}
+else if ($row['cau9']==''){
+    $cauhoi = 9;
+}
+else if ($row['cau10']==''){
+    $cauhoi = 10;
+}
+else if ($row['cau11']==''){
+    $cauhoi = 11;
+}
+else if ($row['cau12']==''){
+    $cauhoi = 12;
+}
+else if ($row['cau13']==''){
+    $cauhoi = 13;
+}
+else if ($row['cau14']==''){
+    $cauhoi = 14;
+}
+else if ($row['cau15']==''){
+    $cauhoi = 15;
+} else{
+    $cauhoi = 16;
+}
+
 
 
 $query1=mysqli_query($conn,"select * from `noidungcauhoi` where idcauhoi='$cauhoi'");
@@ -15,19 +65,151 @@ $row1=mysqli_fetch_assoc($query1);
 
 
 if (isset($_POST['update_user'])){
-  
-  $noidung=$_POST['gia'];
-  
-  
-
-  if ($conn->connect_error) {
-  
+  if ($cauhoi == 1){
+    $noidung=$_POST['gia'];
+    if ($conn->connect_error) {
+    }
+    $sql = "UPDATE toithichgi SET cau1='$noidung' WHERE idkhach='$idkhach'";
+    mysqli_query($conn,$sql);
+    $url = "index1.php?id=" . $idkhach . "";
+    header('location:' . $url);
   }
-   
-  $sql = "INSERT INTO `toithichgi`(idkhach, idcauhoi, noidung) VALUES('$idkhach', '$cauhoi', '$noidung');";
-  mysqli_query($conn,$sql);
-  $url = "index1.php?id=" . $idkhach . "";
-  header('location:' . $url);
+    else if ($cauhoi == 2){
+    $noidung=$_POST['gia'];
+    if ($conn->connect_error) {
+    }
+    $sql = "UPDATE toithichgi SET cau2='$noidung' WHERE idkhach='$idkhach'";
+    mysqli_query($conn,$sql);
+    $url = "index1.php?id=" . $idkhach . "";
+    header('location:' . $url);
+  }
+  else if ($cauhoi == 3){
+    $noidung=$_POST['gia'];
+    if ($conn->connect_error) {
+    }
+    $sql = "UPDATE toithichgi SET cau3='$noidung' WHERE idkhach='$idkhach'";
+    mysqli_query($conn,$sql);
+    $url = "index1.php?id=" . $idkhach . "";
+    header('location:' . $url);
+  }
+  else if ($cauhoi == 4){
+    $noidung=$_POST['gia'];
+    if ($conn->connect_error) {
+    }
+    $sql = "UPDATE toithichgi SET cau4='$noidung' WHERE idkhach='$idkhach'";
+    mysqli_query($conn,$sql);
+    $url = "index1.php?id=" . $idkhach . "";
+    header('location:' . $url);
+  }
+  else if ($cauhoi == 5){
+    $noidung=$_POST['gia'];
+    if ($conn->connect_error) {
+    }
+    $sql = "UPDATE toithichgi SET cau5='$noidung' WHERE idkhach='$idkhach'";
+    mysqli_query($conn,$sql);
+    $url = "index1.php?id=" . $idkhach . "";
+    header('location:' . $url);
+  }
+  else if ($cauhoi == 6){
+    $noidung=$_POST['gia'];
+    if ($conn->connect_error) {
+    }
+    $sql = "UPDATE toithichgi SET cau6='$noidung' WHERE idkhach='$idkhach'";
+    mysqli_query($conn,$sql);
+    $url = "index1.php?id=" . $idkhach . "";
+    header('location:' . $url);
+  }
+  else if ($cauhoi == 7){
+    $noidung=$_POST['gia'];
+    if ($conn->connect_error) {
+    }
+    $sql = "UPDATE toithichgi SET cau7='$noidung' WHERE idkhach='$idkhach'";
+    mysqli_query($conn,$sql);
+    $url = "index1.php?id=" . $idkhach . "";
+    header('location:' . $url);
+  }
+  else if ($cauhoi == 8){
+    $noidung=$_POST['gia'];
+    if ($conn->connect_error) {
+    }
+    $sql = "UPDATE toithichgi SET cau8='$noidung' WHERE idkhach='$idkhach'";
+    mysqli_query($conn,$sql);
+    $url = "index1.php?id=" . $idkhach . "";
+    header('location:' . $url);
+  }
+  else if ($cauhoi == 9){
+    $noidung=$_POST['gia'];
+    if ($conn->connect_error) {
+    }
+    $sql = "UPDATE toithichgi SET cau9='$noidung' WHERE idkhach='$idkhach'";
+    mysqli_query($conn,$sql);
+    $url = "index1.php?id=" . $idkhach . "";
+    header('location:' . $url);
+  }
+  else if ($cauhoi == 10){
+    $noidung=$_POST['gia'];
+    if ($conn->connect_error) {
+    }
+    $sql = "UPDATE toithichgi SET cau10='$noidung' WHERE idkhach='$idkhach'";
+    mysqli_query($conn,$sql);
+    $url = "index1.php?id=" . $idkhach . "";
+    header('location:' . $url);
+  }
+  else if ($cauhoi == 11){
+    $noidung=$_POST['gia'];
+    if ($conn->connect_error) {
+    }
+    $sql = "UPDATE toithichgi SET cau11='$noidung' WHERE idkhach='$idkhach'";
+    mysqli_query($conn,$sql);
+    $url = "index1.php?id=" . $idkhach . "";
+    header('location:' . $url);
+  }
+  else if ($cauhoi == 12){
+    $noidung=$_POST['gia'];
+    if ($conn->connect_error) {
+    }
+    $sql = "UPDATE toithichgi SET cau12='$noidung' WHERE idkhach='$idkhach'";
+    mysqli_query($conn,$sql);
+    $url = "index1.php?id=" . $idkhach . "";
+    header('location:' . $url);
+  }
+  else if ($cauhoi == 13){
+    $noidung=$_POST['gia'];
+    if ($conn->connect_error) {
+    }
+    $sql = "UPDATE toithichgi SET cau13='$noidung' WHERE idkhach='$idkhach'";
+    mysqli_query($conn,$sql);
+    $url = "index1.php?id=" . $idkhach . "";
+    header('location:' . $url);
+  }
+  else if ($cauhoi == 14){
+    $noidung=$_POST['gia'];
+    if ($conn->connect_error) {
+    }
+    $sql = "UPDATE toithichgi SET cau14='$noidung' WHERE idkhach='$idkhach'";
+    mysqli_query($conn,$sql);
+    $url = "index1.php?id=" . $idkhach . "";
+    header('location:' . $url);
+  }
+  else if ($cauhoi == 15){
+    $noidung=$_POST['gia'];
+    if ($conn->connect_error) {
+    }
+    $sql = "UPDATE toithichgi SET cau15='$noidung' WHERE idkhach='$idkhach'";
+    mysqli_query($conn,$sql);
+    $url = "index1.php?id=" . $idkhach . "";
+    header('location:' . $url);
+  }
+  else{
+    $noidung=$_POST['gia'];
+    if ($conn->connect_error) {
+    }
+    $sql = "UPDATE toithichgi SET cau1='$noidung' WHERE idkhach='$idkhach'";
+    mysqli_query($conn,$sql);
+    $url = "index1.php?id=" . $idkhach . "";
+    header('location:' . $url);
+  }
+
 
 
   
