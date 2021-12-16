@@ -90,7 +90,7 @@ default:
                   ?>
 <header class="container">
       <nav class="navbar navbar-expand-sm header-top">
-          <a class="navbar-brand" href="index1.php?id=<?php echo $idkhach;?>" style="width:100; font-size: 25px;">
+          <a class="navbar-brand" href="../index1.php?id=<?php echo $idkhach;?>" style="width:100; font-size: 25px;">
                  THPT Nghĩa Minh
           </a>
           <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
@@ -104,7 +104,7 @@ default:
                           
                           
                           <li class="nav-item">
-                              <a style="width:100; font-size: 13px;" class="nav-link active" href="loginandout/logout.php">Logout</a>
+                              <a style="width:100; font-size: 13px;" class="nav-link active" href="../loginandout/logout.php">Logout</a>
                           </li>
                   
               </ul>

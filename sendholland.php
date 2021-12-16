@@ -69,7 +69,8 @@ default:
         $mail->Body  .= ''.$a.'';
         $mail->Body  .= ''.$b.'';
         if($mail->send()) {                                     // phải bật cho ứng dụng kém  được dùng ở     myaccount.google.com
-        echo 'Gửi thành công. <a href="banthan.php?id='.$idkhach.'>">Trở về</a> ';  
+          $url = "../thanhcong.php?id=" . $idkhach . "";
+          header('location:' . $url);
         } else {  
         echo 'Message could not be sent';  
         }  

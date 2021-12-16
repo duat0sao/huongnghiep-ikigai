@@ -81,7 +81,7 @@ index 5 => conventional
 
 
 
-const questionText = document.querySelector(".question");
+const questionText = document.querySelector(".question");    //Truyền vào cái đầu tie
 const buttons = document.querySelectorAll(".answers button");
 let questionsIndex = 0;
 let scoresIndex = 0;

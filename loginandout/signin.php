@@ -59,7 +59,8 @@ include('random.php');
 		mysqli_query($conn,"INSERT INTO toithichgi(idkhach) VALUES('$idkhach')");
         
         
-        header('location:../index.php');
+        $url = "../thanhcong.php?id=" . $idkhach . "";
+        header('location:' . $url);
         
         
 
