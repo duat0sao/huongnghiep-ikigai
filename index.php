@@ -17,7 +17,6 @@
       span.slogan{
         padding: 0 12px;
         color: #367cff;
-      }
     </style>
     
   </head>
