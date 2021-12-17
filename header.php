@@ -41,7 +41,7 @@
                       <a style="width:100; font-size: 15px;" class="nav-link" href="index1.php?id=<?php echo $idkhach;?>"><strong>Trang chủ</strong><span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                      <a style="width:100; font-size: 15px;" class="nav-link" href="#">Giới thiệu</a>
+                      <a style="width:100; font-size: 15px;" class="nav-link" href="gioithieu1.php?id=<?php echo $idkhach;?>">Giới thiệu</a>
                   </li>
                  
                   <li class="nav-item">

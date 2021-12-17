@@ -172,8 +172,8 @@
                               <input type="text" name="email" class="form-control" placeholder="Email" required>
                           </div>
                           <div class="form-group">
-                              <label for="exampleDropdownFormPassword1">Password</label>
-                              <input type="password" name="password" class="form-control" placeholder="Password" required>
+                              <label for="exampleDropdownFormPassword1">Mật khẩu</label>
+                              <input type="password" name="password" class="form-control" placeholder="Mật khẩu" required>
                           </div>
                           <!-- <div class="form-check">
                           <input type="checkbox" class="form-check-input">
@@ -181,7 +181,7 @@
                               Remember me
                           </label>
                       </div> -->
-                          <button type="submit" class="btn btn-primary" name="sign-in">Đăng ký</button>
+                          <button type="submit" class="btn btn-primary" name="sign-in">Đăng Nhập</button>
                           <div class="dropdown-divider"></div>
                           <a type="button" class="dropdown-item" href="#" data-dismiss="modal" data-toggle="modal" data-target="#sign-up">
                                Đăng ký.
