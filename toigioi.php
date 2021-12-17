@@ -38,7 +38,7 @@ body {
   }
 
   body .center {
-    top: 60%;
+    top: 80%;
   }
 
   .conttent {
@@ -173,12 +173,19 @@ h1 {
     </style>
   </head>
   <body>
-    <div class="nen">
+    
     
 
     <!-- them anh logo truong ???<img class="logo" src="img/log_nghiaminh.jpg" alt="">-->
 
-    <?php include 'header.php';?>
+    <nav class="navbar navbar-expand-sm header-top container">
+          <a class="navbar-brand" href="index1.php?id=<?php echo $idkhach;?>" style="width:100; font-size: 25px;">
+                 THPT Nghĩa Minh
+          </a>
+         
+          <center><a class="btn" href="index1.php?id=<?php echo $idkhach;?>">Trang chủ</a></center>
+          
+      </nav>
 
   </div>
     <div class="center conttent">
@@ -192,7 +199,8 @@ h1 {
         <a href="disc/index.php?id=<?php echo $idkhach;?>"><img class="disc" src="img/disc.jpg" alt="Responsive image"></a>
         <h4>Trắc nghiệm Disc</h4>
       </div>
-      <!-- <a href="index1.php?id=<?php echo $idkhach;?>">Trang chủ</a> -->
+      
     </div>
+    
   </body>
 </html>

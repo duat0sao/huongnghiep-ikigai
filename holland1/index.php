@@ -67,8 +67,7 @@ $idkhach = $_GET['id'];
                  THPT Nghĩa Minh
           </a>
          
-          <div class="collapse navbar-collapse" id="collapsibleNavId" style="z-idex: 1; background: white; box-shadow: 1px 1px 1px #aaa; boder-radius: 3px;">
-          </div>
+         
           
       </nav>
 
@@ -78,7 +77,7 @@ $idkhach = $_GET['id'];
     <div class="align-center text-center">
       <h2 class="question"></h2>
       <div class="answers">
-      <h5><sub>Hãy chọn đáp án phù hợp nhất với mình</sub></h5>
+      <h5 id="taga1" style="display: block;"><sub>Hãy chọn đáp án phù hợp nhất với mình</sub></h5>
         <button class="btn btn-primary absolutely" value="4" type="button" id="1">
           Hoàn toàn đúng
         </button>
@@ -94,7 +93,7 @@ $idkhach = $_GET['id'];
         <button class="btn btn-primary never" value="0" type="button" id="1">
           Không hề đúng
         </button>
-        <h4 class="" id="thutu">/54</h4>
+        <h4 class="" id="thutu" style="display: block;">/54</h4>
         <br><br> 
         <a class="btn " href="../toigioi.php?id=<?php echo $idkhach;?>" id="taga" style="display: block;">Trở lại</a>
         
@@ -116,9 +115,9 @@ $idkhach = $_GET['id'];
         <div class="row justify-content-center">
           
           <div>
-            <canvas id="myChart" style="width:100%; margin:auto; max-width:450px; height: 450px"></canvas>
+            <canvas id="myChart" style="width:100%;max-width:600px; height: 300px"></canvas>
           </div>
-          <br><br><br><br>
+          <br>
 
         </div>
       </div>

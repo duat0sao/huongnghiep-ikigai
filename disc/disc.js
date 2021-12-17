@@ -204,7 +204,7 @@ function resultScreen() {
 
 
   //   Print Result
-
+  document.getElementById("thutu").style.display = "none";
   document.getElementById("h22").style.display = "none";
   document.getElementById("h223").style.display = "none";
   document.getElementById("taga").style.display = "none";
