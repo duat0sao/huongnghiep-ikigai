@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 16, 2021 lúc 04:09 PM
+-- Thời gian đã tạo: Th12 17, 2021 lúc 09:33 AM
 -- Phiên bản máy phục vụ: 10.4.18-MariaDB
 -- Phiên bản PHP: 8.0.5
 
@@ -42,6 +42,76 @@ INSERT INTO `admin` (`admin`, `matkhau`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `ctdaotaoct`
+--
+
+CREATE TABLE `ctdaotaoct` (
+  `manganh` int(255) NOT NULL,
+  `ctdtct` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `ctdaotaoct`
+--
+
+INSERT INTO `ctdaotaoct` (`manganh`, `ctdtct`) VALUES
+(7140101, 'Xã hội học đại cương'),
+(7140101, 'Tư duy biện luận – sáng tạo'),
+(7140101, 'Nhập môn nghiên cứu khoa học'),
+(7140101, 'Tâm lý học đại cương'),
+(7140101, 'Quản lý giáo dục đại cương'),
+(7140101, 'Quản lý hành chính nhà nước'),
+(7140101, 'Giáo dục học đại cương'),
+(7140101, 'Nhập môn ngành Giáo dục học'),
+(7140101, 'Những nguyên lý cơ bản của Chủ nghĩa Mác – Lênin'),
+(7140101, 'Tư tưởng Hồ Chí Minh'),
+(7140101, 'Giáo dục thể chất (Lý thuyết)'),
+(7140101, 'Giáo dục quốc phòng'),
+(7140101, 'Giáo dục thể chất (Thực hành trong Trường)'),
+(7140101, 'Giáo dục thể chất (Thực hành ngoài Trường)'),
+(7140101, 'Tâm lý học quản lý'),
+(7140101, 'Lý thuyết phát triển và phát triển bền vững'),
+(7140101, 'Thống kê trong khoa học xã hội'),
+(7140101, 'Lý luận giáo dục và lý luận dạy học'),
+(7140101, 'Lịch sử các tư tưởng giáo dục'),
+(7140101, 'Giao tiếp sư phạm'),
+(7140101, 'Đường lối cách mạng của Đảng Cộng Sản Việt Nam'),
+(7140101, 'Kỹ thuật soạn thảo văn bản hành chính'),
+(7140101, 'Lịch sử Đoàn, Hội, Đội và các phong trào thanh thiếu nhi'),
+(7140101, 'Ứng dựng công nghệ thông tin trong giáo dục'),
+(7140101, 'Phương pháp nghiên cứu khoa học giáo dục'),
+(7140101, 'Thực tế chuyên môn'),
+(7140101, 'Quản lý dự án trong giáo dục'),
+(7140101, 'Đánh giá trong giáo dục'),
+(7140101, 'Lý luận chung về công tác thanh thiếu nhi'),
+(7140101, 'Tham vấn học đường'),
+(7140101, 'Công tác Đảng và Đoàn thể trong trường học'),
+(7140101, 'Quản lý hoạt động dạy học, giáo dục trong cơ sở giáo dục'),
+(7140101, 'Thực tập quản lý giáo dục, công tác Đoàn- Đội'),
+(7140101, 'Quản trị hành chính văn phòng trong giáo dục'),
+(7140101, 'Rèn luyện nghiệp vụ sư phạm'),
+(7140101, 'Quản lý tài chính và cơ sở vật chất trong giáo dục'),
+(7140101, 'Quan hệ công chúng'),
+(7140101, 'Tổ chức hoạt động trải nghiệm trong trường học'),
+(7140101, 'Kỹ năng tổ chức hoạt động thiếu nhi'),
+(7140101, 'Công tác sao nhi đồng'),
+(7140101, 'Nghi thức đội và phương pháp huấn luyện nghi thức đội'),
+(7140101, 'Quản lý nhân sự trong giáo dục'),
+(7140101, 'Giao tiếp hiệu quả trong quản lý giáo dục (1+1)'),
+(7140101, 'Quản lý sự thay đổi trong giáo dục'),
+(7140101, 'Giáo dục hòa nhập'),
+(7140101, 'Thực tập tốt nghiệp'),
+(7140101, 'Kỹ năng nghiệp vụ công tác thanh niên'),
+(7140101, 'Truyền thông marketing trong giáo dục'),
+(7140101, 'Giáo dục hướng nghiệp'),
+(7140101, 'Giáo dục giá trị sống và kỹ năng sống'),
+(7140101, 'Kiểm tra và thanh tra trong giáo dục'),
+(7140101, 'Bảo đảm và kiểm định chất lượng giáo dục'),
+(7140101, 'Báo cáo tốt nghiệp');
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `disc`
 --
 
@@ -59,8 +129,30 @@ CREATE TABLE `disc` (
 --
 
 INSERT INTO `disc` (`nhom1`, `nhom2`, `nhom3`, `nhom4`, `iddisc`, `idkhach`) VALUES
-('3', '5', '4', '2', 13, 13),
+('2', '7', '4', '1', 13, 13),
 ('2', '5', '5', '2', 14, 14);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `gioithieu`
+--
+
+CREATE TABLE `gioithieu` (
+  `manganh` int(255) NOT NULL,
+  `gtmot` text NOT NULL,
+  `gtchung` text NOT NULL,
+  `ctdaotao` text NOT NULL,
+  `cohoi` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `gioithieu`
+--
+
+INSERT INTO `gioithieu` (`manganh`, `gtmot`, `gtchung`, `ctdaotao`, `cohoi`) VALUES
+(7140101, 'Giáo dục học là ngành học tổng thể trong lĩnh vực giáo dục, đào tạo giáo viên. Tuy vậy không nhiều bạn biết tới ngành học này và thực tế hiện nay chỉ có 4 trường đại học trên toàn quốc tuyển sinh và đào tạo ngành Giáo dục học.', 'Giáo dục học là ngành học trang bị kiến thức nền tảng về tâm lý giáo dục, quản lý giáo dục, giúp xây dựng và bồi dưỡng năng lực xây dựng kế hoạch, thiết kế, triển khai và đánh giá các hoạt động giáo dục, tư vấn, quản lý trường học, các cơ quan, cơ sở, trung tâm về giáo dục, các tổ chức phi chính phủ, đoàn thể xã hội có liên quan tới giáo dục…', 'Chương trình đào tạo ngành Giáo dục học giúp sinh viên trang bị những kiến thức từ cơ bản tới chuyên sâu về giáo dục với các hướng chuyên môn như Tham vấn và công tác xã hội, Giảng dạy và tổ chức các hoạt động giáo dục, Đánh giá trong giáo dục, giảng dạy giáo dục học và các môn liên quan.', 'Sinh viên hoàn thành chương trình học ngành Giáo dục học sẽ có đủ kiến thức nền tảng để đảm nhiệm nhiều vai trò công việc như nhân viên, chuyên viên, trợ lý, nhà tư vấn, nghiên cứu, giáo viên, quản lý – lãnh đạo trong lĩnh vực giáo dục thực tiễn.  Một số công việc các bạn sinh viên sau khi tốt nghiệp ngành Giáo dục học có thể tham khảo như:  Chuyên viên tư vấn tâm lý trong các cơ sở giáo dục, hệ thống trường phổ thông Tham vấn tâm lý tại các cơ sở, trung tâm tham vấn tư vấn tâm lý ngoài xã hội cho các đối tượng có nhu cầu Cán bộ đánh giá giáo dục, chương trình giáo dục, đánh giá lớp học, học sinh, giáo viên… Giảng dạy tại các cơ sở giáo dục Giảng dạy về những lĩnh vực liên quan tới chuyên ngành giáo dục được đào tạo tại các cơ sở giáo dục chuyên biệt Nghiên cứu và phát triển các dự án liên quan tới giáo dục Tiếp tục học và nghiên cứu lên ở bậc thạc sĩ và tiến sĩ học giáo dục'),
+(7140114, 'Ngành Quản lý giáo dục là một trong những ngành học quan trọng góp phần xây dựng đội ngũ nhân lực làm việc cho nền hành chính giáo dục chuyên nghiệp, phù hợp với những thay đổi trong giáo dục hiện tại và trong tương lai.', 'Quản lý giáo dục là ngành học thuộc khối KHXH giúp cung cấp các kiến thức từ nền tảng tới chuyên sâu của lĩnh vực khoa học giáo dục, tâm lý.  Để theo học ngành quản lý giáo dục, các bạn cũng cần phải sở hữu những phẩm chất tốt đẹp, cao quý của nghề giáo, phù hợp với môi trường giáo dục sư phạm tại Việt Nam.', 'Quản lý  giáo dục', 'Và sau 4 năm cố gắng học hành vất vả, các bạn sẽ có kha khá lựa chọn bởi cơ hội việc làm ngành Quản lý giáo dục cũng không hề ít.  Theo một số trường đại học, sinh viên tốt nghiệp ngành Quản lý giáo dục thường có những lựa chọn nghề nghiệp như sau:  Thực hiện công việc quản lý tại các cơ sở giáo dục Thực hiện công việc nghiên cứu giáo dục Thực hiện công việc tư vấn về giáo dục Giảng dạy các môn học chuyên ngành quản lý giáo dục');
 
 -- --------------------------------------------------------
 
@@ -108,6 +200,31 @@ CREATE TABLE `khach` (
 INSERT INTO `khach` (`idkhach`, `email`, `sdt`, `matkhau`, `hovaten`) VALUES
 (13, 'tduat183@gmail.com', 86645, '1', 'lý thị nụ'),
 (14, '18lynnxx@gmail.com', 1, '1', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `khoixettuyen`
+--
+
+CREATE TABLE `khoixettuyen` (
+  `manganh` int(255) NOT NULL,
+  `khoi` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `khoixettuyen`
+--
+
+INSERT INTO `khoixettuyen` (`manganh`, `khoi`) VALUES
+(7140101, 'Khối A00 (Toán, Lý, Hóa)'),
+(7140101, 'Khối B00 (Toán, Hóa, Sinh)'),
+(7140101, 'Khối C00 (Văn, Sử, Địa)'),
+(7140101, 'Khối C01 (Văn, Toán, Vật lí)'),
+(7140101, 'Khối C14 (Văn, Toán, Giáo dục công dân)'),
+(7140101, 'Khối C15 (Văn, Toán, Khoa học xã hội)'),
+(7140101, 'Khối C19 (Văn, Lịch sử, Giáo dục công dân)'),
+(7140101, 'Khối D01 (Văn, Toán, Anh)');
 
 -- --------------------------------------------------------
 
@@ -207,7 +324,7 @@ INSERT INTO `nhomnganh` (`idnhomnganh`, `tennganh`, `manganh`, `diemvao`, `holla
 ('nn', 'Ngôn ngữ Đức', '7220205', '', 'r'),
 ('nn', 'Ngôn ngữ Tây Ban Nha', '7220206', '', 'r'),
 ('nn', 'Ngôn ngữ Bồ Đào Nha', '7220207', '', 'r'),
-('nn', 'Ngôn ngữ Italia', '7220208', '', 'r'),
+('nn', 'Ngôn ngữ Italia', '7220208 R - Realistic - Kỹ Thuật, Chuyên viên, người thực hiện', '', 'r'),
 ('nn', 'Ngôn ngữ Nhật', '7220209', '', 'r'),
 ('nn', 'Ngôn ngữ Hàn Quốc', '7220210', '', 'r'),
 ('nn', 'Ngôn ngữ Ả Rập', '7220211', '', 'r'),
@@ -489,8 +606,32 @@ CREATE TABLE `toithichgi` (
 --
 
 INSERT INTO `toithichgi` (`idkhach`, `idcauhoi`, `idtoithich`, `cau1`, `cau2`, `cau3`, `cau4`, `cau5`, `cau6`, `cau7`, `cau8`, `cau9`, `cau10`, `cau11`, `cau12`, `cau13`, `cau14`, `cau15`, `cau16`) VALUES
-(13, 15, 16, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(13, 15, 16, 'chơi game', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (14, 3, 17, '21', '2', '3', '4', '67', '68', 'cau 7', 'cau 8', '', '', '', '', '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `truong`
+--
+
+CREATE TABLE `truong` (
+  `manganh` int(255) NOT NULL,
+  `tentruong` varchar(500) NOT NULL,
+  `kv` varchar(500) NOT NULL,
+  `diem` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `truong`
+--
+
+INSERT INTO `truong` (`manganh`, `tentruong`, `kv`, `diem`) VALUES
+(7140101, 'Học viện Quản lý giáo dục', 'b', 16),
+(7140101, 'Đại học Tân Trào', 'b', 15),
+(7140101, 'Đại học Sư phạm Thái Nguyên', 'b', 15),
+(7140101, 'Đại học Khoa học xã hội và Nhân văn – ĐHQG TPHCM', 'n', 22),
+(7140101, 'Đại học Thủ Dầu Một', 'n', 15);
 
 --
 -- Chỉ mục cho các bảng đã đổ
