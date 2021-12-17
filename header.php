@@ -29,7 +29,7 @@
               </ul>
           </div>
       </nav>
-      <span style="padding: 0 12px; color: #367cff; font-size: 18px">Hành trình khám phá bản thân</span>
+      <span style="padding: 0 12px; color: #367cff; font-size: 18px"><sub> Hành trình khám phá bản thân</sub></span>
       <nav class="navbar navbar-expand-lg navbar-light header-bottom">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon" style="width:100; font-size: 10px;"></span>

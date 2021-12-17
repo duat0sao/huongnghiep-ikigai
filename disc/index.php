@@ -11,54 +11,15 @@ $idkhach = $_GET['id'];
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Holland Quiz</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>DISC Quiz</title>
+    <link rel="stylesheet" href="../holland1/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src = "https://code.highcharts.com"> </script>
 
 
-    <style>
-
-    @media only screen and (max-width: 600px) {
-      .la-phai, 
-      .la-trai, 
-      .logo {
-            display: none;
-        }
-
-
-    }
-
-    .la-phai {
-        position: absolute;
-        right: 0;
-        width: 250px;
-        object-fit: cover;
-        transform: translateX(40%);
-        bottom: 40px;
-        z-index: -1;
-    }
-
-    .la-trai {
-        position: absolute;
-        top: 40px;
-        width: 250px;
-        object-fit: cover;
-        transform: translateX(-40%);
-        z-index: -1;
-    }
-
-    .logo {
-        height: 150px;
-        position: absolute;
-        right: 120px;
-        top: 32px;
-    }
-
-  </style>
+    
 
   </head>
   <body>
@@ -66,7 +27,7 @@ $idkhach = $_GET['id'];
           <a class="navbar-brand" href="../toigioi.php?id=<?php echo $idkhach;?>" style="width:100; font-size: 25px;">
                  THPT Nghĩa Minh
           </a>
-         
+          
           <div class="collapse navbar-collapse" id="collapsibleNavId" style="z-idex: 1; background: white; box-shadow: 1px 1px 1px #aaa; boder-radius: 3px;">
           </div>
           
@@ -76,24 +37,22 @@ $idkhach = $_GET['id'];
 
 
     <div class="align-center text-center">
-      <h2 class="question"></h2>
+      <h2 id="h22" style="display: block;">Hãy chọn đáp án phù hợp nhất với mình</h2>
       <div class="answers">
-      <h5><sub>Hãy chọn đáp án phù hợp nhất với mình</sub></h5>
-        <button class="btn btn-primary absolutely" value="4" type="button" id="1">
-          Hoàn toàn đúng
+      <h5 id="h223" style="display: block;"><sub>Hãy chọn đáp án phù hợp nhất với mình</sub></h5>
+        <button class="question1 btn btn-primary absolutely" value="a" type="button" id="1">
+          
         </button>
-        <button class="btn btn-primary very" value="3" type="button" id="1">
-          Đúng trong hầu hết trường hợp
+        <button class="question2 btn btn-primary very" value="b" type="button" id="1">
+          
         </button>
-        <button class="btn btn-primary normal" value="2" type="button" id="1">
-          Chỉ đúng một nửa
+        <button class="question3 btn btn-primary normal" value="c" type="button" id="1">
+          
         </button>
-        <button class="btn btn-primary maybe" value="1" type="button" id="1">
-          Đúng trong vài trường hợp
+        <button class="question4 btn btn-primary maybe" value="d" type="button" id="1">
+          
         </button>
-        <button class="btn btn-primary never" value="0" type="button" id="1">
-          Không hề đúng
-        </button>
+      
         <h4 class="" id="thutu">/54</h4>
         <br><br> 
         <a class="btn " href="../toigioi.php?id=<?php echo $idkhach;?>" id="taga" style="display: block;">Trở lại</a>
@@ -124,10 +83,10 @@ $idkhach = $_GET['id'];
       </div>
       <div class="result blue" style="display: none;"></div>
       <div class=""></div>
-      <a class="btn btn-primary"  href="nhomnganh.php?id=<?php echo $idkhach;?>" id="hello" style="display: none;">Xem thêm nhóm ngành phù hợp</a>
+      <a class="btn btn-primary"  href="../index1.php?id=<?php echo $idkhach;?>" id="hello" style="display: none;">Trang chủ</a>
     </div>
     
 
-    <script src="holland.js"></script>
+    <script src="disc.js"></script>
   </body>
 </html>

@@ -45,9 +45,7 @@
                           </a>
                       </li>
                       
-                          <li class="users">
-                              <a class="nav-link active" href=""><i class="fa fa-user"></i>&nbsp;</a>
-                          </li>
+                          
                           
                               
                           
@@ -84,6 +82,7 @@
           </div>
       </nav>
   </header>
+  
   <div class="contain" style="width: 100%;">
       
 
