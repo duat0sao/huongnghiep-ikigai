@@ -203,7 +203,6 @@ function printCanvas() {
     new Chart("myChart", {
       
       type: "pie",
-      indexLabelFontSize: 0,
       data: {
         labels: xValues,
         
@@ -217,7 +216,7 @@ function printCanvas() {
         title: {
           display: true,
           text: "Biểu điểm của bạn",
-          fontSize:34
+          fontSize:26
         }
       }
     });

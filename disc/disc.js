@@ -248,7 +248,7 @@ function printCanvas() {
             title: {
               display: true,
               text: "Tích cách của bạn",
-              fontSize:34
+              fontSize:26
             }
           }
         });

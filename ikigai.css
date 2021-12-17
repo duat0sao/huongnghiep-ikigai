@@ -1,12 +1,12 @@
 /* Global stuff */
+
 html,
 body {
 	margin: 0;
 	font-family: "Montserrat", Montserrat, sans-serif;
 	font-size: 10px;
-	background-color: #fff;
-	width: 100%;
-	height: 100%;
+	background-color: #d8f5fd;
+	
 }
 
 ul,
@@ -17,56 +17,7 @@ li {
 	/*  */
 }
 
-@media only screen and (min-width: 1200px) {
-	.page {
-		display: grid;
-		height: 100%;
-		width: 100%;
-	}
 
-
-	.venn-wrapper {
-	position: relative;
-	margin: auto;
-	width: 35vw;
-	height: 35vw;
-	border-radius: 100%;
-	background-color: #FA8BFF;
-	background-image: -webkit-linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
-	background-image: -moz-linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
-	background-image: -o-linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
-	background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
-
-	transition: all 0.3s ease-in-out;
-	/*  */
-	display: grid;
-	grid-template: 1fr / 1fr;
-}
-
-.venn-wrapper div {
-	width: 100%;
-	height: 100%;
-	border-radius: 100%;
-	grid-column: 1;
-	grid-row: 1;
-	transition: all 0.3s ease-in-out;
-	/*  */
-	display: grid;
-	grid-template: 1fr 1fr / 1fr 1fr;
-	justify-content: center;
-  /* 	 */
-	opacity: 0;
-}
-
-.venn-wrapper p {
-	margin: auto;
-	text-transform: uppercase;
-	font-size: 1.5vw;
-	grid-column: 1 / -1;
-	grid-row: 1 / -1;
-}
-
-}
 
 	.venn-wrapper {
 	position: relative;

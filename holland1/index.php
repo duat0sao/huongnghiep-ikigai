@@ -20,46 +20,7 @@ $idkhach = $_GET['id'];
     <script src = "https://code.highcharts.com"> </script>
 
 
-    <style>
-
-    @media only screen and (max-width: 600px) {
-      .la-phai, 
-      .la-trai, 
-      .logo {
-            display: none;
-        }
-
-
-    }
-
-    .la-phai {
-        position: absolute;
-        right: 0;
-        width: 250px;
-        object-fit: cover;
-        transform: translateX(40%);
-        bottom: 40px;
-        z-index: -1;
-    }
-
-    .la-trai {
-        position: absolute;
-        top: 40px;
-        width: 250px;
-        object-fit: cover;
-        transform: translateX(-40%);
-        z-index: -1;
-    }
-
-    .logo {
-        height: 150px;
-        position: absolute;
-        right: 120px;
-        top: 32px;
-    }
-
-  </style>
-
+  
   </head>
   <body>
   <nav class="navbar navbar-expand-sm header-top container">
@@ -72,7 +33,6 @@ $idkhach = $_GET['id'];
       </nav>
 
     
-
 
     <div class="align-center text-center">
       <h2 class="question"></h2>
@@ -113,9 +73,9 @@ $idkhach = $_GET['id'];
 
       <div class="container container1 hide">
         <div class="row justify-content-center">
-          
+          <br><br><br><br>
           <div>
-            <canvas id="myChart" style="width:100%;max-width:600px; height: 300px"></canvas>
+            <canvas id="myChart" style="width="385" height="230""></canvas>
           </div>
           <br>
 
@@ -125,7 +85,11 @@ $idkhach = $_GET['id'];
       <div class=""></div>
       <a class="btn btn-primary"  href="nhomnganh.php?id=<?php echo $idkhach;?>" id="hello" style="display: none;">Xem thêm nhóm ngành phù hợp</a>
     </div>
+
+
+
     
+    <br><br><br><br>
 
     <script src="holland.js"></script>
   </body>

@@ -72,9 +72,9 @@ $idkhach = $_GET['id'];
 
       <div class="container container1 hide">
         <div class="row justify-content-center">
-          
+          <br><br><br><br>
           <div>
-            <canvas id="myChart" style="width:100%; max-width:450px; height: 450px"></canvas>
+            <canvas id="myChart" style="width="385" height="230""></canvas>
           </div>
           <br>
 
@@ -82,8 +82,12 @@ $idkhach = $_GET['id'];
       </div>
       <div class="result blue" style="display: none;"></div>
       <div class=""></div>
-      <a class="btn btn-primary"  href="../index1.php?id=<?php echo $idkhach;?>" id="hello" style="display: none;">Trang chủ</a>
+      <a class="btn btn-primary"  href="../toigioi.php?id=<?php echo $idkhach;?>" id="hello" style="display: none;">Trang chủ</a>
     </div>
+
+
+
+    <br><br><br><br>
     
 
     <script src="disc.js"></script>
