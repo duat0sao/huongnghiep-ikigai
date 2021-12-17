@@ -150,6 +150,7 @@ default:
                             <th>Nhóm ngành</th>
                             <th>Tên ngành</th>
                             <th>Mã ngành</th>
+                            
                           </tr>
                         </thead>
                         <tbody class="">
@@ -206,6 +207,22 @@ default:
                             </td>
                             <td><?php echo $row18['tennganh']; ?></td>
                             <td><?php echo $row18['manganh']; ?></td>
+<td><?php 
+$manganhnganh = $row18['manganh'];
+$query111=mysqli_query($conn,"select * from gioithieu where manganh='$manganhnganh'");
+$row111 =mysqli_fetch_array($query111);
+
+if (isset($row111['gtmot'])){
+    echo  '<a href="../chitietnganh.php?id='.$idkhach.'&mg='.$manganhnganh.'">Xem thêm</a>';
+}
+else {
+    echo 'Đang cập nhập';
+}
+
+?></td>
+
+
+
                         </tr>
 
                         <?php  }?>
