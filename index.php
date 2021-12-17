@@ -37,12 +37,12 @@
                   
                       <li class="nav-item">
                           <a type="button" class="nav-link active " href="#" data-toggle="modal" data-target="#login">
-                              Login
+                              Đăng nhập
                           </a>
                       </li>
                       <li class="nav-item">
                           <a type="button" class="nav-link active " href="#" data-toggle="modal" data-target="#sign-up">
-                              Sign Up
+                              Đăng ký
                           </a>
                       </li>
                       
@@ -67,7 +67,7 @@
                       <a class="nav-link" href="index.php">Trang chủ<span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">Giới thiệu</a>
+                      <a class="nav-link" href="gioithieu.php">Giới thiệu</a>
                   </li>
                 
                   
@@ -78,7 +78,7 @@
               </ul>
               <form class="form-inline my-2 my-lg-0">
                   <input class="form-control mr-sm-2" type="search" placeholder="Search">
-                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
               </form>
           </div>
       </nav>
@@ -101,7 +101,7 @@
               <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                   <div class="modal-content">
                       <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Sign Up</h5>
+                          <h5 class="modal-title" id="exampleModalLongTitle">Đăng ký</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                           </button>
@@ -123,25 +123,25 @@
                           </div>
                           <div class="form-row">
                               <div class="col-md-4 mb-3">
-                                  <label for="validationDefault01">Password</label>
+                                  <label for="validationDefault01">Mật khẩu</label>
                                   <input type="password" name="password1" class="form-control" id="validationDefault01" placeholder="Mật khẩu" required>
                               </div>
                               <div class="col-md-4 mb-3">
-                                  <label for="validationDefault01">Re-Password</label>
+                                  <label for="validationDefault01">Nhập lại mật khẩu</label>
                                   <input type="password" name="password2" class="form-control" id="validationDefault01" placeholder="Nhập lại mật khẩu" required>
                               </div>
                           </div>
                           
                           
                           <div class="dropdown-divider"></div>
-                          <button type="submit" class="btn btn-primary">Sign up</button>
+                          <button type="submit" class="btn btn-primary">Đăng ký</button>
                           <div class="dropdown-divider"></div>
                           <a type="button" class="dropdown-item" href="#" data-dismiss="modal" data-toggle="modal" data-target="#login">
-                              Have you around ? Sign In
+                              Bạn đã có tài khoản đăng nhập
                           </a>
                       </div>
                       <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
                       </div>
                   </div>
               </div>
@@ -162,7 +162,7 @@
               <div class="modal-dialog modal-dialog-centered" role="document">
                   <div class="modal-content">
                       <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
+                          <h5 class="modal-title" id="exampleModalLongTitle">Đăng nhập</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                           </button>
@@ -182,16 +182,16 @@
                               Remember me
                           </label>
                       </div> -->
-                          <button type="submit" class="btn btn-primary" name="sign-in">Sign in</button>
+                          <button type="submit" class="btn btn-primary" name="sign-in">Đăng ký</button>
                           <div class="dropdown-divider"></div>
                           <a type="button" class="dropdown-item" href="#" data-dismiss="modal" data-toggle="modal" data-target="#sign-up">
-                              New around here? Sign Up
+                               Đăng ký.
                           </a>
 
-                          <a class="dropdown-item" href="#">Forgot password?</a>
+                          <a class="dropdown-item" href="#">Quên mật khẩu</a>
                       </div>
                       <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
                       </div>
                   </div>
               </div>

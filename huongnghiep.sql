@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 15, 2021 lúc 11:47 AM
+-- Thời gian đã tạo: Th12 16, 2021 lúc 04:09 PM
 -- Phiên bản máy phục vụ: 10.4.18-MariaDB
 -- Phiên bản PHP: 8.0.5
 
@@ -59,8 +59,8 @@ CREATE TABLE `disc` (
 --
 
 INSERT INTO `disc` (`nhom1`, `nhom2`, `nhom3`, `nhom4`, `iddisc`, `idkhach`) VALUES
-('4', '3', '3', '4', 13, 13),
-('0', '0', '0', '0', 14, 14);
+('3', '5', '4', '2', 13, 13),
+('2', '5', '5', '2', 14, 14);
 
 -- --------------------------------------------------------
 
@@ -84,7 +84,7 @@ CREATE TABLE `holland` (
 --
 
 INSERT INTO `holland` (`bo1`, `bo2`, `bo3`, `bo4`, `bo5`, `bo6`, `idholland`, `idkhach`) VALUES
-('27', '27', '27', '27', '27', '27', 31, 13),
+('36', '36', '33', '27', '27', '27', 31, 13),
 ('13', '9', '26', '33', '28', '31', 32, 14);
 
 -- --------------------------------------------------------
@@ -337,7 +337,7 @@ INSERT INTO `nhomnganh` (`idnhomnganh`, `tennganh`, `manganh`, `diemvao`, `holla
 ('khoa', 'Tài nguyên và Du lịch sinh thái', '7859002', '', 'i'),
 ('khoa', 'Cảnh quan và Kỹ thuật hoa viên', '7859007', '', 'i'),
 ('toan', 'Toán học', '7460101', '', 'r'),
-('toan', 'Toán ứng dụng', '7460102', '', 'r'),
+('toan', 'Toán ứng dụng', 'Toán ứng dụng', '', 'r'),
 ('toan', 'Toán – Tin', '7460117', '', 'r'),
 ('toan', 'Thống kê', '7460201', '', 'r'),
 ('cntt', 'Khoa học máy tính', '7480101', '', 'r'),
@@ -378,12 +378,12 @@ INSERT INTO `nhomnganh` (`idnhomnganh`, `tennganh`, `manganh`, `diemvao`, `holla
 ('yte', 'Điều dưỡng', '7720301', '', 'c'),
 ('yte', 'Hộ sinh', '7720302', '', 'c'),
 ('yte', 'Dụng cụ chỉnh hình chân tay giả', '7720399', '', 'c'),
-('yte', 'Y sinh học thể dục thể thao', '7720400', '', 'c'),
+('yte', 'Y sinh học thể dục thể thao', 'Y sinh học thể dục thể thao', '', 'c'),
 ('yte', 'Dinh dưỡng', '7720401', '', 'c'),
 ('yte', 'Dinh dưỡng và Khoa học thực phẩm', '7720497', '', 'c'),
 ('yte', 'Khoa học chế biến món ăn', '7720498', '', 'c'),
 ('yte', 'Khoa học dinh dưỡng và ẩm thực', '7720499', '', 'c'),
-('yte', 'Răng – Hàm – Mặt', '7720501', '', 'c'),
+('yte', 'Răng – Hàm – Mặt', 'Răng – Hàm – Mặt', '', 'c'),
 ('yte', 'Kỹ thuật phục hình răng', '7720502', '', 'c'),
 ('yte', 'Phục hồi chức năng', '7720503', '', 'c'),
 ('yte', 'Điều dưỡng gây mê hồi sức', '7720505', '', 'c'),
@@ -431,48 +431,30 @@ INSERT INTO `nhomnganh` (`idnhomnganh`, `tennganh`, `manganh`, `diemvao`, `holla
 
 CREATE TABLE `noidungcauhoi` (
   `idcauhoi` int(255) DEFAULT NULL,
-  `noidungcauhoi` varchar(255) NOT NULL,
-  `idkhach` int(255) NOT NULL,
-  `kcj` int(11) NOT NULL
+  `noidungcauhoi` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Đang đổ dữ liệu cho bảng `noidungcauhoi`
 --
 
-INSERT INTO `noidungcauhoi` (`idcauhoi`, `noidungcauhoi`, `idkhach`, `kcj`) VALUES
-(1, 'Cuộc sống của bạn chủ yếu xoay quanh việc gì', 0, 0),
-(2, 'Bạn bè nhớ đến bạn vì điều gì', 0, 0),
-(3, 'Thầy cô nhớ đến bạn vì điều gì', 0, 0),
-(4, 'Kỹ năng bẩm sinh bạn có', 0, 0),
-(5, 'Bạn học kỹ năng nào dễ dàng nhất', 0, 0),
-(6, 'Bạn bè hay nhờ bạn điều gì', 0, 0),
-(7, 'Nếu không phải nghĩ về tiền, bạn sẽ làm gì', 0, 0),
-(8, 'Điều gì khiến bạn quên thời gian', 0, 0),
-(9, 'Điều gì khiến làm nổi khùng', 0, 0),
-(10, 'Điều  gì làm bạn tràn đầy nhiệt huyết', 0, 0),
-(11, 'Bạn muốn thay đổi gì ở trường học', 0, 0),
-(12, 'Thành tựu nào khiến bạn tự hào', 0, 0),
-(13, 'Điều gì khiến bạn cảm thấy vui nhất', 0, 0),
-(14, 'Điều gì khiến bạn muốn giải quyết nhất', 0, 0),
-(15, '3 điều bạn muốn làm ngay hôm nay', 0, 0),
-(16, 'Bạn thấy công việc của ai thú vị', 0, 0),
-(1, 'Cuộc sống của bạn chủ yếu xoay quanh việc gì', 0, 0),
-(2, 'Bạn bè nhớ đến bạn vì điều gì', 0, 0),
-(3, 'Thầy cô nhớ đến bạn vì điều gì', 0, 0),
-(4, 'Kỹ năng bẩm sinh bạn có', 0, 0),
-(5, 'Bạn học kỹ năng nào dễ dàng nhất', 0, 0),
-(6, 'Bạn bè hay nhờ bạn điều gì', 0, 0),
-(7, 'Nếu không phải nghĩ về tiền, bạn sẽ làm gì', 0, 0),
-(8, 'Điều gì khiến bạn quên thời gian', 0, 0),
-(9, 'Điều gì khiến làm nổi khùng', 0, 0),
-(10, 'Điều  gì làm bạn tràn đầy nhiệt huyết', 0, 0),
-(11, 'Bạn muốn thay đổi gì ở trường học', 0, 0),
-(12, 'Thành tựu nào khiến bạn tự hào', 0, 0),
-(13, 'Điều gì khiến bạn cảm thấy vui nhất', 0, 0),
-(14, 'Điều gì khiến bạn muốn giải quyết nhất', 0, 0),
-(15, '3 điều bạn muốn làm ngay hôm nay', 0, 0),
-(16, 'Bạn thấy công việc của ai thú vị', 0, 0);
+INSERT INTO `noidungcauhoi` (`idcauhoi`, `noidungcauhoi`) VALUES
+(1, 'Cuộc sống của bạn chủ yếu xoay quanh việc gì'),
+(2, 'Bạn bè nhớ đến bạn vì điều gì'),
+(3, 'Thầy cô nhớ đến bạn vì điều gì'),
+(4, 'Kỹ năng bẩm sinh bạn có'),
+(5, 'Bạn học kỹ năng nào dễ dàng nhất'),
+(6, 'Bạn bè hay nhờ bạn điều gì'),
+(7, 'Nếu không phải nghĩ về tiền, bạn sẽ làm gì'),
+(8, 'Điều gì khiến bạn quên thời gian'),
+(9, 'Điều gì khiến làm nổi khùng'),
+(10, 'Điều  gì làm bạn tràn đầy nhiệt huyết'),
+(11, 'Bạn muốn thay đổi gì ở trường học'),
+(12, 'Thành tựu nào khiến bạn tự hào'),
+(13, 'Điều gì khiến bạn cảm thấy vui nhất'),
+(14, 'Điều gì khiến bạn muốn giải quyết nhất'),
+(15, '3 điều bạn muốn làm ngay hôm nay'),
+(16, 'Bạn thấy công việc của ai thú vị');
 
 -- --------------------------------------------------------
 
@@ -483,16 +465,32 @@ INSERT INTO `noidungcauhoi` (`idcauhoi`, `noidungcauhoi`, `idkhach`, `kcj`) VALU
 CREATE TABLE `toithichgi` (
   `idkhach` int(255) NOT NULL,
   `idcauhoi` int(255) NOT NULL,
-  `noidung` varchar(255) NOT NULL,
-  `idtoithich` int(255) NOT NULL
+  `idtoithich` int(255) NOT NULL,
+  `cau1` varchar(255) NOT NULL,
+  `cau2` varchar(255) NOT NULL,
+  `cau3` varchar(255) NOT NULL,
+  `cau4` varchar(255) NOT NULL,
+  `cau5` varchar(255) NOT NULL,
+  `cau6` varchar(255) NOT NULL,
+  `cau7` varchar(255) NOT NULL,
+  `cau8` varchar(255) NOT NULL,
+  `cau9` varchar(255) NOT NULL,
+  `cau10` varchar(255) NOT NULL,
+  `cau11` varchar(255) NOT NULL,
+  `cau12` varchar(255) NOT NULL,
+  `cau13` varchar(255) NOT NULL,
+  `cau14` varchar(255) NOT NULL,
+  `cau15` varchar(255) NOT NULL,
+  `cau16` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Đang đổ dữ liệu cho bảng `toithichgi`
 --
 
-INSERT INTO `toithichgi` (`idkhach`, `idcauhoi`, `noidung`, `idtoithich`) VALUES
-(13, 15, 'chơi game, xem phim', 16);
+INSERT INTO `toithichgi` (`idkhach`, `idcauhoi`, `idtoithich`, `cau1`, `cau2`, `cau3`, `cau4`, `cau5`, `cau6`, `cau7`, `cau8`, `cau9`, `cau10`, `cau11`, `cau12`, `cau13`, `cau14`, `cau15`, `cau16`) VALUES
+(13, 15, 16, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(14, 3, 17, '21', '2', '3', '4', '67', '68', 'cau 7', 'cau 8', '', '', '', '', '', '', '', '');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -548,7 +546,7 @@ ALTER TABLE `khach`
 -- AUTO_INCREMENT cho bảng `toithichgi`
 --
 ALTER TABLE `toithichgi`
-  MODIFY `idtoithich` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `idtoithich` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
