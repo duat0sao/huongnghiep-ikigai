@@ -136,7 +136,7 @@
                           <button type="submit" class="btn btn-primary">Đăng ký</button>
                           <div class="dropdown-divider"></div>
                           <a type="button" class="dropdown-item" href="#" data-dismiss="modal" data-toggle="modal" data-target="#login">
-                              Bạn đã có tài khoản đăng nhập
+                              Bạn đã có tài khoản? Đăng nhập.
                           </a>
                       </div>
                       <div class="modal-footer">

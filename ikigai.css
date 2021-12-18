@@ -1,12 +1,9 @@
-/* Global stuff */
-
 html,
 body {
 	margin: 0;
 	font-family: "Montserrat", Montserrat, sans-serif;
 	font-size: 10px;
 	background-color: #d8f5fd;
-	
 }
 
 ul,
@@ -18,12 +15,17 @@ li {
 }
 
 
+.page {
+	display: grid;
+	height: 80vw;
+	width: 100vw;
+}
 
-	.venn-wrapper {
+.venn-wrapper {
 	position: relative;
 	margin: auto;
-	width: 35vw;
-	height: 35vw;
+	width: 48vw;
+	height: 48vw;
 	border-radius: 100%;
 	background-color: #FA8BFF;
 	background-image: -webkit-linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
@@ -59,7 +61,6 @@ li {
 	grid-column: 1 / -1;
 	grid-row: 1 / -1;
 }
-
 
 .venn-wrapper span {
 	text-transform: uppercase;
@@ -239,4 +240,3 @@ li {
 .venn-wrapper:hover .tl { transform: translate3d(-33%, -33%, 0); }
 .venn-wrapper:hover .bl { transform: translate3d(-33%, 230%, 0); }
 .venn-wrapper:hover .br { transform: translate3d(100%, 200%, 0); }
-
