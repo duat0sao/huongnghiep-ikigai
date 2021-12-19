@@ -382,7 +382,7 @@ switch ($max) {
         $mail->Body  .= 'Bài kiểm tra Holland cho thấy bạn là '.$a.'';
         $mail->Body  .= ''.$b.'';
         $mail->Body  .= 'Bài kiểm tra DISC cho thấy bạn là'.$c.'';
-        $mail->Body  .= 'Sở thích của bạn là: ';
+        $mail->Body  .= '<br><br>Sở thích của bạn là: ';
         $mail->Body  .= ''.$e.'';
         $mail->Body  .= '<strong><sub>Cám ơn bạn đã sử dụng trang web của chúng tôi. Mong bạn sớm tìm ra ngành học đúng hợp với tính cách và sở thích của mình. Một lần nữa cám ơn các bạn nhiều</sub></strong>';
         if($mail->send()) {                                     // phải bật cho ứng dụng kém  được dùng ở     myaccount.google.com
