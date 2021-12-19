@@ -13,13 +13,26 @@ $idkhach = $_GET['id'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Holland Quiz</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src = "https://code.highcharts.com"> </script>
 
-
+  <style>
+  
+  @media screen and (max-width: 800px) {
+  .graph-container {
+          display: block;
+          float: none;
+          width: 100%;
+          margin-top: 0px;
+          margin-right:0px;
+          margin-left:0px;
+          height: auto;
+      }
+  }
+  </style>
   
   </head>
   <body>
@@ -73,9 +86,9 @@ $idkhach = $_GET['id'];
 
       <div class="container container1 hide">
         <div class="row justify-content-center">
-          <br><br><br><br>
-          <div>
-            <canvas id="myChart" style="width="385" height="230""></canvas>
+         
+          <div class="graph-container">
+            <canvas id="myChart"></canvas>
           </div>
           <br>
 

@@ -249,7 +249,9 @@ function printCanvas() {
               display: true,
               text: "Tích cách của bạn",
               fontSize:26
-            }
+            },
+            responsive: true,
+            maintainAspectRatio: false
           }
         });
 

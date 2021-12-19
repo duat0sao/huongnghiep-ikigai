@@ -18,7 +18,7 @@ $idkhach = $_GET['id'];
 	<title>Thành công</title>
 	<style>
 		.center {
-			margin-top: auto;
+			margin-top: 22%;
 		}
 	</style>
 </head>

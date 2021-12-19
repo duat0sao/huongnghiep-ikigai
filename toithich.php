@@ -71,7 +71,7 @@ if (isset($_POST['update_user'])){
     }
     $sql = "UPDATE toithichgi SET cau1='$noidung' WHERE idkhach='$idkhach'";
     mysqli_query($conn,$sql);
-    $url = "index1.php?id=" . $idkhach . "";
+    $url = "thanhcong.php?id=" . $idkhach . "";
     header('location:' . $url);
   }
     else if ($cauhoi == 2){
@@ -80,7 +80,7 @@ if (isset($_POST['update_user'])){
     }
     $sql = "UPDATE toithichgi SET cau2='$noidung' WHERE idkhach='$idkhach'";
     mysqli_query($conn,$sql);
-    $url = "index1.php?id=" . $idkhach . "";
+    $url = "thanhcong.php?id=" . $idkhach . "";
     header('location:' . $url);
   }
   else if ($cauhoi == 3){
@@ -89,7 +89,7 @@ if (isset($_POST['update_user'])){
     }
     $sql = "UPDATE toithichgi SET cau3='$noidung' WHERE idkhach='$idkhach'";
     mysqli_query($conn,$sql);
-    $url = "index1.php?id=" . $idkhach . "";
+    $url = "thanhcong.php?id=" . $idkhach . "";
     header('location:' . $url);
   }
   else if ($cauhoi == 4){
@@ -98,7 +98,7 @@ if (isset($_POST['update_user'])){
     }
     $sql = "UPDATE toithichgi SET cau4='$noidung' WHERE idkhach='$idkhach'";
     mysqli_query($conn,$sql);
-    $url = "index1.php?id=" . $idkhach . "";
+    $url = "thanhcong.php?id=" . $idkhach . "";
     header('location:' . $url);
   }
   else if ($cauhoi == 5){
@@ -107,7 +107,7 @@ if (isset($_POST['update_user'])){
     }
     $sql = "UPDATE toithichgi SET cau5='$noidung' WHERE idkhach='$idkhach'";
     mysqli_query($conn,$sql);
-    $url = "index1.php?id=" . $idkhach . "";
+    $url = "thanhcong.php?id=" . $idkhach . "";
     header('location:' . $url);
   }
   else if ($cauhoi == 6){
@@ -116,7 +116,7 @@ if (isset($_POST['update_user'])){
     }
     $sql = "UPDATE toithichgi SET cau6='$noidung' WHERE idkhach='$idkhach'";
     mysqli_query($conn,$sql);
-    $url = "index1.php?id=" . $idkhach . "";
+    $url = "thanhcong.php?id=" . $idkhach . "";
     header('location:' . $url);
   }
   else if ($cauhoi == 7){
@@ -125,7 +125,7 @@ if (isset($_POST['update_user'])){
     }
     $sql = "UPDATE toithichgi SET cau7='$noidung' WHERE idkhach='$idkhach'";
     mysqli_query($conn,$sql);
-    $url = "index1.php?id=" . $idkhach . "";
+    $url = "thanhcong.php?id=" . $idkhach . "";
     header('location:' . $url);
   }
   else if ($cauhoi == 8){
@@ -134,7 +134,7 @@ if (isset($_POST['update_user'])){
     }
     $sql = "UPDATE toithichgi SET cau8='$noidung' WHERE idkhach='$idkhach'";
     mysqli_query($conn,$sql);
-    $url = "index1.php?id=" . $idkhach . "";
+    $url = "thanhcong.php?id=" . $idkhach . "";
     header('location:' . $url);
   }
   else if ($cauhoi == 9){
@@ -143,7 +143,7 @@ if (isset($_POST['update_user'])){
     }
     $sql = "UPDATE toithichgi SET cau9='$noidung' WHERE idkhach='$idkhach'";
     mysqli_query($conn,$sql);
-    $url = "index1.php?id=" . $idkhach . "";
+    $url = "thanhcong.php?id=" . $idkhach . "";
     header('location:' . $url);
   }
   else if ($cauhoi == 10){
@@ -152,7 +152,7 @@ if (isset($_POST['update_user'])){
     }
     $sql = "UPDATE toithichgi SET cau10='$noidung' WHERE idkhach='$idkhach'";
     mysqli_query($conn,$sql);
-    $url = "index1.php?id=" . $idkhach . "";
+    $url = "thanhcong.php?id=" . $idkhach . "";
     header('location:' . $url);
   }
   else if ($cauhoi == 11){
@@ -161,7 +161,7 @@ if (isset($_POST['update_user'])){
     }
     $sql = "UPDATE toithichgi SET cau11='$noidung' WHERE idkhach='$idkhach'";
     mysqli_query($conn,$sql);
-    $url = "index1.php?id=" . $idkhach . "";
+    $url = "thanhcong.php?id=" . $idkhach . "";
     header('location:' . $url);
   }
   else if ($cauhoi == 12){
@@ -170,7 +170,7 @@ if (isset($_POST['update_user'])){
     }
     $sql = "UPDATE toithichgi SET cau12='$noidung' WHERE idkhach='$idkhach'";
     mysqli_query($conn,$sql);
-    $url = "index1.php?id=" . $idkhach . "";
+    $url = "thanhcong.php?id=" . $idkhach . "";
     header('location:' . $url);
   }
   else if ($cauhoi == 13){
@@ -179,7 +179,7 @@ if (isset($_POST['update_user'])){
     }
     $sql = "UPDATE toithichgi SET cau13='$noidung' WHERE idkhach='$idkhach'";
     mysqli_query($conn,$sql);
-    $url = "index1.php?id=" . $idkhach . "";
+    $url = "thanhcong.php?id=" . $idkhach . "";
     header('location:' . $url);
   }
   else if ($cauhoi == 14){
@@ -188,7 +188,7 @@ if (isset($_POST['update_user'])){
     }
     $sql = "UPDATE toithichgi SET cau14='$noidung' WHERE idkhach='$idkhach'";
     mysqli_query($conn,$sql);
-    $url = "index1.php?id=" . $idkhach . "";
+    $url = "thanhcong.php?id=" . $idkhach . "";
     header('location:' . $url);
   }
   else if ($cauhoi == 15){
@@ -197,7 +197,7 @@ if (isset($_POST['update_user'])){
     }
     $sql = "UPDATE toithichgi SET cau15='$noidung' WHERE idkhach='$idkhach'";
     mysqli_query($conn,$sql);
-    $url = "index1.php?id=" . $idkhach . "";
+    $url = "thanhcong.php?id=" . $idkhach . "";
     header('location:' . $url);
   }
   else{
@@ -206,7 +206,7 @@ if (isset($_POST['update_user'])){
     }
     $sql = "UPDATE toithichgi SET cau1='$noidung' WHERE idkhach='$idkhach'";
     mysqli_query($conn,$sql);
-    $url = "index1.php?id=" . $idkhach . "";
+    $url = "thanhcong.php?id=" . $idkhach . "";
     header('location:' . $url);
   }
 

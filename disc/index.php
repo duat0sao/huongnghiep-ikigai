@@ -18,7 +18,20 @@ $idkhach = $_GET['id'];
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src = "https://code.highcharts.com"> </script>
 
-
+<style>
+  
+@media screen and (max-width: 800px) {
+.graph-container {
+        display: block;
+        float: none;
+        width: 100%;
+        margin-top: 0px;
+        margin-right:0px;
+        margin-left:0px;
+        height: auto;
+    }
+}
+</style>
     
 
   </head>
@@ -72,9 +85,9 @@ $idkhach = $_GET['id'];
 
       <div class="container container1 hide">
         <div class="row justify-content-center">
-          <br><br><br><br>
-          <div>
-            <canvas id="myChart" style="width="385" height="230""></canvas>
+          
+          <div class="graph-container">
+            <canvas id="myChart"></canvas>
           </div>
           <br>
 
@@ -87,7 +100,7 @@ $idkhach = $_GET['id'];
 
 
 
-    <br><br><br><br>
+    
     
 
     <script src="disc.js"></script>

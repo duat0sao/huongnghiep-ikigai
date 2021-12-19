@@ -287,7 +287,7 @@ for($i=1; $i<$ci; $i++){
                           </tbody>
                           <?php }?>
                         </table>
-                        <center><a class="btn" href="sendholland.php?id=<?php echo $idkhach;?>">Gửi về mail</a></center>
+                        <center><a class="btn" href="sendtoi.php?id=<?php echo $idkhach;?>">Gửi về mail</a></center>
                 </div>
                 
             </div>

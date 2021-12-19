@@ -56,7 +56,7 @@ default:
         $mail->Host = 'smtp.gmail.com;';                       
         $mail->SMTPAuth = true;                               
         $mail->Username = '18lynnxx@gmail.com';                  //tk gmail
-        $mail->Password = 'matkhau3';                           //mk gmail
+        $mail->Password = 'ypwxmziagzpzvmoa';                           //mk gmail
         $mail->SMTPSecure = 'tls';                              
         $mail->Port = 587;                                       
         $mail->setFrom('18lynnxx@gmail.com', 'BOSS lv1');  
