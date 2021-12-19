@@ -65,7 +65,7 @@ echo $row11['hovaten'];
                         <h5>Họ và Tên: <?php echo $row12['hovaten'];?></h5>
                         <h5>SĐT: <?php echo $row12['sdt'];?></h5>
                         <h5>Email: <?php echo $row12['email'];?></h5>
-
+                          <h5><a class="btn" href="doimatkhau.php?id=<?php echo $idkhach;?>">Đổi mật khẩu</a></h5>
                 </div>
                 
             
@@ -102,6 +102,7 @@ $row=mysqli_fetch_array($query)
 
                         </tbody>
                     </table>
+                   
 
                     <div class="container">
 <div class="container"><?php 
@@ -128,7 +129,8 @@ switch ($max) {
     echo "error";
     break;
 }
-?></div>
+?>
+<center><a class="btn" href="sendholland.php?id=<?php echo $idkhach;?>">Gửi về mail</a></center></div>
                     </div>
                 </div>
 
@@ -269,8 +271,11 @@ else if ($row2['cau14']==''){
 }
 else if ($row2['cau15']==''){
   $ci = 15;
-} else{
+} else if ($row2['cau16']==''){
   $ci = 16;
+}
+else{
+  $ci = 17;
 }
 for($i=1; $i<$ci; $i++){
   
@@ -287,7 +292,7 @@ for($i=1; $i<$ci; $i++){
                           </tbody>
                           <?php }?>
                         </table>
-                        <center><a class="btn" href="sendtoi.php?id=<?php echo $idkhach;?>">Gửi về mail</a></center>
+                        <center><a class="btn" href="sendholland.php?id=<?php echo $idkhach;?>">Gửi về mail</a></center>
                 </div>
                 
             </div>
