@@ -3,7 +3,7 @@ body {
 	margin: 0;
 	font-family: "Montserrat", Montserrat, sans-serif;
 	font-size: 10px;
-	background-color: #d8f5fd;
+	background-color: #ffffff;
 }
 
 ul,
@@ -115,10 +115,22 @@ li {
 	color: #ffffff;
 	transition: 0.3s all;
 }
+.venn-wrapper sub {
+	grid-row: 1;
+	grid-column: 1;
+	margin: auto;
+	z-index: 1;
+	font-size:3vw;
+	color: #ffffff;
+	transition: 0.3s all;
+}
 
 
 .venn-wrapper:hover h1 {
 	font-size: 3vw;
+}
+.venn-wrapper:hover sub {
+	font-size: 1vw;
 }
 
 /* Place outer text */

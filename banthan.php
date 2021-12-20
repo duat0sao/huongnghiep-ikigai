@@ -12,11 +12,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
   </head>
   <body>
       <?php include 'header.php';?>
-
+<br><br><br><br>
 <br><br><br>
 <center>
 <div class="container">
@@ -54,18 +56,38 @@ echo $row11['hovaten'];
             <div class="tab-content" id="pills-tabContent">
 
             <div class="tab-pane fade show active" id="pills-thongtin" role="tabpanel" aria-labelledby="pills-thongtin-tab">
-                    
-<?php
+            <table class="table table-striped">
+                        <thead>
+                          <tr>
+                          
+
+                            <th>Họ và tên</th>
+                            <th>Số điện thoại</th>
+                            <th>Mail</th>
+                            
+                          </tr>
+                        </thead>
+                        <?php
     $query12=mysqli_query($conn,"select * from khach where idkhach = '$idkhach'");
 
 
     $row12=mysqli_fetch_array($query12)
     
 ?>
-                        <h5>Họ và Tên: <?php echo $row12['hovaten'];?></h5>
-                        <h5>SĐT: <?php echo $row12['sdt'];?></h5>
-                        <h5>Email: <?php echo $row12['email'];?></h5>
-                          <h5><a class="btn" href="doimatkhau.php?id=<?php echo $idkhach;?>">Đổi mật khẩu</a></h5>
+                        <tbody>
+                          <tr>
+                          
+                            <td><?php echo $row12['hovaten'];?></td>
+                            <td><?php echo $row12['sdt'];?></td>
+                            <td><?php echo $row12['email'];?></td>
+                           
+                          </tr>
+
+                        </tbody>
+                    </table>
+                    <h5><a class="btn" href="doimatkhau.php?id=<?php echo $idkhach;?>">Đổi mật khẩu</a></h5>
+
+                     
                 </div>
                 
             

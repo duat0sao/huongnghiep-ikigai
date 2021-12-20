@@ -29,24 +29,34 @@ $idkhach = $_GET['id'];
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
+
 }
-
 @media only screen and (max-width: 600px) {
-  .logo {
-    display: none;
-  }
-
   body .center {
-    top: 80%;
+    top: 70%;
   }
-
-  .conttent {
+  .hola,
+  .disc {
+      width: 200px;
+      height: 200px;
+    }
+    .conttent {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+}
+
+
+@media only screen and (min-width: 600px) {
+  .logo {
+    display: none;
+  }
+
+  
+
+  
 
   .hola,
   .disc {
@@ -178,16 +188,8 @@ h1 {
 
     <!-- them anh logo truong ???<img class="logo" src="img/log_nghiaminh.jpg" alt="">-->
 
-    <nav class="navbar navbar-expand-sm header-top container">
-          <a class="navbar-brand" href="index1.php?id=<?php echo $idkhach;?>" style="width:100; font-size: 25px;">
-                 THPT Nghĩa Minh
-          </a>
-         
-          <center><a class="btn" href="index1.php?id=<?php echo $idkhach;?>">Trang chủ</a></center>
-          
-      </nav>
+  <?php include 'header.php';?>
 
-  </div>
     <div class="center conttent">
       <!-- <h2>Mời bạn chọn</h2> -->
       <div>

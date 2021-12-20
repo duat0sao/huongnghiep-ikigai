@@ -11,241 +11,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+   
     <link rel="stylesheet" href="ikigai.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
-      span.slogan{
-        padding: 12px;
-        color: #367cff;}
-    </style>
+		nav{
+            background-color:#47bdec;
+        }
+        nav a{
+            display:inline-block;
+            padding:10px;
+            font-size:20px;
+            color:white;
+            text-decoration:none;
+        }
+        nav a:hover{
+            background-color:#333;
+        }
+	</style>
+    
     
   </head>
 
 
   <body>
-    <header>
-      <nav class="navbar navbar-expand-sm header-top">
-          <a class="navbar-brand logo" href="index.php">
-                  THPT Nghĩa Minh
-          </a>
-          <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
-          <div class="collapse navbar-collapse" id="collapsibleNavId">
-          </div>
-          <div class="narr">
-              <ul class="nav justify-content-end">
-                  
-                      <li class="nav-item">
-                          <a type="button" class="nav-link active " href="#" data-toggle="modal" data-target="#login">
-                              Đăng nhập
-                          </a>
-                      </li>
-                      <li class="nav-item">
-                          <a type="button" class="nav-link active " href="#" data-toggle="modal" data-target="#sign-up">
-                              Đăng ký
-                          </a>
-                      </li>
-                      
-                          
-                          
-                              
-                          
-                          
-              </ul>
-          </div>
-      </nav>
-      <span class="slogan">Hành trình khám phá bản thân</span>
-
-      <nav class="navbar navbar-expand-lg navbar-light header-bottom">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                  <li class="nav-item active">
-                      <a class="nav-link" href="index.php">Trang chủ<span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="gioithieu.php">Giới thiệu</a>
-                  </li>
-                
-                  
-                 
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Liên hệ</a>
-                  </li>
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Search">
-                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
-              </form>
-          </div>
-      </nav>
-  </header>
   
-  <div class="contain" style="width: 100%;">
-      
+  
+  
+<nav>
+        <a href="index.php">THPT Nghĩa Minh</a>
+        <a href="gioithieu.php">Giới thiệu</a>
+        <a href="loginandout/formlogin.php">Đăng nhập/Đăng ký</a>
+</nav>
 
 
-
-
-
-
-
-
-
-      <!--modal sign up -->
-      <div class="modal fade" id="sign-up" tabindex="-2" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="overflow: auto;">
-          <form action="loginandout/signin.php" method="post">
-              <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Đăng ký</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                          </button>
-                      </div>
-                      <div class="modal-body">
-                          <div class="form-row">
-                              <div class="col-md-4 mb-3">
-                                  <label for="validationDefault01">Họ và Tên</label>
-                                  <input type="text" name="hovaten" class="form-control" id="validationDefault01" placeholder="Họ và Tên" required>
-                              </div>
-                              <div class="col-md-4 mb-3">
-                                  <label for="validationDefault02">SĐT</label>
-                                  <input type="text" name="sdt" class="form-control" id="validationDefault02" placeholder="Số điện thoại" required>
-                              </div>
-                              <div class="col-md-4 mb-3">
-                                  <label for="validationDefault02">Email</label>
-                                  <input type="email" name="email" class="form-control" id="validationDefault02" placeholder="Email" required>
-                              </div>
-                          </div>
-                          <div class="form-row">
-                              <div class="col-md-4 mb-3">
-                                  <label for="validationDefault01">Mật khẩu</label>
-                                  <input type="password" name="password1" class="form-control" id="validationDefault01" placeholder="Mật khẩu" required>
-                              </div>
-                              <div class="col-md-4 mb-3">
-                                  <label for="validationDefault01">Nhập lại mật khẩu</label>
-                                  <input type="password" name="password2" class="form-control" id="validationDefault01" placeholder="Nhập lại mật khẩu" required>
-                              </div>
-                          </div>
-                          
-                          
-                          <div class="dropdown-divider"></div>
-                          <button type="submit" class="btn btn-primary">Đăng ký</button>
-                          <div class="dropdown-divider"></div>
-                          <a type="button" class="dropdown-item" href="#" data-dismiss="modal" data-toggle="modal" data-target="#login">
-                              Bạn đã có tài khoản? Đăng nhập.
-                          </a>
-                      </div>
-                      <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                      </div>
-                  </div>
-              </div>
-          </form>
-      </div>
-
-
-
-
-
-
-
-
-
-      <!-- Modal login -->
-      <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <form action="loginandout/login.php" method="post">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Đăng nhập</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                          </button>
-                      </div>
-                      <div class="modal-body">
-                          <div class="form-group">
-                              <label for="exampleDropdownFormEmail1">Email</label>
-                              <input type="text" name="email" class="form-control" placeholder="Email" required>
-                          </div>
-                          <div class="form-group">
-                              <label for="exampleDropdownFormPassword1">Mật khẩu</label>
-                              <input type="password" name="password" class="form-control" placeholder="Mật khẩu" required>
-                          </div>
-                          <!-- <div class="form-check">
-                          <input type="checkbox" class="form-check-input">
-                          <label class="form-check-label" for="dropdownCheck">
-                              Remember me
-                          </label>
-                      </div> -->
-                          <button type="submit" class="btn btn-primary" name="sign-in">Đăng Nhập</button>
-                          <div class="dropdown-divider"></div>
-                          <a type="button" class="dropdown-item" href="#" data-dismiss="modal" data-toggle="modal" data-target="#sign-up">
-                               Đăng ký.
-                          </a>
-
-                          <a class="dropdown-item" href="#">Quên mật khẩu</a>
-                      </div>
-                      <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                      </div>
-                  </div>
-              </div>
-          </form>
-      </div>
-
-
-
-    
-    <!---
-      <nav class="navbar navbar-expand-sm header-top">
-        <a class="navbar-brand logo" href="index.html">
-                Trần Nhật Duật
-        </a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-        </div>
-        <div class="narr">
-            <ul class="nav justify-content-end">
-                
-                    <li class="nav-item">
-                        <a type="button" class="nav-link active " href="#" data-toggle="modal" data-target="#login">
-                            <span>Wellcome</span>
-                        </a>
-                    </li>
-                    
-                    
-                        
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle magana" data-toggle="dropdown" href="#">Thông tin </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item i" href="thongtin1.php">1</a>
-                            <a class="dropdown-item i" href="thongtin2.php">2</a>
-                            <a class="dropdown-item i" href="thongtin3.php">3</a>
-                            <a class="dropdown-item i" href="thongtin4.php">4</a>
-                        </div>
-                    </li>
-                        
-                    <li class="nav-item">
-                        <a class="nav-link active" href="dangky.php">Đăng ký</a>
-                    </li>
-                
-            </ul>
-        </div>
-      </nav>
-    
-
--->
-
-
-<br><br><br>
+<br><br><br><br><br><br><br>
   <!-- ikigai -->
     <div class="page">
 	    <div class="venn-wrapper">
 		    <h1>IKIGAI</h1>
+            <sub><br><br><br>Hành trình khám phá bản thân</sub>
 		    <div class="venn-1">
 			    <p><a href="moibandangnhap.php"> Bạn<b> thích</b> cái gì?</a></p>
 			    <span><b>Sứ mệnh</b></span>

@@ -26,14 +26,6 @@ include('random.php');
     }
 	// Check for a password and match against the confirmed password:
 			$password1 = trim($_POST['password1']);
-			$password2 = trim($_POST['password2']);
-	if (!empty($password1)) {
-		if ($password1 !== $password2) { //#4
-			$errors[] = 'Nhập mật khẩu sau mời bạn nhập lại.';
-		} 
-	} else {
-		$errors[] = 'You forgot to enter your password.';
-    }
     
     if (empty($errors)) {
    
