@@ -36,6 +36,7 @@ include 'header.php';
     <div class="page">
 	    <div class="venn-wrapper">
 		    <h1>IKIGAI</h1>
+			<sub><br><br><br>Hành trình khám phá bản thân</sub>
 		    <div class="venn-1">
 			    <p><a href="toithich.php?id=<?php echo $idkhach;?>"> Bạn<b> thích</b> cái gì?</a></p>
 			    <span><b>Sứ mệnh</b></span>
