@@ -4,19 +4,26 @@ $idkhach = $_GET['id'];
 $errors = array(); // Initialize an error array. 
 
 
+$query2=mysqli_query($conn,"select * from khach where idkhach='$idkhach'");
+$row2=mysqli_fetch_array($query2);
+
+
+
 if (isset($_POST['update_user'])){
   
   
   $mk1=$_POST['mang'];
-  $mk2=$_POST['mang1'];
-
+  
+    $hovaten = $_POST['hovaten'];
+    $email = $_POST['email'];
+    $sdt = $_POST['sdt'];
    
-  $sql = "UPDATE khach SET matkhau='$mk1' WHERE idkhach='$idkhach'";
-  mysqli_query($conn,$sql);
+  $sql = "UPDATE khach SET matkhau='$mk1', hovaten='$hovaten', email='$email', sdt='$sdt'  WHERE idkhach='$idkhach'";
+  
   
 
 
-  if ($mk1 == $mk2) { //#4
+  if ($mk1 != '') { //#4
     mysqli_query($conn,$sql);
     $url = "thanhcong.php?id=" . $idkhach;
     header('location:' . $url);
@@ -93,13 +100,16 @@ if (isset($_POST['update_user'])){
     		  	
             <label class="form-message"></label>
                 <div class="cauhoi">
-
+                <br><h4>Họ và Tên</h4>
+                <input style="width:100; font-size: 20px;" type="text" class="form-contr" name="hovaten" value="<?php echo $row2['hovaten'];?>">
+                <br><h4>Email</h4>
+                <input style="width:100; font-size: 20px;" type="email" class="form-contr" name="email" value="<?php echo $row2['email'];?>">
+                <br><h4>SĐT</h4>
+                <input style="width:100; font-size: 20px;" type="number" class="form-contr" name="sdt" value="<?php echo $row2['sdt'];?>">
                 
                 
                 <br><h4>Mật khẩu mới</h4>
-                <input style="width:100; font-size: 20px;" type="password" class="form-contr" name="mang" value="">
-                <br><h4>Nhập lại mật khẩu</h4>
-                <input style="width:100; font-size: 20px;" type="password" class="form-contr" name="mang1" value="">
+                <input style="width:100; font-size: 20px;" type="password" class="form-contr" name="mang" value="<?php echo $row2['matkhau'];?>">
                 
                 
           

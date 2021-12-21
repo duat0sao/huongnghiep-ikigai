@@ -42,12 +42,6 @@
                   <li class="nav-item">
                       <a class="nav-link" href="#">Giới thiệu</a>
                   </li>
-                
-                  
-                 
-                  <li class="nav-item">
-                      <a class="nav-link" href="addedu.php">Thêm ngành học</a>
-                  </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
                   <input class="form-control mr-sm-2" type="search" placeholder="Search">
@@ -61,70 +55,36 @@
 
 
 <br><br><br>
-     <center>
-<div id="generic_price_table">   
     
-    <?php   
+
+   <div class="container">
+   
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Họ và Tên</th>
+          <th>Mail</th>
+          <th>SĐT</th>
+          <th>Thuộc Nhóm</th>
+        </tr>
+      </thead>
+      <?php   
     
     $query=mysqli_query($conn,"select * from khach");
     
     while($row=mysqli_fetch_array($query)){
     
     ?>
-    
-    <section>
-            <div class="container">
-                <div class="">
-                    <div class="">
-                        <!--PRICE HEADING START-->
-                        <div class="">
-                            <h1></h1>
-                        </div>
-                        <!--//PRICE HEADING END-->
-                    </div>
-                </div>
-            </div>
-    
-    
-    
-    
-    
-    
-            <div class="container">
-                
-                <!--BLOCK ROW START-->
-                <div class="">
-                    <div class="col-md-4">
-                    
-                      <!--PRICE CONTENT START-->
-                        <div class="generic_content clearfix">
-                            
-                            <!--HEAD PRICE DETAIL START-->
-                            <div class="generic_head_price clearfix">
-                            
-                                <!--HEAD CONTENT START-->
-                                <div class="generic_head_content clearfix">
-                                
-                                  <!--HEAD START-->
-                                    <div class="head_bg"></div>
-                                    <div class="head">
-                                        <span>
-<?php
+      <tbody>
+        <tr>
+          <td scope="row"><?php
 $idfake = $row['idkhach'];
 $query2=mysqli_query($conn,"select * from khach where idkhach='$idfake'");
 $row2=mysqli_fetch_array($query2);
-echo $ten = $row2['hovaten']; ?></span>
-                                    </div>
-                                    <!--//HEAD END-->
-                                    
-                                </div>
-                                <!--//HEAD CONTENT END-->
-                                
-                                <!--PRICE START-->
-                                <div class="generic_price_tag clearfix">	
-                                    <span class="price">
-                                        <span class="sign">
-    <?php   
+echo $ten = $row2['hovaten']; ?></td>
+          <td><?php echo $row2['email'];?></td>
+          <td><?php echo $row2['sdt'];?></td>
+          <td><?php   
     
     $query1=mysqli_query($conn,"select * from holland where idkhach='$idfake'");
     $row1=mysqli_fetch_array($query1);
@@ -164,44 +124,35 @@ echo $ten = $row2['hovaten']; ?></span>
         }
     
     
-    ?> 
-                                        </span>
-                                        
-                                    </span>
-                                </div>
-                                
-                                
-                            </div>                            
-                            
-                            
-                            <!--BUTTON START-->
-                            <div class="generic_price_btn clearfix">
-                              <a class="" href="xemthem.php?id=<?php echo $idfake;?>">Xem thêm</a>
-                            </div>
-                            <!--//BUTTON END-->
-                            
-                        </div>
-                        <!--//PRICE CONTENT END-->
-                            
-                    </div>
-                    
-                    
-                    
-                </div>	
-                <!--//BLOCK ROW END-->
-                
-            </div>
-    
-    
-        </section>    
-        <?php 
+    ?> </td>
+          <td>
+            <td><a href="xemthem.php?id=<?php echo $idfake;?>">Xem thêm</a></td>
+            <td><a href="xoa.php?id=<?php echo $idfake;?>">Xóa</a></td>
+        </td>
+          
+        </tr>
+      </tbody>
+      <?php 
     }?>
+    </table>
+    
+
+    </div> 
+    
+
+
+
+
+
+    
+                                       
+      
         
-        </center>       
+       
     
     
     
-    </div>
+
 
 
 

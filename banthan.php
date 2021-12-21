@@ -85,7 +85,7 @@ echo $row11['hovaten'];
 
                         </tbody>
                     </table>
-                    <h5><a class="btn" href="doimatkhau.php?id=<?php echo $idkhach;?>">Đổi mật khẩu</a></h5>
+                    <h5><a class="btn" href="doimatkhau.php?id=<?php echo $idkhach;?>">Thay đổi thông tin</a></h5>
 
                      
                 </div>
