@@ -207,14 +207,14 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
 			</div>
 			<div class="wrapper">
 				<form id="login" tabindex="500" action="login.php" method="post">
-					<h3>Login</h3>
+					<h3>Đăng nhập</h3>
 					<div class="mail">
 						<input type="mail" name="email">
-						<label>Mail or Username</label>
+						<label>Email</label>
 					</div>
 					<div class="passwd">
 						<input type="password" name="password">
-						<label>Password</label>
+						<label>Mật khẩu</label>
 					</div>
 					<div class="submit">
 						<button type="submit" class="dark" name="sign-in">Login</button>
