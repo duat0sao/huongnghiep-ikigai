@@ -386,6 +386,7 @@ switch ($max) {
         $mail->Body  .= ''.$e.'';
         $mail->Body  .= '<strong><sub>Cám ơn bạn đã sử dụng trang web của chúng tôi. Mong bạn sớm tìm ra ngành học đúng hợp với tính cách và sở thích của mình. Một lần nữa cám ơn các bạn nhiều</sub></strong>';
         if($mail->send()) {                                     // phải bật cho ứng dụng kém  được dùng ở     myaccount.google.com
+          mysqli_query($conn,"update toithichgi set  cau1='', cau2='', cau3='', cau4='', cau5='', cau6='', cau7='',cau8='', cau9='', cau10='', cau11='', cau12='', cau13='', cau14='', cau15='', cau16='' where idkhach='$idkhach'");
           $url = "thanhcong.php?id=" . $idkhach;
           header('location:' . $url);
         } else {  

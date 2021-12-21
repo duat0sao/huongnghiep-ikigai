@@ -204,7 +204,7 @@ if (isset($_POST['update_user'])){
     $noidung=$_POST['gia'];
     if ($conn->connect_error) {
     }
-    $sql = "UPDATE toithichgi SET cau1='$noidung' WHERE idkhach='$idkhach'";
+    $sql = "UPDATE toithichgi SET cau16='$noidung' WHERE idkhach='$idkhach'";
     mysqli_query($conn,$sql);
     $url = "thanhcong.php?id=" . $idkhach . "";
     header('location:' . $url);
