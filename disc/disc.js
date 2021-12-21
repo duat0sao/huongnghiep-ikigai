@@ -91,7 +91,7 @@ var nhomc = [
 	
 	 "Tôi thuộc tuýp người rất khiêm tốn.",
 		
-	 "Tôi là một loại dễ chịu.",
+	 "Tôi là một người dễ chịu.",
 	
  "Nói chuyện trực tiếp và thẳng thắn.",
 	

@@ -7,11 +7,12 @@ include '../config.php';
 if (isset($_POST['update_user'])){
   
   
-  $mang=$_POST['manganh'];
-  $ctdaotao=$_POST['ctdaotao'];
-  $gtmot=$_POST['gioithieu'];
-  $gtchung=$_POST['gtchung'];
-  $cohoi=$_POST['cohoi'];
+  $cap1=$_POST['manganh'];
+  $cap3=$_POST['ctdaotao'];
+  $cap2=$_POST['gioithieu'];
+  $cap5=$_POST['gtchung'];
+  $cap4=$_POST['cohoi'];
+  $noidung = $_POST['noidung'];
   
   
 
@@ -19,7 +20,7 @@ if (isset($_POST['update_user'])){
   
   }
    
-  $sql = "INSERT INTO `gioithieu`(manganh, gtmot, gtchung, ctdaotao, cohoi) VALUES('$mang', '$gtmot','$gtchung','$ctdaotao','$cohoi');";
+  $sql = "INSERT INTO `danhmuc10`(cap1, cap2, cap3, cap4, cap5, noidung) VALUES('$cap1', '$cap2','$cap3','$cap4','$cap5', '$noidung');";
   mysqli_query($conn,$sql);
   
   header('location: addedu2.php');
@@ -75,43 +76,6 @@ if (isset($_POST['update_user'])){
 </head>
 <body>
 
-<header>
-      <nav class="navbar navbar-expand-sm header-top">
-          <a class="navbar-brand logo" href="admin.php">
-                  THPT Nghĩa Minh
-          </a>
-          <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
-          <div class="collapse navbar-collapse" id="collapsibleNavId">
-          </div>
-         
-      </nav>
-      <nav class="navbar navbar-expand-lg navbar-light header-bottom">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                  <li class="nav-item active">
-                      <a class="nav-link" href="admin.php">Trang chủ<span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Giới thiệu</a>
-                  </li>
-                
-                  
-                 
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Liên hệ</a>
-                  </li>
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Search">
-                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form>
-          </div>
-      </nav>
-  </header>   
 
 
 
@@ -128,16 +92,18 @@ if (isset($_POST['update_user'])){
             <label class="form-message"></label>
                 <div class="cauhoi">
 
-                <br><h4>Mã ngành</h4>
+                <br><h4>cap1</h4>
                 <input style="width:100; font-size: 20px;" type="input" class="form-contr" name="manganh" value="">
-                <br><h4>Giới thiệu 1</h4>
+                <br><h4>cap2</h4>
                 <input style="width:100; font-size: 20px;" type="input" class="form-contr" name="gioithieu" value="">
-                <br><h4>Ct đào tạo</h4>
+                <br><h4>cap3</h4>
                 <input style="width:100; font-size: 20px;" type="input" class="form-contr" name="ctdaotao" value="">
-                <br><h4>Cơ hội việc làm</h4>
+                <br><h4>cap4</h4>
                 <input style="width:100; font-size: 20px;" type="input" class="form-contr" name="cohoi" value="">
-                <br><h4>Giới thiệu chung</h4>
+                <br><h4>cap5</h4>
                 <input style="width:100; font-size: 20px;" type="input" class="form-contr" name="gtchung" value="">
+                <br><h4>noi dung</h4>
+                <input style="width:100; font-size: 20px;" type="input" class="form-contr" name="noidung" value="">
                 
           
                 </div>

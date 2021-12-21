@@ -20,7 +20,7 @@
         nav a{
             display:inline-block;
             padding:10px;
-            font-size:20px;
+            font-size:25px;
             color:white;
             text-decoration:none;
         }
@@ -38,9 +38,9 @@
   
   
 <nav>
-        <a href="index.php">THPT Nghĩa Minh</a>
-        <a href="gioithieu.php">Giới thiệu</a>
-        <a href="loginandout/formlogin.php">Đăng nhập/Đăng ký</a>
+        <a href="index.php">IKIGAI</a>
+        <a href="gioithieu.php" style="font-size:18px;">Giới thiệu</a>
+        <a href="loginandout/formlogin.php" style="font-size:18px;">Đăng nhập/Đăng ký</a>
 </nav>
 
 

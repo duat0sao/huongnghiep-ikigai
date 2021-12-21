@@ -192,13 +192,14 @@ h1 {
 
     <div class="center conttent">
       <!-- <h2>Mời bạn chọn</h2> -->
-      <div>
-        <a href="disc/index.php?id=<?php echo $idkhach;?>"><img class="disc" src="img/disc.jpg" alt="Responsive image"></a>
-        <h4>Trắc nghiệm Disc</h4>
-      </div>
+      
       <div>
         <a href="holland1/index.php?id=<?php echo $idkhach;?>"><img class="hola" src="img/holland.png" alt="Responsive image"></a>
         <h4>Trắc nghiệm Holland</h4>
+      </div>
+      <div>
+        <a href="disc/index.php?id=<?php echo $idkhach;?>"><img class="disc" src="img/disc.jpg" alt="Responsive image"></a>
+        <h4>Trắc nghiệm Disc</h4>
       </div>
 
       

@@ -37,7 +37,7 @@ $idkhach = $_GET['id'];
   </head>
   <body>
   <nav style="background-color:#47bdec;">
-        <a style="display:inline-block; padding:10px; font-size:20px; color:white; text-decoration:none;" href="../toigioi.php?id=<?php echo $idkhach;?>">THPT Nghĩa Minh</a>
+        <a style="display:inline-block; padding:10px; font-size:20px; color:white; text-decoration:none;" href="../toigioi.php?id=<?php echo $idkhach;?>">IKIGAI</a>
         <a style="display:inline-block; padding:10px; font-size:20px; color:white; text-decoration:none; float: right; margin-right: 5px;" href="../loginandout/logout.php">Thoát</a>
 </nav>
 

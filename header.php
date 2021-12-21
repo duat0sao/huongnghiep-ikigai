@@ -13,8 +13,8 @@
 
 
 <nav style="background-color:#47bdec;">
-        <a style="display:inline-block; padding:10px; font-size:20px; color:white; text-decoration:none;" href="index1.php?id=<?php echo $idkhach;?>">THPT Nghĩa Minh</a>
-        <a style="display:inline-block; padding:10px; font-size:20px; color:white; text-decoration:none;" href="banthan.php?id=<?php echo $idkhach;?>">Cá nhân&nbsp;</a>
-        <a style="display:inline-block; padding:10px; font-size:20px; color:white; text-decoration:none;" href="gioithieu1.php?id=<?php echo $idkhach;?>">Giới thiệu</a>
+        <a style="display:inline-block; padding:10px; font-size:25px; color:white; text-decoration:none;" href="index1.php?id=<?php echo $idkhach;?>">IKIGAI</a>
+        <a style="display:inline-block; padding:10px; font-size:18px; color:white; text-decoration:none;" href="banthan.php?id=<?php echo $idkhach;?>">Cá nhân</a>
+        <a style="display:inline-block; padding:10px; font-size:18px; color:white; text-decoration:none;" href="gioithieu1.php?id=<?php echo $idkhach;?>">Giới thiệu</a>
         <a style="display:inline-block; padding:10px; font-size:20px; color:blackk; text-decoration:none; float: right; margin-right: 5px;" href="loginandout/logout.php">Thoát</a>
 </nav>
