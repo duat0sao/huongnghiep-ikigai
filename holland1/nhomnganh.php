@@ -91,7 +91,7 @@ default:
 <header class="container">
       <nav class="navbar navbar-expand-sm header-top">
           <a class="navbar-brand" href="../index1.php?id=<?php echo $idkhach;?>" style="width:100; font-size: 25px;">
-                 THPT Nghĩa Minh
+                 IKIGAI
           </a>
           <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
           <div class="collapse navbar-collapse" id="collapsibleNavId" style="z-idex: 1; background: white; box-shadow: 1px 1px 1px #aaa; boder-radius: 3px;">

@@ -12,13 +12,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<<<<<<< HEAD
     <link rel="stylesheet" href="style1.css">
     <script src="https://kit.fontawesome.com/4eb98e0bb5.js" crossorigin="anonymous"></script>
+=======
+    
+>>>>>>> f7efe16b081e7fe3e32f07d188b81aafaa2c140b
   </head>
   <body>
       <?php include 'header.php';?>
-
+<br><br><br><br>
 <br><br><br>
 <center>
 <div class="container">
@@ -56,14 +61,25 @@ echo $row11['hovaten'];
             <div class="tab-content" id="pills-tabContent">
 
             <div class="tab-pane fade show active" id="pills-thongtin" role="tabpanel" aria-labelledby="pills-thongtin-tab">
-                    
-<?php
+            <table class="table table-striped">
+                        <thead>
+                          <tr>
+                          
+
+                            <th>Họ và tên</th>
+                            <th>Số điện thoại</th>
+                            <th>Mail</th>
+                            
+                          </tr>
+                        </thead>
+                        <?php
     $query12=mysqli_query($conn,"select * from khach where idkhach = '$idkhach'");
 
 
     $row12=mysqli_fetch_array($query12)
     
 ?>
+<<<<<<< HEAD
         <div class="container abc" >
         <div class="row contents">
           <div class="col-md-4 col-sm-12">
@@ -116,6 +132,22 @@ echo $row11['hovaten'];
                   <div class="contents_img">
                       <img class="oqw" src="{{asset('public/frontend/img/'.$data_blog->HinhAnh)}}" alt="">
                   </div>
+=======
+                        <tbody>
+                          <tr>
+                          
+                            <td><?php echo $row12['hovaten'];?></td>
+                            <td><?php echo $row12['sdt'];?></td>
+                            <td><?php echo $row12['email'];?></td>
+                           
+                          </tr>
+
+                        </tbody>
+                    </table>
+                    <h5><a class="btn" href="doimatkhau.php?id=<?php echo $idkhach;?>">Thay đổi thông tin</a></h5>
+
+                     
+>>>>>>> f7efe16b081e7fe3e32f07d188b81aafaa2c140b
                 </div>
               </div>
             </div>
@@ -164,6 +196,7 @@ $row=mysqli_fetch_array($query)
 
                         </tbody>
                     </table>
+                   
 
                     <div class="container">
 <div class="container"><?php 
@@ -190,7 +223,8 @@ switch ($max) {
     echo "error";
     break;
 }
-?></div>
+?>
+<center><a class="btn" href="sendholland.php?id=<?php echo $idkhach;?>">Gửi về mail</a></center></div>
                     </div>
                 </div>
 
@@ -287,52 +321,55 @@ $query2=mysqli_query($conn,"select * from toithichgi where idkhach = '$idkhach'"
 $row2=mysqli_fetch_array($query2);
 $hello = 1;
 
-if ($row2['cau1']==''){
+if (empty($row2['cau1'])){
   $ci = 1;
 }
-else if ($row2['cau2']==''){
+else if (empty($row2['cau2'])){
   $ci = 2;
 }
-else if ($row2['cau3']==''){
+else if (empty($row2['cau3'])){
   $ci = 3;
 }
-else if ($row2['cau4']==''){
+else if (empty($row2['cau4'])){
   $ci = 4;
 }
-else if ($row2['cau5']==''){
+else if (empty($row2['cau5'])){
   $ci = 5;
 }
-else if ($row2['cau6']==''){
+else if (empty($row2['cau6'])){
   $ci = 6;
 }
-else if ($row2['cau7']==''){
+else if (empty($row2['cau7'])){
   $ci = 7;
 }
-else if ($row2['cau8']==''){
+else if (empty($row2['cau8'])){
   $ci = 8;
 }
-else if ($row2['cau9']==''){
+else if (empty($row2['cau9'])){
   $ci = 9;
 }
-else if ($row2['cau10']==''){
+else if (empty($row2['cau10'])){
   $ci = 10;
 }
-else if ($row2['cau11']==''){
+else if (emtpy($row2['cau11'])){
   $ci = 11;
 }
-else if ($row2['cau12']==''){
+else if (empty($row2['cau12'])){
   $ci = 12;
 }
-else if ($row2['cau13']==''){
+else if (empty($row2['cau13'])){
   $ci = 13;
 }
-else if ($row2['cau14']==''){
+else if (empty($row2['cau14'])){
   $ci = 14;
 }
-else if ($row2['cau15']==''){
+else if (empty($row2['cau15'])){
   $ci = 15;
-} else{
+} else if (empty($row2['cau16'])){
   $ci = 16;
+}
+else{
+  $ci = 17;
 }
 for($i=1; $i<$ci; $i++){
   

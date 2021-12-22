@@ -1,4 +1,3 @@
-
 <?php
 include 'config.php';
 
@@ -36,78 +35,417 @@ $idkhach = $_GET['id'];
 
 
 
-<br><br>
+<br><br><br><br>
 
 
 
       <div class="container">
-          <div><center><h2><strong>Danh mục nghề nghiệp ở Việt Nam</strong></h2></center></div>
+          <div><center><h3><strong>Danh mục nghề nghiệp ở Việt Nam</strong></h3></center></div>
           <br>
     <div class="content-detail" id="content">
 
-<div class="desc"><p>
-Chúng ta được trả tiền dựa trên kỹ năng mà chúng ta muốn phục vụ xã hội. Theo văn bản Thủ tướng Chính phủ đã ban hành Danh mục nghề nghiệp Việt Nam (kèm theo Quyết định số 34/2020/QĐ-TTg) thì có 5 loại cấp độ kỹ năng và những ngành nghề phù hợp với từng cấp độ. Và đó là:
-</p>    
+<div class="desc">
+    Vừa qua, Thủ tướng Chính phủ đã ban hành Danh mục nghề nghiệp Việt Nam (kèm theo Quyết định số 34/2020/QĐ-TTg). Quyết định này có hiệu lực thi hành kể từ ngày 15/1/2021.
+    <br />
 </div>
+
+
+
+
+
+
+
+<br>
+
 
 
 <div class="noidung">
 
-    <div class="motkhoi">
-      <h5 class="tdkhoi">Cấp độ 1 <i class="anhicon fas fa-angle-down"></i></h5>
-      <div class="ndkhoi">
-        Nhiệm vụ đơn giản, chỉ đòi hỏi sức khỏe, biết tính toán;
 
-        <p><span>Nhóm này bao gồm những nghề đòi hỏi kiến thức và kinh nghiệm ở trình độ bậc trung (cao đẳng, trung cấp) về các lĩnh vực khoa học và kỹ thuật, sức khỏe, kinh doanh và quản lý, luật pháp, văn hóa, xã hội, thông tin và truyền thông và giáo viên.</span></span></p>
+    <div class="motkhoi">
+      <h4 class="tdkhoi">1. Lãnh đạo, quản lý trong các ngành, các cấp và các đơn vị <i class="anhicon fas fa-angle-down"></i></h4>
+      <div class="ndkhoi">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Cấp 1</th>
+                            <th>Cấp 2</th>
+                            <th>Cấp 3</th>
+                            <th>Cấp 4</th>
+                            <th>Cấp 5</th>
+                            <th>Tên gọi nghề nghiệp</th>
+                          </tr>
+                        </thead>
+    <?php   
+    
+    $query213=mysqli_query($conn,"select * from danhmuc1");
+    
+    while($row213=mysqli_fetch_array($query213)){
+    
+    ?>
+                        <tbody>
+                        <tr>
+                              <td><?php echo $row213['cap1'];?></td>
+                              <td><?php echo $row213['cap2'];?></td>
+                              <td><?php echo $row213['cap3'];?></td>
+                              <td><?php echo $row213['cap4'];?></td>
+                              <td><?php echo $row213['cap5'];?></td>
+                              <td><?php echo $row213['noidung'];?></td>
+                          </tr>
+                        </tbody>
+                        <?php }?>
+                    </table>
       </div> <!-- end nd khoi -->
     </div>  <!-- end moi khoi -->
 
     <div class="motkhoi">
-      <h5 class="tdkhoi">Cấp độ 2 <i class="anhicon fas fa-angle-down"></i></h5>
+      <h4 class="tdkhoi">2. Nhà chuyên môn bậc cao <i class="anhicon fas fa-angle-down"></i></h4>
       <div class="ndkhoi">
-        Nhiệm vụ đòi hỏi biết về chuyên môn của công việc, có trình độ chuyên môn nhất định tương đương sơ cấp;
-
-         <p><span>Nhóm này bao gồm những nghề đòi hỏi kiến thức và kinh nghiệm cần thiết để tổ chức, lưu trữ, tính toán và truy cập thông tin. Các nhiệm vụ chính của nhóm này bao gồm việc thực thi các công việc thư ký, xử lý văn bản, vận hành các máy móc, thiết bị văn phòng, ghi chép và tính toán số liệu bằng số và thực hiện các nhiệm vụ văn phòng theo định hướng của khách hàng (như làm các công việc có liên quan đến các dịch vụ thư tín, chuyển tiền, bố trí du lịch, thông tin thương mại và giao dịch khác).</span></span></p>
-
-        
-
-        
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Cấp 1</th>
+                            <th>Cấp 2</th>
+                            <th>Cấp 3</th>
+                            <th>Cấp 4</th>
+                            <th>Cấp 5</th>
+                            <th>Tên gọi nghề nghiệp</th>
+                          </tr>
+                        </thead>
+                        <?php   
+    
+    $query213=mysqli_query($conn,"select * from danhmuc2");
+    
+    while($row213=mysqli_fetch_array($query213)){
+    
+    ?>
+                        <tbody>
+                        <tr>
+                              <td><?php echo $row213['cap1'];?></td>
+                              <td><?php echo $row213['cap2'];?></td>
+                              <td><?php echo $row213['cap3'];?></td>
+                              <td><?php echo $row213['cap4'];?></td>
+                              <td><?php echo $row213['cap5'];?></td>
+                              <td><?php echo $row213['noidung'];?></td>
+                          </tr>
+                        </tbody>
+                        <?php }?>
+                    </table>
       </div> <!-- end nd khoi -->
     </div>  <!-- end moi khoi -->
+
+
+
 
     <div class="motkhoi">
-      <h5 class="tdkhoi">Cấp độ 3 <i class="anhicon fas fa-angle-down"></i></h5>
+      <h4 class="tdkhoi">3. Nhà chuyên môn bậc trung <i class="anhicon fas fa-angle-down"></i></h4>
       <div class="ndkhoi">
-        Nhiệm vụ phức tạp hơn, đòi hỏi chuyên môn cao hơn cấp độ kỹ năng 2, tương ứng với trình độ trung cấp hoặc cao đẳng;
-
-        <p><span><span>Nhóm này bao gồm những nghề đòi hỏi kiến thức và kinh nghiệm ở trình độ bậc trung (cao đẳng, trung cấp) về các lĩnh vực khoa học và kỹ thuật, sức khỏe, kinh doanh và quản lý, luật pháp, văn hóa, xã hội, thông tin và truyền thông và giáo viên.</span></span></p>
-
-       
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Cấp 1</th>
+                            <th>Cấp 2</th>
+                            <th>Cấp 3</th>
+                            <th>Cấp 4</th>
+                            <th>Cấp 5</th>
+                            <th>Tên gọi nghề nghiệp</th>
+                          </tr>
+                        </thead>
+                        <?php   
+    
+    $query213=mysqli_query($conn,"select * from danhmuc3");
+    
+    while($row213=mysqli_fetch_array($query213)){
+    
+    ?>
+                        <tbody>
+                        <tr>
+                              <td><?php echo $row213['cap1'];?></td>
+                              <td><?php echo $row213['cap2'];?></td>
+                              <td><?php echo $row213['cap3'];?></td>
+                              <td><?php echo $row213['cap4'];?></td>
+                              <td><?php echo $row213['cap5'];?></td>
+                              <td><?php echo $row213['noidung'];?></td>
+                          </tr>
+                        </tbody>
+                        <?php }?>
+                    </table>
       </div> <!-- end nd khoi -->
     </div>  <!-- end moi khoi -->
+
+
+
+
 
     <div class="motkhoi">
-      <h5 class="tdkhoi">Cấp độ 4 <i class="anhicon fas fa-angle-down"></i></h5>
+      <h4 class="tdkhoi">4. Nhân viên trợ lý văn phòng <i class="anhicon fas fa-angle-down"></i></h4>
       <div class="ndkhoi">
-        Nhiệm vụ phức tạp, đòi hỏi có chuyên môn sâu, tương ứng với trình độ đại học;
-
-       <p><span><span>Nhóm này bao gồm những nghề đòi hỏi phải có kiến thức chuyên môn, nghiệp vụ và kinh nghiệm ở trình độ cao (đại học trở lên) trong lĩnh vực khoa học và kỹ thuật, sức khỏe, giáo dục, kinh doanh và quản lý, công nghệ thông tin và truyền thông và luật pháp, văn hóa, xã hội.</span></span></p>
-
-       
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Cấp 1</th>
+                            <th>Cấp 2</th>
+                            <th>Cấp 3</th>
+                            <th>Cấp 4</th>
+                            <th>Cấp 5</th>
+                            <th>Tên gọi nghề nghiệp</th>
+                          </tr>
+                        </thead>
+                        <?php   
+    
+    $query213=mysqli_query($conn,"select * from danhmuc4");
+    
+    while($row213=mysqli_fetch_array($query213)){
+    
+    ?>
+                        <tbody>
+                        <tr>
+                              <td><?php echo $row213['cap1'];?></td>
+                              <td><?php echo $row213['cap2'];?></td>
+                              <td><?php echo $row213['cap3'];?></td>
+                              <td><?php echo $row213['cap4'];?></td>
+                              <td><?php echo $row213['cap5'];?></td>
+                              <td><?php echo $row213['noidung'];?></td>
+                          </tr>
+                        </tbody>
+                        <?php }?>
+                    </table>
       </div> <!-- end nd khoi -->
     </div>  <!-- end moi khoi -->
+
+
+
 
     <div class="motkhoi">
-      <h5 class="tdkhoi">Cấp độ 5 <i class="anhicon fas fa-angle-down"></i></h5>
+      <h4 class="tdkhoi">5. Nhân viên dịch vụ và bán hàng <i class="anhicon fas fa-angle-down"></i></h4>
       <div class="ndkhoi">
-        Nhiệm vụ phức tạp nhất, đòi hỏi có chuyên môn sâu, rộng, tương ứng với trình độ sau đại học.
-
-        <p><span><span>Nhóm này bao gồm những nghề đòi hỏi kiến thức và kinh nghiệm cần thiết trong việc cung cấp các dịch vụ cá nhân, bảo vệ và bán các sản phẩm tại các cửa hàng, cửa hiệu hoặc tại chợ. Các nhiệm vụ chính của nhóm này bao gồm việc cung cấp các dịch vụ có liên quan đến việc du lịch, trông coi nhà cửa, cung cấp lương thực, thực phẩm, phục vụ vui chơi giải trí, quản lý khách sạn, chăm sóc cá nhân, bảo vệ tính mạng và tài sản, duy trì luật pháp và luật lệ hoặc bán sản phẩm tại các cửa hàng, cửa hiệu và tại chợ.</span></span></p>
-
-       
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Cấp 1</th>
+                            <th>Cấp 2</th>
+                            <th>Cấp 3</th>
+                            <th>Cấp 4</th>
+                            <th>Cấp 5</th>
+                            <th>Tên gọi nghề nghiệp</th>
+                          </tr>
+                        </thead>
+                        <?php   
+    
+    $query213=mysqli_query($conn,"select * from danhmuc5");
+    
+    while($row213=mysqli_fetch_array($query213)){
+    
+    ?>
+                        <tbody>
+                        <tr>
+                              <td><?php echo $row213['cap1'];?></td>
+                              <td><?php echo $row213['cap2'];?></td>
+                              <td><?php echo $row213['cap3'];?></td>
+                              <td><?php echo $row213['cap4'];?></td>
+                              <td><?php echo $row213['cap5'];?></td>
+                              <td><?php echo $row213['noidung'];?></td>
+                          </tr>
+                        </tbody>
+                        <?php }?>
+                    </table>
       </div> <!-- end nd khoi -->
     </div>  <!-- end moi khoi -->
 
+
+
+    <div class="motkhoi">
+      <h4 class="tdkhoi">6. Lao động có kỹ năng trong nông nghiệp, lâm nghiệp, thủy sản <i class="anhicon fas fa-angle-down"></i></h4>
+      <div class="ndkhoi">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Cấp 1</th>
+                            <th>Cấp 2</th>
+                            <th>Cấp 3</th>
+                            <th>Cấp 4</th>
+                            <th>Cấp 5</th>
+                            <th>Tên gọi nghề nghiệp</th>
+                          </tr>
+                        </thead>
+                        <?php   
+    
+    $query213=mysqli_query($conn,"select * from danhmuc6");
+    
+    while($row213=mysqli_fetch_array($query213)){
+    
+    ?>
+                        <tbody>
+                        <tr>
+                              <td><?php echo $row213['cap1'];?></td>
+                              <td><?php echo $row213['cap2'];?></td>
+                              <td><?php echo $row213['cap3'];?></td>
+                              <td><?php echo $row213['cap4'];?></td>
+                              <td><?php echo $row213['cap5'];?></td>
+                              <td><?php echo $row213['noidung'];?></td>
+                          </tr>
+                        </tbody>
+                        <?php }?>
+                    </table>
+      </div> <!-- end nd khoi -->
+    </div>  <!-- end moi khoi -->
+
+
+
+    <div class="motkhoi">
+      <h4 class="tdkhoi">7. Thợ thủ công và các nghề nghiệp có liên quan khác <i class="anhicon fas fa-angle-down"></i></h4>
+      <div class="ndkhoi">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Cấp 1</th>
+                            <th>Cấp 2</th>
+                            <th>Cấp 3</th>
+                            <th>Cấp 4</th>
+                            <th>Cấp 5</th>
+                            <th>Tên gọi nghề nghiệp</th>
+                          </tr>
+                        </thead>
+                        <?php   
+    
+    $query213=mysqli_query($conn,"select * from danhmuc7");
+    
+    while($row213=mysqli_fetch_array($query213)){
+    
+    ?>
+                        <tbody>
+                        <tr>
+                              <td><?php echo $row213['cap1'];?></td>
+                              <td><?php echo $row213['cap2'];?></td>
+                              <td><?php echo $row213['cap3'];?></td>
+                              <td><?php echo $row213['cap4'];?></td>
+                              <td><?php echo $row213['cap5'];?></td>
+                              <td><?php echo $row213['noidung'];?></td>
+                          </tr>
+                        </tbody>
+                        <?php }?>
+                    </table>
+      </div> <!-- end nd khoi -->
+    </div>  <!-- end moi khoi -->
+
+
+
+
+    <div class="motkhoi">
+      <h4 class="tdkhoi">8. Thợ vận hành và lắp ráp máy móc, thiết bị <i class="anhicon fas fa-angle-down"></i></h4>
+      <div class="ndkhoi">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Cấp 1</th>
+                            <th>Cấp 2</th>
+                            <th>Cấp 3</th>
+                            <th>Cấp 4</th>
+                            <th>Cấp 5</th>
+                            <th>Tên gọi nghề nghiệp</th>
+                          </tr>
+                        </thead>
+                        <?php   
+    
+    $query213=mysqli_query($conn,"select * from danhmuc8");
+    
+    while($row213=mysqli_fetch_array($query213)){
+    
+    ?>
+                        <tbody>
+                        <tr>
+                              <td><?php echo $row213['cap1'];?></td>
+                              <td><?php echo $row213['cap2'];?></td>
+                              <td><?php echo $row213['cap3'];?></td>
+                              <td><?php echo $row213['cap4'];?></td>
+                              <td><?php echo $row213['cap5'];?></td>
+                              <td><?php echo $row213['noidung'];?></td>
+                          </tr>
+                        </tbody>
+                        <?php }?>
+                    </table>
+      </div> <!-- end nd khoi -->
+    </div>  <!-- end moi khoi -->
+
+
+
+
+    <div class="motkhoi">
+      <h4 class="tdkhoi">9. Lao động giản đơn <i class="anhicon fas fa-angle-down"></i></h4>
+      <div class="ndkhoi">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Cấp 1</th>
+                            <th>Cấp 2</th>
+                            <th>Cấp 3</th>
+                            <th>Cấp 4</th>
+                            <th>Cấp 5</th>
+                            <th>Tên gọi nghề nghiệp</th>
+                          </tr>
+                        </thead>
+                        <?php   
+    
+    $query213=mysqli_query($conn,"select * from danhmuc9");
+    
+    while($row213=mysqli_fetch_array($query213)){
+    
+    ?>
+                        <tbody>
+                        <tr>
+                              <td><?php echo $row213['cap1'];?></td>
+                              <td><?php echo $row213['cap2'];?></td>
+                              <td><?php echo $row213['cap3'];?></td>
+                              <td><?php echo $row213['cap4'];?></td>
+                              <td><?php echo $row213['cap5'];?></td>
+                              <td><?php echo $row213['noidung'];?></td>
+                          </tr>
+                        </tbody>
+                        <?php }?>
+                    </table>
+      </div> <!-- end nd khoi -->
+    </div>  <!-- end moi khoi -->
+
+
+
+
+    <div class="motkhoi">
+      <h4 class="tdkhoi">10. Lực lượng vũ trang <i class="anhicon fas fa-angle-down"></i></h4>
+      <div class="ndkhoi">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Cấp 1</th>
+                            <th>Cấp 2</th>
+                            <th>Cấp 3</th>
+                            <th>Cấp 4</th>
+                            <th>Cấp 5</th>
+                            <th>Tên gọi nghề nghiệp</th>
+                          </tr>
+                        </thead>
+                        <?php   
+    
+    $query213=mysqli_query($conn,"select * from danhmuc10");
+    
+    while($row213=mysqli_fetch_array($query213)){
+    
+    ?>
+                        <tbody>
+                        <tr>
+                              <td><?php echo $row213['cap1'];?></td>
+                              <td><?php echo $row213['cap2'];?></td>
+                              <td><?php echo $row213['cap3'];?></td>
+                              <td><?php echo $row213['cap4'];?></td>
+                              <td><?php echo $row213['cap5'];?></td>
+                              <td><?php echo $row213['noidung'];?></td>
+                          </tr>
+                        </tbody>
+                        <?php }?>
+                    </table>
+      </div> <!-- end nd khoi -->
+    </div>  <!-- end moi khoi -->
+
+    
 
 </div>
 

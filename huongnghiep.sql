@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 19, 2021 lúc 08:19 AM
+-- Thời gian đã tạo: Th12 22, 2021 lúc 07:35 AM
 -- Phiên bản máy phục vụ: 10.4.18-MariaDB
 -- Phiên bản PHP: 8.0.5
 
@@ -562,7 +562,7 @@ INSERT INTO `ctdaotaoct` (`manganh`, `ctdtct`) VALUES
 (7210404, 'Thiết kế thời trang 1'),
 (7210404, 'Nghiên cứu trang phục truyền thống'),
 (7210404, 'Lịch sử Đảng Cộng sản Việt Nam'),
-(7210404, 'Nghệ thuật học'),
+(0, 'Nghệ thuật học'),
 (7210404, 'Nghiên cứu chuyên đề thời trang'),
 (7210404, 'Đồ án tiền tốt nghiệp – TKTT'),
 (7210404, 'Đồ án tốt nghiệp'),
@@ -4989,6 +4989,908 @@ INSERT INTO `ctdaotaoct` (`manganh`, `ctdtct`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `danhmuc1`
+--
+
+CREATE TABLE `danhmuc1` (
+  `cap1` text NOT NULL,
+  `cap2` text NOT NULL,
+  `cap3` text NOT NULL,
+  `cap4` text NOT NULL,
+  `cap5` text NOT NULL,
+  `noidung` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `danhmuc1`
+--
+
+INSERT INTO `danhmuc1` (`cap1`, `cap2`, `cap3`, `cap4`, `cap5`, `noidung`) VALUES
+('', '10', '', '', '', 'Lãnh đạo cơ quan Đảng Cộng sản Việt Nam cấp trung ương và địa phương (chuyên trách)'),
+('', '', '101', '', '', 'Lãnh đạo cơ quan Đảng Cộng sản Việt Nam cấp trung ương (chuyên trách)'),
+('', '', '', '1011', '10110', 'Tổng Bí thư, Thường trực Ban Bí thư, Ban Bí thư, Ủy viên Bộ Chính trị, Ủy viên Ban Chấp hành Trung ương Đảng'),
+('', '', '', '1012', '10120', 'Bí thư, Phó Bí thư Đảng ủy cơ quan trung ương'),
+('', '', '', '1013', '10130', 'Bí thư, Phó Bí thư Đảng ủy khối trực thuộc trung ương'),
+('', '', '', '1014', '10140', 'Trưởng ban, Phó Trưởng ban Đảng và tương đương thuộc cấp trung ương'),
+('', '', '', '1015', '10150', 'Trợ lý Ủy viên Bộ Chính trị'),
+('', '', '', '1016', '10160', 'Vụ trưởng, Phó Vụ trưởng và tương đương'),
+('', '', '102', '', '', 'Lãnh đạo cơ quan Đảng Cộng sản Việt Nam cấp tỉnh (chuyên trách)'),
+('', '', '', '1021', '10210', 'Bí thư Tỉnh ủy, Phó Bí thư Tỉnh ủy, Ủy viên Ban Chấp hành Đảng bộ cấp tỉnh'),
+('', '', '', '1022', '10220', 'Bí thư, Phó Bí thư Đảng ủy sở, ban, ngành cấp tỉnh'),
+('', '', '', '1023', '10230', 'Bí thư, Phó Bí thư Đảng ủy khối cơ quan cấp tỉnh'),
+('', '', '', '1024', '10240', 'Trưởng ban, Phó Trưởng ban Đảng và tương đương thuộc cấp tỉnh'),
+('', '', '103', '', '', 'Lãnh đạo Đảng Cộng sản Việt Nam cấp huyện (chuyên trách)'),
+('', '', '', '1031', '10210', 'Bí thư Huyện ủy, Phó Bí thư Huyện ủy, Ủy viên Ban Chấp hành Đảng bộ cấp huyện'),
+('', '', '', '1032', '10320', 'Bí thư, Phó Bí thư Đảng Ủy ban, ngành cấp huyện'),
+('', '', '', '1033', '10330', 'Trưởng ban, Phó Trưởng ban Đảng và tương đương thuộc cấp huyện'),
+('', '', '104', '', '', 'Lãnh đạo Đảng Cộng sản Việt Nam cấp xã (chuyên trách)'),
+('', '', '', '1040', '10400', 'Bí thư, Phó Bí thư Đảng ủy cấp xã'),
+('', '', '105', '', '', 'Lãnh đạo Đảng Cộng sản Việt Nam tại doanh nghiệp và các tổ chức sự nghiệp (chuyên trách)'),
+('', '', '', '1050', '10500', 'Bí thư, Phó Bí thư Đảng ủy'),
+('', '11', '', '', '', 'Lãnh đạo, quản lý của Quốc hội, Văn phòng Quốc hội và Văn phòng Chủ tịch nước (chuyên trách)'),
+('', '', '111', '', '', 'Lãnh đạo, quản lý của Quốc hội, Văn phòng Quốc hội (chuyên trách)'),
+('', '', '', '1111', '11110', 'Chủ tịch Quốc hội, Phó Chủ tịch Quốc hội, Ủy viên thường vụ Quốc hội'),
+('', '', '', '1112', '11120', 'Chủ nhiệm, Phó Chủ nhiệm Ủy ban và tương đương làm việc tại Văn phòng Quốc hội'),
+('', '', '', '1113', '11130', 'Vụ trưởng, Phó Vụ trưởng và tương đương'),
+('', '', '112', '', '', 'Lãnh đạo, quản lý của Nhà nước, Văn phòng Chủ tịch nước (chuyên trách)'),
+('', '', '', '1121', '11210', 'Chủ tịch nước, Phó Chủ tịch nước'),
+('', '', '', '1122', '11220', 'Chủ nhiệm, Phó Chủ nhiệm tương đương Bộ trưởng, Thứ trưởng và tương đương làm việc tại Văn phòng Chủ tịch nước'),
+('', '', '', '1123', '11230', 'Vụ trưởng, Phó Vụ trưởng và tương đương'),
+('', '12', '', '', '', 'Lãnh đạo, quản lý của Chính phủ, Văn phòng Chính phủ, các bộ, ngành và tương đương thuộc Chính phủ (chuyên trách)'),
+('', '', '121', '', '', 'Lãnh đạo, quản lý của Chính phủ, Văn phòng Chính phủ (chuyên trách)'),
+('', '', '', '1211', '12110', 'Thủ tướng, Phó Thủ tướng Chính phủ'),
+('', '', '', '1212', '12120', 'Chủ nhiệm, Phó Chủ nhiệm và tương đương làm việc tại Văn phòng Chính phủ'),
+('', '', '', '1213', '12130', 'Vụ trưởng, Phó Vụ trưởng và tương đương'),
+('', '', '122', '', '', 'Lãnh đạo, quản lý bộ, ngành và tương đương thuộc Chính phủ (chuyên trách)'),
+('', '', '', '1221', '12210', 'Bộ trưởng, Thứ trưởng và tương đương của các bộ, ngành, các cơ quan ngang bộ, các cơ quan thuộc Chính phủ'),
+('', '', '', '1222', '12220', 'Trợ lý Bộ trưởng Bộ Ngoại giao'),
+('', '', '', '1223', '12230', 'Vụ trưởng, Phó Vụ trưởng, Trưởng ban, Phó Trưởng ban và tương đương'),
+('', '', '123', '', '', 'Lãnh đạo, quản lý tổng cục thuộc bộ (chuyên trách)'),
+('', '', '', '1231', '12310', 'Tổng cục trưởng, Phó Tổng cục trưởng và tương đương'),
+('', '', '', '1232', '12320', 'Vụ trưởng, Phó Vụ trưởng, Trưởng ban, Phó Trưởng ban và tương đương'),
+('', '13', '', '', '', 'Lãnh đạo, quản lý của Tòa án nhân dân và Viện Kiểm sát nhân dân (chuyên trách)'),
+('', '', '131', '', '', 'Lãnh đạo, quản lý của Tòa án nhân dân tối cao và cấp cao và Viện Kiểm sát nhân dân tối cao và cấp cao (chuyên trách)'),
+('', '', '', '1311', '13110', 'Chánh án, Phó Chánh án Tòa án nhân dân tối cao và cấp cao; Viện trưởng, Phó Viện trưởng Viện Kiểm sát nhân dân tối cao và cấp cao'),
+('', '', '', '1312', '13120', 'Vụ trưởng, Phó Vụ trưởng và tương đương làm việc ở Tòa án nhân dân tối cao và cấp cao và Viện Kiểm sát nhân dân tối cao và cấp cao'),
+('', '', '132', '', '', 'Lãnh đạo, quản lý của Tòa án nhân dân và Viện Kiểm sát nhân dân ở địa phương (chuyên trách)'),
+('', '', '', '1321', '13210', 'Chánh án, Phó Chánh án Tòa án nhân dân; Viện trưởng, Phó Viện trưởng Viện Kiểm sát nhân dân cấp tỉnh'),
+('', '', '', '1322', '13220', 'Chánh án, Phó Chánh án Tòa án nhân dân cấp huyện'),
+('', '', '133', '', '', 'Lãnh đạo, quản lý của Tòa án khác (trừ Tòa án Quân sự) do luật định (chuyên trách)'),
+('', '', '', '1330', '1330', 'Chánh án, Phó Chánh án Tòa án khác (trừ Tòa án Quân sự) do luật định'),
+('', '14', '', '', '', 'Lãnh đạo, quản lý của Hội đồng nhân dân và Ủy ban nhân dân địa phương (kể cả các cơ quan chuyên môn ở địa phương, trừ tư pháp và đoàn thể) (chuyên trách)'),
+('', '', '141', '', '', 'Lãnh đạo, quản lý của Hội đồng nhân dân (chuyên trách)'),
+('', '', '', '1411', '14110', 'Chủ tịch, Phó Chủ tịch và Thường trực Hội đồng nhân dân cấp tỉnh'),
+('', '', '', '1412', '14120', 'Trưởng ban, Phó Trưởng ban và tương đương trong các cơ quan của Hội đồng nhân dân cấp tỉnh'),
+('', '', '', '1413', '14130', 'Chủ tịch, Phó Chủ tịch và Thường trực Hội đồng nhân dân cấp huyện'),
+('', '', '', '1414', '14140', 'Trưởng ban, Phó Trưởng ban và tương đương trong các cơ quan của Hội đồng nhân dân cấp huyện'),
+('', '', '', '1415', '14150', 'Chủ tịch, Phó Chủ tịch Hội đồng nhân dân cấp xã'),
+('', '', '142', '', '', 'Lãnh đạo, quản lý của Ủy ban nhân dân (kể cả các cơ quan chuyên môn) (chuyên trách)'),
+('', '', '', '1421', '14210', 'Chủ tịch, Phó Chủ tịch và Ủy viên thường trực Ủy ban nhân dân cấp tỉnh'),
+('', '', '', '1422', '14220', 'Chủ tịch, Phó Chủ tịch và Ủy viên thường trực Ủy ban nhân dân cấp huyện'),
+('', '', '', '1424', '14240', 'Trưởng ngành, Phó Trưởng ngành, ban, sở và tương đương của các cơ quan chuyên môn cấp tỉnh'),
+('', '', '', '1425', '14250', 'Trưởng ngành, Phó Trưởng ngành, ban và tương đương của các cơ quan chuyên môn cấp huyện'),
+('', '15', '', '', '', 'Lãnh đạo, quản lý khối đoàn thể; Mặt trận Tổ quốc, Liên đoàn Lao động, Hội Phụ nữ, Hội Nông dân, Đoàn Thanh niên Cộng sản Hồ Chí Minh, Hội Cựu chiến binh (chuyên trách)'),
+('', '', '151', '', '', 'Lãnh đạo, quản lý khối đoàn thể (trừ Liên đoàn Lao động) (chuyên trách)'),
+('', '', '', '1515', '15150', 'Ủy viên cấp huyện'),
+('', '', '', '1514', '15140', 'Ủy viên cấp tỉnh'),
+('', '', '152', '', '', 'Lãnh đạo, quản lý Liên đoàn Lao động (chuyên trách)'),
+('', '', '', '1521', '15210', 'Chủ tịch, Phó Chủ tịch'),
+('', '', '', '1522', '15220', 'Ủy viên của Tổng Liên đoàn Lao động Việt Nam'),
+('', '', '', '1523', '15230', 'Vụ trưởng, Phó Vụ trưởng và tương đương của Tổng Liên đoàn Lao động Việt Nam'),
+('', '', '', '1524', '15240', 'Ủy viên trở lên của Liên đoàn Lao động cấp tỉnh'),
+('', '', '', '1525', '15250', 'Ủy viên trở lên của Liên đoàn Lao động cấp huyện'),
+('', '16', '', '', '', 'Nhà quản lý của Tổ chức nghiệp chủ, nhân đạo và vì quyền lợi đặc thù khác (chuyên trách)'),
+('', '', '161', '', '', 'Nhà quản lý của Tổ chức nghiệp chủ (chuyên trách)'),
+('', '', '', '1610', '16100', 'Chủ tịch, Phó Chủ tịch'),
+('', '', '162', '', '', 'Nhà quản lý của Tổ chức nhân đạo và vì quyền lợi đặc thù khác (chuyên trách)'),
+('', '', '', '1620', '16200', 'Chủ tịch, Phó Chủ tịch'),
+('', '17', '', '', '', 'Nhà quản lý của các cơ quan tập đoàn, tổng công ty và tương đương (chuyên trách)'),
+('', '', '171', '1710', '17100', 'Chủ tịch, Phó Chủ tịch Hội đồng quản trị, Tổng giám đốc doanh nghiệp, Phó Tổng giám đốc doanh nghiệp, Chủ tịch, Phó Chủ tịch Hội đồng trường, Hiệu trưởng, Phó Hiệu trưởng trường đại học lớn và tương đương (chuyên trách)'),
+('', '', '172', '', '', 'Giám đốc, Phó Giám đốc của các đơn vị sản xuất và triển khai thuộc cơ quan tập đoàn, tổng công ty, trường đại học lớn và tương đương (chuyên trách)'),
+('', '', '', '1721', '17210', 'Nông nghiệp, lâm nghiệp và thủy sản'),
+('', '', '', '1722', '17220', 'Khai khoáng, công nghiệp chế biến, chế tạo, sản xuất và phân phối điện, khí đốt, nước nóng, hơi nước và điều hòa không khí'),
+('', '', '', '1723', '17230', 'Xây dựng'),
+('', '', '', '1724', '17240', 'Bán buôn, bán lẻ'),
+('', '', '', '1725', '17250', 'Dịch vụ lưu trú và ăn uống'),
+('', '', '', '1726', '17260', 'Vận tải, kho bãi; Thông tin và truyền thông'),
+('', '', '', '1727', '17270', 'Dịch vụ kinh doanh'),
+('', '', '', '1728', '17280', 'Dịch vụ cá nhân và cộng đồng'),
+('', '', '', '1729', '17290', 'Các đơn vị sản xuất và dịch vụ còn lại chưa được phân vào đâu'),
+('', '', '173', '', '', 'Giám đốc, Phó Giám đốc các đơn vị quản lý thuộc cơ quan Liên hiệp, Tổng công ty, trường đại học lớn và tương đương (chuyên trách)'),
+('', '', '174', '', '', 'Giám đốc, Phó Giám đốc công ty, doanh nghiệp, xí nghiệp, hợp tác xã; Hiệu trưởng, Phó Hiệu trưởng trường nhỏ và tương đương (chuyên trách)'),
+('', '', '', '1741', '17410', 'Nông nghiệp, lâm nghiệp và thủy sản'),
+('', '', '', '1742', '17420', 'Khai khoáng, công nghiệp chế biến, chế tạo, sản xuất và phân phối điện, khí đốt, nước nóng, hơi nước và điều hòa không khí'),
+('', '', '', '1743', '17430', 'Xây dựng'),
+('', '', '', '1744', '17440', 'Bán buôn, bán lẻ'),
+('', '', '', '1745', '17450', 'Dịch vụ lưu trú và ăn uống'),
+('', '', '', '1746', '17460', 'Vận tải kho bãi; Thông tin và truyền thông'),
+('', '', '', '1747', '17470', 'Dịch vụ kinh doanh'),
+('', '', '', '1748', '17480', 'Dịch vụ cá nhân và cộng đồng'),
+('', '', '', '1749', '17490', 'Các đơn vị sản xuất và dịch vụ còn lại chưa được phân vào đâu');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `danhmuc2`
+--
+
+CREATE TABLE `danhmuc2` (
+  `cap1` text NOT NULL,
+  `cap2` text NOT NULL,
+  `cap3` text NOT NULL,
+  `cap4` text NOT NULL,
+  `cap5` text NOT NULL,
+  `noidung` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `danhmuc2`
+--
+
+INSERT INTO `danhmuc2` (`cap1`, `cap2`, `cap3`, `cap4`, `cap5`, `noidung`) VALUES
+('2', '', '', '', '', 'Nhà chuyên môn bậc cao'),
+('', '21', '', '', '', 'Nhà chuyên môn trong lĩnh vực khoa học và kỹ thuật'),
+('', '', '211', '', '', 'Nhà chuyên môn về khoa học trái đất và vật lý'),
+('', '', '', '2111', '21110', 'Nhà vật lý học và thiên văn học'),
+('', '', '', '2112', '21120', 'Nhà khí tượng học'),
+('', '', '', '2113', '21130', 'Nhà hóa học'),
+('', '', '', '2114', '21140', 'Nhà địa chất, địa vật lý'),
+('', '', '212', '', '', 'Nhà toán học, nhà thống kê'),
+('', '', '', '2121', '', 'Nhà toán học'),
+('', '', '', '', '21211', 'Nhà toán học'),
+('', '', '', '', '21212', 'Nhà phân tích nghiên cứu hoạt động'),
+('', '', '', '2122', '21220', 'Nhà thống kê'),
+('', '', '213', '', '', 'Nhà chuyên môn về khoa học sự sống'),
+('', '', '', '2131', '21310', 'Nhà sinh vật học, thực vật học, động vật học và các chuyên môn liên quan'),
+('', '', '', '2132', '', 'Nhà tư vấn nông, lâm nghiệp và thủy sản'),
+('', '', '', '', '21321', 'Nhà trồng trọt'),
+('', '', '', '', '21322', 'Nhà tư vấn làm vườn'),
+('', '', '', '', '21323', 'Nhà bệnh học thực vật'),
+('', '', '', '', '21324', 'Nhà khoa học đất đai'),
+('', '', '', '', '21325', 'Nhà chăn nuôi'),
+('', '', '', '', '21326', ''),
+('', '', '', '', '21327', 'Nhà nuôi cấy mô thực vật'),
+('', '', '', '', '21328', 'Nhà tư vấn nuôi trồng thủy sản'),
+('', '', '', '', '21329', 'Các chuyên gia nông, lâm, thủy sản khác'),
+('', '', '', '2133', '21330', 'Nhà chuyên môn về bảo vệ môi trường'),
+('', '', '214', '', '', 'Nhà chuyên môn về kỹ thuật (trừ kỹ thuật điện)'),
+('', '', '', '2141', '21410', 'Kỹ sư công nghiệp chế biến, chế tạo'),
+('', '', '', '2142', '21420', 'Kỹ sư xây dựng'),
+('', '', '', '2143', '21430', 'Kỹ sư môi trường'),
+('', '', '', '2144', '21440', 'Kỹ sư cơ học, cơ khí'),
+('', '', '', '2145', '21450', 'Kỹ sư hóa học'),
+('', '', '', '2146', '21460', 'Kỹ sư khai thác mỏ, luyện kim và các nghề liên quan'),
+('', '', '', '2149', '21490', 'Kỹ sư kỹ thuật khác chưa được phân vào đâu'),
+('', '', '215', '', '', 'Kỹ sư kỹ thuật điện'),
+('', '', '', '2151', '21510', 'Kỹ sư điện'),
+('', '', '', '2152', '21520', 'điện '),
+('', '', '', '2153', '21530', 'Kỹ sư viễn thông'),
+('', '', '216', '', '', 'Kiến trúc sư, nhà quy hoạch, khảo sát và thiết kế'),
+('', '', '', '2163', '', 'Nhà thiết kế sản phẩm và may mặc'),
+('', '', '', '2162', '21620', 'Kiến trúc sư cảnh quan'),
+('', '', '', '2161', '21610', 'Kiến trúc sư xây dựng'),
+('', '', '', '', '21631', 'Nhà thiết kế trang phục/thời trang, phụ kiện'),
+('', '', '', '', '21632', 'Nhà thiết kế công nghiệp và sản phẩm'),
+('', '', '', '2164', '', 'Nhà quy hoạch đô thị và giao thông'),
+('', '', '', '2165', '', 'Nhà vẽ bản đồ và khảo sát hiện trường'),
+('', '', '', '', '21641', 'Nhà quy hoạch đô thị'),
+('', '', '', '', '21649', 'Nhà quy hoạch giao thông khác'),
+('', '', '', '', '21651', 'Nhà khảo sát chung'),
+('', '', '', '', '21652', 'Nhà khảo sát đất'),
+('', '', '', '', '21653', 'Nhà khảo sát thủy văn'),
+('', '', '', '', '21654', 'Người vẽ bản đồ'),
+('', '', '', '2166', '21660', 'Nhà thiết kế đồ họa và truyền thông đa phương tiện'),
+('', '22', '', '', '', 'Nhà chuyên môn về sức khỏe'),
+('', '', '221', '', '', 'Bác sỹ y khoa'),
+('', '', '', '2211', '22110', 'Bác sỹ đa khoa'),
+('', '', '', '2212', '', 'Bác sỹ chuyên khoa'),
+('', '', '', '', '22121', 'Bác sỹ tim mạch'),
+('', '', '', '', '22122', 'Bác sỹ da liễu'),
+('', '', '', '', '22123', 'Bác sỹ tiêu hóa'),
+('', '', '', '', '22124', 'Bác sỹ nội khoa'),
+('', '', '', '', '22125', 'Bác sỹ ung bướu'),
+('', '', '', '', '22126', 'Bác sỹ nhi khoa'),
+('', '', '', '', '22127', 'Bác sỹ hô hấp'),
+('', '', '', '', '22128', 'Bác sỹ tâm thần'),
+('', '', '', '', '22129', 'Bác sỹ chuyên khoa khác'),
+('', '', '222', '', '', 'Y tá/Điều dưỡng (cao cấp) và hộ sinh (cao cấp)'),
+('', '', '', '2221', '22210', 'Y tá/Điều dưỡng (cao cấp)'),
+('', '', '', '2222', '22220', 'Hộ sinh (cao cấp)'),
+('', '', '223', '2230', '22300', 'Nhà chuyên môn về y học cổ truyền và hỗ trợ'),
+('', '', '', '224', '2240', 'Bác sỹ phụ tá'),
+('', '', '225', '2250', '22500', 'Bác sỹ thú y'),
+('', '', '226', '', '', 'Nhà chuyên môn về sức khỏe khác'),
+('', '', '', '2261', '22610', 'Bác sỹ răng - hàm - mặt'),
+('', '', '', '2262', '', 'Dược sỹ'),
+('', '', '', '', '22621', 'Dược sỹ sản xuất thuốc'),
+('', '', '', '', '22629', 'Dược sỹ khác'),
+('', '', '', '2263', '22630', 'Nhà chuyên môn về vệ sinh môi trường và bệnh nghề nghiệp'),
+('', '', '', '2264', '22640', 'Nhà chuyên môn về vật lý trị liệu'),
+('', '', '', '2265', '22650', 'Nhà chuyên môn về dinh dưỡng'),
+('', '', '', '2266', '22660', 'Bác sỹ thính học và đặc trị các khuyết tật về ngôn ngữ'),
+('', '', '', '2267', '22670', 'Nhà chuyên môn về thị lực và nhãn khoa'),
+('', '', '', '2269', '22690', 'Nhà chuyên môn khác về sức khỏe chưa được phân vào đâu'),
+('', '23', '', '', '', 'Nhà chuyên môn về giảng dạy'),
+('', '', '231', '', '', 'Giảng viên cao đẳng, đại học và cao học'),
+('', '', '', '2311', '23110', 'Giảng viên đại học và cao học'),
+('', '', '', '2312', '23120', 'Giảng viên cao đẳng'),
+('', '', '232', '2320', '23200', 'Giáo viên trung cấp'),
+('', '', '233', '', '', 'Giáo viên trung học'),
+('', '', '', '2331', '23310', 'Giáo viên trung học phổ thông (cấp III)'),
+('', '', '', '2332', '23320', 'Giáo viên trung học cơ sở (cấp II)'),
+('', '', '234', '', '', 'Giáo viên tiểu học và mầm non'),
+('', '', '', '2341', '23410', 'Giáo viên tiểu học (cấp I)'),
+('', '', '', '2342', '23420', 'Giáo viên mầm non'),
+('', '', '239', '', '', 'Nhà chuyên môn giảng dạy khác chưa được phân vào đâu'),
+('', '', '', '2391', '23910', 'Chuyên gia về phương pháp giáo dục'),
+('', '', '', '2392', '23920', 'Giáo viên theo các nhu cầu đặc biệt'),
+('', '24', '', '', '', 'Nhà chuyên môn về kinh doanh và quản lý'),
+('', '', '241', '', '', 'Nhà chuyên môn về tài chính'),
+('', '', '', '2411', '', 'Kế toán và các nhà chuyên môn có liên quan'),
+('', '', '', '', '24111', 'Kế toán (trừ kế toán thuế)'),
+('', '', '', '', '24112', 'Kiểm toán'),
+('', '', '', '', '24113', 'Kế toán thuế'),
+('', '', '', '2412', '24120', 'Nhà tư vấn tài chính và đầu tư'),
+('', '', '', '2413', '', 'Nhà phân tích tài chính và các nhà chuyên môn có liên quan'),
+('', '', '', '', '24131', 'Nhà phân tích tài chính'),
+('', '', '', '', '24132', 'Nhà phân tích rủi ro'),
+('', '', '', '', '24133', 'Nhà quản lý quỹ đầu tư'),
+('', '', '', '', '24134', 'Nhà quản lý quỹ ủy thác'),
+('', '', '', '', '24139', 'Nhà phân tích tài chính và các nhà chuyên môn có liên quan khác'),
+('', '', '242', '', '', 'Nhà chuyên môn về quản trị'),
+('', '', '', '2421', '24210', 'Nhà phân tích tổ chức và quản lý'),
+('', '', '', '2422', '24220', 'Nhà chuyên môn về quản trị chính sách'),
+('', '', '', '2423', '24230', 'Nhà chuyên môn về nhân sự và nghề nghiệp'),
+('', '', '', '2424', '24240', 'Nhà chuyên môn về đào tạo và phát triển nhân viên'),
+('', '', '243', '', '', 'Nhà chuyên môn về bán hàng, tiếp thị và quan hệ công chúng'),
+('', '', '', '2431', '24310', 'Nhà chuyên môn về quảng cáo và tiếp thị'),
+('', '', '', '2432', '24320', 'Nhà chuyên môn về quan hệ công chúng'),
+('', '', '', '2433', '24330', 'Nhà chuyên môn về bán hàng hóa kỹ thuật và y tế (không bao gồm công nghệ thông tin và truyền thông)'),
+('', '', '', '2434', '24340', 'Nhà chuyên môn về bán hàng hóa trong lĩnh vực công nghệ thông tin và truyền thông'),
+('', '', '244', '', '', 'Nhà chuyên môn điều tiết của Chính phủ'),
+('', '', '', '2441', '24410', 'Nhà chuyên môn về hải quan của Chính phủ'),
+('', '', '', '2442', '24420', 'Nhà chuyên môn về thuế của Chính phủ'),
+('', '', '', '2443', '24430', 'Nhà chuyên môn về trợ cấp xã hội của Chính phủ'),
+('', '', '', '2444', '24440', 'Nhà chuyên môn về cấp phép của Chính phủ'),
+('', '', '', '2445', '24450', 'Kiểm lâm'),
+('', '', '', '2446', '24460', 'Nhà ngoại giao'),
+('', '', '', '2449', '24490', 'Nhà chuyên môn điều tiết của Chính phủ khác chưa được phân vào đâu'),
+('', '25', '', '', '', 'Nhà chuyên môn trong lĩnh vực công nghệ thông tin và truyền thông'),
+('', '', '251', '', '', 'Nhà chuyên môn về phân tích và phát triển phần mềm và các ứng dụng'),
+('', '', '', '2511', '', 'Nhà phân tích hệ thống'),
+('', '', '', '', '25111', 'Nhà phân tích/thiết kế hệ thống'),
+('', '', '', '', '25112', 'Tư vấn quy trình kinh doanh công nghệ thông tin/phân tích kinh doanh'),
+('', '', '', '', '25113', 'Nhà kiến trúc giải pháp/doanh nghiệp');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `danhmuc3`
+--
+
+CREATE TABLE `danhmuc3` (
+  `cap1` text NOT NULL,
+  `cap2` text NOT NULL,
+  `cap3` text NOT NULL,
+  `cap4` text NOT NULL,
+  `cap5` text NOT NULL,
+  `noidung` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `danhmuc3`
+--
+
+INSERT INTO `danhmuc3` (`cap1`, `cap2`, `cap3`, `cap4`, `cap5`, `noidung`) VALUES
+('3', '', '', '', '', 'Nhà chuyên môn bậc trung'),
+('', '31', '', '', '', 'Kỹ thuật viên khoa học và kỹ thuật'),
+('', '', '311', '', '', 'Kỹ thuật viên khoa học vật lý và kỹ thuật'),
+('', '', '', '3111', '', 'Kỹ thuật viên khoa học hóa học và vật lý'),
+('', '', '', '', '31111', 'Kỹ thuật viên hóa học'),
+('', '', '', '', '31112', 'Kỹ thuật viên vật lí'),
+('', '', '', '', '31119', 'Kỹ thuật viên hóa học và vật lí khác'),
+('', '', '', '3112', '', 'Kỹ thuật viên kỹ thuật xây dựng'),
+('', '', '', '', '31121', 'Kỹ thuật viên xây dựng dân dụng'),
+('', '', '', '', '31123', 'Kỹ thuật viên xây dựng công trình'),
+('', '', '', '', '31124', 'Kỹ thuật viên khảo sát đất đai'),
+('', '', '', '', '31129', 'Kỹ thuật viên xây dựng dân dụng khác'),
+('', '', '', '3113', '', 'Kỹ thuật viên kỹ thuật điện'),
+('', '', '', '', '31131', 'Kỹ thuật viên điện dân dụng chung'),
+('', '', '', '', '31132', 'Kỹ thuật viên điện dân dụng cao tần'),
+('', '', '', '3114', '', 'Kỹ thuật viên kỹ thuật điện tử'),
+('', '', '', '', '31141', 'Kỹ thuật viên điện tử dân dụng (chung)'),
+('', '', '', '', '31142', 'Kỹ thuật viên bán dẫn'),
+('', '', '', '', '31143', 'Kỹ thuật viên thiết bị ghi âm, ghi hình'),
+('', '', '', '', '31144', 'Kỹ thuật viên thiết bị đo đạc'),
+('', '', '', '', '31149', 'Kỹ thuật viên điện tử dân dụng khác'),
+('', '', '', '3115', '', 'Kỹ thuật viên kỹ thuật cơ khí'),
+('', '', '', '', '31151', 'Kỹ thuật viên kỹ thuật cơ khí chung'),
+('', '', '', '', '31152', 'Kỹ thuật viên cơ khí hàng không'),
+('', '', '', '', '31153', 'Kỹ thuật viên máy tự động'),
+('', '', '', '', '31154', 'Kỹ thuật viên điều hòa không khí/điện lạnh'),
+('', '', '', '', '31155', 'Kỹ thuật viên máy móc, công cụ'),
+('', '', '', '', '31156', 'Người thiết kế khuôn/công cụ'),
+('', '', '', '3116', '31160', 'Kỹ thuật viên kỹ thuật hóa học'),
+('', '', '', '3117', '31170', 'Kỹ thuật viên khai thác mỏ và luyện kim'),
+('', '', '', '3118', '31180', 'Kỹ thuật viên phác thảo kỹ thuật'),
+('', '', '', '3119', '31190', 'Kỹ thuật viên khoa học vật lý và kỹ thuật chưa được phân vào đâu'),
+('', '', '312', '', '', 'Giám sát viên khai thác mỏ, sản xuất và xây dựng'),
+('', '', '', '3123', '31230', 'Giám sát viên xây dựng'),
+('', '', '', '3121', '31210', 'Giám sát viên khai thác mỏ'),
+('', '', '', '3122', '31220', 'Giám sát viên sản xuất'),
+('', '', '313', '', '', 'Kỹ thuật viên kiểm soát, vận hành và điều khiển quy trình'),
+('', '', '', '3133', '', 'Kiểm soát viên nhà máy xử lý hoá chất'),
+('', '', '', '', '31340', 'Người vận hành nhà máy lọc dầu và khí tự nhiên'),
+('', '', '', '3135', '31350', 'Kiểm soát viên quy trình sản xuất kim loại'),
+('', '', '', '3139', '31390', 'Kỹ thuật viên kiểm soát quy trình khác chưa được phân vào đâu'),
+('', '', '314', '', '', 'Kỹ thuật viên khoa học sự sống và kỹ thuật viên hỗ trợ liên quan'),
+('', '', '', '3141', '31410', 'Kỹ thuật viên khoa học sự sống (không kể y tế)'),
+('', '', '', '3142', '', 'Kỹ thuật viên nông nghiệp'),
+('', '', '', '3143', '31430', 'Kỹ thuật viên lâm nghiệp'),
+('', '', '', '3144', '31440', 'Kỹ thuật viên nuôi trồng thủy sản'),
+('', '', '315', '', '', 'Kỹ thuật viên và kiểm soát viên tàu thuỷ và phương tiện bay'),
+('', '32', '', '', '', 'Kỹ thuật viên sức khỏe'),
+('', '', '321', '', '', 'Kỹ thuật viên y tế và dược'),
+('', '', '3211', '', '', 'Kỹ thuật viên hình ảnh và thiết bị y tế'),
+('', '', '', '', '32111', 'Kỹ thuật viên siêu âm'),
+('', '', '', '', '32112', 'Kỹ thuật viên X quang'),
+('', '', '', '', '32119', 'Kỹ thuật viên thiết bị y tế và hình ảnh khác'),
+('', '', '', '3212', '32120', 'Kỹ thuật viên phòng thí nghiệm y tế'),
+('', '', '', '3213', '32130', 'Kỹ thuật viên và trợ lý dược'),
+('', '', '', '3214', '', 'Kỹ thuật viên lắp răng giả và chỉnh hình'),
+('', '', '', '', '32141', 'Kỹ thuật viên lắp chân tay giả và chỉnh hình'),
+('', '', '', '', '32142', 'Người làm và sửa các thiết bị chỉnh hình'),
+('', '', '', '', '32143', 'Kỹ thuật viên lắp răng giả, chân tay giả và các thiết bị chỉnh hình khác'),
+('', '', '322', '', '', 'Y tá/điều dưỡng, kỹ thuật viên chăm sóc bệnh nhân và hộ sinh'),
+('', '', '', '3221', '32210', 'Y tá/điều dưỡng, kỹ thuật viên chăm sóc bệnh nhân'),
+('', '', '', '3222', '32220', 'Hộ sinh'),
+('', '', '323', '3230', '32300', 'Kỹ thuật viên y học cổ truyền và bổ trợ'),
+('', '', '324', '3240', '32400', 'Kỹ thuật viên thú y và phụ tá'),
+('', '', '325', '', '', 'Kỹ thuật viên sức khỏe khác'),
+('', '', '', '3251', '32510', 'Phụ tá nha khoa và trị liệu'),
+('', '', '', '3252', '32520', 'Kỹ thuật viên ghi chép sổ sách y tế và thông tin về sức khỏe'),
+('', '', '', '3253', '32530', 'Nhân viên y tế cộng đồng'),
+('', '', '', '3254', '32540', 'Kỹ thuật viên nhãn khoa'),
+('', '', '', '3255', '32550', 'Kỹ thuật viên vật lý trị liệu và phụ tá'),
+('', '', '', '3256', '32560', 'Nhân viên trợ giúp y tế'),
+('', '33', '', '', '', 'Nhân viên về kinh doanh và quản lý'),
+('', '', '331', '', '', 'Nhân viên về toán ứng dụng và tài chính'),
+('', '', '', '3311', '33110', 'Nhân viên môi giới, buôn bán chứng khoán và tài chính'),
+('', '', '', '3313', '33130', 'Kế toán viên'),
+('', '', '', '3314', '33140', 'Nhân viên về thống kê và toán học ứng dụng có liên quan'),
+('', '', '', '3315', '', 'Nhân viên định giá và đánh giá mức độ thiệt hại'),
+('', '', '', '', '33151', 'Thẩm định viên/định giá (trừ tài sản vô hình)'),
+('', '', '', '', '33152', 'Giám định viên'),
+('', '', '', '', '33153', 'Nhân viên định giá tài sản vô hình'),
+('', '', '', '3316', '33160', 'Thủ quỹ'),
+('', '', '332', '', '', 'Nhân viên bán hàng, mua sắm và môi giới'),
+('', '', '', '3321', '', 'Nhân viên đại diện bảo hiểm'),
+('', '', '', '', '33211', 'Đại lý môi giới bảo hiểm (gồm cả nhà kế hoạch tài chính độc lập)'),
+('', '', '', '', '33219', 'Đại diện bảo hiểm và các nhân viên hỗ trợ liên quan khác'),
+('', '', '', '3322', '33220', 'Nhân viên đại diện bán hàng hóa thương mại'),
+('', '', '', '3323', '', 'Nhân viên/đại lý mua hàng'),
+('', '', '', '', '33231', 'Nhân viên thu mua'),
+('', '', '', '', '33232', 'Đại lý thu mua'),
+('', '', '', '3324', '33240', 'Nhân viên môi giới thương mại'),
+('', '', '333', '', '', 'Nhân viên/đại lý dịch vụ kinh doanh'),
+('', '', '', '3331', '33310', 'Nhân viên làm thủ tục thông quan và vận tải hàng hóa'),
+('', '', '', '3332', '33320', 'Nhân viên tổ chức hội thảo và sự kiện'),
+('', '', '', '3333', '33330', 'Nhân viên môi giới việc làm và nhà thầu'),
+('', '', '', '3339', '33390', 'Nhân viên/đại lý dịch vụ kinh doanh khác chưa được phân vào đâu'),
+('', '', '334', '', '', 'Thư ký hành chính và nhân viên chuyên môn khác'),
+('', '', '', '3341', '33410', 'Giám sát viên văn phòng'),
+('', '', '', '3342', '33420', 'Thư ký luật'),
+('', '', '', '3343', '33430', 'Thư ký hành chính và điều hành'),
+('', '', '', '3344', '33440', 'Thư ký y tế'),
+('', '', '335', '', '', 'Nhân viên điều tiết của Chính phủ'),
+('', '', '', '3351', '33510', 'Nhân viên hải quan của Chính phủ'),
+('', '', '', '3352', '33520', 'Nhân viên thuế của Chính phủ'),
+('', '', '', '3354', '33540', 'Nhân viên cấp phép của Chính phủ'),
+('', '', '', '3355', '33550', 'Kiểm lâm'),
+('', '', '', '3359', '33590', 'Nhân viên điều tiết của Chính phủ khác chưa được phân vào đâu'),
+('', '34', '', '', '', 'Nhân viên luật pháp, văn hóa, xã hội'),
+('', '', '341', '', '', 'Nhân viên về luật pháp, xã hội và tôn giáo'),
+('', '', '', '3411', '34110', 'Nhân viên về luật pháp'),
+('', '', '', '3412', '34120', 'Nhân viên về công tác xã hội'),
+('', '', '', '3413', '34130', 'Nhân viên về tôn giáo'),
+('', '', '342', '', '', 'Nhân viên về thể thao và tập luyện'),
+('', '', '', '3421', '34210', 'Vận động viên và người chơi thể thao'),
+('', '', '', '3422', '', 'Huấn luyện viên, nhân viên hướng dẫn thể thao và làm việc trong lĩnh vực thể thao'),
+('', '', '', '', '34221', 'Huấn luyện viên thể thao'),
+('', '', '', '', '34222', 'Nhân viên hướng dẫn thể dục thẩm mỹ'),
+('', '', '', '', '34223', 'Nhân viên hướng dẫn tập thể hình'),
+('', '', '', '', '34224', 'Nhân viên làm việc trong lĩnh vực thể thao'),
+('', '', '', '3423', '34230', 'Người hướng dẫn tập luyện và giải trí, người chỉ đạo chương trình'),
+('', '', '343', '', '', 'Nhân viên về nghệ thuật, văn hóa và ẩm thực'),
+('', '', '', '3431', '34310', 'Nhiếp ảnh gia'),
+('', '', '', '3432', '34320', 'Nhà thiết kế và trang trí nội thất'),
+('', '', '', '3433', '34330', 'Kỹ thuật viên thư viện, viện bảo tàng và triển lãm'),
+('', '', '', '3434', '34340', 'Đầu bếp trưởng'),
+('', '35', '', '', '', 'Kỹ thuật viên thông tin và truyền thông'),
+('', '', '351', '', '', 'Kỹ thuật viên hỗ trợ người sử dụng và vận hành công nghệ thông tin và truyền thông'),
+('', '', '', '3511', '35110', 'Kỹ thuật viên vận hành công nghệ thông tin và truyền thông'),
+('', '', '', '3512', '35120', 'Kỹ thuật viên hỗ trợ người sử dụng công nghệ thông tin và truyền thông'),
+('', '', '', '3513', '35130', 'Kỹ thuật viên hệ thống và mạng máy tính'),
+('', '', '352', '', '', 'Kỹ thuật viên viễn thông và phát thanh truyền hình'),
+('', '', '', '3521', '', 'Kỹ thuật viên truyền hình và nghe - nhìn'),
+('', '', '', '', '35211', 'Kỹ thuật viên điều hành chương trình'),
+('', '', '', '', '35212', 'Nhân viên điều khiển máy quay phim'),
+('', '', '', '', '35213', 'Nhân viên điều khiển máy quay hình động/tivi'),
+('', '', '', '', '35214', 'Nhân viên điều khiển thiết bị phòng thu phát thanh truyền hình'),
+('', '', '', '', '35215', 'Nhân viên điều khiển thiết bị ghi âm'),
+('', '', '', '', '35216', 'Nhân viên dựng phim'),
+('', '', '', '', '35219', 'Các kỹ thuật viên phát thanh và nghe nhìn khác'),
+('', '', '', '3522', '35220', 'Kỹ thuật viên kỹ thuật viễn thông'),
+('', '36', '', '', '', 'Giáo viên bậc trung'),
+('', '', '361', '3610', '36100', 'Giáo viên tiểu học'),
+('', '', '362', '3620', '36200', 'Giáo viên mầm non'),
+('', '', '363', '3630', '36300', 'Giáo viên dạy các đối tượng bị khuyết tật'),
+('', '', '364', '', '', 'Giáo viên khác'),
+('', '', '', '3641', '36410', 'Giáo viên sơ cấp'),
+('', '', '', '3642', '36420', 'Giáo viên đào tạo khác');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `danhmuc4`
+--
+
+CREATE TABLE `danhmuc4` (
+  `cap1` text NOT NULL,
+  `cap2` text NOT NULL,
+  `cap3` text NOT NULL,
+  `cap4` text NOT NULL,
+  `cap5` text NOT NULL,
+  `noidung` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `danhmuc4`
+--
+
+INSERT INTO `danhmuc4` (`cap1`, `cap2`, `cap3`, `cap4`, `cap5`, `noidung`) VALUES
+('4', '', '', '', '', 'Nhân viên trợ lý văn phòng'),
+('', '41', '', '', '', 'Nhân viên tổng hợp và nhân viên làm các công việc bàn giấy'),
+('', '', '411', '4110', '', 'Nhân viên tổng hợp'),
+('', '', '', '', '41101', 'Nhân viên văn phòng (gồm cả sắp xếp tài liệu và sao chụp)'),
+('', '', '', '', '41102', 'Nhân viên nguồn nhân lực/tổ chức'),
+('', '', '', '', '41109', 'Nhân viên hành chính khác'),
+('', '', '412', '4120', '41200', 'Thư ký (tổng hợp)'),
+('', '', '413', '', '', 'Nhân viên làm công việc bàn giấy'),
+('', '42', '', '', '', 'Nhân viên dịch vụ khách hàng'),
+('', '', '421', '', '', 'Nhân viên thu ngân, thu tiền và các nghề liên quan'),
+('', '', '', '4211', '', 'Nhân viên giao dịch ngân hàng và các nghề liên quan'),
+('', '', '', '', '42111', 'Nhân viên giao dịch ngân hàng'),
+('', '', '', '', '42112', 'Nhân viên thu ngân dịch vụ bưu điện'),
+('', '', '', '', '42113', 'Nhân viên đổi tiền'),
+('', '', '', '', '42119', 'Nhân viên giao dịch và thu ngân khác'),
+('', '', '', '4212', '42120', 'Nhân viên chia bài trong sòng bạc và các nghề liên quan đến cờ bạc khác'),
+('', '', '', '4213', '', 'Chủ hiệu cầm đồ và cho vay tiền'),
+('', '', '', '', '42131', 'Chủ hiệu cầm đồ'),
+('', '', '', '', '42132', 'Người cho vay tiền'),
+('', '', '', '4214', '', 'Người thu nợ và các công việc liên quan'),
+('', '', '', '', '42141', 'Người thu nợ'),
+('', '', '422', '', '', 'Nhân viên thông tin khách hàng'),
+('', '', '', '4221', '42210', 'Nhân viên và tư vấn viên du lịch'),
+('', '', '', '4222', '42220', 'Nhân viên trung tâm thông tin liên lạc'),
+('', '', '', '4223', '42230', 'Nhân viên vận hành tổng đài điện thoại'),
+('', '', '', '4224', '42240', 'Nhân viên lễ tân khách sạn'),
+('', '', '', '4226', '42260', 'Lễ tân (tổng hợp)'),
+('', '', '', '4227', '42270', 'Phỏng vấn viên điều tra và nghiên cứu thị trường'),
+('', '', '', '4229', '42290', 'Nhân viên thông tin khách hàng chưa được phân vào đâu'),
+('', '43', '', '', '', 'Nhân viên ghi chép số liệu và vật liệu'),
+('', '', '431', '', '', 'Nhân viên làm công việc liên quan đến số liệu'),
+('', '', '', '4311', '43110', 'Nhân viên kế toán'),
+('', '', '', '4312', '43120', 'Nhân viên thống kê, tài chính và bảo hiểm'),
+('', '', '', '4313', '43130', 'Nhân viên kế toán tiền lương'),
+('', '', '432', '', '', 'Nhân viên ghi chép nguyên vật liệu và vận chuyển'),
+('', '44', '440', '', '', 'Nhân viên hỗ trợ văn phòng khác'),
+('', '', '', '4323', '43230', 'Nhân viên vận chuyển'),
+('', '', '', '4322', '43220', '43220'),
+('', '', '', '4401', '44010', 'Nhân viên thư viện'),
+('', '', '', '4402', '44020', 'Nhân viên phân loại và vận chuyển thư'),
+('', '', '', '4403', '44030', 'Nhân viên đánh mã, đọc và sửa bản in thử'),
+('', '', '', '4404', '44040', 'Người ghi chép thuê và người làm các công việc có liên quan'),
+('', '', '', '4405', '44050', 'Nhân viên văn thư và phô tô'),
+('', '', '', '4406', '44060', 'Nhân viên tổ chức nhân sự'),
+('', '', '', '4409', '44090', 'Nhân viên hỗ trợ văn phòng khác chưa được phân vào đâu');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `danhmuc5`
+--
+
+CREATE TABLE `danhmuc5` (
+  `cap1` text NOT NULL,
+  `cap2` text NOT NULL,
+  `cap3` text NOT NULL,
+  `cap4` text NOT NULL,
+  `cap5` text NOT NULL,
+  `noidung` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `danhmuc5`
+--
+
+INSERT INTO `danhmuc5` (`cap1`, `cap2`, `cap3`, `cap4`, `cap5`, `noidung`) VALUES
+('5', '', '', '', '', 'Nhân viên địch vụ và bán hàng'),
+('', '51', '', '', '', 'Nhân viên dịch vụ cá nhân'),
+('', '', '511', '', '', 'Nhân viên hướng dẫn, tổ chức khách du lịch'),
+('', '', '', '5111', '51110', 'Tiếp viên trên tàu hoặc máy bay'),
+('', '', '', '5112', '51120', 'Nhân viên phụ tàu xe'),
+('', '', '', '5113', '', 'Nhân viên hướng dẫn du lịch'),
+('', '', '', '', '51131', 'Nhân viên hướng dẫn khu thiên nhiên'),
+('', '', '', '', '51132', 'Nhân viên hướng dẫn công viên chủ đề'),
+('', '', '', '', '51139', 'Nhân viên hướng dẫn du lịch khác (như di tích lịch sử, bảo tàng)'),
+('', '', '512', '5120', '51200', 'Đầu bếp'),
+('', '', '513', '', '', 'Bồi bàn và nhân viên pha chế'),
+('', '', '514', '', '', 'Thợ làm đầu, nhân viên làm đẹp'),
+('', '', '', '5141', '51410', 'Thợ làm đầu'),
+('', '', '', '5142', '51420', 'Nhân viên làm đẹp và nhân viên có liên quan'),
+('', '', '515', '', '', 'Người giám sát tòa nhà, quản gia'),
+('', '', '516', '', '', 'Nhân viên dịch vụ cá nhân khác'),
+('', '', '', '5161', '51610', 'Nhà chiêm tinh, nhà tướng số và những người có liên quan đến tâm linh khác'),
+('', '', '', '5162', '51620', 'Người bồi phòng và những người được thuê để làm bầu bạn'),
+('', '', '', '5163', '51630', 'Người làm nghề phục vụ tang lễ và ướp xác'),
+('', '', '', '5164', '51640', 'Nhân viên chăm sóc và làm đẹp động vật'),
+('', '', '', '5165', '51650', 'Giáo viên hướng dẫn lái xe'),
+('', '', '52', '', '', 'Nhân viên bán hàng'),
+('', '', '', '521', '', 'Người bán hàng trên đường phố và tại chợ'),
+('', '', '', '5211', '52110', 'Người bán hàng trong quầy hàng và tại chợ'),
+('', '', '', '5212', '52120', 'Người bán đồ ăn trên đường phố'),
+('', '', '522', '', '', 'Nhân viên bán hàng trong cửa hàng'),
+('', '', '523', '5230', '', 'Nhân viên thu ngân và bán vé'),
+('', '', '524', '', '', 'Nhân viên bán hàng khác'),
+('', '53', '', '', '', 'Nhân viên chăm sóc cá nhân'),
+('', '', '531', '', '', 'Nhân viên chăm sóc trẻ em và người phụ tá cho giáo viên'),
+('', '', '532', '', '', 'Nhân viên chăm sóc cá nhân trong các dịch vụ y tế'),
+('', '', '', '5321', '53210', 'Nhân viên hỗ trợ về chăm sóc sức khỏe'),
+('', '', '', '5322', '', 'Nhân viên chăm sóc cá nhân tại nhà'),
+('', '', '', '', '53222', 'Điều dưỡng tại nhà'),
+('', '54', '540', '', '', 'Nhân viên dịch vụ bảo vệ'),
+('', '', '', '5401', '54010', 'Nhân viên an ninh (trừ công an)'),
+('', '', '', '5409', '', 'Nhân viên dịch vụ bảo vệ khác chưa được phân vào đâu'),
+('', '', '', '', '54091', 'Thám tử tư'),
+('', '', '', '', '54092', 'Nhân viên bảo vệ rùng'),
+('', '', '', '', '54099', 'Nhân viên dịch vụ bảo vệ khác còn lại chưa được phân vào đâu');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `danhmuc6`
+--
+
+CREATE TABLE `danhmuc6` (
+  `cap1` text NOT NULL,
+  `cap2` text NOT NULL,
+  `cap3` text NOT NULL,
+  `cap4` text NOT NULL,
+  `cap5` text NOT NULL,
+  `noidung` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `danhmuc6`
+--
+
+INSERT INTO `danhmuc6` (`cap1`, `cap2`, `cap3`, `cap4`, `cap5`, `noidung`) VALUES
+('6', '', '', '', '', 'Lao động có kỹ năng trong nông nghiệp, lâm nghệp và thủy sản'),
+('', '61', '', '', '', 'Lao động có kỹ năng trong nông nghiệp có sản phẩm chủ yếu để bán'),
+('', '', '611', '', '', 'Lao động trồng trọt và làm vườn có sản phẩm chủ yếu để bán'),
+('', '', '', '6111', '', 'Lao động trồng, thu hoạch rau và cây mùa vụ'),
+('', '', '', '', '61111', 'Lao động trồng, thu hoạch lúa'),
+('', '', '', '', '61112', 'Lao động trồng, thu hoạch rau các loại'),
+('', '', '', '', '61119', 'Lao động trồng, thu hoạch cây mùa vụ khác'),
+('', '', '', '6112', '', 'Lao động trồng, thu hoạch sản phẩm cây bụi và cây thân gỗ'),
+('', '', '', '', '61121', 'Lao động trồng, thu hoạch sản phẩm cây cà phê'),
+('', '', '', '', '61122', 'Lao động trồng, thu hoạch sản phẩm cây chè'),
+('', '', '', '', '61123', 'Lao động trồng, thu hoạch sản phẩm cây tiêu'),
+('', '', '', '', '61124', 'Lao động trồng, thu hoạch sản phẩm cây điều'),
+('', '', '', '', '61125', 'Lao động trồng, thu hoạch sản phẩm cây cao su'),
+('', '', '', '', '61129', 'Lao động trồng, thu hoạch sản phẩm cây bụi và cây thân gỗ khác'),
+('', '', '', '6113', '', 'Lao động làm vườn, trồng vườn và vườn ươm'),
+('', '', '', '', '61131', 'Lao động trồng, thu hoạch hoa, cây cảnh'),
+('', '', '', '6114', '61140', 'Lao động trồng trọt hỗn hợp'),
+('', '', '612', '', '', 'Lao động chăn nuôi'),
+('', '', '', '6121', '', 'Lao động chăn nuôi gia súc và vật nuôi lấy sữa'),
+('', '', '', '', '61211', 'Lao động chăn nuôi trâu bò'),
+('', '', '', '', '61212', 'Lạo động chăn nuôi dê, cừu, hươu'),
+('', '', '', '', '61213', 'Lao động chăn nuôi lợn'),
+('', '', '', '6122', '', 'Lao động chăn nuôi gia cầm'),
+('', '', '', '', '61221', 'Lao động chăn nuôi gà'),
+('', '', '', '', '61222', 'Lao động chăn nuôi vịt, ngan, ngỗng'),
+('', '', '', '', '61229', 'Lao động chăn nuôi gia cầm khác'),
+('', '', '', '6123', '', 'Lao động nuôi ong và nuôi tằm'),
+('', '', '', '', '61231', 'Lao động nuôi ong'),
+('', '', '', '', '61232', 'Lao động nuôi tằm'),
+('', '', '', '6129', '61290', 'Lao động chăn nuôi chưa được phân vào đâu'),
+('', '', '613', '6130', '61300', 'Lao động trồng trọt và chăn nuôi hỗn hợp'),
+('', '62', '', '', '', 'Lao động có kỹ năng trong lâm nghiệp, thủy sản và săn bắn có sản phẩm chủ yếu để bán'),
+('', '', '621', '6210', '', 'Lao động trong lâm nghiệp và lĩnh vực có liên quan'),
+('', '', '', '', '62101', 'Lao động ươm giống cây lâm nghiệp'),
+('', '', '', '', '62102', 'Lao động trồng rừng và chăm sóc rừng lấy gỗ'),
+('', '', '', '', '62103', 'Lao động trồng rừng và chăm sóc rừng tre, nứa'),
+('', '', '622', '', '', 'Lao động thủy sản, săn bắn và đánh bẫy'),
+('', '', '', '6221', '', 'Lao động nuôi trồng thủy sản'),
+('', '', '', '', '62211', 'Lao động nuôi cá'),
+('', '', '', '', '62212', 'Lao động nuôi tôm'),
+('', '', '', '', '62219', 'Lao động nuôi trồng thủy sản khác'),
+('', '', '', '6222', '62220', 'Lao động khai thác thủy sản trong nội địa'),
+('', '', '', '6223', '', 'Lao động khai thác thủy sản trong vùng biển Việt Nam'),
+('', '', '', '6224', '62240', 'Lao động săn bắn, đánh bẫy'),
+('', '', '63', '', '', 'Lao động tự cung tự cấp trong nông nghiệp, lâm nghiệp và thủy sản'),
+('', '63', '', '', '', 'Lao động tự cung tự cấp trong nông nghiệp, lâm nghiệp và thủy sản'),
+('', '', '631', '6310', '63100', 'Lao động trồng trọt tự cung tự cấp'),
+('', '', '632', '6320', '63200', 'Lao động chăn nuôi gia súc tự cung tự cấp'),
+('', '', '633', '6330', '63300', 'Lao động trồng trọt và chăn nuôi hỗn hợp tự cung tự cấp'),
+('', '', '634', '6340', '63400', 'Lao động đánh cá, săn bắn, đánh bẫy và thu hái tự cung tự cấp');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `danhmuc7`
+--
+
+CREATE TABLE `danhmuc7` (
+  `cap1` text NOT NULL,
+  `cap2` text NOT NULL,
+  `cap3` text NOT NULL,
+  `cap4` text NOT NULL,
+  `cap5` text NOT NULL,
+  `noidung` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `danhmuc7`
+--
+
+INSERT INTO `danhmuc7` (`cap1`, `cap2`, `cap3`, `cap4`, `cap5`, `noidung`) VALUES
+('7', '', '', '', '', 'Lao động thủ công và các nghề có liên quan khác'),
+('', '71', '', '', '', 'Lao động xây dựng và lao động có liên quan đến nghề xây dựng (trừ thợ điện)'),
+('', '', '711', '', '', 'Thợ xây dựng khung nhà và thợ khác có liên quan'),
+('', '', '', '7111', '71110', 'Thợ xây nhà'),
+('', '', '', '7112', '71120', 'Thợ nề và các thợ có liên quan'),
+('', '', '', '7113', '', 'Thợ xây nhà bằng đá, thợ cắt đá, thợ tách đá và thợ khắc đá'),
+('', '', '', '', '71131', 'Thợ đẽo đá/thợ khắc đá'),
+('', '', '', '', '71132', 'Thợ xây nhà bằng đá'),
+('', '', '', '7114', '', 'Thợ đổ bê tông và các thợ có liên quan'),
+('', '', '', '', '71141', 'Thợ đổ bê tông cốt thép (chung)'),
+('', '', '', '', '71142', 'Thợ bê tông'),
+('', '', '', '', '71149', 'Thợ bê tông khác, thợ hoàn thiện bê tông và thợ liên quan khác'),
+('', '', '', '7115', '71150', 'Thợ mộc và thợ làm đồ gỗ'),
+('', '', '', '7119', '', 'Thợ xây dựng khung nhà và thợ khác có liên quan chưa được phân vào đâu'),
+('', '', '712', '', '', 'Thợ hoàn thiện công trình và thợ có liên quan'),
+('', '', '', '7121', '71210', 'Thợ lợp mái'),
+('', '', '', '7122', '71220', 'Thợ lát sàn và thợ lát đá'),
+('', '', '', '7123', '71230', 'Thợ thạch cao'),
+('', '', '', '7124', '', 'Thợ lắp đặt vật liệu cách âm, cách nhiệt'),
+('', '', '', '', '71241', 'Thợ lắp đặt cách điện xây dựng'),
+('', '', '', '', '71242', 'Thợ nồi hơi/thợ ống cách điện'),
+('', '', '', '', '71243', 'Thợ lắp đặt cách điện thiết bị điều hòa không khí'),
+('', '', '', '', '71244', 'Thợ lắp đặt vật liệu chịu lửa'),
+('', '', '', '7125', '71250', 'Thợ lắp kính'),
+('', '', '', '7126', '71260', 'Thợ ống nước'),
+('', '', '', '7127', '71270', 'Thợ cơ khí thiết bị điều hòa không khí và làm lạnh'),
+('', '72', '', '', '', 'Thợ luyện kim, cơ khí và thợ có liên quan'),
+('', '', '721', '', '', 'Thợ luyện kim loại, thợ đúc, thợ hàn và thợ có liên quan'),
+('', '', '', '7211', '72110', 'Thợ tạo khuôn và lõi kim loại'),
+('', '', '', '7212', '', 'Thợ hàn và thợ cắt kim loại bằng nhiệt'),
+('', '', '', '', '72121', 'Thợ hàn'),
+('', '', '', '', '72122', 'Thợ cắt kim loại bằng nhiệt'),
+('', '', '', '7213', '72130', 'Thợ luyện kim loại'),
+('', '', '', '7214', '72140', 'Thợ chuẩn bị và lắp ráp các cấu kiện kim loại'),
+('', '', '', '7215', '72150', 'Thợ lắp ráp và thợ nối cáp'),
+('', '', '722', '', '', 'Thợ rèn, thợ chế tạo các dụng cụ và thợ có liên quan'),
+('', '', '', '7221', '72210', ''),
+('', '', '', '7222', '72220', 'Thợ chế tạo dụng cụ và thợ có liên quan'),
+('', '', '', '7223', '72230', 'Thợ lắp ráp và vận hành máy công cụ kim loại'),
+('', '', '', '7224', '72240', 'Thợ đánh bóng, thợ mài kim loại và dụng cụ kim loại'),
+('', '', '723', '', '', 'Thợ cơ khí và sửa chữa máy móc'),
+('', '', '', '7231', '', 'Thợ cơ khí và sửa chữa xe có động cơ'),
+('', '', '', '', '72311', 'Thợ cơ khí xe có động cơ'),
+('', '', '', '', '72312', 'Thợ sửa chữa xe có động cơ'),
+('', '', '', '7232', '72320', 'Thợ cơ khí và sửa chữa động cơ máy bay'),
+('', '', '', '7233', '72330', 'Thợ cơ khí và sửa chữa máy móc nông nghiệp và công nghiệp'),
+('', '73', '', '', '', 'Thợ thủ công và thợ liên quan đến in'),
+('', '', '731', '', '', 'Thợ thủ công'),
+('', '', '', '7311', '73110', 'Thợ sản xuất và sửa chữa dụng cụ chính xác'),
+('', '', '', '7313', '', 'Thợ kim hoàn'),
+('', '', '', '', '73131', '73131'),
+('', '', '', '', '73131', 'Thợ kim hoàn (nói chung)'),
+('', '', '', '', '73132', 'Thợ cắt và đánh bóng đá quý'),
+('', '', '', '', '73133', 'Thợ vàng/thợ bạc'),
+('', '', '', '', '73134', 'Thợ khắc kim hoàn'),
+('', '', '', '', '73139', 'Thợ kim hoàn khác'),
+('', '', '', '7314', '', 'Thợ gốm và thợ có liên quan'),
+('', '', '', '', '73141', 'Thợ gốm'),
+('', '', '', '', '73142', 'Thợ gạch ngói'),
+('', '', '', '', '73149', 'Thợ gốm và thợ có liên quan khác'),
+('', '', '', '7315', '73150', 'Thợ sản xuất, thợ cắt, thợ mài và thợ hoàn thiện đồ thủy tinh'),
+('', '', '', '7316', '73160', 'Thợ vẽ biển quảng cáo, thợ trang trí, thợ khắc và thợ khắc axit'),
+('', '', '732', '', '', 'Thợ liên quan đến in'),
+('', '', '', '7321', '73210', 'Thợ thực hiện công đoạn trước in'),
+('', '', '', '7322', '73220', 'Thợ in'),
+('', '74', '', '', '', 'Thợ điện và thợ điện tử'),
+('', '', '741', '', '', 'Thợ lắp đặt và sửa chữa thiết bị điện'),
+('', '', '', '7411', '74110', 'Thợ lắp điện cho tòa nhà và thợ điện có liên quan'),
+('', '', '', '7412', '', 'Thợ lắp ráp và thợ cơ khí điện'),
+('', '', '', '', '74122', 'Thợ lắp ráp điện thang máy, thang cuốn và các thiết bị liên quan'),
+('', '', '', '', '74123', 'Thợ sửa chữa điện gia dụng'),
+('', '', '', '', '74129', 'Thơ lắp ráp và thợ cơ khí điện khác'),
+('', '', '', '7413', 'Thợ lắp đặt và sửa chữa đường dây điện0', 'Thợ lắp đặt và sửa chữa đường dây điện'),
+('', '', '742', '7421', '', 'Thợ lắp đặt và thợ sửa chữa điện tử viễn thông'),
+('', '', '', '', '74211', 'Thợ lắp đặt thiết bị điện tử (chung)'),
+('', '', '', '', '74212', 'Thợ cơ khí thiết bị video và âm thanh'),
+('', '', '', '', '74219', 'Thợ lắp đặt thiết bị điện tử khác');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `danhmuc8`
+--
+
+CREATE TABLE `danhmuc8` (
+  `cap1` text NOT NULL,
+  `cap2` text NOT NULL,
+  `cap3` text NOT NULL,
+  `cap4` text NOT NULL,
+  `cap5` text NOT NULL,
+  `noidung` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `danhmuc8`
+--
+
+INSERT INTO `danhmuc8` (`cap1`, `cap2`, `cap3`, `cap4`, `cap5`, `noidung`) VALUES
+('', '81', '', '', '', 'Thợ vận hành máy móc và thiết bị'),
+('', '', '811', '', '', 'Thợ vận hành máy móc, thiết bị xử lý khai khoáng'),
+('', '', '', '8111', '81110', 'Thợ khai thác mỏ và đá'),
+('', '', '', '8112', '81120', 'Thợ vận hành thiết bị chế biến khoáng sản và đá'),
+('', '', '', '8113', '', 'Thợ khoan, đào giếng và các thợ có liên quan'),
+('', '', '', '', '81131', 'Thợ khoan giếng (giếng dầu khí)'),
+('', '', '', '', '81132', 'Thợ khoan giếng (trừ giếng dầu khí)'),
+('', '', '', '', '81133', 'Thợ vận hành máy khoan sâu'),
+('', '', '', '8114', '', 'Thợ vận hành máy sản xuất xi măng, đá và khoáng khác'),
+('', '', '', '', '81141', 'Thợ vận hành máy sản xuất sản phẩm bê tông đúc sẵn'),
+('', '', '', '', '81142', 'Thợ vận hành máy sản xuất xi măng amiăng'),
+('', '', '812', '', '', 'Thợ vận hành thiết bị xử lý và hoàn thiện kim loại'),
+('', '', '', '8121', '81210', 'Thợ vận hành thiết bị xử lý kim loại'),
+('', '', '', '8122', '81220', 'Thợ vận hành máy hoàn thiện, tráng, mạ kim loại'),
+('', '', '813', '', '', 'Thợ vận hành máy móc, thiết bị sản xuất hóa học và sản xuất sản phẩm phim ảnh'),
+('', '', '', '8131', '', 'Thợ vận hành máy và thiết bị sản xuất hóa chất'),
+('', '', '', '', '81311', 'Thợ vận hành thiết bị nghiền/trộn hóa chất'),
+('', '', '', '', '81312', 'Thợ vận hành máy xử lý nhiệt hóa học'),
+('', '', '', '', '81314', 'Thợ vận hành hóa chất tĩnh/lò phản ứng'),
+('', '82', '820', '', '', 'Thợ lắp ráp'),
+('', '', '', '8201', '82010', 'Thợ lắp ráp máy cơ khí'),
+('', '', '', '8202', '', 'Thợ lắp ráp thiết bị điện và điện tử'),
+('', '', '', '', '82021', 'Thợ lắp ráp thiết bị điện/linh kiện điện'),
+('', '', '', '', '82022', 'Thợ lắp ráp thiết bị điện tử/linh kiện điện tử'),
+('', '', '', '8209', '', 'Thợ lắp ráp chưa được phân vào đâu'),
+('', '', '', '', '82091', 'Thợ lắp ráp đồ chơi'),
+('', '', '', '', '82099', 'Thợ lắp ráp khác chưa được phân vào đâu (lắp ráp sản phẩm nhựa, lắp ráp sản phẩm cao su)'),
+('', '83', '', '', '', ''),
+('', '', '831', '', '', 'Lái các phương tiện vận chuyển trên đường ray và các công nhân có liên quan'),
+('', '', '', '8311', '83110', 'Lái các phương tiện vận chuyển trên đường ray'),
+('', '', '', '8312', '', 'Nhân viên điều khiển tín hiệu, bẻ ghi và chuyển hướng tàu hỏa'),
+('', '', '', '', '83121', 'Nhân viên điều khiển tín hiệu, bẻ ghi và chuyển hướng tàu hỏa'),
+('', '', '', '', '83129', 'Nhân viên đường sắt khác và nhân viên có liên quan'),
+('', '', '832', '', '', 'Lái xe con, xe tải và xe máy'),
+('', '', '', '8321', '', 'Lái xe máy'),
+('', '', '', '', '83211', 'Người chở người, chở hàng bằng xe máy (không phải là thư)'),
+('', '', '', '', '83212', 'Người chở người, chở hàng bằng xe máy sử dụng các thiết bị di động cá nhân (lái xe máy công nghệ)'),
+('', '', '833', '', '', 'Lái xe tải hạng vừa, hạng nặng, xe buýt và xe điện'),
+('', '', '', '8331', '83310', 'Lái xe buýt và xe điện'),
+('', '', '', '8332', '', 'Lái xe tải hạng vừa và xe tải hạng nặng'),
+('', '', '834', '', '', 'Thợ vận hành thiết bị chuyển động'),
+('', '', '', '8341', '83410', 'Thợ vận hành thiết bị nông nghiệp và lâm nghiệp'),
+('', '', '', '8342', '', 'Thợ vận hành máy đào đất và thợ vận hành thiết bị có liên quan'),
+('', '', '', '', '83421', 'Thợ vận hành máy đào'),
+('', '', '', '', '83422', 'Thợ vận hành máy ủi'),
+('', '', '', '', '83423', 'Thợ vận hành máy nạo vét'),
+('', '', '835', '8350', '', 'Thủy thủ trên tàu và những thợ có liên quan (trừ lao động trên tàu đánh bắt thủy sản)'),
+('', '', '', '', '83501', 'Người lái tàu'),
+('', '', '', '', '83502', 'Thủy thủ (bao gồm cả người chủ tàu)'),
+('', '', '', '', '83509', 'Thủy thủ trên tàu và những thợ có liên quan khác');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `danhmuc9`
+--
+
+CREATE TABLE `danhmuc9` (
+  `cap1` text NOT NULL,
+  `cap2` text NOT NULL,
+  `cap3` text NOT NULL,
+  `cap4` text NOT NULL,
+  `cap5` text NOT NULL,
+  `noidung` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `danhmuc9`
+--
+
+INSERT INTO `danhmuc9` (`cap1`, `cap2`, `cap3`, `cap4`, `cap5`, `noidung`) VALUES
+('', '91', '', '', '', 'Người quét dọn và giúp việc'),
+('', '', '911', '', '', 'Người quét dọn và giúp việc gia đình, khách sạn và văn phòng'),
+('', '', '', '9111', '', 'Người quét dọn và giúp việc gia đình'),
+('', '', '', '', '91111', 'Người giúp việc gia đình (chung)'),
+('', '', '', '', '91119', 'Người quét dọn và giúp việc gia đình khác'),
+('', '', '', '9112', '', 'Người quét dọn và giúp việc trong văn phòng, khách sạn và các cơ sở khác'),
+('', '', '', '', '91121', 'Người dọn dẹp văn phòng'),
+('', '', '', '', '91122', 'Người dọn dẹp khách sạn'),
+('', '', '', '', '91123', 'Người dọn dẹp cơ sở công nghiệp'),
+('', '', '', '', '91124', 'Người dọn dẹp cơ sở thực phẩm và đồ uống (như nhà hàng, trung tâm bán hàng rong)'),
+('', '', '', '', '91126', 'Người dọn dẹp khu vực công cộng (như trạm dừng xe buýt, đường sắt, cống rãnh, cầu trên cao, đường giao thông, đường cao tốc, công viên, bãi biển)'),
+('', '', '', '', '91127', 'Người dọn dẹp các phương tiện (như máy bay, tàu hỏa, tàu điện ngầm)'),
+('', '', '912', '', '', 'Thợ rửa xe cộ, làm sạch cửa sổ, giặt là và những người làm công việc dọn dẹp bằng tay khác'),
+('', '', '', '9121', '91210', 'Thợ giặt là bằng tay'),
+('', '', '', '9122', '91220', 'Thợ rửa xe cộ'),
+('', '', '', '9123', '91230', 'Thợ làm sạch cửa sổ'),
+('', '', '', '9129', '', 'Thợ lau dọn khác'),
+('', '92', '920', '', '', 'Lao động giản đơn trong nông nghiệp, lâm nghiệp và thủy sản'),
+('', '', '', '9201', '92010', 'Lao động trồng trọt'),
+('', '', '', '9202', '92020', 'Lao động chăn nuôi'),
+('', '', '', '9203', '92030', 'Lao động trồng trọt và chăn nuôi hỗn hợp'),
+('', '', '', '9204', '92040', 'Lao động làm vườn'),
+('', '', '', '9205', '92050', 'Lao động lâm nghiệp'),
+('', '', '', '9206', '92060', 'Lao động thủy sản'),
+('', '93', '', '', '', 'Lao động trong ngành khai khoáng, xây dựng, công nghiệp chế biến, chế tạo và giao thông vận tải'),
+('', '', '931', '', '', 'Lao động trong ngành khai khoáng và xây dựng'),
+('', '', '', '9311', '93110', 'Lao động trong khai thác mỏ và khai thác đá'),
+('', '', '', '9312', '93120', 'Lao động trong xây dựng công trình kỹ thuật (không phải nhà)'),
+('', '', '', '9313', '93130', 'Thợ phụ xây dựng'),
+('', '', '932', '', '', 'Lao động trong công nghiệp'),
+('', '', '', '9321', '93210', 'Lao động đóng gói thủ công'),
+('', '', '', '9329', '93290', 'Lao động công nghiệp khác chưa được phân vào đâu'),
+('', '', '933', '', '', 'Lao động vận chuyển và kho hàng'),
+('', '94', '940', '', '', 'Người phụ giúp chuẩn bị thực phẩm'),
+('', '', '', '9401', '94010', 'Người chuẩn bị đồ ăn nhanh'),
+('', '', '', '9402', '94020', 'Người phụ bếp'),
+('', '95', '', '', '', 'Lao. động trên đường phố và lao động có liên quan đến bán hàng'),
+('', '', '951', '9510', '95100', 'Lao động trên đường phố và lao động có liên quan'),
+('', '', '952', '9520', '95200', 'Người bán hàng rong trên đường phố (trừ đồ ăn)');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `danhmuc10`
+--
+
+CREATE TABLE `danhmuc10` (
+  `cap1` text NOT NULL,
+  `cap2` text NOT NULL,
+  `cap3` text NOT NULL,
+  `cap4` text NOT NULL,
+  `cap5` text NOT NULL,
+  `noidung` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `danhmuc10`
+--
+
+INSERT INTO `danhmuc10` (`cap1`, `cap2`, `cap3`, `cap4`, `cap5`, `noidung`) VALUES
+('', '01', '', '', '', 'Lực lượng quân đội'),
+('', '', '011', '0110', '01100', 'Sĩ quan'),
+('', '', '012', '0120', '01200', 'Hạ sĩ quan, binh sĩ'),
+('', '', '013', '0130', '01300', 'Lực lượng khác trong quân đội'),
+('', '02', '', '', '', 'Lực lượng công an'),
+('', '', '021', '0210', '02100', 'Sĩ quan'),
+('', '', '022', '0220', '02200', 'Hạ sĩ quan, chiến sĩ'),
+('', '', '023', '0230', '02300', 'Lực lượng khác trong công an'),
+('', '03', '', '', '', 'Cơ yếu và lực lượng vũ trang khác'),
+('', '', '031', '0310', '03100', 'Cơ yếu'),
+('', '', '032', '0320', '03200', 'Lực lượng vũ trang khác');
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `disc`
 --
 
@@ -4998,17 +5900,26 @@ CREATE TABLE `disc` (
   `nhom3` varchar(255) NOT NULL,
   `nhom4` varchar(255) NOT NULL,
   `iddisc` int(255) NOT NULL,
-  `idkhach` int(255) NOT NULL
+  `idkhach` int(255) NOT NULL,
+  `homnay` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Đang đổ dữ liệu cho bảng `disc`
 --
 
-INSERT INTO `disc` (`nhom1`, `nhom2`, `nhom3`, `nhom4`, `iddisc`, `idkhach`) VALUES
-('0', '14', '0', '0', 13, 13),
-('2', '5', '5', '2', 14, 14),
-('0', '0', '0', '0', 15, 15);
+INSERT INTO `disc` (`nhom1`, `nhom2`, `nhom3`, `nhom4`, `iddisc`, `idkhach`, `homnay`) VALUES
+('0', '14', '0', '0', 13, 13, '2021-12-22 12:07:01'),
+('14', '0', '0', '0', 14, 14, '2021-12-22 12:07:01'),
+('0', '0', '0', '0', 17, 17, '2021-12-22 12:07:01'),
+('0', '0', '0', '0', 18, 18, '2021-12-22 12:07:01'),
+('0', '0', '0', '0', 19, 19, '2021-12-22 12:07:01'),
+('8', '2', '3', '1', 20, 14, '2021-12-22 12:07:01'),
+('14', '0', '0', '0', 21, 13, '2021-12-22 12:07:01'),
+('2', '2', '10', '0', 22, 13, '2021-12-22 12:07:01'),
+('14', '0', '0', '0', 23, 13, '2021-12-22 12:07:14'),
+('0', '0', '14', '0', 24, 13, '2021-12-22 12:07:28'),
+('14', '0', '0', '0', 25, 13, '2021-12-22 12:36:28');
 
 -- --------------------------------------------------------
 
@@ -5138,17 +6049,22 @@ CREATE TABLE `holland` (
   `bo5` varchar(100) NOT NULL,
   `bo6` varchar(100) NOT NULL,
   `idholland` int(255) NOT NULL,
-  `idkhach` tinyint(255) NOT NULL
+  `idkhach` tinyint(255) NOT NULL,
+  `homnay` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Đang đổ dữ liệu cho bảng `holland`
 --
 
-INSERT INTO `holland` (`bo1`, `bo2`, `bo3`, `bo4`, `bo5`, `bo6`, `idholland`, `idkhach`) VALUES
-('18', '18', '16', '23', '18', '18', 31, 13),
-('13', '9', '26', '33', '28', '31', 32, 14),
-('0', '0', '0', '0', '0', '0', 33, 15);
+INSERT INTO `holland` (`bo1`, `bo2`, `bo3`, `bo4`, `bo5`, `bo6`, `idholland`, `idkhach`, `homnay`) VALUES
+('18', '18', '16', '23', '18', '18', 31, 13, '2021-12-22 12:09:31'),
+('36', '36', '36', '36', '36', '36', 32, 14, '2021-12-22 12:09:31'),
+('0', '0', '0', '0', '0', '0', 35, 17, '2021-12-22 12:09:31'),
+('0', '0', '0', '0', '0', '0', 36, 18, '2021-12-22 12:09:31'),
+('0', '0', '0', '0', '0', '0', 37, 19, '2021-12-22 12:09:31'),
+('36', '36', '36', '36', '36', '36', 38, 13, '2021-12-22 12:10:07'),
+('36', '36', '26', '18', '18', '18', 39, 13, '2021-12-22 12:35:40');
 
 -- --------------------------------------------------------
 
@@ -5169,9 +6085,11 @@ CREATE TABLE `khach` (
 --
 
 INSERT INTO `khach` (`idkhach`, `email`, `sdt`, `matkhau`, `hovaten`) VALUES
-(13, 't183@gmail', 86645, '1', 'tnd'),
-(14, '18lynnxx@gmail.com', 1, '1', '1'),
-(15, '2@20', 1, '1', '1');
+(13, 'tduat183@gmail.com', 86645, '1', 'lý thị nụ'),
+(14, '18lynnxx@gmail.com', 1, '1', 'Trần Nhật Duật'),
+(17, '1@122', 866546300, '1', '1'),
+(18, '1@114', 866546300, '1', 'Trần Nhật Duật'),
+(19, '2@01', 9879999, '1', 'có 1 không 2');
 
 -- --------------------------------------------------------
 
@@ -6672,7 +7590,7 @@ INSERT INTO `nhomnganh` (`idnhomnganh`, `tennganh`, `manganh`, `diemvao`, `holla
 ('khoa', 'Khoa học đất', '7440106', '', 'i'),
 ('khoa', 'Quản lý tài nguyên và môi trường', '7850101', '', 'r'),
 ('khoa', 'Quản lý tài nguyên và môi trường', '7850101', '', 'c'),
-('khoa', 'Kinh tế tài nguyên thiên nhiên', '7850102', '', 'i'),
+('kh', 'Kinh tế tài nguyên thiên nhiên', '7850102', '', 'i'),
 ('khoa', 'Quản lý đất đai', '7850103', '', 'r'),
 ('khoa', 'Quản lý đất đai', '7850103', '', 'i'),
 ('khoa', 'Quản lý tổng hợp tài nguyên nước', '7850195', '', 'r'),
@@ -6703,7 +7621,7 @@ INSERT INTO `nhomnganh` (`idnhomnganh`, `tennganh`, `manganh`, `diemvao`, `holla
 ('kien', 'Kiến trúc nội thất', '7580103', '', 'a'),
 ('kien', 'Quy hoạch vùng và đô thị', '7580105', '', 'i'),
 ('kien', 'Quản lý đô thị và công trình', '7580106', '', 'c'),
-('kien', 'Thiết kế nội thất', '7580108', '', 'a'),
+('', 'Thiết kế nội thất', '7580108', '', 'a'),
 ('kien', 'Thiết kế nội thất', '7580108', '', 'a'),
 ('kien', 'Thiết kế nội thất', '7580108', '', 'r'),
 ('kien', 'Đô thị học', '7580112', '', 'i'),
@@ -6806,12 +7724,42 @@ INSERT INTO `noidungcauhoi` (`idcauhoi`, `noidungcauhoi`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `str`
+--
+
+CREATE TABLE `str` (
+  `idstr` int(255) NOT NULL,
+  `loai` varchar(500) NOT NULL,
+  `bo1` int(255) NOT NULL,
+  `bo2` int(255) NOT NULL,
+  `bo3` int(255) NOT NULL,
+  `bo4` int(255) NOT NULL,
+  `bo5` int(255) NOT NULL,
+  `bo6` int(255) NOT NULL,
+  `nhom1` int(255) NOT NULL,
+  `nhom2` int(255) NOT NULL,
+  `nhom3` int(255) NOT NULL,
+  `nhom4` int(255) NOT NULL,
+  `homnay` datetime NOT NULL,
+  `idkhach` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `str`
+--
+
+INSERT INTO `str` (`idstr`, `loai`, `bo1`, `bo2`, `bo3`, `bo4`, `bo5`, `bo6`, `nhom1`, `nhom2`, `nhom3`, `nhom4`, `homnay`, `idkhach`) VALUES
+(1, 'holland', 36, 36, 26, 18, 18, 18, 0, 0, 0, 0, '2021-12-22 12:35:40', 13),
+(2, 'disc', 0, 0, 0, 0, 0, 0, 14, 0, 0, 0, '2021-12-22 12:36:28', 13);
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `toithichgi`
 --
 
 CREATE TABLE `toithichgi` (
   `idkhach` int(255) NOT NULL,
-  `idcauhoi` int(255) NOT NULL,
   `idtoithich` int(255) NOT NULL,
   `cau1` varchar(255) NOT NULL,
   `cau2` varchar(255) NOT NULL,
@@ -6835,10 +7783,8 @@ CREATE TABLE `toithichgi` (
 -- Đang đổ dữ liệu cho bảng `toithichgi`
 --
 
-INSERT INTO `toithichgi` (`idkhach`, `idcauhoi`, `idtoithich`, `cau1`, `cau2`, `cau3`, `cau4`, `cau5`, `cau6`, `cau7`, `cau8`, `cau9`, `cau10`, `cau11`, `cau12`, `cau13`, `cau14`, `cau15`, `cau16`) VALUES
-(13, 15, 16, 'chơi game', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(14, 3, 17, '21', '2', '3', '4', '67', '68', 'cau 7', 'cau 8', '', '', '', '', '', '', '', ''),
-(15, 0, 28, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO `toithichgi` (`idkhach`, `idtoithich`, `cau1`, `cau2`, `cau3`, `cau4`, `cau5`, `cau6`, `cau7`, `cau8`, `cau9`, `cau10`, `cau11`, `cau12`, `cau13`, `cau14`, `cau15`, `cau16`) VALUES
+(14, 16, 'chơi ngủ và ăn', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -8913,6 +9859,12 @@ ALTER TABLE `khach`
   ADD PRIMARY KEY (`idkhach`);
 
 --
+-- Chỉ mục cho bảng `str`
+--
+ALTER TABLE `str`
+  ADD PRIMARY KEY (`idstr`);
+
+--
 -- Chỉ mục cho bảng `toithichgi`
 --
 ALTER TABLE `toithichgi`
@@ -8926,25 +9878,31 @@ ALTER TABLE `toithichgi`
 -- AUTO_INCREMENT cho bảng `disc`
 --
 ALTER TABLE `disc`
-  MODIFY `iddisc` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `iddisc` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT cho bảng `holland`
 --
 ALTER TABLE `holland`
-  MODIFY `idholland` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `idholland` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT cho bảng `khach`
 --
 ALTER TABLE `khach`
-  MODIFY `idkhach` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `idkhach` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT cho bảng `str`
+--
+ALTER TABLE `str`
+  MODIFY `idstr` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `toithichgi`
 --
 ALTER TABLE `toithichgi`
-  MODIFY `idtoithich` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `idtoithich` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

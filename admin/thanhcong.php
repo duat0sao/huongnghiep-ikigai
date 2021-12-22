@@ -1,9 +1,4 @@
-<?php
-include 'config.php';
 
-
-$idkhach = $_GET['id'];
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +25,7 @@ $idkhach = $_GET['id'];
 				<div class="alert alert-info center" role="alert">
                 <center> Thao tác đã <strong> Thành công </strong> mời bạn bấm <strong> Quay lại </strong> để về trang chủ </center>
 				</div>	
-				<center><a class="btn btn-danger" href="index1.php?id=<?php echo $idkhach;?>"><i class="fas fa-chevron-left"></i> Quay lại trang chủ.</a></center>
+				<center><a class="btn btn-danger" href="admin.php"><i class="fas fa-chevron-left"></i> Quay lại trang chủ.</a></center>
 			</form>
 			
 		</div>

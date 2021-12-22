@@ -29,24 +29,32 @@ $idkhach = $_GET['id'];
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
+
+}
+@media only screen and (max-width: 600px) {
+  body .center {
+    top: 70%;
+  }
+  .hola,
+  .disc {
+      width: 200px;
+      height: 200px;
+      color: white;
+    }
+    .conttent {
+    margin-top: 40px;
+    display: auto;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-@media only screen and (max-width: 600px) {
+
+@media only screen and (min-width: 600px) {
   .logo {
     display: none;
   }
 
-  body .center {
-    top: 80%;
-  }
-
-  .conttent {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
   .hola,
   .disc {
@@ -138,13 +146,13 @@ h1 {
   padding: 15px;
   margin: 10px 0;
   color: white;
-  background-color: rgb(0, 0, 197);
+  background-color: white;
   transition: 0.3s;
 }
 
 .center a:hover {
   cursor: pointer;
-  background-color: rgb(41, 41, 223);
+  background-color: white;
   transform: scale(1.1);
 }
 
@@ -178,25 +186,18 @@ h1 {
 
     <!-- them anh logo truong ???<img class="logo" src="img/log_nghiaminh.jpg" alt="">-->
 
-    <nav class="navbar navbar-expand-sm header-top container">
-          <a class="navbar-brand" href="index1.php?id=<?php echo $idkhach;?>" style="width:100; font-size: 25px;">
-                 THPT Nghĩa Minh
-          </a>
-         
-          <center><a class="btn" href="index1.php?id=<?php echo $idkhach;?>">Trang chủ</a></center>
-          
-      </nav>
+  <?php include 'header.php';?>
 
-  </div>
     <div class="center conttent">
       <!-- <h2>Mời bạn chọn</h2> -->
+      
       <div>
-        <a href="disc/index.php?id=<?php echo $idkhach;?>"><img class="disc" src="img/disc.jpg" alt="Responsive image"></a>
-        <h4>Trắc nghiệm Disc</h4>
+        <a href="holland1/index.php?id=<?php echo $idkhach;?>"><center><img class="hola" src="img/holland.png" alt="Responsive image"></center></a>
+        <h4>Trắc nghiệm Holland: Nhóm ngành phù hợp</h4>
       </div>
       <div>
-        <a href="holland1/index.php?id=<?php echo $idkhach;?>"><img class="hola" src="img/holland.png" alt="Responsive image"></a>
-        <h4>Trắc nghiệm Holland</h4>
+        <a href="disc/index.php?id=<?php echo $idkhach;?>"><center><img class="disc" src="img/disc.jpg" alt="Responsive image"></center></a>
+        <h4>Trắc nghiệm DISC: Cách thể hiện trong công việc</h4>
       </div>
 
       

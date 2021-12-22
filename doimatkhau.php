@@ -1,34 +1,42 @@
 <?php
-include '../config.php';
+include 'config.php';
+$idkhach = $_GET['id'];
+$errors = array(); // Initialize an error array. 
 
+
+$query2=mysqli_query($conn,"select * from khach where idkhach='$idkhach'");
+$row2=mysqli_fetch_array($query2);
 
 
 
 if (isset($_POST['update_user'])){
   
   
-  $cap1=$_POST['manganh'];
-  $cap3=$_POST['ctdaotao'];
-  $cap2=$_POST['gioithieu'];
-  $cap5=$_POST['gtchung'];
-  $cap4=$_POST['cohoi'];
-  $noidung = $_POST['noidung'];
+  $mk1=$_POST['mang'];
   
-  
-
-  if ($conn->connect_error) {
-  
-  }
+    $hovaten = $_POST['hovaten'];
+    $email = $_POST['email'];
+    $sdt = $_POST['sdt'];
    
-  $sql = "INSERT INTO `danhmuc10`(cap1, cap2, cap3, cap4, cap5, noidung) VALUES('$cap1', '$cap2','$cap3','$cap4','$cap5', '$noidung');";
-  mysqli_query($conn,$sql);
+  $sql = "UPDATE khach SET matkhau='$mk1', hovaten='$hovaten', email='$email', sdt='$sdt'  WHERE idkhach='$idkhach'";
   
-  header('location: addedu2.php');
+  
+
+
+  if ($mk1 != '') { //#4
+    mysqli_query($conn,$sql);
+    $url = "thanhcong.php?id=" . $idkhach;
+    header('location:' . $url);
+} else {
+    $message = "Hai  mật khẩu không khớp mời nhập lại";
+    echo "<script type='text/javascript'>alert('$message');</script>";
+}
+  
 
 
   
   
-  }
+ }
 
 
 
@@ -76,6 +84,7 @@ if (isset($_POST['update_user'])){
 </head>
 <body>
 
+<?php include 'header.php';?>
 
 
 
@@ -91,19 +100,17 @@ if (isset($_POST['update_user'])){
     		  	
             <label class="form-message"></label>
                 <div class="cauhoi">
-
-                <br><h4>cap1</h4>
-                <input style="width:100; font-size: 20px;" type="input" class="form-contr" name="manganh" value="">
-                <br><h4>cap2</h4>
-                <input style="width:100; font-size: 20px;" type="input" class="form-contr" name="gioithieu" value="">
-                <br><h4>cap3</h4>
-                <input style="width:100; font-size: 20px;" type="input" class="form-contr" name="ctdaotao" value="">
-                <br><h4>cap4</h4>
-                <input style="width:100; font-size: 20px;" type="input" class="form-contr" name="cohoi" value="">
-                <br><h4>cap5</h4>
-                <input style="width:100; font-size: 20px;" type="input" class="form-contr" name="gtchung" value="">
-                <br><h4>noi dung</h4>
-                <input style="width:100; font-size: 20px;" type="input" class="form-contr" name="noidung" value="">
+                <br><h4>Họ và Tên</h4>
+                <input style="width:100; font-size: 20px;" type="text" class="form-contr" name="hovaten" value="<?php echo $row2['hovaten'];?>">
+                <br><h4>Email</h4>
+                <input style="width:100; font-size: 20px;" type="email" class="form-contr" name="email" value="<?php echo $row2['email'];?>">
+                <br><h4>SĐT</h4>
+                <input style="width:100; font-size: 20px;" type="number" class="form-contr" name="sdt" value="<?php echo $row2['sdt'];?>">
+                
+                
+                <br><h4>Mật khẩu mới</h4>
+                <input style="width:100; font-size: 20px;" type="password" class="form-contr" name="mang" value="<?php echo $row2['matkhau'];?>">
+                
                 
           
                 </div>
@@ -114,7 +121,7 @@ if (isset($_POST['update_user'])){
                 <div class="footer">
                     <div class="footer_l">
                         
-                        <button name="update_user" class="btn" style="width:100; font-size: 20px;">Submit</button>
+                        <button name="update_user" class="btn" style="width:100; font-size: 20px;">Đổi</button>
                         
                        
                     </div>

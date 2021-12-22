@@ -26,14 +26,6 @@ include('random.php');
     }
 	// Check for a password and match against the confirmed password:
 			$password1 = trim($_POST['password1']);
-			$password2 = trim($_POST['password2']);
-	if (!empty($password1)) {
-		if ($password1 !== $password2) { //#4
-			$errors[] = 'Nhập mật khẩu sau mời bạn nhập lại.';
-		} 
-	} else {
-		$errors[] = 'You forgot to enter your password.';
-    }
     
     if (empty($errors)) {
    
@@ -54,10 +46,8 @@ include('random.php');
         $row=mysqli_fetch_array($layid);
         $idkhach = $row['idkhach'];
        
-        mysqli_query($conn,"INSERT INTO holland(idkhach, bo1, bo2, bo3, bo4, bo5, bo6) VALUES('$idkhach', '0','0','0','0','0','0')");
-        mysqli_query($conn,"INSERT INTO disc(idkhach,nhom1,nhom2,nhom3,nhom4) VALUES('$idkhach','0','0','0','0')");
-		mysqli_query($conn,"INSERT INTO toithichgi(idkhach) VALUES('$idkhach')");
         
+		mysqli_query($conn,"INSERT INTO toithichgi(idkhach, cau1, cau2, cau3, cau4, cau5, cau6, cau7,cau8, cau9, cau10, cau11, cau12, cau13, cau14, cau15, cau16) VALUES('$idkhach', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '')");
         
         $url = "../thanhcong.php?id=" . $idkhach . "";
         header('location:' . $url);

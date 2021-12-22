@@ -18,19 +18,29 @@ $idkhach = $_GET['id'];
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src = "https://code.highcharts.com"> </script>
 
-
+<style>
+  
+@media screen and (max-width: 600px) {
+.graph-container {
+        display: block;
+        float: none;
+        width: 100%;
+        margin-top: 50px;
+        margin-right:0px;
+        margin-left:0px;
+        height: auto;
+    }
+}
+</style>
     
 
   </head>
   <body>
-  <nav class="navbar navbar-expand-sm header-top container">
-          <a class="navbar-brand" href="../toigioi.php?id=<?php echo $idkhach;?>" style="width:100; font-size: 25px;">
-                 THPT Nghĩa Minh
-          </a>
-          
-          
-          
-      </nav>
+
+<nav style="background-color:#47bdec;">
+        <a style="display:inline-block; padding:10px; font-size:20px; color:white; text-decoration:none;" href="../toigioi.php?id=<?php echo $idkhach;?>">IKIGAI</a>
+        <a style="display:inline-block; padding:10px; font-size:20px; color:white; text-decoration:none; float: right; margin-right: 5px;" href="../loginandout/logout.php">Thoát</a>
+</nav>
 
     
 
@@ -72,9 +82,9 @@ $idkhach = $_GET['id'];
 
       <div class="container container1 hide">
         <div class="row justify-content-center">
-          <br><br><br><br>
-          <div>
-            <canvas id="myChart" style="width="385" height="230""></canvas>
+          
+          <div class="graph-container">
+            <canvas id="myChart"></canvas>
           </div>
           <br>
 
@@ -87,7 +97,7 @@ $idkhach = $_GET['id'];
 
 
 
-    <br><br><br><br>
+    
     
 
     <script src="disc.js"></script>

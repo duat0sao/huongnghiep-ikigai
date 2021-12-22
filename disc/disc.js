@@ -91,7 +91,7 @@ var nhomc = [
 	
 	 "Tôi thuộc tuýp người rất khiêm tốn.",
 		
-	 "Tôi là một loại dễ chịu.",
+	 "Tôi là một người dễ chịu.",
 	
  "Nói chuyện trực tiếp và thẳng thắn.",
 	
@@ -249,7 +249,9 @@ function printCanvas() {
               display: true,
               text: "Tích cách của bạn",
               fontSize:26
-            }
+            },
+            responsive: true,
+            maintainAspectRatio: false
           }
         });
 
