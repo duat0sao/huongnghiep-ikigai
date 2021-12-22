@@ -13,6 +13,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://kit.fontawesome.com/4eb98e0bb5.js" crossorigin="anonymous"></script>
   </head>
   <body>
       <?php include 'header.php';?>
@@ -62,11 +64,70 @@ echo $row11['hovaten'];
     $row12=mysqli_fetch_array($query12)
     
 ?>
-                        <h5>Họ và Tên: <?php echo $row12['hovaten'];?></h5>
-                        <h5>SĐT: <?php echo $row12['sdt'];?></h5>
-                        <h5>Email: <?php echo $row12['email'];?></h5>
-
+        <div class="container abc" >
+        <div class="row contents">
+          <div class="col-md-4 col-sm-12">
+              <div class="thongtin" >
+                <h2 class="gioithieu">Giới thiệu</h2>
+                <p class="tieusu"style="color:{{($data_theme->ChuTS)}} ;">Tiểu sử</p>
+                <div class="diachi">
+                  <div class="">Họ và tên:</div>
+                  <div class="infor_1"><?= $row12['hovaten'] ?></div>
                 </div>
+                <div class="diachi">
+                  <div class="">Email:</div>
+                  <div class="infor_1"><?= $row12['email'] ?></div>
+                </div>
+                <div class="diachi">
+                  <div class="">SĐT:</div>
+                  <div class="infor_1"><?= $row12['sdt'] ?></div>
+                </div>
+              </div>
+
+          </div>
+          <div class="col-md-8 col-sm-12  ">
+            <div class="dangblog">
+              <div class="avata_icon">
+                  
+                <img src="https://pdp.edu.vn/wp-content/uploads/2021/01/hinh-anh-girl-xinh-toc-ngan-de-thuong.jpg" alt="">
+              </div>
+              <button type="button" class="content_blog" data-toggle="modal" data-target="#myModal">Viết blog</button>
+            </div>
+            <div class="baiviet" >
+              <h2>Bài viết</h2>
+            </div>
+              <div div class="baiviet_infor" >
+                <div class="baiviet_infor-header">
+                  <div class="avata_icon">
+                    <img src="https://pdp.edu.vn/wp-content/uploads/2021/01/hinh-anh-girl-xinh-toc-ngan-de-thuong.jpg" alt="">
+                    <div class="name_icon">
+                    Phạm Huyền Trân
+                    </div>
+                    
+                  </div>
+                  <div class="tuychon">
+                          
+                         <button class="us"><i class="far fa-edit" data-toggle="modal" data-target="#suabaiviet"></i></button>
+                          <a href="{{URL::to('/delete-blog/'.$data_blog->idBlog)}}"  onclick="return confirm('Bạn có chắc chắn muốn xoá bài viết này không?')"><button class="us"><i class="far fa-trash-alt"></i></button></a>
+                  </div>
+                </div>
+                <div class="contents_blog">
+                  <p> Nội dung </p>
+                  <div class="contents_img">
+                      <img class="oqw" src="{{asset('public/frontend/img/'.$data_blog->HinhAnh)}}" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+                        
+
+
+         </div>
+       </div>
+     </div>
                 
             
             
@@ -89,6 +150,7 @@ echo $row11['hovaten'];
 <?php   
 $idkhach = $_GET['id'];
 $query=mysqli_query($conn,"select * from disc where idkhach='$idkhach'");
+
 $row=mysqli_fetch_array($query)
 ?>
                         <tbody>

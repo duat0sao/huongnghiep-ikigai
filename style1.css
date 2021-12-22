@@ -1,0 +1,416 @@
+*{
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.9rem;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    background-color: white;
+    font-weight: 500;
+}
+.container{
+
+max-width: 1530px;
+
+}
+.bia{
+    background-image: linear-gradient(#9f8da7, #f8f7fc);
+    border-bottom:1px solid #999 ;
+}    
+
+
+.img_bia{
+    margin:auto ;
+    background-color: darkcyan;
+    height: 340px;
+    width: 80%;
+    border-radius: 3px;
+    display: block;
+    
+   
+}
+.img_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+    
+}
+.infor{
+    /* transform: translateY(-100px); */
+    margin: auto;
+    width: 75%;
+    height: 100px;
+    text-align: center;
+    padding-bottom: 130px;
+    /* border: 1px solid black; */
+}
+.avata{
+    border-radius: 100%;
+    transform: translateY(-60%);
+   
+}
+.img_avata{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 3px solid white;
+   
+   
+}
+.name{
+    text-align: left;
+    position:relative;
+    height: 100px;
+}
+.name_name{
+    font-size: 30px;
+    position: absolute;
+    top: 40px;
+    color:#050505;
+    font-weight: 700;
+}
+.chinhsua{
+    height: 100px;
+    position: relative;
+    /* background-color: red; */
+}
+.btn_chinhsua{
+   
+    font-size: 14px;
+    
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    min-width: 200px;
+}
+.btn_dangxuat{
+    font-size: 14px;
+    
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    min-width: 200px;
+}
+.abc{
+   padding-top: 20px;
+    z-index: 5;
+   
+}
+.contents{
+    
+    width: 75%;
+    margin: auto;
+}
+.thongtin{
+    border: 1px solid #9f8da7;
+    /* background-color: red; */
+    font-size: 14px;
+    border-radius: 10px;
+    padding:  15px;
+    margin-bottom: 15px;
+}
+
+.diachi{
+    display: flex;
+    margin: 7px 0;
+}
+.infor_1{
+    margin-left: 10px;
+    font-weight: 500;
+}
+.dangblog{
+    display: flex;
+    border: 1px solid #9f8da7;
+    /* background-color: #9f8da7; */
+    font-size: 14px;
+    border-radius: 10px;
+    padding:  15px;
+}
+.avata_icon{
+    display: flex;
+}
+.avata_icon img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 1px solid #999;
+}
+.content_blog{
+   
+    opacity: 0.7;
+    
+    margin-left: 20px;
+    height: 40px;
+    width: 80%;
+    border-radius: 50px;
+    border: none;
+    padding-left: 20px;
+    text-align: left;
+}
+.content_blog:hover{
+    opacity: 1;
+}
+.baiviet{
+    margin-top: 15px;
+    border: 1px solid #9f8da7;
+    /* background-color: #9f8da7; */
+    font-size: 14px;
+    border-radius: 10px;
+    padding:  15px;
+}
+.baiviet_infor{
+    margin-top: 15px;
+   
+    border: 1px solid #9f8da7;
+    /* background-color: #9f8da7; */
+    font-size: 14px;
+    border-radius: 10px;
+    padding:  15px;
+}
+.baiviet_infor-header{
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+}
+.name_icon{
+    
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+.contents_blog{
+    margin-top: 10px;
+}
+.contents_img img{
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+}
+.contents_modal{
+    width: 100%;
+   height: 200px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+}
+.modal-body{
+    font-size: 16px;
+}
+.modal1{
+    margin-top: 100px;
+}
+.modal-footer{
+    margin: auto;
+    padding: 20px 0;
+   
+}
+.dangbai{
+    font-size: 16px;
+    min-width: 400px;
+    height: 40px;
+}
+/* chinhsua */
+/* chỉnh sưa */
+.modal-content{
+    border-radius: 10px;
+}
+.xyz{
+    max-width: 800px; 
+   
+}
+.plm{
+    height: 680px;
+    overflow-y: auto;
+}
+.plm::-webkit-scrollbar { 
+    display: none; 
+}
+
+.group1{
+    width: 95%;
+    font-size: 16px;
+    margin: auto;
+    padding: 15px 0;
+    border-bottom: 1px #9f8da7 solid;
+}
+.group1_header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.qaz{
+    font-size: 22px;
+    font-weight: 700;
+    /* overflow: auto; */
+}
+.chinhsua_btn{
+    color: blue;
+    font-size: 16px;
+}
+.chinhsua_btn:hover{
+    color: blue;
+    background-color: #9f8da7;
+}
+.img_avata1{
+    width: 25%;
+    margin-top: 10px;
+    margin-left: 35%;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 3px solid #9f8da7;
+   
+   
+}
+.chinhsua_img_img{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 3px;
+    margin-left: 10%;
+}
+.chinhsua_tieusu{
+    width: 80%;
+    height: 100px;
+    margin-left: 10%;
+    padding: 10px;
+    outline: none;
+   
+
+}
+.bnm, .hjk{
+    margin-top: 5px;
+    width: 80%;
+    margin-left: 10%;
+}
+.form-label{
+    font-size: 14px;
+    color: #9f8da7;
+}
+.form-control{
+    font-size: 14px;
+    width: 60%;
+    margin-bottom: 10px;
+}
+.bnm1{
+    margin-left: 10%;
+}
+.diachi1{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.chinhsua_gioithieu{
+    border: none;
+    outline: none;
+    width: 80%;
+}
+.us{
+    position: relative;
+    top: 8px;
+    border: none;
+    border-radius: 100%;
+    background-color:#d2cad8;
+}
+.us:hover{
+    background-color: #9f8da7;
+}
+.tuychon{
+   float: right;
+   width: 60px;
+   padding: 0;
+}
+.vbn{
+    margin-top: 0;
+    
+}
+.qwe a{
+    width: 60px;
+    height: 60px;
+    background-color: cornflowerblue;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: rgb(218, 209, 209);
+    font-weight: 700;
+    text-decoration: none;
+}
+.qwe a:hover{
+    opacity: 0.7;
+}
+
+
+
+/* chinhsua */
+
+
+.full_screen{
+    width: 100%;
+    height: 100vh;
+    background-image:radial-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.7))   , url("https://scontent.fhan5-10.fna.fbcdn.net/v/t1.6435-9/248555460_589235242126842_362686603779792739_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=730e14&_nc_ohc=3tiD0-bUdTUAX8dNBug&_nc_ht=scontent.fhan5-10.fna&oh=be98753bf4520824b19569e22659f638&oe=61A7430C");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.chinhsua_blog{
+    width: 700px;
+    margin: auto;
+    background-color: white;
+    position: relative;
+}
+.header{
+    width: 100%;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.a{
+    font-size: 20px;
+    font-weight: 500;  
+}
+.b{
+   position: absolute;
+   top:10px ;
+   right: 10px;
+   font-size: 14px;
+}
+.jjj{
+    width: 500px;
+    margin: auto;
+    position: relative;
+    top: 10px;
+}
+.ddd{
+    width: 100%;
+    height: 340px;
+    object-fit:contain ;
+}
+.aaaa{
+    height: 70px;
+}
+.form-select{
+    outline: none;
+    font-size: 12px;
+   
+}
+.a2a{
+   line-height: 40px;
+}
+.tieusu{
+    font-size: 17px;
+    font-weight: 500;
+    color: palevioletred;
+    text-align: center;
+    padding: 0;
+    margin: 15px 0;
+}
+.mmm{
+    font-size: 25px;
+}

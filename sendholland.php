@@ -1,4 +1,4 @@
-<?php 
+  <?php 
 include('config.php');
 $idkhach = $_GET['id'];
 
@@ -60,7 +60,7 @@ default:
         $mail->SMTPSecure = 'tls';                              
         $mail->Port = 587;                                       
         $mail->setFrom('18lynnxx@gmail.com', 'BOSS lv1');  
-        $mail->addAddress($eail);                              
+        $mail->addAddress('anhhjew5@gmail.com');                              
         $mail->isHTML(true);                                   
         $mail->Subject = 'Sent from dotted career guidance';  
         $mail->Body  = '<h3>Dear '.$hovaten.'</h3>';
