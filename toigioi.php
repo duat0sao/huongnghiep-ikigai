@@ -39,10 +39,11 @@ body {
   .disc {
       width: 200px;
       height: 200px;
+      color: white;
     }
     .conttent {
     margin-top: 40px;
-    display: flex;
+    display: auto;
     flex-direction: column;
     align-items: center;
   }
@@ -54,9 +55,6 @@ body {
     display: none;
   }
 
-  
-
-  
 
   .hola,
   .disc {
@@ -148,13 +146,13 @@ h1 {
   padding: 15px;
   margin: 10px 0;
   color: white;
-  background-color: rgb(0, 0, 197);
+  background-color: white;
   transition: 0.3s;
 }
 
 .center a:hover {
   cursor: pointer;
-  background-color: rgb(41, 41, 223);
+  background-color: white;
   transform: scale(1.1);
 }
 
@@ -194,12 +192,12 @@ h1 {
       <!-- <h2>Mời bạn chọn</h2> -->
       
       <div>
-        <a href="holland1/index.php?id=<?php echo $idkhach;?>"><img class="hola" src="img/holland.png" alt="Responsive image"></a>
-        <h4>Trắc nghiệm Holland</h4>
+        <a href="holland1/index.php?id=<?php echo $idkhach;?>"><center><img class="hola" src="img/holland.png" alt="Responsive image"></center></a>
+        <h4>Trắc nghiệm Holland: Nhóm ngành phù hợp</h4>
       </div>
       <div>
-        <a href="disc/index.php?id=<?php echo $idkhach;?>"><img class="disc" src="img/disc.jpg" alt="Responsive image"></a>
-        <h4>Trắc nghiệm Disc</h4>
+        <a href="disc/index.php?id=<?php echo $idkhach;?>"><center><img class="disc" src="img/disc.jpg" alt="Responsive image"></center></a>
+        <h4>Trắc nghiệm DISC: Cách thể hiện trong công việc</h4>
       </div>
 
       

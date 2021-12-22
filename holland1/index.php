@@ -21,12 +21,12 @@ $idkhach = $_GET['id'];
 
   <style>
   
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 600px) {
   .graph-container {
           display: block;
           float: none;
           width: 100%;
-          margin-top: 0px;
+          margin-top: 150px;
           margin-right:0px;
           margin-left:0px;
           height: auto;
