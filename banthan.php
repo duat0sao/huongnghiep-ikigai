@@ -14,12 +14,18 @@
     <!-- Bootstrap CSS -->
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<<<<<<< HEAD
+
     <link rel="stylesheet" href="style1.css">
     <script src="https://kit.fontawesome.com/4eb98e0bb5.js" crossorigin="anonymous"></script>
-=======
-    
->>>>>>> f7efe16b081e7fe3e32f07d188b81aafaa2c140b
+
+    <style>
+      table {
+        font-size: 16px;
+      }
+
+
+    </style>
+
   </head>
   <body>
       <?php include 'header.php';?>
@@ -79,7 +85,7 @@ echo $row11['hovaten'];
     $row12=mysqli_fetch_array($query12)
     
 ?>
-<<<<<<< HEAD
+
         <div class="container abc" >
         <div class="row contents">
           <div class="col-md-4 col-sm-12">
@@ -132,7 +138,7 @@ echo $row11['hovaten'];
                   <div class="contents_img">
                       <img class="oqw" src="{{asset('public/frontend/img/'.$data_blog->HinhAnh)}}" alt="">
                   </div>
-=======
+
                         <tbody>
                           <tr>
                           
@@ -144,10 +150,10 @@ echo $row11['hovaten'];
 
                         </tbody>
                     </table>
-                    <h5><a class="btn" href="doimatkhau.php?id=<?php echo $idkhach;?>">Thay đổi thông tin</a></h5>
+                    <h5><a class="btn" style="font-size: 14px;" href="doimatkhau.php?id=<?php echo $idkhach;?>">Thay đổi thông tin</a></h5>
 
                      
->>>>>>> f7efe16b081e7fe3e32f07d188b81aafaa2c140b
+
                 </div>
               </div>
             </div>
@@ -160,6 +166,7 @@ echo $row11['hovaten'];
          </div>
        </div>
      </div>
+
                 
             
             
@@ -199,7 +206,7 @@ $row=mysqli_fetch_array($query)
                    
 
                     <div class="container">
-<div class="container"><?php 
+<div class="container" style="font-size: 16px;"><?php 
 $listnhom = array($nhom1,$nhom2,$nhom3,$nhom4);
 $max = max($listnhom);
 switch ($max) {
@@ -224,7 +231,7 @@ switch ($max) {
     break;
 }
 ?>
-<center><a class="btn" href="sendholland.php?id=<?php echo $idkhach;?>">Gửi về mail</a></center></div>
+<center><a class="btn" style="font-size: 1.5rem; margin: 12px 0;" href="sendholland.php?id=<?php echo $idkhach;?>">Gửi về mail</a></center></div>
                     </div>
                 </div>
 
@@ -260,7 +267,7 @@ $row1=mysqli_fetch_array($query1)
                           
                         </tbody>
                     </table>
-<div class="container">
+<div class="container" style="font-size: 16px;">
 <?php
 $listbo = array($bo1,$bo2,$bo3,$bo4,$bo5,$bo6);
 $maxbo = max($listbo);
@@ -304,7 +311,9 @@ default:
 
 
 </div>
-<center><a class="btn" href="sendholland.php?id=<?php echo $idkhach;?>">Gửi về mail</a></center>
+<center><a class="btn btn-mail" style="font-size: 1.5rem; margin: 12px 0;" href="sendholland.php?id=<?php echo $idkhach;?>">Gửi về mail</a></center>
+<br>
+<br>
                 </div>
                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                     <table class="table table-striped">
@@ -386,7 +395,9 @@ for($i=1; $i<$ci; $i++){
                           </tbody>
                           <?php }?>
                         </table>
-                        <center><a class="btn" href="sendholland.php?id=<?php echo $idkhach;?>">Gửi về mail</a></center>
+                        <center ><a class="btn" style="font-size: 1.5rem; margin: 12px 0;" href="sendholland.php?id=<?php echo $idkhach;?>">Gửi về mail</a></center>
+                        <br>
+                        <br>
                 </div>
                 
             </div>

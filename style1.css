@@ -414,3 +414,9 @@ max-width: 1530px;
 .mmm{
     font-size: 25px;
 }
+
+.btn-mail:hover {
+    color: #fff;
+    text-decoration: none;
+    background: palevioletred;
+}
