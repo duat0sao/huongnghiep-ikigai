@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 22, 2021 lúc 07:35 AM
+-- Thời gian đã tạo: Th12 22, 2021 lúc 06:00 PM
 -- Phiên bản máy phục vụ: 10.4.18-MariaDB
 -- Phiên bản PHP: 8.0.5
 
@@ -562,7 +562,7 @@ INSERT INTO `ctdaotaoct` (`manganh`, `ctdtct`) VALUES
 (7210404, 'Thiết kế thời trang 1'),
 (7210404, 'Nghiên cứu trang phục truyền thống'),
 (7210404, 'Lịch sử Đảng Cộng sản Việt Nam'),
-(0, 'Nghệ thuật học'),
+(7210404, 'Nghệ thuật học'),
 (7210404, 'Nghiên cứu chuyên đề thời trang'),
 (7210404, 'Đồ án tiền tốt nghiệp – TKTT'),
 (7210404, 'Đồ án tốt nghiệp'),
@@ -5908,18 +5908,7 @@ CREATE TABLE `disc` (
 -- Đang đổ dữ liệu cho bảng `disc`
 --
 
-INSERT INTO `disc` (`nhom1`, `nhom2`, `nhom3`, `nhom4`, `iddisc`, `idkhach`, `homnay`) VALUES
-('0', '14', '0', '0', 13, 13, '2021-12-22 12:07:01'),
-('14', '0', '0', '0', 14, 14, '2021-12-22 12:07:01'),
-('0', '0', '0', '0', 17, 17, '2021-12-22 12:07:01'),
-('0', '0', '0', '0', 18, 18, '2021-12-22 12:07:01'),
-('0', '0', '0', '0', 19, 19, '2021-12-22 12:07:01'),
-('8', '2', '3', '1', 20, 14, '2021-12-22 12:07:01'),
-('14', '0', '0', '0', 21, 13, '2021-12-22 12:07:01'),
-('2', '2', '10', '0', 22, 13, '2021-12-22 12:07:01'),
-('14', '0', '0', '0', 23, 13, '2021-12-22 12:07:14'),
-('0', '0', '14', '0', 24, 13, '2021-12-22 12:07:28'),
-('14', '0', '0', '0', 25, 13, '2021-12-22 12:36:28');
+
 
 -- --------------------------------------------------------
 
@@ -6057,14 +6046,6 @@ CREATE TABLE `holland` (
 -- Đang đổ dữ liệu cho bảng `holland`
 --
 
-INSERT INTO `holland` (`bo1`, `bo2`, `bo3`, `bo4`, `bo5`, `bo6`, `idholland`, `idkhach`, `homnay`) VALUES
-('18', '18', '16', '23', '18', '18', 31, 13, '2021-12-22 12:09:31'),
-('36', '36', '36', '36', '36', '36', 32, 14, '2021-12-22 12:09:31'),
-('0', '0', '0', '0', '0', '0', 35, 17, '2021-12-22 12:09:31'),
-('0', '0', '0', '0', '0', '0', 36, 18, '2021-12-22 12:09:31'),
-('0', '0', '0', '0', '0', '0', 37, 19, '2021-12-22 12:09:31'),
-('36', '36', '36', '36', '36', '36', 38, 13, '2021-12-22 12:10:07'),
-('36', '36', '26', '18', '18', '18', 39, 13, '2021-12-22 12:35:40');
 
 -- --------------------------------------------------------
 
@@ -6084,12 +6065,7 @@ CREATE TABLE `khach` (
 -- Đang đổ dữ liệu cho bảng `khach`
 --
 
-INSERT INTO `khach` (`idkhach`, `email`, `sdt`, `matkhau`, `hovaten`) VALUES
-(13, 'tduat183@gmail.com', 86645, '1', 'lý thị nụ'),
-(14, '18lynnxx@gmail.com', 1, '1', 'Trần Nhật Duật'),
-(17, '1@122', 866546300, '1', '1'),
-(18, '1@114', 866546300, '1', 'Trần Nhật Duật'),
-(19, '2@01', 9879999, '1', 'có 1 không 2');
+
 
 -- --------------------------------------------------------
 
@@ -7748,9 +7724,7 @@ CREATE TABLE `str` (
 -- Đang đổ dữ liệu cho bảng `str`
 --
 
-INSERT INTO `str` (`idstr`, `loai`, `bo1`, `bo2`, `bo3`, `bo4`, `bo5`, `bo6`, `nhom1`, `nhom2`, `nhom3`, `nhom4`, `homnay`, `idkhach`) VALUES
-(1, 'holland', 36, 36, 26, 18, 18, 18, 0, 0, 0, 0, '2021-12-22 12:35:40', 13),
-(2, 'disc', 0, 0, 0, 0, 0, 0, 14, 0, 0, 0, '2021-12-22 12:36:28', 13);
+
 
 -- --------------------------------------------------------
 
@@ -7783,8 +7757,7 @@ CREATE TABLE `toithichgi` (
 -- Đang đổ dữ liệu cho bảng `toithichgi`
 --
 
-INSERT INTO `toithichgi` (`idkhach`, `idtoithich`, `cau1`, `cau2`, `cau3`, `cau4`, `cau5`, `cau6`, `cau7`, `cau8`, `cau9`, `cau10`, `cau11`, `cau12`, `cau13`, `cau14`, `cau15`, `cau16`) VALUES
-(14, 16, 'chơi ngủ và ăn', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+
 
 -- --------------------------------------------------------
 
@@ -9878,31 +9851,31 @@ ALTER TABLE `toithichgi`
 -- AUTO_INCREMENT cho bảng `disc`
 --
 ALTER TABLE `disc`
-  MODIFY `iddisc` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `iddisc` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT cho bảng `holland`
 --
 ALTER TABLE `holland`
-  MODIFY `idholland` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `idholland` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT cho bảng `khach`
 --
 ALTER TABLE `khach`
-  MODIFY `idkhach` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `idkhach` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT cho bảng `str`
 --
 ALTER TABLE `str`
-  MODIFY `idstr` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idstr` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `toithichgi`
 --
 ALTER TABLE `toithichgi`
-  MODIFY `idtoithich` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `idtoithich` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
