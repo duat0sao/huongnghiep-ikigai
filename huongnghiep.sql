@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 22, 2021 lúc 05:43 AM
+-- Thời gian đã tạo: Th12 22, 2021 lúc 07:35 AM
 -- Phiên bản máy phục vụ: 10.4.18-MariaDB
 -- Phiên bản PHP: 8.0.5
 
@@ -5901,7 +5901,7 @@ CREATE TABLE `disc` (
   `nhom4` varchar(255) NOT NULL,
   `iddisc` int(255) NOT NULL,
   `idkhach` int(255) NOT NULL,
-  `homnay` tinyint(4) NOT NULL
+  `homnay` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -5909,12 +5909,17 @@ CREATE TABLE `disc` (
 --
 
 INSERT INTO `disc` (`nhom1`, `nhom2`, `nhom3`, `nhom4`, `iddisc`, `idkhach`, `homnay`) VALUES
-('0', '14', '0', '0', 13, 13, 0),
-('14', '0', '0', '0', 14, 14, 0),
-('0', '0', '0', '0', 17, 17, 0),
-('0', '0', '0', '0', 18, 18, 0),
-('0', '0', '0', '0', 19, 19, 0),
-('8', '2', '3', '1', 20, 14, 0);
+('0', '14', '0', '0', 13, 13, '2021-12-22 12:07:01'),
+('14', '0', '0', '0', 14, 14, '2021-12-22 12:07:01'),
+('0', '0', '0', '0', 17, 17, '2021-12-22 12:07:01'),
+('0', '0', '0', '0', 18, 18, '2021-12-22 12:07:01'),
+('0', '0', '0', '0', 19, 19, '2021-12-22 12:07:01'),
+('8', '2', '3', '1', 20, 14, '2021-12-22 12:07:01'),
+('14', '0', '0', '0', 21, 13, '2021-12-22 12:07:01'),
+('2', '2', '10', '0', 22, 13, '2021-12-22 12:07:01'),
+('14', '0', '0', '0', 23, 13, '2021-12-22 12:07:14'),
+('0', '0', '14', '0', 24, 13, '2021-12-22 12:07:28'),
+('14', '0', '0', '0', 25, 13, '2021-12-22 12:36:28');
 
 -- --------------------------------------------------------
 
@@ -6044,19 +6049,22 @@ CREATE TABLE `holland` (
   `bo5` varchar(100) NOT NULL,
   `bo6` varchar(100) NOT NULL,
   `idholland` int(255) NOT NULL,
-  `idkhach` tinyint(255) NOT NULL
+  `idkhach` tinyint(255) NOT NULL,
+  `homnay` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Đang đổ dữ liệu cho bảng `holland`
 --
 
-INSERT INTO `holland` (`bo1`, `bo2`, `bo3`, `bo4`, `bo5`, `bo6`, `idholland`, `idkhach`) VALUES
-('18', '18', '16', '23', '18', '18', 31, 13),
-('36', '36', '36', '36', '36', '36', 32, 14),
-('0', '0', '0', '0', '0', '0', 35, 17),
-('0', '0', '0', '0', '0', '0', 36, 18),
-('0', '0', '0', '0', '0', '0', 37, 19);
+INSERT INTO `holland` (`bo1`, `bo2`, `bo3`, `bo4`, `bo5`, `bo6`, `idholland`, `idkhach`, `homnay`) VALUES
+('18', '18', '16', '23', '18', '18', 31, 13, '2021-12-22 12:09:31'),
+('36', '36', '36', '36', '36', '36', 32, 14, '2021-12-22 12:09:31'),
+('0', '0', '0', '0', '0', '0', 35, 17, '2021-12-22 12:09:31'),
+('0', '0', '0', '0', '0', '0', 36, 18, '2021-12-22 12:09:31'),
+('0', '0', '0', '0', '0', '0', 37, 19, '2021-12-22 12:09:31'),
+('36', '36', '36', '36', '36', '36', 38, 13, '2021-12-22 12:10:07'),
+('36', '36', '26', '18', '18', '18', 39, 13, '2021-12-22 12:35:40');
 
 -- --------------------------------------------------------
 
@@ -7716,12 +7724,42 @@ INSERT INTO `noidungcauhoi` (`idcauhoi`, `noidungcauhoi`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `str`
+--
+
+CREATE TABLE `str` (
+  `idstr` int(255) NOT NULL,
+  `loai` varchar(500) NOT NULL,
+  `bo1` int(255) NOT NULL,
+  `bo2` int(255) NOT NULL,
+  `bo3` int(255) NOT NULL,
+  `bo4` int(255) NOT NULL,
+  `bo5` int(255) NOT NULL,
+  `bo6` int(255) NOT NULL,
+  `nhom1` int(255) NOT NULL,
+  `nhom2` int(255) NOT NULL,
+  `nhom3` int(255) NOT NULL,
+  `nhom4` int(255) NOT NULL,
+  `homnay` datetime NOT NULL,
+  `idkhach` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `str`
+--
+
+INSERT INTO `str` (`idstr`, `loai`, `bo1`, `bo2`, `bo3`, `bo4`, `bo5`, `bo6`, `nhom1`, `nhom2`, `nhom3`, `nhom4`, `homnay`, `idkhach`) VALUES
+(1, 'holland', 36, 36, 26, 18, 18, 18, 0, 0, 0, 0, '2021-12-22 12:35:40', 13),
+(2, 'disc', 0, 0, 0, 0, 0, 0, 14, 0, 0, 0, '2021-12-22 12:36:28', 13);
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `toithichgi`
 --
 
 CREATE TABLE `toithichgi` (
   `idkhach` int(255) NOT NULL,
-  `idcauhoi` int(255) NOT NULL,
   `idtoithich` int(255) NOT NULL,
   `cau1` varchar(255) NOT NULL,
   `cau2` varchar(255) NOT NULL,
@@ -7745,12 +7783,8 @@ CREATE TABLE `toithichgi` (
 -- Đang đổ dữ liệu cho bảng `toithichgi`
 --
 
-INSERT INTO `toithichgi` (`idkhach`, `idcauhoi`, `idtoithich`, `cau1`, `cau2`, `cau3`, `cau4`, `cau5`, `cau6`, `cau7`, `cau8`, `cau9`, `cau10`, `cau11`, `cau12`, `cau13`, `cau14`, `cau15`, `cau16`) VALUES
-(14, 15, 16, 'hello', 'hello', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(14, 3, 17, 'hello', 'hello', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(14, 0, 30, 'hello', 'hello', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(14, 0, 31, 'hello', 'hello', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(14, 0, 32, 'hello', 'hello', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO `toithichgi` (`idkhach`, `idtoithich`, `cau1`, `cau2`, `cau3`, `cau4`, `cau5`, `cau6`, `cau7`, `cau8`, `cau9`, `cau10`, `cau11`, `cau12`, `cau13`, `cau14`, `cau15`, `cau16`) VALUES
+(14, 16, 'chơi ngủ và ăn', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -9825,6 +9859,12 @@ ALTER TABLE `khach`
   ADD PRIMARY KEY (`idkhach`);
 
 --
+-- Chỉ mục cho bảng `str`
+--
+ALTER TABLE `str`
+  ADD PRIMARY KEY (`idstr`);
+
+--
 -- Chỉ mục cho bảng `toithichgi`
 --
 ALTER TABLE `toithichgi`
@@ -9838,19 +9878,25 @@ ALTER TABLE `toithichgi`
 -- AUTO_INCREMENT cho bảng `disc`
 --
 ALTER TABLE `disc`
-  MODIFY `iddisc` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `iddisc` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT cho bảng `holland`
 --
 ALTER TABLE `holland`
-  MODIFY `idholland` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `idholland` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT cho bảng `khach`
 --
 ALTER TABLE `khach`
   MODIFY `idkhach` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT cho bảng `str`
+--
+ALTER TABLE `str`
+  MODIFY `idstr` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `toithichgi`

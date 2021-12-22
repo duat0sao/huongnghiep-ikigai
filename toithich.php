@@ -10,49 +10,49 @@ $query=mysqli_query($conn,"select * from `toithichgi` where idkhach='$idkhach'")
 $row=mysqli_fetch_assoc($query);
 
 
-if ($row['cau1']==''){
+if (empty($row['cau1'])){
     $cauhoi = 1;
 }
-else if ($row['cau2']==''){
+else if (empty($row['cau2'])){
     $cauhoi = 2;
 }
-else if ($row['cau3']==''){
+else if (empty($row['cau3'])){
     $cauhoi = 3;
 }
-else if ($row['cau4']==''){
+else if (empty($row['cau4'])){
     $cauhoi = 4;
 }
-else if ($row['cau5']==''){
+else if (empty($row['cau5'])){
     $cauhoi = 5;
 }
-else if ($row['cau6']==''){
+else if (empty($row['cau6'])){
     $cauhoi = 6;
 }
-else if ($row['cau7']==''){
+else if (empty($row['cau7'])){
     $cauhoi = 7;
 }
-else if ($row['cau8']==''){
+else if (empty($row['cau8'])){
     $cauhoi = 8;
 }
-else if ($row['cau9']==''){
+else if (empty($row['cau9'])){
     $cauhoi = 9;
 }
-else if ($row['cau10']==''){
+else if (empty($row['cau10'])){
     $cauhoi = 10;
 }
-else if ($row['cau11']==''){
+else if (empty($row['cau11'])){
     $cauhoi = 11;
 }
-else if ($row['cau12']==''){
+else if (empty($row['cau12'])){
     $cauhoi = 12;
 }
-else if ($row['cau13']==''){
+else if (empty($row['cau13'])){
     $cauhoi = 13;
 }
-else if ($row['cau14']==''){
+else if (empty($row['cau14'])){
     $cauhoi = 14;
 }
-else if ($row['cau15']==''){
+else if (empty($row['cau15'])){
     $cauhoi = 15;
 } else{
     $cauhoi = 16;

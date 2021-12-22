@@ -247,52 +247,55 @@ $query2=mysqli_query($conn,"select * from toithichgi where idkhach = '$idkhach'"
 $row2=mysqli_fetch_array($query2);
 $hello = 1;
 
-if ($row2['cau1']==''){
+if (empty($row2['cau1'])){
   $ci = 1;
 }
-else if ($row2['cau2']==''){
+else if (empty($row2['cau2'])){
   $ci = 2;
 }
-else if ($row2['cau3']==''){
+else if (empty($row2['cau3'])){
   $ci = 3;
 }
-else if ($row2['cau4']==''){
+else if (empty($row2['cau4'])){
   $ci = 4;
 }
-else if ($row2['cau5']==''){
+else if (empty($row2['cau5'])){
   $ci = 5;
 }
-else if ($row2['cau6']==''){
+else if (empty($row2['cau6'])){
   $ci = 6;
 }
-else if ($row2['cau7']==''){
+else if (empty($row2['cau7'])){
   $ci = 7;
 }
-else if ($row2['cau8']==''){
+else if (empty($row2['cau8'])){
   $ci = 8;
 }
-else if ($row2['cau9']==''){
+else if (empty($row2['cau9'])){
   $ci = 9;
 }
-else if ($row2['cau10']==''){
+else if (empty($row2['cau10'])){
   $ci = 10;
 }
-else if ($row2['cau11']==''){
+else if (emtpy($row2['cau11'])){
   $ci = 11;
 }
-else if ($row2['cau12']==''){
+else if (empty($row2['cau12'])){
   $ci = 12;
 }
-else if ($row2['cau13']==''){
+else if (empty($row2['cau13'])){
   $ci = 13;
 }
-else if ($row2['cau14']==''){
+else if (empty($row2['cau14'])){
   $ci = 14;
 }
-else if ($row2['cau15']==''){
+else if (empty($row2['cau15'])){
   $ci = 15;
-} else{
+} else if (empty($row2['cau16'])){
   $ci = 16;
+}
+else{
+  $ci = 17;
 }
 for($i=1; $i<$ci; $i++){
   
