@@ -24,18 +24,13 @@ if(isset($_POST['sign-in']) && $_POST['email'] != '' && $_POST['password'] != ''
     }
     else {
         $_SESSION['thongbao']='tai khoan va mat khau khong chinh xac';
-        header('location:../index.php');
+        header('location:../thatbai.php');
         
     }
 }
 else {
     $_SESSION['thongbao']='vui long nhap day du thong tin dang nhap';
-    header('location:../index.php');
+    header('location:../thatbai.php');
     
-}
-?>
-<?php
-function phpAlert($msg) {
-    echo '<script type="text/javascript">alert("' . $msg . '")</script>';
 }
 ?>
