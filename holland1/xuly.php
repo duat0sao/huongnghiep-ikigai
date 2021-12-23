@@ -11,6 +11,6 @@ $data = $_POST['clm'];
  $bo6 = $data[5];
  $idkhach = $data[6];
 mysqli_query($conn,"INSERT INTO holland(idkhach, bo1, bo2, bo3, bo4, bo5, bo6, homnay) VALUES('$idkhach', '$bo1','$bo2','$bo3','$bo4','$bo5','$bo6',(now()))");
-mysqli_query($conn,"INSERT INTO str(idkhach, bo1, bo2, bo3, bo4, bo5, bo6, nhom1, nhom2, nhom3, nhom4 homnay,loai) VALUES('$idkhach', '$bo1','$bo2','$bo3','$bo4','$bo5','$bo6','0','0','0','0',(now()),'holland')");
+mysqli_query($conn,"INSERT INTO str(idkhach, bo1, bo2, bo3, bo4, bo5, bo6, nhom1, nhom2, nhom3, nhom4 homnay,loai) VALUES('$idkhach', '$bo1','$bo2','$bo3','$bo4','$bo5','$bo6','0','0','0','0',(now()),'0')");
 
 ?>

@@ -46,7 +46,7 @@
       <div class="col-md-4 col-sm-12">
           <div class="thongtin" >
             <h2 class="gioithieu">Giới thiệu</h2>
-            <p class="tieusu"style="color:{{($data_theme->ChuTS)}} ;"><a href="thichgi.php?id=<?php echo $idkhach;?>">Điều tôi thích</a></p>
+            <p style="font-size:15px"><strong><a href="thichgi.php?id=<?php echo $idkhach;?>">Điều tôi thích</a></strong></p>
             <div class="diachi">
               <div class="">Họ và Tên</div>
               <div class="infor_1"><?= $row12['hovaten'] ?></div>

@@ -458,7 +458,7 @@ $idkhach = $_GET['id'];
       $(document).ready(function() {
       $('.tdkhoi').click(function(event) {
         /* Act on the event */
-        $('.ndkhoi').slideUp();
+       
         $('.tdkhoi').removeClass('xanhden');
 
         $(this).toggleClass('xanhden');
