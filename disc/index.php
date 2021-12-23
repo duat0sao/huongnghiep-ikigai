@@ -25,11 +25,17 @@ $idkhach = $_GET['id'];
         display: block;
         float: none;
         width: 100%;
-        margin-top: 50px;
+        margin-top: 150px;
         margin-right:0px;
         margin-left:0px;
         height: auto;
     }
+.question4,
+.question1,
+.question2,
+.question3{
+  font-size:12px;
+}
 }
 </style>
     

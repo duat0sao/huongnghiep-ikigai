@@ -18,10 +18,10 @@
 define('HOST', 'localhost');
 define('USERNAME', 'root');
 define('PASSWORD', '');
-define('DATABASE', 'huongnghiep');
+define('DATABASE', 'huongnghiep1');
  
 
-$conn=mysqli_connect('localhost', 'root', '', 'huongnghiep');
+$conn=mysqli_connect('localhost', 'root', '', 'huongnghiep1');
 mysqli_set_charset($conn, 'UTF8');
 
 if(!$conn){

@@ -19,7 +19,7 @@ var nhoma = [
 		 "Tôi rất bình thường trong thói quen của tôi.",
 	
 	
-		 "Tôi có sự nhận thức và hiểu biết sâu sắc về mọi người xung quanh.",
+		 "Tôi có hiểu biết sâu sắc về mọi người xung quanh.",
 	
 	
 		 "Tôi có thể dễ dàng thuyết phục người khác.",
@@ -47,7 +47,7 @@ var nhomb = [
 	
 		 "Có tình bạn tốt và luôn cảm thấy hạnh phúc.",
 			
-		 "Có uy tín trong cộng đồng hoặc đạt được sự nổi tiếng.",
+		 "Có uy tín trong cộng đồng.",
 				
 		 "Tôi rất thân thiện.",
 		
@@ -55,7 +55,7 @@ var nhomb = [
 		
 		 "Tôi thích trò chuyện với mọi người",
 		
-		 "Tôi luôn sẵn sàng làm những điều mới - chấp nhận rủi ro.",
+		 "Tôi luôn sẵn sàng làm những điều mới.",
 	
 		 "Tôi không thích khoe khoang.",
 	
@@ -64,7 +64,7 @@ var nhomb = [
 		 "Tôi rất tự tin và có sức thuyết phục.",	
 		 "Mọi người thường chú ý đến tôi.",
 		
-		 "Thích ứng với môi trường luôn thay đổi hoặc những mục tiêu được đặt ra không rõ ràng.",
+		 "Thích ứng với môi trường luôn thay đổi.",
 		
 		 "Tập trung trong thời gian dài.",
 	
@@ -76,14 +76,14 @@ var nhomc = [
 		
 	 "Đạt được sự ủng hộ của một nhóm người.",
 		
- "Làm việc trong môi trường được kiểm soát và không có nhiều sự thay đổi.",
+ "Làm việc trong môi trường được kỷ luật.",
 	
-	"Tôi có xu hướng giữ cảm xúc của mình với chính mình.",
+	"Tôi luôn giữ cảm xúc của mình với chính mình.",
    "Tôi là một người rất kiên quyết",
 		
 	 "Tôi đưa ra quyết định một cách dứt khoát",
 		
-	 "Tôi là một người ôn hòa chứ không phải là một người cực đoan.",
+	 "Tôi là một người ôn hòa.",
 	
 	 "Tôi là một người lịch thiệp.",
 		
@@ -100,7 +100,7 @@ var nhomc = [
 	 "Bị kiểm soát."
 ];
 var nhomd = [
-	 "Có quy trình làm việc khách quan, đạt độ chính xác cao.",
+	 "Có quy trình làm việc khách quan.",
    "Phong thái ổn định và tin cậy.",
 	 "Phát triển cá nhân.",
 	 "Độ chính xác rất quan trọng đối với tôi.",

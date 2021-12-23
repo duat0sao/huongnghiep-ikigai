@@ -10,6 +10,22 @@
   <script src="https://kit.fontawesome.com/4eb98e0bb5.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
   <title>Trang cá nhân</title>
+  <style>
+    @media screen and (max-width: 600px) {
+      .bd{
+        width: 200px;
+        height:200px;
+      }
+    }
+    @media screen and (min-width: 600px) {
+      .bd{
+        width: 350px;
+        height:350px;
+      }
+    }
+
+
+  </style>
 </head>
 <body>
 
@@ -99,7 +115,7 @@ while($row=mysqli_fetch_array($query)){
             <div class="">  
                 <center><strong><?php echo $row['homnay'];?></strong></center>
                 <div class="">
-                 <center><img src=<?php echo $chartUrl;?> alt="2" style="width: 300px;height:300px;"></center>
+                 <center><img class="bd" src=<?php echo $chartUrl;?> alt="2"></center>
                 </div>
 <?php
 
