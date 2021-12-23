@@ -227,7 +227,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
 						<label>Họ và Tên</label>
 					</div>
 					<div class="mail">
-						<input type="mail" name="email">
+						<input type="email" name="email">
 						<label>Mail</label>
 					</div>
 					<div class="uid">
