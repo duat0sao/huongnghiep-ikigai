@@ -217,7 +217,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
 						<label>Mật khẩu</label>
 					</div>
 					<div class="submit">
-						<button type="submit" class="dark" name="sign-in">Login</button>
+						<button type="submit" class="dark" name="sign-in">Đăng nhập</button>
 					</div>
 				</form>
 				<form id="register" tabindex="502" action="signin.php" method="post">
