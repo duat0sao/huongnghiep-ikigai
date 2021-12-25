@@ -46,7 +46,7 @@
       <div class="col-md-4 col-sm-12">
           <div class="thongtin" >
             <h2 class="gioithieu">Giới thiệu</h2>
-            <p style="font-size:15px"><strong><a href="thichgi.php?id=<?php echo $idkhach;?>">Điều tôi thích</a></strong></p>
+            <p style="font-size:15px"><strong><a href="lichsu.php?id=<?php echo $idkhach;?>">Lịch sử khảo sát</a></strong></p>
             <div class="diachi">
               <div class="">Họ và Tên</div>
               <div class="infor_1"><?= $row12['hovaten'] ?></div>
@@ -73,25 +73,38 @@
           
           </div>
         <div class="baiviet" >
-          <h2>Lịch sử khảo sát</h2>
+          <h2>Kết quả</h2>
         </div>
 
 
 <?php 
-$query=mysqli_query($conn,"select * from str where idkhach='$idkhach' ORDER BY idstr DESC");
+$query=mysqli_query($conn,"select * from holland where idholland=(select MAX(idholland) from holland where idkhach='$idkhach')");
+$query18=mysqli_query($conn,"select * from disc where iddisc=(select MAX(iddisc) from disc where idkhach='$idkhach')");
+$row=mysqli_fetch_array($query);
+$row18=mysqli_fetch_array($query18);
 
-while($row=mysqli_fetch_array($query)){
+
   $bo1 = $row['bo1'];
   $bo2 = $row['bo2'];
   $bo3 = $row['bo3'];
   $bo4 = $row['bo4'];
   $bo5 = $row['bo5'];
   $bo6 = $row['bo6'];
-  $nhom1 = $row['nhom1'];
-  $nhom2 = $row['nhom2'];
-  $nhom3 = $row['nhom3'];
-  $nhom4 = $row['nhom4'];
+  $nhom1 = $row18['nhom1'];
+  $nhom2 = $row18['nhom2'];
+  $nhom3 = $row18['nhom3'];
+  $nhom4 = $row18['nhom4'];
+  $timeho = $row['homnay'];
+  $timedi = $row18['homnay'];
+
+  $queryho=mysqli_query($conn,"select * from str where homnay='$timeho' and idkhach='$idkhach' ");
+  $querydi=mysqli_query($conn,"select * from str where homnay='$timedi' and idkhach='$idkhach' ");
+  $rowho=mysqli_fetch_array($queryho);
+  $rowdi=mysqli_fetch_array($querydi);
+
   
+
+
 
   $listnhom = array($nhom1,$nhom2,$nhom3,$nhom4);
   $maxnhom = max($listnhom);
@@ -100,26 +113,49 @@ while($row=mysqli_fetch_array($query)){
   $listbo = array($bo1,$bo2,$bo3,$bo4,$bo5,$bo6);
   $maxbo = max($listbo);
 
+  switch ($maxbo) {
+    case $bo1:
+        $a = 'r';
+        break;
+    case $bo2:
+        $a = 'i';
+        break;
+    case $bo3:
+        $a = 'a';
+        break;
+    case $bo4:
+        $a = 's';
+        break;
+    case $bo5:
+        $a = 'e';
+        break;
+    case $bo6:
+        $a = 'c';
+        break;
+    default:
+      echo "error";
+      break;
+    }
+    
+ 
+    $chartConfigHo = "{type:'bar',data:{labels:['R','I','A','S','E','C'],datasets:[{data:['$bo1','$bo2','$bo3','$bo4','$bo5','$bo6'],backgroundColor:['red','green','blue','orange','purple','yellow']}]}}";
 
-  if (empty($maxnhom)){
-    $chartConfig = "{type:'bar',data:{labels:['R','I','A','S','E','C'],datasets:[{data:['$bo1','$bo2','$bo3','$bo4','$bo5','$bo6'],backgroundColor:['red','green','blue','orange','purple','yellow']}]}}";
-  } else {
-    $chartConfig = "{type:'bar',data:{labels:['D','I','S','C'],datasets:[{data:['$nhom1','$nhom2','$nhom3','$nhom4'],backgroundColor:['red','green','blue','oragen']}]}}";
-  }
+    $chartConfigDISC = "{type:'bar',data:{labels:['D','I','S','C'],datasets:[{data:['$nhom1','$nhom2','$nhom3','$nhom4'],backgroundColor:['red','green','blue','oragen']}]}}";
+ 
 
-  $chartUrl = 'https://quickchart.io/chart?c=' . $chartConfig;
-
+  $chartUrlHo = 'https://quickchart.io/chart?c=' . $chartConfigHo;
+  $chartUrlDISC = 'https://quickchart.io/chart?c=' . $chartConfigDISC;
 ?>
 
           <div div class="baiviet_infor" >
             <div class="">  
-                <center><strong><?php echo $row['homnay'];?></strong></center>
+                <center><strong>Holland</strong></center>
                 <div class="">
-                 <center><img class="bd" src=<?php echo $chartUrl;?> alt="2"></center>
+                 <center><img class="bd" src=<?php echo $chartUrlHo;?> alt="2"></center>
                 </div>
 <?php
 
-if (empty($maxnhom)){
+
   switch ($maxbo) {
     case $bo1:
       echo "<h1>Người thực tế</h1>";
@@ -155,42 +191,255 @@ if (empty($maxnhom)){
       echo "error";
       break;
     }
-}  else{
-  switch ($maxnhom) {
-    case $nhom1:
-      echo "<h1> Người Thủ lĩnh</h1> 
-      <b>Mô tả:</b> Những người nằm ở nhóm này quan trọng kết quả hoàn thành. Họ luôn tự tin và có động lực cạnh tranh để chiến thắng hoặc đạt được thành công. Họ luôn chấp nhận thử thách và hành động tức thì để đạt được kết quả. Những người thuộc nhóm Thủ lĩnh thường được mô tả là mạnh mẽ, tự tin, nhanh nhẹn, luôn tiếp cận vấn đề một cách trực tiếp. Tuy nhiên, điểm trừ của những người thuộc nhóm Thủ lĩnh là đôi khi họ bị giới hạn bởi sự vô tâm đối với người khác, thiếu kiên nhẫn và hay hoài nghi. Đôi khi họ cũng được cho là dễ bị tổn thương.";
-      break;
-    case $nhom2:
-      echo  "<h1>Người tạo ảnh hưởng </h1>
-      <b>Mô tả:</b> Người thuộc nhóm này chú trọng vào việc tạo ra ảnh hưởng hoặc thuyết phục người khác bằng sự cởi mở và những mối quan hệ của mình. Họ thường được mô tả là những người có sức thuyết phục, nhiệt tình, ấm áp, luôn lạc quan và có niềm tin vào người khác. Phong cách làm việc của họ luôn thể hiện sự hợp tác và nhiệt tình. Những người Tạo ảnh hưởng thường được thúc đẩy bởi sự công nhận xã hội (hoặc một nhóm người trong xã hội), vào những hoạt động nhóm và sự phát triển các mối quan hệ. Chính vì vậy mà họ sẽ sợ bị mất sự ảnh hưởng, bị từ chối hoặc bị bỏ qua.";
-      break;
-    case $nhom3:
-      echo "<h1> Người Thủ lĩnh</h1> 
-                  <b>Mô tả:</b> Những người nằm ở nhóm này quan trọng kết quả hoàn thành. Họ luôn tự tin và có động lực cạnh tranh để chiến thắng hoặc đạt được thành công. Họ luôn chấp nhận thử thách và hành động tức thì để đạt được kết quả. Những người thuộc nhóm Thủ lĩnh thường được mô tả là mạnh mẽ, tự tin, nhanh nhẹn, luôn tiếp cận vấn đề một cách trực tiếp. Tuy nhiên, điểm trừ của những người thuộc nhóm Thủ lĩnh là đôi khi họ bị giới hạn bởi sự vô tâm đối với người khác, thiếu kiên nhẫn và hay hoài nghi. Đôi khi họ cũng được cho là dễ bị tổn thương.";
-      break;
-    case $nhom4:
-      echo " <h1>Người Tuân thủ</h1> 
-      <b>Mô tả:</b> Những người thuộc nhóm Tuân thủ này thường chú trọng vào chất lượng và độ chính xác, chuyên môn, năng lực cá nhân. Họ thường tìm thấy động lực từ những cơ hội để đạt được kiến thức, những cơ hội giúp họ thể hiện được chuyên môn cá nhân và tạo ra những sản phẩm có chất lượng. Người Tuân thủ để ý đến độ chính xác trong công việc, họ luôn muốn duy trì sự ổn định trong công việc. Những người Tuân thủ cũng thường được được mô tả là người cẩn thận, thận trọng, làm việc có hệ thống, chính xác, lịch sự và biết cách ngoại giao. Tuy nhiên, họ có thể bị giới hạn bởi việc bị quá tải, bản thân bị cô lập, những lời chỉ trích và mắc sai lầm.";
-      break;
-    default:
-      echo "error";
-      break;
-  }
 
 
-}
 
 
 ?>
-                    <center><button class="btn"><a style="font-size:20px" href="sendsend.php?id=<?php echo $idkhach;?>&idstr=<?php echo $row['idstr']?>">Gửi</a></button></center>
+
+
+
+                    <center><button class="btn"><a style="font-size:17px" href="sendsend.php?id=<?php echo $idkhach;?>&idstr=<?php echo $rowho['idstr']?>">Gửi thông tin về mail</a></button></center>
             </div>
           </div>
 
 
+          <div div class="baiviet_infor" >
+            <div class="">  
+                <center><strong>DISC</strong></center>
+                <div class="">
+                 <center><img class="bd" src=<?php echo $chartUrlDISC;?> alt="2"></center>
+                </div>
+                <?php
+
+switch ($maxnhom) {
+  case $nhom1:
+    echo "<h1> Người Thủ lĩnh</h1> 
+    <b>Mô tả:</b> Những người nằm ở nhóm này quan trọng kết quả hoàn thành. Họ luôn tự tin và có động lực cạnh tranh để chiến thắng hoặc đạt được thành công. Họ luôn chấp nhận thử thách và hành động tức thì để đạt được kết quả. Những người thuộc nhóm Thủ lĩnh thường được mô tả là mạnh mẽ, tự tin, nhanh nhẹn, luôn tiếp cận vấn đề một cách trực tiếp. Tuy nhiên, điểm trừ của những người thuộc nhóm Thủ lĩnh là đôi khi họ bị giới hạn bởi sự vô tâm đối với người khác, thiếu kiên nhẫn và hay hoài nghi. Đôi khi họ cũng được cho là dễ bị tổn thương.";
+    break;
+  case $nhom2:
+    echo  "<h1>Người tạo ảnh hưởng </h1>
+    <b>Mô tả:</b> Người thuộc nhóm này chú trọng vào việc tạo ra ảnh hưởng hoặc thuyết phục người khác bằng sự cởi mở và những mối quan hệ của mình. Họ thường được mô tả là những người có sức thuyết phục, nhiệt tình, ấm áp, luôn lạc quan và có niềm tin vào người khác. Phong cách làm việc của họ luôn thể hiện sự hợp tác và nhiệt tình. Những người Tạo ảnh hưởng thường được thúc đẩy bởi sự công nhận xã hội (hoặc một nhóm người trong xã hội), vào những hoạt động nhóm và sự phát triển các mối quan hệ. Chính vì vậy mà họ sẽ sợ bị mất sự ảnh hưởng, bị từ chối hoặc bị bỏ qua.";
+    break;
+  case $nhom3:
+    echo "<h1> Người Thủ lĩnh</h1> 
+                <b>Mô tả:</b> Những người nằm ở nhóm này quan trọng kết quả hoàn thành. Họ luôn tự tin và có động lực cạnh tranh để chiến thắng hoặc đạt được thành công. Họ luôn chấp nhận thử thách và hành động tức thì để đạt được kết quả. Những người thuộc nhóm Thủ lĩnh thường được mô tả là mạnh mẽ, tự tin, nhanh nhẹn, luôn tiếp cận vấn đề một cách trực tiếp. Tuy nhiên, điểm trừ của những người thuộc nhóm Thủ lĩnh là đôi khi họ bị giới hạn bởi sự vô tâm đối với người khác, thiếu kiên nhẫn và hay hoài nghi. Đôi khi họ cũng được cho là dễ bị tổn thương.";
+    break;
+  case $nhom4:
+    echo " <h1>Người Tuân thủ</h1> 
+    <b>Mô tả:</b> Những người thuộc nhóm Tuân thủ này thường chú trọng vào chất lượng và độ chính xác, chuyên môn, năng lực cá nhân. Họ thường tìm thấy động lực từ những cơ hội để đạt được kiến thức, những cơ hội giúp họ thể hiện được chuyên môn cá nhân và tạo ra những sản phẩm có chất lượng. Người Tuân thủ để ý đến độ chính xác trong công việc, họ luôn muốn duy trì sự ổn định trong công việc. Những người Tuân thủ cũng thường được được mô tả là người cẩn thận, thận trọng, làm việc có hệ thống, chính xác, lịch sự và biết cách ngoại giao. Tuy nhiên, họ có thể bị giới hạn bởi việc bị quá tải, bản thân bị cô lập, những lời chỉ trích và mắc sai lầm.";
+    break;
+  default:
+    echo "error";
+    break;
+}
 
 
-<?php }?>      
+
+?>
+                <center><button class="btn"><a style="font-size:17px" href="sendsend.php?id=<?php echo $idkhach;?>&idstr=<?php echo $rowdi['idstr']?>">Gửi thông tin về mail</a></button></center>
+            </div>
+          </div>
+
+          <div div class="baiviet_infor" >
+            <div class="">  
+               
+                <div class="">
+                 <table class="table basic">
+                        <thead>
+                        <tr>
+                            <th scope="col">Câu hỏi </th>
+                            <th scope="col">Câu trả lời</th>
+                            
+                          </tr>
+                            
+                          </thead>
+<?php
+$query2=mysqli_query($conn,"select * from toithichgi where idkhach = '$idkhach'");
+$row2=mysqli_fetch_array($query2);
+$hello = 1;
+
+if (empty($row2['cau1'])){
+  $ci = 1;
+}
+else if (empty($row2['cau2'])){
+  $ci = 2;
+}
+else if (empty($row2['cau3'])){
+  $ci = 3;
+}
+else if (empty($row2['cau4'])){
+  $ci = 4;
+}
+else if (empty($row2['cau5'])){
+  $ci = 5;
+}
+else if (empty($row2['cau6'])){
+  $ci = 6;
+}
+else if (empty($row2['cau7'])){
+  $ci = 7;
+}
+else if (empty($row2['cau8'])){
+  $ci = 8;
+}
+else if (empty($row2['cau9'])){
+  $ci = 9;
+}
+else if (empty($row2['cau10'])){
+  $ci = 10;
+}
+else if (emtpy($row2['cau11'])){
+  $ci = 11;
+}
+else if (empty($row2['cau12'])){
+  $ci = 12;
+}
+else if (empty($row2['cau13'])){
+  $ci = 13;
+}
+else if (empty($row2['cau14'])){
+  $ci = 14;
+}
+else if (empty($row2['cau15'])){
+  $ci = 15;
+} else if (empty($row2['cau16'])){
+  $ci = 16;
+}
+else{
+  $ci = 17;
+}
+for($i=1; $i<$ci; $i++){
+  
+    $query3=mysqli_query($conn,"select * from noidungcauhoi where idcauhoi = '$i'");
+    $row3=mysqli_fetch_array($query3);
+?>
+                          <tbody>
+                            <tr>
+                              <td><?php echo $row3['noidungcauhoi']; ?></td>
+                              <td><?php echo $row2['cau'.$i.'']; ?></td>
+                            </tr>
+                            
+                            
+                          </tbody>
+                          <?php }?>
+                        </table>
+                </div>
+
+                    <center><button class="btn"><a style="font-size:17px" href="sendholland.php?id=<?php echo $idkhach;?>">Gửi thông tin về mail</a></button></center>
+                   
+            </div>
+          </div>
+
+  
+
+
+
+
+
+
+
+
+          <div div class="baiviet_infor" >
+            <div class="">  
+               
+                <div class="">
+
+          <table class="table basic">
+                        <thead>
+                          <tr>
+                            <th>Nhóm ngành</th>
+                            <th>Tên ngành</th>
+                            <th>Mã ngành</th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody class="">
+                            <?php
+                                $query18=mysqli_query($conn,"select * from nhomnganh where holland='$a'");
+                                while($row18=mysqli_fetch_array($query18)){
+                            ?>
+                        <tr>
+                            <td>
+                                <?php 
+                                    $b = $row18['idnhomnganh'];
+                                    if ($b == 'edu'){
+                                        echo 'Nhóm ngành sư phạm';
+                                    } else if ($b == 'art'){
+                                        echo 'Nhóm ngành năng khiếu mỹ thuật';
+                                    }  else if ($b == 'mu'){
+                                        echo 'Nhóm ngành năng khiếu âm nhạc';
+                                    } else if ($b == 'bd'){
+                                        echo 'Nhóm ngành năng khiếu biểu diễn';
+                                    } else if ($b == 'nn'){
+                                        echo 'Nhóm ngành ngôn ngữ';
+                                    } else if ($b =='kt'){
+                                        echo 'Nhóm ngành kinh tế';
+                                    } else if ($b =='ctri'){
+                                        echo 'Nhóm ngành chính trị';
+                                    } else if ($b =='tt'){
+                                        echo 'Nhóm ngành truyền thông';
+                                    } else if ($b =='qly'){
+                                        echo 'Nhóm ngành quản lý - lưu trữ thông tin';
+                                    } else if ($b =='luat'){
+                                        echo 'Nhóm ngành luật';
+                                    } else if ($b =='sinh'){
+                                        echo 'Nhóm ngành công nghệ sinh học và ứng dụng';
+                                    } else if ($b =='khoa'){
+                                        echo 'Nhóm ngành Khoa học môi trường và thiên nhiên';
+                                    } else if ($b =='toan'){
+                                        echo 'Nhóm ngành Toán học và ứng dụng';
+                                    } else if ($b =='cntt'){
+                                        echo 'Nhóm ngành công nghệ thông tin';
+                                    } else if ($b=='kien'){
+                                        echo 'Nhóm ngành xây dựng và kiến trúc';
+                                    } else if($b=='yte'){
+                                        echo 'Nhóm ngành y tế';
+                                    } else if ($b =='dulich'){
+                                        echo 'Nhóm ngành vận tải du lịch';
+                                    } else if($b=='coan'){
+                                        echo 'Nhóm ngành đào tạo công an và quân đội';
+                                    } else {
+                                        echo 'Nhóm ngành thế dục thể thao';
+                                    }
+                                
+                                
+                                ?>
+                            </td>
+                            <td><?php echo $row18['tennganh']; ?></td>
+                            <td><?php echo $row18['manganh']; ?></td>
+<td><?php 
+$manganhnganh = $row18['manganh'];
+$query111=mysqli_query($conn,"select * from gioithieu where manganh='$manganhnganh'");
+$row111 =mysqli_fetch_array($query111);
+
+if (isset($row111['gtmot'])){
+    echo  '<a href="chitietnganh1.php?id='.$idkhach.'&mg='.$manganhnganh.'">Xem thêm</a>';
+}
+else {
+    echo 'Đang cập nhập';
+}
+
+?></td>
+
+
+
+                        </tr>
+
+                        <?php  }?>
+
+                        </tbody>
+                    </table>
+
+                    </div>
+
+
+
+</div>
+</div>
+
+
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

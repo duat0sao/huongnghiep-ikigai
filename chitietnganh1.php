@@ -42,7 +42,7 @@ $query1=mysqli_query($conn,"select * from gioithieu where manganh='$a'");
 $row1 =mysqli_fetch_array($query1);
 
 ?>
-      <br><br><br>             
+   <br><br><br>       
             
 <div class="td-main-content-wrap td-container-wrap">
 
@@ -158,7 +158,7 @@ while($row4=mysqli_fetch_array($query4)){
 <p><?php echo $row1['cohoi'];?></p>
 
 
-  <center><button class="btn"><a href="holland1/nhomnganh.php?id=<?php echo $idkhach;?>"> trở về</a></button></center>
+  <center><button class="btn"><a href="banthan.php?id=<?php echo $idkhach;?>"> trở về</a></button></center>
 <br><br><br><br>
 
 </body>

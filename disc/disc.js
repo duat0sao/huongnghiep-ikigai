@@ -301,8 +301,6 @@ function main() {
           type: "POST",
           
           data:{clm: datadatadata}
-         
-          
           
         });
 

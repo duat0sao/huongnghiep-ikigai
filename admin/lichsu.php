@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="../style1.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://kit.fontawesome.com/4eb98e0bb5.js" crossorigin="anonymous"></script>
@@ -28,10 +28,24 @@
   </style>
 </head>
 <body>
+<?php
+                    $idkhach = $_GET['id'];
+                   
+?>
+
+
+
+
+
+<nav style="background-color:#47bdec;">
+        <a style="display:inline-block; padding:10px; font-size:25px; color:white; text-decoration:none;" href="admin.php">IKIGAI</a>
+        
+      
+</nav>
 
   <?php 
-  include 'config.php';
-  include 'header.php';
+  include '../config.php';
+  
   
   $query12=mysqli_query($conn,"select * from khach where idkhach = '$idkhach'");
   $row12=mysqli_fetch_array($query12);
@@ -46,7 +60,7 @@
       <div class="col-md-4 col-sm-12">
           <div class="thongtin" >
             <h2 class="gioithieu">Giới thiệu</h2>
-            <p style="font-size:15px"><strong><a href="banthan.php?id=<?php echo $idkhach;?>">Trang cá nhân</a></strong></p>
+            <p style="font-size:15px"><strong><a href="xemthem.php?id=<?php echo $idkhach;?>">Trang cá nhân</a></strong></p>
             <div class="diachi">
               <div class="">Họ và Tên</div>
               <div class="infor_1"><?= $row12['hovaten'] ?></div>
@@ -59,9 +73,7 @@
               <div class="">SĐT</div>
               <div class="infor_1"><?= $row12['sdt'] ?></div>
             </div>
-            <div class="diachi">
-              <a style="font-size: 15px;" class="btn" href="doimatkhau.php?id=<?php echo $idkhach;?>">Thay đổi thông tin</a>
-            </div>
+            
           </div>
         
       </div>
@@ -183,7 +195,7 @@ if (empty($maxnhom)){
 
 
 ?>
-                    <center><button class="btn"><a style="font-size:17px" href="sendsend.php?id=<?php echo $idkhach;?>&idstr=<?php echo $row['idstr']?>">Gửi thông tin về mail</a></button></center>
+                    <center><button class="btn"><a style="font-size:20px" href="sendsend.php?id=<?php echo $idkhach;?>&idstr=<?php echo $row['idstr']?>">Gửi</a></button></center>
             </div>
           </div>
 
