@@ -1,21 +1,20 @@
 <?php 
-include 'config.php';
+include '../config.php';
 $idkhach = $_GET['id'];
 ?>
 
-<!doctype html >
-
- <html lang="vi"> 
-<head>
-    <title>Tìm hiểu ngành nghề: Ngành Giáo dục học (Mã XT: 7140101)</title>
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Chi tiết nhóm ngành</title>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <link rel="stylesheet" href="css.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-
-<body class="container">
+  <body>
 
         
 <?php
@@ -29,7 +28,11 @@ $idkhach = $_GET['id'];
 ?>
 
 
-<?php include 'header.php';?>
+<nav style="background-color:#47bdec;">
+        <a style="display:inline-block; padding:10px; font-size:25px; color:white; text-decoration:none;" href="admin.php">IKIGAI</a>
+        
+      
+</nav> 
        
         
 <?php 
@@ -44,7 +47,7 @@ $row1 =mysqli_fetch_array($query1);
 ?>
    <br><br><br>       
             
-<div class="td-main-content-wrap td-container-wrap">
+<div class=" container td-main-content-wrap td-container-wrap">
 
     <div class="td-container td-post-template-5 ">
         
@@ -158,7 +161,7 @@ while($row4=mysqli_fetch_array($query4)){
 <p><?php echo $row1['cohoi'];?></p>
 
 
-  <center><button class="btn"><a href="banthan.php?id=<?php echo $idkhach;?>"> trở về</a></button></center>
+  <center><button class="btn"><a href="xemthem.php?id=<?php echo $idkhach;?>"> trở về</a></button></center>
 <br><br><br><br>
 
 </body>
