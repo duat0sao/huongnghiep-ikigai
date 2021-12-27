@@ -78,41 +78,27 @@
 
 
 <?php 
+
 $query=mysqli_query($conn,"select * from holland where idholland=(select MAX(idholland) from holland where idkhach='$idkhach')");
 $query18=mysqli_query($conn,"select * from disc where iddisc=(select MAX(iddisc) from disc where idkhach='$idkhach')");
 $row=mysqli_fetch_array($query);
 $row18=mysqli_fetch_array($query18);
-
-
+$querystr=mysqli_query($conn,"select * from str");
+$rowif=mysqli_fetch_array($querystr);
+if(isset($rowif)){
+  if(isset($row)){
   $bo1 = $row['bo1'];
   $bo2 = $row['bo2'];
   $bo3 = $row['bo3'];
   $bo4 = $row['bo4'];
   $bo5 = $row['bo5'];
   $bo6 = $row['bo6'];
-  $nhom1 = $row18['nhom1'];
-  $nhom2 = $row18['nhom2'];
-  $nhom3 = $row18['nhom3'];
-  $nhom4 = $row18['nhom4'];
   $timeho = $row['homnay'];
-  $timedi = $row18['homnay'];
-
   $queryho=mysqli_query($conn,"select * from str where homnay='$timeho' and idkhach='$idkhach' ");
-  $querydi=mysqli_query($conn,"select * from str where homnay='$timedi' and idkhach='$idkhach' ");
   $rowho=mysqli_fetch_array($queryho);
-  $rowdi=mysqli_fetch_array($querydi);
-
-  
-
-
-
-  $listnhom = array($nhom1,$nhom2,$nhom3,$nhom4);
-  $maxnhom = max($listnhom);
-  
-
+  $idho = $rowho['idstr'];
   $listbo = array($bo1,$bo2,$bo3,$bo4,$bo5,$bo6);
   $maxbo = max($listbo);
-
   switch ($maxbo) {
     case $bo1:
         $a = 'r';
@@ -136,28 +122,52 @@ $row18=mysqli_fetch_array($query18);
       echo "error";
       break;
     }
+  $chartConfigHo = "{type:'bar',data:{labels:['R','I','A','S','E','C'],datasets:[{data:['$bo1','$bo2','$bo3','$bo4','$bo5','$bo6'],backgroundColor:['red','green','blue','orange','purple','yellow']}]}}";
+  $chartUrlHo = 'https://quickchart.io/chart?c=' . $chartConfigHo;
+  }
+  if(isset($row18)){
+  $nhom1 = $row18['nhom1'];
+  $nhom2 = $row18['nhom2'];
+  $nhom3 = $row18['nhom3'];
+  $nhom4 = $row18['nhom4'];
+  $timedi = $row18['homnay'];
+  $querydi=mysqli_query($conn,"select * from str where homnay='$timedi' and idkhach='$idkhach' ");
+  $rowdi=mysqli_fetch_array($querydi);
+  $iddi = $rowdi['idstr'];
+  $listnhom = array($nhom1,$nhom2,$nhom3,$nhom4);
+  $maxnhom = max($listnhom);
+  $chartConfigDISC = "{type:'bar',data:{labels:['D','I','S','C'],datasets:[{data:['$nhom1','$nhom2','$nhom3','$nhom4'],backgroundColor:['red','green','blue','oragen']}]}}";
+  $chartUrlDISC = 'https://quickchart.io/chart?c=' . $chartConfigDISC;}
+  }
+  
+
+  
+ 
+
+
+  
+  
+
+  
+
+  
     
  
-    $chartConfigHo = "{type:'bar',data:{labels:['R','I','A','S','E','C'],datasets:[{data:['$bo1','$bo2','$bo3','$bo4','$bo5','$bo6'],backgroundColor:['red','green','blue','orange','purple','yellow']}]}}";
-
-    $chartConfigDISC = "{type:'bar',data:{labels:['D','I','S','C'],datasets:[{data:['$nhom1','$nhom2','$nhom3','$nhom4'],backgroundColor:['red','green','blue','oragen']}]}}";
- 
-
-  $chartUrlHo = 'https://quickchart.io/chart?c=' . $chartConfigHo;
-  $chartUrlDISC = 'https://quickchart.io/chart?c=' . $chartConfigDISC;
+  
 ?>
 
           <div div class="baiviet_infor" >
             <div class="">  
                 <center><strong>Holland</strong></center>
                 <div class="">
-                 <center><img class="bd" src=<?php echo $chartUrlHo;?> alt="2"></center>
+                 <center><img class="bd" src=<?php if (isset($row)){ echo $chartUrlHo;} 
+                 else {echo 'hello';}?> alt="2"></center>
                 </div>
                 
 <?php
 
 
-  
+  if(isset($row)){
       echo '<h1 id="1">Người thực tế (R)</h1>';
       echo '<p id="11">Người thuộc nhóm sở thích nghề nghiệp này thường có khả năng về kỹ thuật, công nghệ, hệ thống; ưa thích làm việc với đồ vật, máy móc, động thực vật; thích làm các công việc ngoài trời.</p>';
       echo '<p id="111"><b>Ngành nghề phù hợp</b> với nhóm này bao gồm những nghề về kiến trúc, an toàn lao động, nghề mộc, xây dựng, thủy sản, kỹ thuật, máy tàu thủy, lái xe, huấn luyện viên, nông - lâm nghiệp (quản lý trang trại, nhân giống cá, lâm nghiệp...), cơ khí (chế tạo máy, bảo trì và sửa chữa thiết bị, luyện kim, cơ khí ứng dụng, tự động...), điện - điện tử, địa lý - địa chất (đo đạc, vẽ bản đồ địa chính), dầu khí, hải dương học, quản lý công nghiệp...</p>';
@@ -243,12 +253,17 @@ $row18=mysqli_fetch_array($query18);
         echo "error";
         break;
       }
-
+    echo '<center><button class="btn"><a style="font-size:17px" href="sendsend.php?id='.$idkhach.'&idstr='.$idho.'">Gửi thông tin về mail</a></button></center>';
+    
+    }else{
+      echo '<center>Bạn chưa làm bài khảo sát Holland nào</center>';
+    }
+    
 ?>
 
 
 
-                    <center><button class="btn"><a style="font-size:17px" href="sendsend.php?id=<?php echo $idkhach;?>&idstr=<?php echo $rowho['idstr']?>">Gửi thông tin về mail</a></button></center>
+                    
             </div>
           </div>
 
@@ -257,11 +272,12 @@ $row18=mysqli_fetch_array($query18);
             <div class="">  
                 <center><strong>DISC</strong></center>
                 <div class="">
-                 <center><img class="bd" src=<?php echo $chartUrlDISC;?> alt="2"></center>
+                 <center><img class="bd" src=<?php if(isset($row18)){ echo $chartUrlDISC;}
+                 else {echo 'khong co gi ca';}?> alt="2"></center>
                 </div>
                 <?php
 
-
+if(isset($row)){
   
     echo '<h1 id="d1"> Người Thủ lĩnh (D)</h1><p id="d11"><b>Mô tả:</b> Những người nằm ở nhóm này quan trọng kết quả hoàn thành. Họ luôn tự tin và có động lực cạnh tranh để chiến thắng hoặc đạt được thành công. Họ luôn chấp nhận thử thách và hành động tức thì để đạt được kết quả. Những người thuộc nhóm Thủ lĩnh thường được mô tả là mạnh mẽ, tự tin, nhanh nhẹn, luôn tiếp cận vấn đề một cách trực tiếp. Tuy nhiên, điểm trừ của những người thuộc nhóm Thủ lĩnh là đôi khi họ bị giới hạn bởi sự vô tâm đối với người khác, thiếu kiên nhẫn và hay hoài nghi. Đôi khi họ cũng được cho là dễ bị tổn thương.</p>';
    
@@ -313,10 +329,13 @@ $row18=mysqli_fetch_array($query18);
         echo "error";
         break;
       }
-
+      echo '<center><button class="btn"><a style="font-size:17px" href="sendsend.php?id='.$idkhach.'&idstr='.$iddi.'">Gửi thông tin về mail</a></button></center>';
+    }
+    else {echo '<center>Bạn chưa làm bài khảo sát DISC nào</center>';}
+   
 
 ?>
-                <center><button class="btn"><a style="font-size:17px" href="sendsend.php?id=<?php echo $idkhach;?>&idstr=<?php echo $rowdi['idstr']?>">Gửi thông tin về mail</a></button></center>
+                
             </div>
           </div>
 
@@ -337,7 +356,7 @@ $row18=mysqli_fetch_array($query18);
 $query2=mysqli_query($conn,"select * from toithichgi where idkhach = '$idkhach'");
 $row2=mysqli_fetch_array($query2);
 $hello = 1;
-
+$ci  = 0;
 if (empty($row2['cau1'])){
   $ci = 1;
 }
@@ -404,9 +423,10 @@ for($i=1; $i<$ci; $i++){
                           <?php }?>
                         </table>
                 </div>
-
-                    <center><button class="btn"><a style="font-size:17px" href="sendholland.php?id=<?php echo $idkhach;?>">Gửi thông tin về mail</a></button></center>
-                   
+<?php
+              if ($ci != 0)    { echo  '<center><button class="btn"><a style="font-size:17px" href="sendholland.php?id=<?php echo $idkhach;?>">Gửi thông tin về mail</a></button></center>';}
+else{ echo 'Bạn chưa trả lời câu hỏi nào cả';}
+?>                   
             </div>
           </div>
 
@@ -435,13 +455,14 @@ for($i=1; $i<$ci; $i++){
                         </thead>
                         <tbody class="">
                             <?php
-                                $query18=mysqli_query($conn,"select * from nhomnganh where holland='$a'");
-                                while($row18=mysqli_fetch_array($query18)){
+                            if(isset($row)){
+                                $query188=mysqli_query($conn,"select * from nhomnganh where holland='$a'");
+                                while($row188=mysqli_fetch_array($query188)){
                             ?>
                         <tr>
                             <td>
                                 <?php 
-                                    $b = $row18['idnhomnganh'];
+                                    $b = $row188['idnhomnganh'];
                                     if ($b == 'edu'){
                                         echo 'Nhóm ngành sư phạm';
                                     } else if ($b == 'art'){
@@ -485,10 +506,10 @@ for($i=1; $i<$ci; $i++){
                                 
                                 ?>
                             </td>
-                            <td><?php echo $row18['tennganh']; ?></td>
-                            <td><?php echo $row18['manganh']; ?></td>
+                            <td><?php echo $row188['tennganh']; ?></td>
+                            <td><?php echo $row188['manganh']; ?></td>
 <td><?php 
-$manganhnganh = $row18['manganh'];
+$manganhnganh = $row188['manganh'];
 $query111=mysqli_query($conn,"select * from gioithieu where manganh='$manganhnganh'");
 $row111 =mysqli_fetch_array($query111);
 
@@ -505,7 +526,7 @@ else {
 
                         </tr>
 
-                        <?php  }?>
+                        <?php  }}?>
 
                         </tbody>
                     </table>
