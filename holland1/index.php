@@ -13,18 +13,40 @@ $idkhach = $_GET['id'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Holland Quiz</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src = "https://code.highcharts.com"> </script>
 
+  <style>
+  
+  @media screen and (max-width: 600px) {
+  .graph-container {
+          display: block;
+          float: none;
+          width: 100%;
+          margin-top: 150px;
+          margin-right:0px;
+          margin-left:0px;
+          height: auto;
+      }
+  }
+  </style>
+  
   </head>
   <body>
+  <nav style="background-color:#47bdec;">
+        <a style="display:inline-block; padding:10px; font-size:20px; color:white; text-decoration:none;" href="../toigioi.php?id=<?php echo $idkhach;?>">IKIGAI</a>
+        <a style="display:inline-block; padding:10px; font-size:20px; color:white; text-decoration:none; float: right; margin-right: 5px;" href="../loginandout/logout.php">Thoát</a>
+</nav>
+
+    
 
     <div class="align-center text-center">
       <h2 class="question"></h2>
       <div class="answers">
+      <h5 id="taga1" style="display: block;"><sub>Hãy chọn đáp án phù hợp nhất với mình</sub></h5>
         <button class="btn btn-primary absolutely" value="4" type="button" id="1">
           Hoàn toàn đúng
         </button>
@@ -40,7 +62,7 @@ $idkhach = $_GET['id'];
         <button class="btn btn-primary never" value="0" type="button" id="1">
           Không hề đúng
         </button>
-
+        <h4 class="" id="thutu" style="display: block;">/54</h4>
         <br><br> 
         <a class="btn " href="../toigioi.php?id=<?php echo $idkhach;?>" id="taga" style="display: block;">Trở lại</a>
         
@@ -60,18 +82,23 @@ $idkhach = $_GET['id'];
 
       <div class="container container1 hide">
         <div class="row justify-content-center">
-          
-          <div>
-            <canvas id="myChart" style="width:100%; margin:auto; max-width:450px; height: 450px"></canvas>
+         
+          <div class="graph-container">
+            <canvas id="myChart"></canvas>
           </div>
-          <br><br><br><br>
+          <br>
 
         </div>
       </div>
       <div class="result blue" style="display: none;"></div>
-      <a class="btn"  href="../toigioi.php?id=<?php echo $idkhach;?>" id="hello" style="display: none;">Home</a>
+      <div class=""></div>
+      <a class="btn btn-primary"  href="nhomnganh.php?id=<?php echo $idkhach;?>" id="hello" style="display: none;">Xem thêm nhóm ngành phù hợp</a>
     </div>
+
+
+
     
+    <br><br><br><br>
 
     <script src="holland.js"></script>
   </body>

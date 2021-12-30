@@ -14,7 +14,7 @@ const questions = [
   "Tôi thích thực hiện các thí nghiệm hay nghiên cứu",
   "Tôi có khả năng tổng hợp, khái quát, suy đoán những vấn đề",
   "Tôi thích những hoạt động điều tra, phân loại, kiểm tra, đánh giá",
-  "Tôi tự tổ chức công việc mình phái làm",
+  "Tôi tự tổ chức công việc mình phải làm",
   "Tôi thích suy nghĩ về những vấn đề phức tạp, làm những công việc phức tạp",
   "Tôi có khả năng giải quyết các vấn đề",
   "Tôi là người dễ xúc động",
@@ -29,12 +29,12 @@ const questions = [
   "Tôi là người thân thiện, hay giúp đỡ người khác",
   "Tôi thích gặp gỡ, làm việc với con người",
   "Tôi là người lịch sự, tử tế",
-  "Tôi thích khuyên bảo, huấn luyện hay giảng giái cho người khác",
-  "Tôi là người biệt lắng nghe",
+  "Tôi thích khuyên bảo, huấn luyện hay giảng giải cho người khác",
+  "Tôi là người biết lắng nghe",
   "Tôi thích các hoạt động chăm sóc sức khỏe của bản thân và người khác",
-  "Tôi thích các hoạt độngvì mục tiêu chung của công đồng, xã hội",
+  "Tôi thích các hoạt động vì mục tiêu chung của công đồng, xã hội",
   "Tôi mong muốn mình có thể đóng góp để xã hội tốt đẹp hơn",
-  "Tôi mong muốn mình có thể đóng góp để xã hội tốt đẹp hơn",
+  "Tôi là người thích trẻ nhỏ",
   "Tôi là người có tính phiêu lưu, mạo hiểm",
   "Tôi có tính quyết đoán",
   "Tôi là người năng động",
@@ -42,13 +42,13 @@ const questions = [
   "Tôi thích các việc quản lý, đánh giá",
   "Tôi thường đặt ra các mục tiêu, kế hoạch trong cuộc sống",
   "Tôi thích gây ảnh hưởng đến người khác",
-  "Tôi là người thích cạnh tranh, và muốn mình giói hơn người khác",
+  "Tôi là người thích cạnh tranh, và muốn mình giỏi hơn người khác",
   "Tôi muốn người khác phải kính trọng, nể phục tôi",
   "Tôi là người có đầu óc sắp xếp, tổ chức",
   "Tôi có tính cẩn thận",
   "Tôi là người chu đáo, chính xác và đáng tin cậy",
   "Tôi thích công việc tính toán sổ sách, ghi chép số liệu",
-  "Tôi thích các công việc lưu trữ, phân loại, cập nhất thông tin",
+  "Tôi thích các công việc lưu trữ, phân loại, cập nhập thông tin",
   "Tôi thường đặt ra những mục tiêu, kế hoạch trong cuộc sống",
   "Tôi thích dự kiến các khoản thu chi",
   "Tôi thích lập thời khóa biểu, sắp xếp lịch làm việc",
@@ -79,7 +79,9 @@ index 4 => enterprising
 index 5 => conventional
 */
 
-const questionText = document.querySelector(".question");
+
+
+const questionText = document.querySelector(".question");    //Truyền vào cái đầu tie
 const buttons = document.querySelectorAll(".answers button");
 let questionsIndex = 0;
 let scoresIndex = 0;
@@ -90,6 +92,8 @@ let scoresIndex = 0;
 function printQuestion() {
   console.log(questions[questionsIndex]);
   questionText.textContent = questions[questionsIndex];
+  
+
 }
 
 function nextQuestion() {  // câu hỏi tiếp theo
@@ -171,6 +175,8 @@ function resultScreen() {
 
   //   Print Result
   document.getElementById("taga").style.display = "none";
+  document.getElementById("taga1").style.display = "none";
+  document.getElementById("thutu").style.display = "none";
   document.getElementById("hello").style.display = "block";
   document.getElementById("resultIntro").style.display = "block";
   let resultName = document.createElement("h2");
@@ -197,7 +203,6 @@ function printCanvas() {
     new Chart("myChart", {
       
       type: "pie",
-      indexLabelFontSize: 0,
       data: {
         labels: xValues,
         
@@ -211,8 +216,10 @@ function printCanvas() {
         title: {
           display: true,
           text: "Biểu điểm của bạn",
-          fontSize:34
-        }
+          fontSize:26
+        },
+        responsive: true,
+        maintainAspectRatio: false
       }
     });
 
@@ -223,6 +230,7 @@ function printCanvas() {
 
 function main() {
   printQuestion();
+  document.getElementById("thutu").innerHTML = "1/54";
   buttons.forEach(button => {
     button.addEventListener("click", () => {
       let score = button.getAttribute("value");
@@ -230,13 +238,18 @@ function main() {
       scores[scoresIndex] += score;
       console.log(scores);
       nextQuestion();
+      document.getElementById("thutu").innerHTML = `${questionsIndex+1}/54`;
       document.getElementById("1").checked = false;
       printQuestion();
       if (questionsIndex % 9 == 0) scoresIndex += 1;
       if (questionsIndex == questions.length) {
         
         resultScreen();
+        
         printCanvas();
+        
+
+
 
 
         

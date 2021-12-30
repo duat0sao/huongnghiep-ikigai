@@ -1,10 +1,8 @@
 <?php
-
 include '../config.php';
 
+
 $data = $_POST['clm'];
-
-
  $bo1 = $data[0];
  $bo2 = $data[1];
  $bo3 = $data[2];
@@ -12,11 +10,7 @@ $data = $_POST['clm'];
  $bo5 = $data[4];
  $bo6 = $data[5];
  $idkhach = $data[6];
-
-
- $sql = "UPDATE holland SET bo1='$bo1', bo2='$bo2', bo3='$bo3', bo4='$bo4', bo5='$bo5', bo6='$bo6' WHERE idkhach='$idkhach'";
-
-mysqli_query($conn, $sql)
-
+mysqli_query($conn,"INSERT INTO holland(idkhach, bo1, bo2, bo3, bo4, bo5, bo6, homnay) VALUES('$idkhach','$bo1','$bo2','$bo3','$bo4','$bo5','$bo6',(now()))");
+mysqli_query($conn,"INSERT INTO str(idkhach, bo1, bo2, bo3, bo4, bo5, bo6, nhom1, nhom2, nhom3, nhom4, homnay,loai) VALUES('$idkhach', '$bo1','$bo2','$bo3','$bo4','$bo5','$bo6','0','0','0','0',(now()),'holland')");
 
 ?>

@@ -30,13 +30,13 @@
   font-size: 1.2rem;
   margin-top: 0.8rem;
   background-color: rgb(58, 58, 184);
-  border-color: rgb(58, 58, 184);
+  /*border-color: rgb(58, 58, 184);*/
   color: #fff;
 }
 
 .btn-primary:hover {
   background-color: rgb(24, 24, 177);
-  border-color: rgb(24, 24, 177);
+  /*border-color: rgb(24, 24, 177);*/
   color: #fff;
   cursor: pointer;
 }
@@ -59,8 +59,3 @@ p {
 }
 
 
-
-canvas#myChart {
-  margin-top: 120px;
-  margin-bottom: 40px;
-}
