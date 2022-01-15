@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 22, 2021 lúc 06:00 PM
+-- Thời gian đã tạo: Th1 15, 2022 lúc 11:20 AM
 -- Phiên bản máy phục vụ: 10.4.18-MariaDB
 -- Phiên bản PHP: 8.0.5
 
@@ -544,6 +544,7 @@ INSERT INTO `ctdaotaoct` (`manganh`, `ctdtct`) VALUES
 (7210404, 'Hình họa 2'),
 (7210404, 'Giáo dục quốc phòng'),
 (7210404, 'Tin học ứng dụng 2 (Illustrator)'),
+(7210404, '7210404'),
 (7210404, 'Diễn họa thời trang 2'),
 (7210404, 'Diễn họa thời trang 2'),
 (7210404, 'Chủ nghĩa xã hội khoa học'),
@@ -552,6 +553,7 @@ INSERT INTO `ctdaotaoct` (`manganh`, `ctdtct`) VALUES
 (7210404, 'Nghiên cứu lịch sử phát triển thời trang'),
 (7210404, 'Vật liệu may 1'),
 (7210404, 'Kỹ thuật cắt may 2'),
+(7210404, '7210404'),
 (7210404, 'Phương pháp sáng tạo'),
 (7210404, 'Tư tưởng Hồ Chí Minh'),
 (7210404, 'Anh văn 4'),
@@ -560,7 +562,7 @@ INSERT INTO `ctdaotaoct` (`manganh`, `ctdtct`) VALUES
 (7210404, 'Thiết kế thời trang 1'),
 (7210404, 'Nghiên cứu trang phục truyền thống'),
 (7210404, 'Lịch sử Đảng Cộng sản Việt Nam'),
-(7210404, 'Nghệ thuật học'),
+(0, 'Nghệ thuật học'),
 (7210404, 'Nghiên cứu chuyên đề thời trang'),
 (7210404, 'Đồ án tiền tốt nghiệp – TKTT'),
 (7210404, 'Đồ án tốt nghiệp'),
@@ -719,7 +721,7 @@ INSERT INTO `ctdaotaoct` (`manganh`, `ctdtct`) VALUES
 (7220210, 'Quan hệ Việt-Hàn'),
 (7220210, 'Hàn Quốc học'),
 (7220210, 'Chữ Hán'),
-(7220210, 'Định hướng Biên – Phiên dịch'),
+(7220210, 'A. Định hướng Biên – Phiên dịch'),
 (7220210, 'Học phần bắt buộc'),
 (7220210, 'Nhập môn Biên-Phiên dịch'),
 (7220210, 'Thực hành dịch viết'),
@@ -889,7 +891,7 @@ INSERT INTO `ctdaotaoct` (`manganh`, `ctdtct`) VALUES
 (7310104, 'Hội nhập Kinh tế quốc tế'),
 (7310104, 'Đầu tư theo hình thức PPP'),
 (7310104, '10 Kế toán dự án đầu tư'),
-(7310104, 'Chuyên đề thực tập'),
+(7310104, '4. Chuyên đề thực tập'),
 (7310106, 'Những nguyên lý cơ bản của CN Mác-Lênin 1, 2'),
 (7310106, 'Tư tưởng Hồ Chí Minh'),
 (7310106, 'Đường lối cách mạng của Đảng Cộng sản Việt Nam'),
@@ -940,7 +942,7 @@ INSERT INTO `ctdaotaoct` (`manganh`, `ctdtct`) VALUES
 (7310106, 'Hội nhập Kinh tế quốc tế'),
 (7310106, 'Đầu tư theo hình thức PPP'),
 (7310106, '10 Kế toán dự án đầu tư'),
-(7310106, 'Chuyên đề thực tập'),
+(7310106, '4. Chuyên đề thực tập'),
 (7310105, 'Những nguyên lý cơ bản của CN Mác-Lênin 1, 2'),
 (7310105, 'Tư tưởng Hồ Chí Minh'),
 (7310105, 'Đường lối cách mạng của Đảng Cộng sản Việt Nam'),
@@ -5906,7 +5908,23 @@ CREATE TABLE `disc` (
 -- Đang đổ dữ liệu cho bảng `disc`
 --
 
-
+INSERT INTO `disc` (`nhom1`, `nhom2`, `nhom3`, `nhom4`, `iddisc`, `idkhach`, `homnay`) VALUES
+('14', '0', '0', '0', 14, 14, '2021-12-22 12:07:01'),
+('0', '0', '0', '0', 17, 17, '2021-12-22 12:07:01'),
+('0', '0', '0', '0', 18, 18, '2021-12-22 12:07:01'),
+('0', '0', '0', '0', 19, 19, '2021-12-22 12:07:01'),
+('8', '2', '3', '1', 20, 14, '2021-12-22 12:07:01'),
+('5', '4', '3', '2', 27, 20, '2021-12-22 23:58:42'),
+('3', '5', '4', '2', 28, 20, '2021-12-23 00:11:03'),
+('3', '5', '3', '3', 29, 20, '2021-12-23 00:28:15'),
+('3', '5', '4', '2', 30, 20, '2021-12-23 00:28:55'),
+('1', '8', '3', '2', 31, 20, '2021-12-23 00:30:25'),
+('1', '10', '2', '1', 32, 20, '2021-12-23 00:30:53'),
+('14', '0', '0', '0', 33, 21, '2021-12-23 09:46:27'),
+('5', '3', '4', '2', 34, 21, '2021-12-23 10:01:22'),
+('14', '0', '0', '0', 35, 21, '2021-12-25 10:17:22'),
+('5', '2', '3', '4', 36, 14, '2021-12-25 10:59:24'),
+('4', '3', '3', '4', 37, 22, '2021-12-27 11:24:09');
 
 -- --------------------------------------------------------
 
@@ -6020,7 +6038,11 @@ INSERT INTO `gioithieu` (`manganh`, `gtmot`, `gtchung`, `ctdaotao`, `cohoi`) VAL
 INSERT INTO `gioithieu` (`manganh`, `gtmot`, `gtchung`, `ctdaotao`, `cohoi`) VALUES
 (7840101, 'Dịch vụ vận tải Logistics đang là lĩnh vực phát triển mạnh mẽ trên toàn thế giới và trở thành một ngành công nghiệp quan trọng tại Việt Nam.  Các doanh nghiệp kinh doanh trong lĩnh vực logistics và vận tải tại Việt Nam cung cấp cơ hội việc làm và phát triển bản thân cho thế hệ trẻ trong tương lai. Nếu bạn đang muốn tìm kiếm cơ hội với ngành học này thì hãy tiếp tục đọc bài viết này nhé.', 'Khai thác vận tải là ngành học nghiên cứu về quá trình lên kế hoạch, áp dụng và kiểm soát các luồng giao dịch hàng hóa cùng với các thông tin liên quan tới đầu vào (các chuyên liệu vật tư) và đầu ra (các sản phẩm cuối cùng) từ ban đầu cho tới khi tiêu thụ, còn biết tới là khâu hậu cần trong vận chuyển.', 'Sinh viên theo học ngành Khai thác vận tải sẽ được đào tạo các kiến thức và kỹ năng về:  Kỹ năng lập kế hoạch, tổ chức và điều hành các dịch vụ vận tải đa phương thức Kỹ năng phân tích luồng hàng, xác định nhu cầu của khách hàng Quy hoạch trung tâm phân phối và quản trị quy trình phân phối từ các đầu mối tới khách hàng Khả năng lập kế hoạch, tổ chức công tác đóng gói, kho bãi, xếp dỡ, giao nhận, vận tải và cung ứng Khả năng phân tích hiệu quả hoạt động khai thác vận tải logistics Xây dựng quy trình khai thác, phát triển và quản trị chuỗi cung ứng', ''),
 (7510605, 'Ngành Logistics đang thực sự phát triển nhờ hệ thống giao thông, đường xá ở nước ta ngày càng mở rộng. Chính vì vậy mà nhân lực ngành này đang thiếu hụt một lượng lớn, tiềm năng và nhu cầu việc làm của ngành liên quan tới Logistics và quản lý chuỗi cung ứng luôn ở mức cao.  Hãy cùng mình đi tìm hiểu về một số thông tin quan trọng của ngành Logistics nhé.', 'Logistics và Quản lý chuỗi cung ứng là ngành học nghiên cứu và đào tạo về dịch vụ vận chuyển trong sản xuất và kinh doanh. Các hoạt động này là các bước từ lên kế hoạch, sử dụng và kiểm soát luồng vận chuyển hàng hóa, kiểm soát nguyên liệu đầu vào và sản phẩm đầu ra, từ sản xuất tới tiêu thụ.', 'Có thể nói, Logistics và Quản lý chuỗi cung ứng chính là một hệ thống toàn diện, người quản lý hệ thống này cần có một chiến lược phù hợp để phân phối các sản phẩm được sản xuất trong nước tới khách hàng nội địa và trên toàn cầu một cách nhanh và đạt hiệu quả cao.', 'Các công việc ngành Logistics mà bạn có thể mong đợi như:  1. Nhân viên khai báo hải quan Mức lương: ~ 20 triệu/tháng  Công việc bao gồm:  Thực hiện giải quyết các vấn đề hải quan phát sinh Kiểm tra việc mở tờ khai trên hệ thống Làm thủ tục liên quan tới việc thông quan hàng hóa như khai báo và nộp thuế xuất nhập khẩu, thủ tục xin hoàn thuế, miễn giảm thuế, xin giấy phép hạn ngạch, kiểm tra chất định và kiểm định hàng hóa Thực hiện các thủ tục nhập hàng, định mức tới khi xuất hàng theo phương thức gia công, sản xuất, xuất khẩu. Thực hiện thủ tục thanh koản và báo cáo quyết toán Hướng dẫn khách hàng và làm việc trực tiếp với họ về những vấn đề liên quan tới khai báo hải quan Làm việc trực tiếp với cơ quan hải quan khi cần Xây dựng mối quan hệ tốt đẹp với các chi cục hải quan và cơ quan ban ngành liên quan tới xuất – nhập khẩu.  2. Nhân viên kinh doanh cho công ty vận tải (Logistics Sales) Mức lương: 5 – 15 triệu/tháng  Công việc bao gồm:  Tiếp cận và khai thác, phát triển lượng khách hàng có nhu cầu về vận tải giao nhận, hàng hóa xuất nhập khẩu Chăm sóc khách hàng cũ Khai thác đại lý để phát triển các lô hàng nhập FOB và EXW Thực hiện báo cáo khi cấp trên có yêu cầu 3. Nhân viên chứng từ Logistics tại các công ty vận chuyển Mức lương: 7 – 10 triệu/tháng  Công việc bao gồm:  Nhận Booking từ khách Liên hệ hãng tàu để lấy lệnh cấp container rỗng Fax lệnh cấp container cho khách Theo dõi và yêu cầu khách hàng đóng hàng và hạ bãi đúng thời gian quy định Yêu cầu khách hàng khi đóng hàng vào container xong phải báo chi tiết Đánh HBL nháp Fax cho khách kiểm tra và confirm sau khi nhận chi tiết lô hàng từ khách Gửi chi tiết lô hàng và tên đại lý cho hãng tàu đánh MBL. Khi nhận MBL phải kiểm tra kỹ về tên tàu, số chuyến, số cont/seal, tên đại lý… Đến hãng tàu nhận MBL với MBL gốc thường chỉ cần MBL Surrender  nên chỉ nận MBL bằng FAX Giao HBL  gốc cho khách hàng và  thu tiền Lưu file cần thiết Và một số công việc khác như  Nhân viên thông quan (Customs Clearance Staff) Trưởng bộ phận phân phối (mức lương 15 – 25tr/tháng) Nhân viên Logistics (lương 8 – 12 triệu)'),
-(7140206, 'Giáo dục thể chất là ngành học năng khiếu dành cho những bạn yêu thích thể dục thể thao và muốn trở thành giáo viên thể dục hay tương lai làm các công việc liên quan tới thể dục thể thao… ???? Nếu bạn đang đọc bài viết này, khả năng cao bạn là một người yêu thích các môn về thể dục, thể thao?  Vậy có những lưu ý gì quan trọng trước khi đăng ký xét tuyển ngành này? Hãy cùng mình tìm hiểu một chút nhé.', 'Giáo dục thể chất (Physical education) là ngành học giáo dục giảng dạy về thể chất, vận động và ảnh hưởng từ vận động tới sự phát triển về thể chất của con người. Thông qua quá trình vận động sẽ dần xây dựng thể chất của con người theo hướng tích cực. Các bạn cứ hình dung thầy/cô dạy thể dục cho dễ hiểu nhé, họ là những người đào tạo các bạn về giáo dục thể chất cơ bản trước khi bước lên đại học.', 'Chương trình đào tạo ngành Giáo dục thể chất sẽ cung cấp cho các bạn kiến thức và kỹ năng cần thiết trong việc giảng dạy, nghiên cứu, tổ chức các buổi hoạt động thể chất, thể dục thể thao tại các cấp trường học, trung tâm thể thao sao cho phù hợp.', 'Sinh viên ngành Giáo dục thể chất sau khi ra trường sẽ có đủ điều kiện về kỹ năng, kiến thức để đảm nhiệm công tác giảng dạy hoặc huấn luyện tại các trường đại học, trường cấp 1, 2, cấp 3, học viện, đại học, trung tâm thể dục thể thao của Việt Nam.  Ngoài ra các bạn có thể đảm nhiệm công tác điều hành, quản lý tại các cơ quan, tổ chức về TDTT giải trí, trung tâm tổ chức sự kiện thể thao, kinh doanh, buôn bán đồ dùng thể thao, cơ quan truyền thông về thể thao…');
+(7140206, 'Giáo dục thể chất là ngành học năng khiếu dành cho những bạn yêu thích thể dục thể thao và muốn trở thành giáo viên thể dục hay tương lai làm các công việc liên quan tới thể dục thể thao… ???? Nếu bạn đang đọc bài viết này, khả năng cao bạn là một người yêu thích các môn về thể dục, thể thao?  Vậy có những lưu ý gì quan trọng trước khi đăng ký xét tuyển ngành này? Hãy cùng mình tìm hiểu một chút nhé.', 'Giáo dục thể chất (Physical education) là ngành học giáo dục giảng dạy về thể chất, vận động và ảnh hưởng từ vận động tới sự phát triển về thể chất của con người. Thông qua quá trình vận động sẽ dần xây dựng thể chất của con người theo hướng tích cực. Các bạn cứ hình dung thầy/cô dạy thể dục cho dễ hiểu nhé, họ là những người đào tạo các bạn về giáo dục thể chất cơ bản trước khi bước lên đại học.', 'Chương trình đào tạo ngành Giáo dục thể chất sẽ cung cấp cho các bạn kiến thức và kỹ năng cần thiết trong việc giảng dạy, nghiên cứu, tổ chức các buổi hoạt động thể chất, thể dục thể thao tại các cấp trường học, trung tâm thể thao sao cho phù hợp.', 'Sinh viên ngành Giáo dục thể chất sau khi ra trường sẽ có đủ điều kiện về kỹ năng, kiến thức để đảm nhiệm công tác giảng dạy hoặc huấn luyện tại các trường đại học, trường cấp 1, 2, cấp 3, học viện, đại học, trung tâm thể dục thể thao của Việt Nam.  Ngoài ra các bạn có thể đảm nhiệm công tác điều hành, quản lý tại các cơ quan, tổ chức về TDTT giải trí, trung tâm tổ chức sự kiện thể thao, kinh doanh, buôn bán đồ dùng thể thao, cơ quan truyền thông về thể thao…'),
+(7860113, '', 'Phòng cháy chữa cháy và cứu nạn cứu hộ là một trong những lĩnh vực đặc thù của hệ thống ngành nghề ở nước ta. Đây là ngành nghề với nhiệm vụ quan trọng, đào tạo ra những chiến sĩ PCCC có năng lực và chuyên môn để sẵn sàng đứng đầu chuyến tiến để chiến đấu với những trận lửa cháy, đảm bảo cuộc sống thanh bình cho nhân dân.', '', '•	Ở Bộ Công an có Cục cảnh sát phòng cháy và chữa cháy và cứu nạn, cứu hộ. •	Thành phố Hồ Chí Minh, Hà Nội, Hải Phòng, Cần Thơ, Đà Nẵng, Bắc Ninh, Thừa Thiên Huế, Đồng Nai, Bình Dương, Vĩnh Phúc, Bà Rịa – Vũng Tàu, Đăk Lăk, Bình Định, Quảng Ninh, Khánh Hòa, Lâm Đồng, Quảng Ngãi, Thanh Hóa, Nghệ An, Thái Nguyên có Cảnh sát phòng cháy và chữa cháy (đôi khi được gọi là Sở Cảnh sát phòng cháy và chữa cháy, ngang cấp với Công an cấp tỉnh/thành phố) trực tiếp quản lý các Phòng Cảnh sát PCCC quận, huyện, thành phố trực thuộc tỉnh. •	Ở Công an các tỉnh, thành phố trực thuộc trung ương có Phòng cảnh sát phòng cháy,chữa cháy và cứu nạn, cứu hộ trực tiếp quản lý các đội phòng cháy, chữa cháy khu vực.'),
+(7860104, '', 'Ngành Điều tra hình sự là chuyên ngành đào tạo cán bộ công an hệ đại học chuyên ngành Hình sự có những kỹ năng nghiệp vụ phục vụ trong việc phá án, có phẩm chất đạo đức tốt, có phương pháp tư duy khoa học, có đạo đức nghề nghiệp, có sức khỏe tốt để sẵn sàng nhận nhiệm vụ được giao', '', 'Cơ hội việc làm sau tốt nghiệp Sau khi tốt nghiệp chuyên ngành Điều tra hình sự, các cán bộ công an có thể làm tại các đơn vị khác nhau tại các đơn vị trực thuộc Bộ Công an như: •	Cục CSĐTTP về tham nhũng kinh tế buôn lậu; •	Cục CSĐTTP về ma túy; •	Cục CSQLHC về TTXH; •	Cục CS quản lý giam giữ tạm giam và thi hành án hình sự tại cộng đồng; •	Cục An ninh điều tra; •	Cục An ninh mạng và phòng chống tội phạm sử dụng công nghệ cao; •	Cục Công tác đảng, công tác chính trị… •	Làm việc tại Công an tỉnh, thành phố trực thuộc Trung ương; •	Công an hình sự của quận, huyện, thành phố trực thuộc tỉnh'),
+(7720604, 'Khúc xạ nhãn khoa là một ngành y học chuyên nghiên cứu về mắt và các liên hệ về mắt với các tật khúc xạ mắt', 'Khúc xạ nhãn khoa là một ngành y học chuyên nghiên cứu về mắt và các liên hệ về mắt với các tật khúc xạ mắt', '', 'Cơ hội việc làm sau tốt nghiệp: -Lập kế hoạch, tổ chức, thực hiện quy trình thăm khám người bệnh -Phối hợp với các bác sĩ chuyên khoa về mắt thăm khám người bệnh  -Làm các công việc nghiên cứu, thí nghiệm, khảo sát về mắt -Tư  vấn, giáo dục sức khỏe mắt cho cộng đồng -Đề xuất các phương pháp chắm sóc, điều trị và phục hồi mắt và phòng chống bệnh -Giảng dạy đào tạo về chuyên ngành khúc xạ nhãn khoa'),
+(7840102, '', 'Ngành Quản lý hoạt động bay là ngành đào tạo những sinh viên trở thành Kỹ sư chuyên ngành Quản lý hoạt động bay; quản lý, điều hành hoạt động bay dân dụng, đảm bảo an toàn, điều hòa cho việc cất và hạ cánh của các chuyến bay, giám sát trung tâm bay theo các phương pháp và chính sách đã ban hành, đưa ra những chỉ dẫn cần thiết cho việc cất cánh và hạ cánh', '', 'Cơ hội việc làm sau tốt nghiệp •	 Vị trí như kiểm soát không lưu, thủ tục bay, kế hoạch bay, thông báo bay của Trung tâm Quản lý bay… •	Giảng dạy tại các trường đại học, cao đẳng, dạy nghề có liên quan đến hàng không; •	Nhân viên thủ tục bay; Nhân viên thông báo, hợp đồng bay; •	Kiểm soát viên mặt đất tại sân bay; •	Kiểm soát viên không lưu tại sân bay; •	Kiểm soát viên không lưu tiếp cận ra-đa, không ra-đa; Kiểm soát viên không lưu đường dài ra-đa, không ra-đa; •	Kíp trưởng không lưu; •	Huấn luyện viên không lưu; •	Nhân viên đánh tín hiệu.');
 
 -- --------------------------------------------------------
 
@@ -6044,6 +6066,15 @@ CREATE TABLE `holland` (
 -- Đang đổ dữ liệu cho bảng `holland`
 --
 
+INSERT INTO `holland` (`bo1`, `bo2`, `bo3`, `bo4`, `bo5`, `bo6`, `idholland`, `idkhach`, `homnay`) VALUES
+('36', '36', '36', '36', '36', '36', 32, 14, '2021-12-22 12:09:31'),
+('0', '0', '0', '0', '0', '0', 35, 17, '2021-12-22 12:09:31'),
+('0', '0', '0', '0', '0', '0', 36, 18, '2021-12-22 12:09:31'),
+('0', '0', '0', '0', '0', '0', 37, 19, '2021-12-22 12:09:31'),
+('20', '24', '36', '36', '36', '36', 40, 20, '2021-12-22 23:58:17'),
+('31', '27', '27', '27', '23', '18', 41, 21, '2021-12-25 10:17:37'),
+('0', '9', '21', '36', '11', '33', 42, 21, '2021-12-26 12:43:17'),
+('23', '11', '12', '29', '35', '36', 43, 22, '2021-12-27 11:33:53');
 
 -- --------------------------------------------------------
 
@@ -6063,7 +6094,14 @@ CREATE TABLE `khach` (
 -- Đang đổ dữ liệu cho bảng `khach`
 --
 
-
+INSERT INTO `khach` (`idkhach`, `email`, `sdt`, `matkhau`, `hovaten`) VALUES
+(14, '18lynnxx@gmail.com', 1234, '1', 'Trần Nhật Duật'),
+(17, '1@122', 866546300, '1', '1'),
+(18, '1@114', 866546300, '1', 'Trần Nhật Duật'),
+(19, '2@01', 9879999, '1', 'có 1 không 2'),
+(20, 'mail@mail', 866546300, '1', 'Trần Nhật Duật'),
+(21, '1@12345', 111, '1', 'Trần Nhật Duật'),
+(22, '22@22', 1, '1', '2');
 
 -- --------------------------------------------------------
 
@@ -6315,8 +6353,8 @@ INSERT INTO `khoixettuyen` (`manganh`, `khoi`) VALUES
 (7310106, 'Khối D07 (Toán, Hóa, Anh)'),
 (7310107, 'Khối A00 (Toán, Vật lí, Hóa học)'),
 (7310107, 'Khối A01 (Toán, Vật lí, Tiếng Anh)'),
-(7310107, 'Khối C15 (Văn, Toán, Khoa học xã hội)'),
-(7310107, 'Khối D01 (Toán, Anh, Văn)'),
+(7310107, 'Khối C15  (Văn, Toán, Khoa học xã hội)'),
+(7310107, ' Khối D01 (Toán, Anh, Văn)'),
 (7310107, 'Khối D07 (Toán, Hóa, Anh)'),
 (7310107, 'Khối D90 (Toán, KHTN, Anh)'),
 (7310108, 'Khối A00: Toán, Vật lí, Hóa học'),
@@ -7346,7 +7384,17 @@ INSERT INTO `khoixettuyen` (`manganh`, `khoi`) VALUES
 (7810301, 'Khối C00 (Văn, Sử, Địa)'),
 (7810301, 'Khối C14 (Văn, Toán, GDCD)'),
 (7810301, 'Khối C19 (Văn, Sử, GDCD)'),
-(7810301, 'Khối D78 (Văn, KHXH, Anh)');
+(7810301, 'Khối D78 (Văn, KHXH, Anh)'),
+(7860113, 'A01: Toán, Vật lí, Anh'),
+(7860113, 'C03 : Ngữ văn, Toán, Lịch sử'),
+(7860113, 'D01 : Ngữ văn, Toán , Tiếng Anh'),
+(7860113, 'A00 :  Toán, Vật lí, Hóa học'),
+(7720604, 'B00 '),
+(7840102, 'Khối A00: Toán học, Vật lý, Hóa học'),
+(7840102, '•	Khối A01: Toán học, Vật lý, Tiếng Anh'),
+(7840102, '•	Khối D01: Toán học, Ngữ văn, Tiếng Anh'),
+(7840102, 'Khối D78: Ngữ văn, Khoa học xã hội, Tiếng Anh'),
+(7840102, 'Khối D96: Toán học, Khoa học xã hội, Tiếng Anh.');
 
 -- --------------------------------------------------------
 
@@ -7397,8 +7445,8 @@ INSERT INTO `nhomnganh` (`idnhomnganh`, `tennganh`, `manganh`, `diemvao`, `holla
 ('edu', 'Sư phạm Ngữ văn', '7140217', '', 's'),
 ('edu', 'Sư phạm Lịch sử', '7140218', '', 'r'),
 ('edu', 'Sư phạm Địa lý', '7140219', '', 'r'),
-('edu', 'Sư phạm âm nhạc', '7140221', '', 'r'),
-('edu', 'Sư phạm âm nhạc', '7140221', '', 'a'),
+('edu', 'Sư phạm  m nhạc', '7140221', '', 'r'),
+('edu', 'Sư phạm  m nhạc', '7140221', '', 'a'),
 ('edu', 'Sư phạm Mỹ thuật', '7140222', '', 'r'),
 ('edu', 'Sư phạm Mỹ thuật', '7140222', '', 'a'),
 ('edu', 'Sư phạm Tiếng Anh', '7140231', '', 'r'),
@@ -7446,7 +7494,7 @@ INSERT INTO `nhomnganh` (`idnhomnganh`, `tennganh`, `manganh`, `diemvao`, `holla
 ('nn', 'Ngôn ngữ Đức', '7220205', '', 'r'),
 ('nn', 'Ngôn ngữ Tây Ban Nha', '7220206', '', 'r'),
 ('nn', 'Ngôn ngữ Bồ Đào Nha', '7220207', '', 'r'),
-('nn', 'Ngôn ngữ Italia', '7220208', '', 'r'),
+('nn', 'Ngôn ngữ Italia', '7220208 R - Realistic - Kỹ Thuật, Chuyên viên, người thực hiện', '', 'r'),
 ('nn', 'Ngôn ngữ Nhật', '7220209', '', 'r'),
 ('nn', 'Ngôn ngữ Hàn Quốc', '7220210', '', 'r'),
 ('nn', 'Ngôn ngữ Ả Rập', '7220211', '', 'r'),
@@ -7722,7 +7770,25 @@ CREATE TABLE `str` (
 -- Đang đổ dữ liệu cho bảng `str`
 --
 
-
+INSERT INTO `str` (`idstr`, `loai`, `bo1`, `bo2`, `bo3`, `bo4`, `bo5`, `bo6`, `nhom1`, `nhom2`, `nhom3`, `nhom4`, `homnay`, `idkhach`) VALUES
+(1, 'holland', 36, 36, 26, 18, 18, 18, 0, 0, 0, 0, '2021-12-22 12:35:40', 13),
+(2, 'disc', 0, 0, 0, 0, 0, 0, 14, 0, 0, 0, '2021-12-22 12:36:28', 13),
+(3, 'disc', 0, 0, 0, 0, 0, 0, 3, 4, 5, 2, '2021-12-22 17:57:05', 13),
+(4, 'holland', 20, 24, 36, 36, 36, 36, 0, 0, 0, 0, '2021-12-22 23:58:17', 20),
+(5, 'disc', 0, 0, 0, 0, 0, 0, 5, 4, 3, 2, '2021-12-22 23:58:42', 20),
+(6, 'disc', 0, 0, 0, 0, 0, 0, 3, 5, 4, 2, '2021-12-23 00:11:03', 20),
+(7, 'disc', 0, 0, 0, 0, 0, 0, 3, 5, 3, 3, '2021-12-23 00:28:15', 20),
+(8, 'disc', 0, 0, 0, 0, 0, 0, 3, 5, 4, 2, '2021-12-23 00:28:55', 20),
+(9, 'disc', 0, 0, 0, 0, 0, 0, 1, 8, 3, 2, '2021-12-23 00:30:25', 20),
+(10, 'disc', 0, 0, 0, 0, 0, 0, 1, 10, 2, 1, '2021-12-23 00:30:53', 20),
+(11, 'disc', 0, 0, 0, 0, 0, 0, 14, 0, 0, 0, '2021-12-23 09:46:27', 21),
+(12, 'disc', 0, 0, 0, 0, 0, 0, 5, 3, 4, 2, '2021-12-23 10:01:22', 21),
+(13, 'disc', 0, 0, 0, 0, 0, 0, 14, 0, 0, 0, '2021-12-25 10:17:22', 21),
+(14, 'holland', 31, 27, 27, 27, 23, 18, 0, 0, 0, 0, '2021-12-25 10:17:37', 21),
+(15, 'disc', 0, 0, 0, 0, 0, 0, 5, 2, 3, 4, '2021-12-25 10:59:24', 14),
+(16, 'holland', 0, 9, 21, 36, 11, 33, 0, 0, 0, 0, '2021-12-26 12:43:17', 21),
+(17, 'disc', 0, 0, 0, 0, 0, 0, 4, 3, 3, 4, '2021-12-27 11:24:09', 22),
+(18, 'holland', 23, 11, 12, 29, 35, 36, 0, 0, 0, 0, '2021-12-27 11:33:53', 22);
 
 -- --------------------------------------------------------
 
@@ -7755,7 +7821,11 @@ CREATE TABLE `toithichgi` (
 -- Đang đổ dữ liệu cho bảng `toithichgi`
 --
 
-
+INSERT INTO `toithichgi` (`idkhach`, `idtoithich`, `cau1`, `cau2`, `cau3`, `cau4`, `cau5`, `cau6`, `cau7`, `cau8`, `cau9`, `cau10`, `cau11`, `cau12`, `cau13`, `cau14`, `cau15`, `cau16`) VALUES
+(14, 16, 'chao em', 'anh dung day tu chieu', 'nhớ thôi chứ nhớ gì ', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(20, 33, 'chơi thôi chứ không biết làm gì cả', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(21, 34, 'thích em qua rồi này ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(22, 35, 'anh nhớ em ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -9805,7 +9875,14 @@ INSERT INTO `truong` (`manganh`, `tentruong`, `kv`, `diem`) VALUES
 (7140206, 'Đại học Đồng Tháp', 'n', '23'),
 (7140206, 'Đại học Sư phạm thể dục thể thao TP HCM', 'n', '23'),
 (7140206, 'Đại học Cần Thơ', 'n', '24,25'),
-(7140206, 'Đại học Quốc tế Hồng Bàng', 'n', '18');
+(7140206, 'Đại học Quốc tế Hồng Bàng', 'n', '18'),
+(7860101, 'Học viện Phòng cháy chữa cháy', 'b', '27'),
+(7860113, 'Học viện Cảnh sát nhân dân', 'b', '23.93-26.76'),
+(7860113, 'Học viện An ninh nhân dân', 'b', '20.25-26.8'),
+(7720604, 'Đại học Y Hà Nội', 'b', '26.2'),
+(7720604, 'Đại học Y Khoa Phạm Ngọc Thạch', 'b', '24.9-24.7'),
+(7840102, 'Học Viện Phòng Không- Không quân                         ', 'b', '23.3'),
+(7840102, 'Học Viện Hàng Không Việt NAm            ', 'b', '25');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -9849,31 +9926,31 @@ ALTER TABLE `toithichgi`
 -- AUTO_INCREMENT cho bảng `disc`
 --
 ALTER TABLE `disc`
-  MODIFY `iddisc` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `iddisc` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT cho bảng `holland`
 --
 ALTER TABLE `holland`
-  MODIFY `idholland` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `idholland` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT cho bảng `khach`
 --
 ALTER TABLE `khach`
-  MODIFY `idkhach` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `idkhach` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT cho bảng `str`
 --
 ALTER TABLE `str`
-  MODIFY `idstr` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idstr` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT cho bảng `toithichgi`
 --
 ALTER TABLE `toithichgi`
-  MODIFY `idtoithich` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `idtoithich` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
